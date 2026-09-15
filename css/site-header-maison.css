@@ -1,0 +1,83 @@
+/* Shared homepage header, scoped to public storefront chrome. */
+body:is(.site-maison,[data-page]) { --header-h:112px; --header-h-stuck:112px; }
+body:is(.site-maison,[data-page]) #header { position:sticky !important; top:0 !important; height:112px !important; min-height:112px; background:#fff !important; color:#2e2e2e !important; border-bottom:1px solid rgba(46,46,46,.1) !important; backdrop-filter:none; box-shadow:none !important; }
+body:is(.site-maison,[data-page]) #header * { box-sizing:border-box; }
+body:is(.site-maison,[data-page]) #header :focus-visible { outline:2px solid #8a6a4a; outline-offset:4px; }
+body:is(.site-maison,[data-page]) #header .header__inner { display:grid !important; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:40px; max-width:none; width:100%; height:112px; min-height:112px; margin:0; padding:0 64px !important; }
+body:is(.site-maison,[data-page]) #header .header__left { grid-column:2; grid-row:1; justify-content:center; }
+body:is(.site-maison,[data-page]) #header .logo { display:block; width:auto; min-width:0; max-width:none; margin:0; padding:0; line-height:0; }
+body:is(.site-maison,[data-page]) #header .logo__img { width:auto !important; height:58px !important; max-width:none; filter:none !important; }
+body:is(.site-maison,[data-page]) #header .nav { display:flex !important; grid-column:1; grid-row:1; gap:24px !important; padding:0 !important; justify-content:flex-start; align-items:center; height:100%; }
+body:is(.site-maison,[data-page]) #header .nav-item > a, body:is(.site-maison,[data-page]) #header .home-studio-link { font:400 10.5px/1.4 var(--font-body); letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; color:#2e2e2e !important; text-decoration:none; }
+body:is(.site-maison,[data-page]) #header .nav-item > a { padding-inline:0; }
+body:is(.site-maison,[data-page]) #header .home-studio-link { display:inline-flex; align-items:center; min-height:44px; }
+body:is(.site-maison,[data-page]) #header .header__actions { grid-column:3; grid-row:1; display:flex; gap:20px; justify-content:flex-end; align-items:center; }
+body:is(.site-maison,[data-page]) #header .header-search { width:20px; min-width:20px; padding:0; border:0; background:none; }
+body:is(.site-maison,[data-page]) #header .header-search > span, body:is(.site-maison,[data-page]) #header .header-search::before { display:none; }
+body:is(.site-maison,[data-page]) #header .icon-btn, body:is(.site-maison,[data-page]) #header .header-search svg { width:20px; height:20px; min-width:20px; padding:0; color:#2e2e2e; }
+body:is(.site-maison,[data-page]) #header .icon-btn svg { width:19px; height:19px; flex-shrink:0; }
+body:is(.site-maison,[data-page]) #header .locale-tools { display:flex; gap:20px; }
+body:is(.site-maison,[data-page]) #header :is(.lang-select,select,.lang-btn) { font:400 10.5px/1.4 var(--font-body); letter-spacing:.12em; }
+body:is(.site-maison,[data-page]) #header .cart-count { min-width:15px; height:15px; padding:0 3px; font-size:9px; border-radius:999px; background:#2e2e2e; color:#fff; top:-6px; right:-8px; }
+body:is(.site-maison,[data-page]) #header .home-menu-slot { display:none; }
+body:is(.site-maison,[data-page])[data-page="checkout"] #checkoutRoot .checkout__head { display:none; }
+body:is(.site-maison,[data-page])[data-page="checkout"] #header { display:block !important; }
+@media (min-width:861px) and (max-width:1350px) {
+  body:is(.site-maison,[data-page]) #header .header__inner { padding-inline:32px !important; gap:24px; }
+  body:is(.site-maison,[data-page]) #header .nav { gap:10px !important; }
+}
+@media (max-width:1200px) {
+  body:is(.site-maison,[data-page]) #header .nav { display:none !important; }
+  body:is(.site-maison,[data-page]) #header .home-studio-link { display:none; }
+  body:is(.site-maison,[data-page]) #header .home-menu-slot { display:block; grid-column:1; grid-row:1; }
+  body:is(.site-maison,[data-page]) #header .home-menu-slot .burger { display:flex; }
+}
+@media (min-width:861px) and (max-width:1500px) {
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .header__inner { padding-inline:32px !important; gap:24px; }
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .nav { gap:10px !important; }
+}
+@media (max-width:1350px) {
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .nav { display:none !important; }
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .home-menu-slot { display:block; grid-column:1; grid-row:1; }
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .home-menu-slot .burger { display:flex; }
+  html[lang="tr"] body:is(.site-maison,[data-page]) #header .home-studio-link { display:none; }
+}
+@media (max-width:860px) {
+  body:is(.site-maison,[data-page]) { --header-h:72px; --header-h-stuck:72px; }
+  body:is(.site-maison,[data-page]) #header { height:72px !important; min-height:72px; }
+  body:is(.site-maison,[data-page]) #header .header__inner { min-height:72px; height:72px; padding:0 18px !important; gap:16px; }
+  body:is(.site-maison,[data-page]) #header .logo__img { height:38px !important; }
+  body:is(.site-maison,[data-page]) #header .home-studio-link, body:is(.site-maison,[data-page]) #header .locale-tools, body:is(.site-maison,[data-page]) #header .wishlist-btn { display:none; }
+  body:is(.site-maison,[data-page]) #header .icon-btn, body:is(.site-maison,[data-page]) #header .header-search { height:44px; width:28px; min-width:28px; padding:0; }
+  body:is(.site-maison,[data-page]) #header .header__actions { gap:20px; }
+}
+
+/* Pre-mount corrections: suppress the obsolete toolbar until its replacement is ready. */
+html.motion-boot body[data-page="collections"]:not([data-collection]) .toolbar { visibility:hidden; }
+@media (max-width:860px) {
+ html:not(.yza-chrome-in) body[data-page="product"]::before { height:var(--header-h,72px) !important; }
+}
+
+/* Empty legacy product scaffolding must not flash before real product data mounts.
+   motion.js removes motion-boot at DOM ready, including on catalog failures. */
+html.motion-boot #productRoot:not([data-viewed-handle]) > .product { visibility:hidden; }
+
+/* Match existing announcement heights while the shared chrome mounts. */
+body[data-page] { --motion-announcement-reserve:40px; }
+@media(max-width:860px) { body[data-page] { --motion-announcement-reserve:calc(40.5px + .8rem); } }
+body:is([data-page="home"],[data-page="collections"],[data-page="studio"],[data-page="b2b"],[data-page="product"]) { --motion-announcement-reserve:30px; }
+body[data-page="checkout"] { --motion-announcement-reserve:0px; }
+html:not(.yza-chrome-in) body[data-page="checkout"]::before { display:block !important; }
+html.motion-boot #faqList,
+html.motion-boot body[data-page="charmy"] .cy-why { visibility:hidden; }
+
+/* Blog trust content mounts above the article; reveal the article after that mount. */
+html.motion-boot body[data-page="journal"] main,
+html.motion-boot body[data-page="home"] #header > *,
+html.motion-boot body[data-page="home"] .announcement__line { visibility:hidden; }
+
+/* Keep downstream offer sections stable even during a fast scroll before the grid arrives. */
+html.motion-boot body[data-page="charmy"] [data-cy-strip][hidden] ~ * { visibility:hidden; }
+
+html[data-motion-chrome-pending] body[data-page="home"] #header > *,
+html[data-motion-chrome-pending] body[data-page="home"] .announcement__line { visibility:hidden; }

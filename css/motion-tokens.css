@@ -1,0 +1,20 @@
+/* Shared storefront and WordPress motion. CSS is the single source for JavaScript timings. */
+:root {
+ --motion-press: 100ms;
+ --motion-hover: 150ms;
+ --motion-fade: 200ms;
+ --motion-enter: 300ms;
+ --motion-move: 250ms;
+ --motion-exit: 200ms;
+ --motion-modal-enter: 200ms;
+ --motion-modal-exit: 150ms;
+ --motion-stagger: 60ms;
+ --motion-stagger-max: 180ms;
+ --motion-distance: 12px;
+ --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+ --ease-out-cubic: cubic-bezier(.33, 1, .68, 1);
+ --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+ --ease-in-cubic: cubic-bezier(.32, 0, .67, 0);
+ --ease-reveal: var(--ease-out-quint);
+ --transition-image: var(--motion-fade) linear;
+}

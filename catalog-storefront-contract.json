@@ -1,0 +1,2366 @@
+{
+  "schemaVersion": 1,
+  "verifiedRevision": "seed-20260814-fullcontrol-v2",
+  "productsJsSha256": "37b132bd3bce28c6293c4de9b7377c93b16acaa0b354d181786168d9aac166cc",
+  "finalizationMarker": "YZA.catalogReleaseFinalized = true;",
+  "resolvedCounts": {
+    "products": 33,
+    "publicProducts": 32,
+    "bagRows": 6
+  },
+  "timedScenarios": [
+    "family-sale-active"
+  ],
+  "baseProducts": {
+    "avocado-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "cherries-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "grapes-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "kiwi-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "la-nouvelle-vague-m-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "bleu",
+        "rose",
+        "rouge"
+      ],
+      "availableSizes": [
+        "M"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "rose",
+      "colorways": {
+        "bleu": {
+          "slug": "bleu",
+          "image": "assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.jpg",
+          "active": true,
+          "swatchHex": "#87B8D8"
+        },
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/la-nouvelle-vague/lnv-rouge-m-hover.webp",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "rose": {
+          "slug": "rose",
+          "image": "assets/products/la-nouvelle-vague/lnv-rose-m-scene.webp",
+          "active": true,
+          "swatchHex": "#1F3D2E"
+        }
+      }
+    },
+    "la-nouvelle-vague-s-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "bleu",
+        "rose",
+        "rouge"
+      ],
+      "availableSizes": [
+        "S"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "rouge",
+      "colorways": {
+        "bleu": {
+          "slug": "bleu",
+          "image": "assets/products/la-nouvelle-vague/lnv-bleu-s-hover.webp",
+          "active": true,
+          "swatchHex": "#87B8D8"
+        },
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/la-nouvelle-vague/lnv-rouge-s-hover.webp",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "rose": {
+          "slug": "rose",
+          "image": "assets/products/la-nouvelle-vague/lnv-rose-s-hover.webp",
+          "active": true,
+          "swatchHex": "#1F3D2E"
+        }
+      }
+    },
+    "la-nouvelle-vague-xs-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "bleu",
+        "rose",
+        "rouge"
+      ],
+      "availableSizes": [
+        "XS"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "bleu",
+      "colorways": {
+        "bleu": {
+          "slug": "bleu",
+          "image": "assets/products/la-nouvelle-vague/lnv-bleu-xs-hover.webp",
+          "active": true,
+          "swatchHex": "#87B8D8"
+        },
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/la-nouvelle-vague/lnv-rouge-xs-hover.webp",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "rose": {
+          "slug": "rose",
+          "image": "assets/products/la-nouvelle-vague/lnv-rose-xs-hover.webp",
+          "active": true,
+          "swatchHex": "#1F3D2E"
+        }
+      }
+    },
+    "la-sculpture-m-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "noir",
+        "rouge",
+        "violet"
+      ],
+      "availableSizes": [
+        "M"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "noir",
+      "colorways": {
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/review-white/bags/04-sculpture-m-hot-red.png",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "violet": {
+          "slug": "violet",
+          "image": "assets/products/review-white/bags/07-sculpture-m-deep-violet.png",
+          "active": true,
+          "swatchHex": "#4A2D6B"
+        },
+        "noir": {
+          "slug": "noir",
+          "image": "assets/products/review-white/bags/01-sculpture-m-black-olive.png",
+          "active": true,
+          "swatchHex": "#2C3020"
+        }
+      }
+    },
+    "la-sculpture-s-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "noir",
+        "rouge",
+        "violet"
+      ],
+      "availableSizes": [
+        "S"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "violet",
+      "colorways": {
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/review-white/bags/05-sculpture-s-hot-red.png",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "violet": {
+          "slug": "violet",
+          "image": "assets/products/review-white/bags/08-sculpture-s-deep-violet.png",
+          "active": true,
+          "swatchHex": "#4A2D6B"
+        },
+        "noir": {
+          "slug": "noir",
+          "image": "assets/products/review-white/bags/02-sculpture-s-black-olive.png",
+          "active": true,
+          "swatchHex": "#2C3020"
+        }
+      }
+    },
+    "la-sculpture-xs-basket-bag-ss26": {
+      "kind": "override",
+      "category": "bags",
+      "sku": null,
+      "colorSlugs": [
+        "noir",
+        "rouge",
+        "violet"
+      ],
+      "availableSizes": [
+        "XS"
+      ],
+      "variantKeys": [],
+      "defaultColorSlug": "rouge",
+      "colorways": {
+        "rouge": {
+          "slug": "rouge",
+          "image": "assets/products/review-white/bags/06-sculpture-xs-hot-red.png",
+          "active": true,
+          "swatchHex": "#C0322C"
+        },
+        "violet": {
+          "slug": "violet",
+          "image": "assets/products/review-white/bags/09-sculpture-xs-deep-violet.png",
+          "active": true,
+          "swatchHex": "#4A2D6B"
+        },
+        "noir": {
+          "slug": "noir",
+          "image": "assets/products/review-white/bags/03-sculpture-xs-black-olive.png",
+          "active": true,
+          "swatchHex": "#2C3020"
+        }
+      }
+    },
+    "lemon-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "orange-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "raffia-avocado-half-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-cherries-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-grapes-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-kiwi-slice-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-lemon-slice-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-orange-slice-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-tomato-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-watermelon-slice-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-whole-lemon-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "raffia-whole-orange-charm-ss26": {
+      "kind": "override",
+      "category": "charms",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": [],
+      "finishKeys": [
+        "loop",
+        "r2",
+        "r3"
+      ]
+    },
+    "tomatoes-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "watermelon-raffia-earrings-ss26": {
+      "kind": "override",
+      "category": "earrings",
+      "sku": null,
+      "colorSlugs": [],
+      "availableSizes": [],
+      "variantKeys": []
+    },
+    "yza-bandeau-top-jawhara-ss26": {
+      "kind": "override",
+      "category": "tops",
+      "sku": "T-BD-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "T-BD-JWP-BLANCJ",
+        "T-BD-JWP-BLEUMA",
+        "T-BD-JWP-BLEUSA",
+        "T-BD-JWP-BORDEA",
+        "T-BD-JWP-JAUNES",
+        "T-BD-JWP-NOIRNU",
+        "T-BD-JWP-ROUGEC",
+        "T-BD-JWP-VERTAM",
+        "T-BD-JWP-VERTFO",
+        "T-BD-JWP-VIOLET"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/top-halter-b/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-button-up-shirt-jawhara-ss26": {
+      "kind": "override",
+      "category": "tops",
+      "sku": "T-CH-S-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "variantKeys": [
+        "T-CH-L-JWP-BD",
+        "T-CH-L-JWP-BL",
+        "T-CH-L-JWP-BLU",
+        "T-CH-L-JWP-JM",
+        "T-CH-L-JWP-NR",
+        "T-CH-L-JWP-RG",
+        "T-CH-L-JWP-RV",
+        "T-CH-L-JWP-VP",
+        "T-CH-L-JWP-VR",
+        "T-CH-M-JWP-BD",
+        "T-CH-M-JWP-BL",
+        "T-CH-M-JWP-BLU",
+        "T-CH-M-JWP-JM",
+        "T-CH-M-JWP-NR",
+        "T-CH-M-JWP-RG",
+        "T-CH-M-JWP-RV",
+        "T-CH-M-JWP-VP",
+        "T-CH-M-JWP-VR",
+        "T-CH-S-JWP-BD",
+        "T-CH-S-JWP-BL",
+        "T-CH-S-JWP-BLU",
+        "T-CH-S-JWP-JM",
+        "T-CH-S-JWP-NR",
+        "T-CH-S-JWP-RG",
+        "T-CH-S-JWP-RV",
+        "T-CH-S-JWP-VP",
+        "T-CH-S-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/chemise/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/chemise/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/chemise/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/chemise/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/chemise/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/chemise/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/chemise/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/chemise/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/chemise/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/chemise/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-palazzo-pants-jawhara-ss26": {
+      "kind": "override",
+      "category": "pants",
+      "sku": "B-PT-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "B-PT-JWP-BD",
+        "B-PT-JWP-BL",
+        "B-PT-JWP-BLU",
+        "B-PT-JWP-JM",
+        "B-PT-JWP-NR",
+        "B-PT-JWP-RG",
+        "B-PT-JWP-RV",
+        "B-PT-JWP-VP",
+        "B-PT-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/pantalon-large/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-pareo-skirt-long-jawhara-ss26": {
+      "kind": "override",
+      "category": "pareos",
+      "sku": "B-JPL-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "B-JPL-JWP-BD",
+        "B-JPL-JWP-BL",
+        "B-JPL-JWP-BLU",
+        "B-JPL-JWP-JM",
+        "B-JPL-JWP-NR",
+        "B-JPL-JWP-RG",
+        "B-JPL-JWP-RV",
+        "B-JPL-JWP-VP",
+        "B-JPL-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/lifestyle/rtw/jupe-pareo-maxi-jaune-safran-jour.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-maxi/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-pareo-skirt-midi-jawhara-ss26": {
+      "kind": "override",
+      "category": "pareos",
+      "sku": "B-JPM-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "B-JPM-JWP-BD",
+        "B-JPM-JWP-BL",
+        "B-JPM-JWP-BLU",
+        "B-JPM-JWP-JM",
+        "B-JPM-JWP-NR",
+        "B-JPM-JWP-RG",
+        "B-JPM-JWP-RV",
+        "B-JPM-JWP-VP",
+        "B-JPM-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-midi/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-pareo-skirt-short-jawhara-ss26": {
+      "kind": "override",
+      "category": "pareos",
+      "sku": "B-JPC-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "B-JPC-JWP-BD",
+        "B-JPC-JWP-BL",
+        "B-JPC-JWP-BLU",
+        "B-JPC-JWP-JM",
+        "B-JPC-JWP-NR",
+        "B-JPC-JWP-RG",
+        "B-JPC-JWP-RV",
+        "B-JPC-JWP-VP",
+        "B-JPC-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/jupe-pareo-courte/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-pareo-skirt-x-long-jawhara-ss26": {
+      "kind": "override",
+      "category": "pareos",
+      "sku": "B-JPLP-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "B-JPLP-JWP-BD",
+        "B-JPLP-JWP-BL",
+        "B-JPLP-JWP-BLU",
+        "B-JPLP-JWP-JM",
+        "B-JPLP-JWP-NR",
+        "B-JPLP-JWP-RG",
+        "B-JPLP-JWP-RV",
+        "B-JPLP-JWP-VP",
+        "B-JPLP-JWP-VR"
+      ],
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "",
+          "active": false,
+          "swatchHex": "#F3EFE5"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "",
+          "active": false,
+          "swatchHex": "#151515"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "",
+          "active": false,
+          "swatchHex": "#ECA80E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "",
+          "active": false,
+          "swatchHex": "#ADB383"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "",
+          "active": false,
+          "swatchHex": "#B98EB7"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "",
+          "active": false,
+          "swatchHex": "#E3262E"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "",
+          "active": false,
+          "swatchHex": "#7D1725"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "",
+          "active": false,
+          "swatchHex": "#1741C7"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "",
+          "active": false,
+          "swatchHex": "#173C30"
+        }
+      }
+    },
+    "yza-scarf-top-jawhara-ss26": {
+      "kind": "override",
+      "category": "tops",
+      "sku": "T-FL-JWP-BL",
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [
+        "T-FL-JWP-BD",
+        "T-FL-JWP-BL",
+        "T-FL-JWP-BLU",
+        "T-FL-JWP-JM",
+        "T-FL-JWP-NR",
+        "T-FL-JWP-RG",
+        "T-FL-JWP-RV",
+        "T-FL-JWP-VP",
+        "T-FL-JWP-VR"
+      ],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    },
+    "yza-wrap-pants-jawhara-ss26": {
+      "kind": "override",
+      "category": "pants",
+      "sku": null,
+      "colorSlugs": [
+        "blanc-jasmin",
+        "bleu-majorelle",
+        "bleu-sama",
+        "bordeaux",
+        "jaune-safran",
+        "noir-nuit",
+        "rouge-coquelicot",
+        "vert-amande-clair",
+        "vert-fonce",
+        "violet-lilas"
+      ],
+      "availableSizes": [],
+      "variantKeys": [],
+      "defaultColorSlug": "blanc-jasmin",
+      "colorways": {
+        "blanc-jasmin": {
+          "slug": "blanc-jasmin",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/blanc-jasmin.webp",
+          "active": true,
+          "swatchHex": "#F3EFE5"
+        },
+        "bleu-majorelle": {
+          "slug": "bleu-majorelle",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/bleu-majorelle.webp",
+          "active": true,
+          "swatchHex": "#1741C7"
+        },
+        "bleu-sama": {
+          "slug": "bleu-sama",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/bleu-sama.webp",
+          "active": true,
+          "swatchHex": "#B9D2E2"
+        },
+        "bordeaux": {
+          "slug": "bordeaux",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/bordeaux.webp",
+          "active": true,
+          "swatchHex": "#7D1725"
+        },
+        "jaune-safran": {
+          "slug": "jaune-safran",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/jaune-safran.webp",
+          "active": true,
+          "swatchHex": "#ECA80E"
+        },
+        "noir-nuit": {
+          "slug": "noir-nuit",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/noir-nuit.webp",
+          "active": true,
+          "swatchHex": "#151515"
+        },
+        "rouge-coquelicot": {
+          "slug": "rouge-coquelicot",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/rouge-coquelicot.webp",
+          "active": true,
+          "swatchHex": "#E3262E"
+        },
+        "vert-amande-clair": {
+          "slug": "vert-amande-clair",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/vert-amande-clair.webp",
+          "active": true,
+          "swatchHex": "#ADB383"
+        },
+        "vert-fonce": {
+          "slug": "vert-fonce",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/vert-fonce.webp",
+          "active": true,
+          "swatchHex": "#173C30"
+        },
+        "violet-lilas": {
+          "slug": "violet-lilas",
+          "image": "assets/catalog/jawhara-v1/pantalon-pareo/violet-lilas.webp",
+          "active": true,
+          "swatchHex": "#B98EB7"
+        }
+      }
+    }
+  },
+  "imageOwners": {
+    "assets/catalog/jawhara-v1/chemise/blanc-jasmin.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/bleu-majorelle.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/bleu-sama.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/bordeaux.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/jaune-safran.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/noir-nuit.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/rouge-coquelicot.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/vert-amande-clair.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/vert-fonce.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/chemise/violet-lilas.webp": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/blanc-jasmin.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-majorelle.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-sama.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bordeaux.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/jaune-safran.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/noir-nuit.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/rouge-coquelicot.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-amande-clair.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-fonce.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/violet-lilas.webp": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/blanc-jasmin.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-majorelle.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-sama.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bordeaux.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/noir-nuit.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/rouge-coquelicot.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-amande-clair.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-fonce.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/violet-lilas.webp": [
+      "yza-pareo-skirt-long-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/blanc-jasmin.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-majorelle.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-sama.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bordeaux.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/jaune-safran.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/noir-nuit.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/rouge-coquelicot.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-amande-clair.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-fonce.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/violet-lilas.webp": [
+      "yza-pareo-skirt-midi-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/blanc-jasmin.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-majorelle.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-sama.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/bordeaux.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/jaune-safran.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/noir-nuit.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/rouge-coquelicot.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/vert-amande-clair.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/vert-fonce.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-large/violet-lilas.webp": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/blanc-jasmin.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-majorelle.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-sama.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/bordeaux.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/jaune-safran.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/noir-nuit.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/rouge-coquelicot.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-amande-clair.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-fonce.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/pantalon-pareo/violet-lilas.webp": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bordeaux.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/bordeaux.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.back.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.webp": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/blanc-jasmin.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/bleu-majorelle.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/bleu-sama.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/bordeaux.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/jaune-safran.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/noir-nuit.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/rouge-coquelicot.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/vert-amande-clair.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/vert-fonce.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/catalog/jawhara-v1/top-halter-b/violet-lilas.webp": [
+      "yza-bandeau-top-jawhara-ss26"
+    ],
+    "assets/products/charms-2026-08/avocado-half-anneau.webp": [
+      "raffia-avocado-half-charm-ss26"
+    ],
+    "assets/products/charms-2026-08/grapes-anneau.webp": [
+      "raffia-grapes-charm-ss26"
+    ],
+    "assets/products/charms-2026-08/lemon-slice-anneau.webp": [
+      "raffia-lemon-slice-charm-ss26"
+    ],
+    "assets/products/charms-2026-08/orange-slice-anneau.webp": [
+      "raffia-orange-slice-charm-ss26"
+    ],
+    "assets/products/charms-2026-08/whole-lemon-anneau.webp": [
+      "raffia-whole-lemon-charm-ss26"
+    ],
+    "assets/products/charms-2026-08/whole-orange-anneau.webp": [
+      "raffia-whole-orange-charm-ss26"
+    ],
+    "assets/products/charms/client/avocado-half-02.jpg": [
+      "raffia-avocado-half-charm-ss26"
+    ],
+    "assets/products/charms/client/cherries-02.jpg": [
+      "raffia-cherries-charm-ss26"
+    ],
+    "assets/products/charms/client/grapes-02.jpg": [
+      "raffia-grapes-charm-ss26"
+    ],
+    "assets/products/charms/client/kiwi-slice-02.jpg": [
+      "raffia-kiwi-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/orange-slice-02.jpg": [
+      "raffia-orange-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/orange-slice-04.jpg": [
+      "raffia-orange-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/orange-slice-05.jpg": [
+      "raffia-orange-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/tomato-02.jpg": [
+      "raffia-tomato-charm-ss26"
+    ],
+    "assets/products/charms/client/watermelon-slice-03.jpg": [
+      "raffia-watermelon-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/watermelon-slice-04.jpg": [
+      "raffia-watermelon-slice-charm-ss26"
+    ],
+    "assets/products/charms/client/whole-lemon-02.jpg": [
+      "raffia-whole-lemon-charm-ss26"
+    ],
+    "assets/products/charms/client/whole-orange-02.jpg": [
+      "raffia-whole-orange-charm-ss26"
+    ],
+    "assets/products/earrings-2026-07/avocado-earrings-card.webp": [
+      "avocado-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/cherries-earrings-card.webp": [
+      "cherries-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/grapes-earrings-card.webp": [
+      "grapes-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/kiwi-earrings-card.webp": [
+      "kiwi-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/lemon-earrings-card.webp": [
+      "lemon-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/orange-earrings-card.webp": [
+      "orange-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/tomato-earrings-card.webp": [
+      "tomatoes-raffia-earrings-ss26"
+    ],
+    "assets/products/earrings-2026-07/watermelon-earrings-card.webp": [
+      "watermelon-raffia-earrings-ss26"
+    ],
+    "assets/products/jawhara/client/chemise-01.jpg": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/chemise-02.jpg": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/chemise-03.jpg": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/chemise-04.jpg": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/chemise-05.jpg": [
+      "yza-button-up-shirt-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-02.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-06.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-07.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-09.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-10.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-11.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/palazzo-12.jpg": [
+      "yza-palazzo-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/pareo-courte-01.jpg": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/pareo-courte-02.jpg": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/pareo-courte-03.jpg": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/pareo-courte-04.jpg": [
+      "yza-pareo-skirt-short-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/top-foulard-01.jpg": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/top-foulard-02.jpg": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/top-foulard-03.jpg": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/top-foulard-04.jpg": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/top-foulard-05.jpg": [
+      "yza-scarf-top-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/wrap-01.jpg": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/wrap-02.jpg": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/products/jawhara/client/wrap-03.jpg": [
+      "yza-wrap-pants-jawhara-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-m-01.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-m-02.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-m-03.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-m-04.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-m-05.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-s-01.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-xs-01.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/bleu-xs-02.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rose-m-01.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rose-s-01.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rose-s-04.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rose-xs-01.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rose-xs-02.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-m-01.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-s-01.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-s-02.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-s-04.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-s-06.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-xs-01.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/client/rouge-xs-02.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-bleu-m.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-bleu-s-hover.webp": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-bleu-s.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-bleu-xs-hover.webp": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-bleu-xs.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-m-scene.webp": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-m.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-s-hover.webp": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-s.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-xs-hover.webp": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rose-xs.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-m-hover.webp": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-m.jpg": [
+      "la-nouvelle-vague-m-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-s-hover.webp": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-s.jpg": [
+      "la-nouvelle-vague-s-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-xs-hover.webp": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-nouvelle-vague/lnv-rouge-xs.jpg": [
+      "la-nouvelle-vague-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-m-01.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-m-02.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-m-03.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-m-04.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-m-05.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-s-01.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-s-02.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-s-03.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-s-04.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-s-05.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-01.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-02.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-03.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-04.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-05.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-06.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/noir-xs-07.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-m-01.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-m-02.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-m-03.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-m-04.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-m-05.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-01.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-02.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-03.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-04.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-05.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-s-06.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-01.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-02.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-03.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-04.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-05.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/rouge-xs-06.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-01.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-02.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-03.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-04.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-05.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-06.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-m-07.jpg": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-01.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-02.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-03.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-04.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-05.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-s-06.jpg": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-xs-01.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-xs-02.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-xs-03.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-xs-04.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/la-sculpture/client/violet-xs-05.jpg": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/01-sculpture-m-black-olive.png": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/02-sculpture-s-black-olive.png": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/03-sculpture-xs-black-olive.png": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/04-sculpture-m-hot-red.png": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/05-sculpture-s-hot-red.png": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/06-sculpture-xs-hot-red.png": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/07-sculpture-m-deep-violet.png": [
+      "la-sculpture-m-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/08-sculpture-s-deep-violet.png": [
+      "la-sculpture-s-basket-bag-ss26"
+    ],
+    "assets/products/review-white/bags/09-sculpture-xs-deep-violet.png": [
+      "la-sculpture-xs-basket-bag-ss26"
+    ]
+  },
+  "reservedImages": [
+    "assets/catalog/jawhara-v1/chemise/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/chemise/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/chemise/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/chemise/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/chemise/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/bordeaux.webp",
+    "assets/catalog/jawhara-v1/chemise/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/chemise/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/chemise/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/chemise/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/chemise/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/chemise/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/chemise/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/bordeaux.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-courte/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/bordeaux.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-maxi/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/bordeaux.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/jupe-pareo-midi/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/pantalon-large/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/bordeaux.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-large/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/pantalon-pareo/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/bordeaux.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/pantalon-pareo/violet-lilas.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.jpg",
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/blanc-jasmin.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-majorelle.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bleu-sama.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bordeaux.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bordeaux.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/bordeaux.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/jaune-safran.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/noir-nuit.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/rouge-coquelicot.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-amande-clair.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.back.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.thumb.webp",
+    "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.webp",
+    "assets/products/accessories-clean/cherries-accessory-clean.png",
+    "assets/products/accessories-clean/grapes-accessory-clean.png",
+    "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+    "assets/products/accessories-clean/lemon-raffia-earrings-clean.webp",
+    "assets/products/accessories-clean/lemon-slice-necklace-clean.webp",
+    "assets/products/accessories-clean/orange-raffia-earrings-clean.webp",
+    "assets/products/accessories-clean/orange-slice-necklace-clean.webp",
+    "assets/products/accessories-clean/tomatoes-earrings-clean.webp",
+    "assets/products/accessories-clean/watermelon-slice-accessory-clean.webp",
+    "assets/products/bag-nouvelle-vague-still-2.webp",
+    "assets/products/bag-nouvelle-vague-still-pink.webp",
+    "assets/products/bag-nouvelle-vague-still.webp",
+    "assets/products/bag-sculpture-black-detail.jpg",
+    "assets/products/bag-sculpture-black-still.jpg",
+    "assets/products/bag-sculpture-black.jpg",
+    "assets/products/bag-sculpture-group.jpg",
+    "assets/products/bag-sculpture-red-detail.jpg",
+    "assets/products/bag-sculpture-red-seated.jpg",
+    "assets/products/bag-sculpture-red-still.jpg",
+    "assets/products/bag-sculpture-red.jpg",
+    "assets/products/bag-sculpture-violet-solo.webp",
+    "assets/products/bag-sculpture-violet-stack.jpg",
+    "assets/products/bag-sculpture-violet.jpg",
+    "assets/products/charms/client/avocado-half-01.jpg",
+    "assets/products/charms/client/avocado-half-02.jpg",
+    "assets/products/charms/client/cherries-01.jpg",
+    "assets/products/charms/client/cherries-02.jpg",
+    "assets/products/charms/client/grapes-01.jpg",
+    "assets/products/charms/client/grapes-02.jpg",
+    "assets/products/charms/client/kiwi-slice-01.jpg",
+    "assets/products/charms/client/kiwi-slice-02.jpg",
+    "assets/products/charms/client/lemon-slice-01.jpg",
+    "assets/products/charms/client/orange-slice-01.jpg",
+    "assets/products/charms/client/orange-slice-02.jpg",
+    "assets/products/charms/client/orange-slice-04.jpg",
+    "assets/products/charms/client/orange-slice-05.jpg",
+    "assets/products/charms/client/tomato-01.jpg",
+    "assets/products/charms/client/tomato-02.jpg",
+    "assets/products/charms/client/watermelon-slice-01.jpg",
+    "assets/products/charms/client/watermelon-slice-03.jpg",
+    "assets/products/charms/client/watermelon-slice-04.jpg",
+    "assets/products/charms/client/whole-lemon-01.jpg",
+    "assets/products/charms/client/whole-lemon-02.jpg",
+    "assets/products/charms/client/whole-orange-01.jpg",
+    "assets/products/charms/client/whole-orange-02.jpg",
+    "assets/products/charms/finish/avocado-ring.jpg",
+    "assets/products/charms/finish/cherries-loop.jpg",
+    "assets/products/charms/finish/cherries-ring.jpg",
+    "assets/products/charms/finish/grapes-loop.jpg",
+    "assets/products/charms/finish/grapes-ring.jpg",
+    "assets/products/charms/finish/lemon-slice-loop.jpg",
+    "assets/products/charms/finish/lemon-slice-ring.jpg",
+    "assets/products/charms/finish/orange-slice-ring.jpg",
+    "assets/products/charms/finish/tomato-loop.jpg",
+    "assets/products/charms/finish/tomato-ring.jpg",
+    "assets/products/charms/finish/watermelon-loop.jpg",
+    "assets/products/charms/finish/watermelon-ring.jpg",
+    "assets/products/charms/finish/whole-lemon-ring.jpg",
+    "assets/products/charms/finish/whole-orange-ring.jpg",
+    "assets/products/earrings-2026-07/avocado-earrings-card.webp",
+    "assets/products/earrings-2026-07/cherries-earrings-card.webp",
+    "assets/products/earrings-2026-07/grapes-earrings-card.webp",
+    "assets/products/earrings-2026-07/kiwi-earrings-card.webp",
+    "assets/products/earrings-2026-07/lemon-earrings-card.webp",
+    "assets/products/earrings-2026-07/orange-earrings-card.webp",
+    "assets/products/earrings-2026-07/tomato-earrings-card.webp",
+    "assets/products/earrings-2026-07/watermelon-earrings-card.webp",
+    "assets/products/fruit-market/charm-avocado.jpg",
+    "assets/products/fruit-market/charm-cherries.jpg",
+    "assets/products/fruit-market/charm-grapes.jpg",
+    "assets/products/fruit-market/charm-kiwi-slice.jpg",
+    "assets/products/fruit-market/charm-lemon-slice.jpg",
+    "assets/products/fruit-market/charm-tomato.jpg",
+    "assets/products/fruit-market/charm-watermelon-slice.jpg",
+    "assets/products/fruit-market/charm-whole-lemon.jpg",
+    "assets/products/fruit-market/charm-whole-orange.jpg",
+    "assets/products/fruit-market/earrings-cherries.jpg",
+    "assets/products/fruit-market/earrings-grapes.jpg",
+    "assets/products/fruit-market/earrings-kiwi.jpg",
+    "assets/products/fruit-market/earrings-lemon.jpg",
+    "assets/products/fruit-market/earrings-orange.jpg",
+    "assets/products/fruit-market/earrings-tomato.jpg",
+    "assets/products/fruit-market/earrings-watermelon.jpg",
+    "assets/products/fruit-market/necklace-cherries.jpg",
+    "assets/products/fruit-market/necklace-grapes.jpg",
+    "assets/products/fruit-market/necklace-lemon-slice.jpg",
+    "assets/products/fruit-market/necklace-orange-slice.jpg",
+    "assets/products/fruit-market/necklace-watermelon-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-avocado.jpg",
+    "assets/products/fruit-market/vibe/vibe-cherries-earrings.jpg",
+    "assets/products/fruit-market/vibe/vibe-cherries-necklace.jpg",
+    "assets/products/fruit-market/vibe/vibe-grapes.jpg",
+    "assets/products/fruit-market/vibe/vibe-kiwi-earrings.jpg",
+    "assets/products/fruit-market/vibe/vibe-kiwi-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-lemon-slice-necklace.jpg",
+    "assets/products/fruit-market/vibe/vibe-lemon-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-orange-slice-necklace.jpg",
+    "assets/products/fruit-market/vibe/vibe-orange-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-tomato.jpg",
+    "assets/products/fruit-market/vibe/vibe-watermelon-earrings.jpg",
+    "assets/products/fruit-market/vibe/vibe-watermelon-slice-necklace.jpg",
+    "assets/products/fruit-market/vibe/vibe-watermelon-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-whole-lemon.jpg",
+    "assets/products/fruit-market/vibe/vibe-whole-orange.jpg",
+    "assets/products/jawhara/client/chemise-01.jpg",
+    "assets/products/jawhara/client/chemise-02.jpg",
+    "assets/products/jawhara/client/chemise-03.jpg",
+    "assets/products/jawhara/client/chemise-04.jpg",
+    "assets/products/jawhara/client/chemise-05.jpg",
+    "assets/products/jawhara/client/palazzo-01.jpg",
+    "assets/products/jawhara/client/palazzo-02.jpg",
+    "assets/products/jawhara/client/palazzo-06.jpg",
+    "assets/products/jawhara/client/palazzo-07.jpg",
+    "assets/products/jawhara/client/palazzo-09.jpg",
+    "assets/products/jawhara/client/palazzo-10.jpg",
+    "assets/products/jawhara/client/palazzo-11.jpg",
+    "assets/products/jawhara/client/palazzo-12.jpg",
+    "assets/products/jawhara/client/pareo-courte-01.jpg",
+    "assets/products/jawhara/client/pareo-courte-02.jpg",
+    "assets/products/jawhara/client/pareo-courte-03.jpg",
+    "assets/products/jawhara/client/pareo-courte-04.jpg",
+    "assets/products/jawhara/client/top-foulard-01.jpg",
+    "assets/products/jawhara/client/top-foulard-02.jpg",
+    "assets/products/jawhara/client/top-foulard-03.jpg",
+    "assets/products/jawhara/client/top-foulard-04.jpg",
+    "assets/products/jawhara/client/top-foulard-05.jpg",
+    "assets/products/jawhara/client/wrap-01.jpg",
+    "assets/products/jawhara/client/wrap-02.jpg",
+    "assets/products/jawhara/client/wrap-03.jpg",
+    "assets/products/la-nouvelle-vague/client/bleu-m-01.jpg",
+    "assets/products/la-nouvelle-vague/client/bleu-s-01.jpg",
+    "assets/products/la-nouvelle-vague/client/bleu-xs-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rose-m-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rose-s-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rose-xs-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rouge-m-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rouge-s-01.jpg",
+    "assets/products/la-nouvelle-vague/client/rouge-xs-01.jpg",
+    "assets/products/la-nouvelle-vague/lnv-bleu-s-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-bleu-xs-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-rose-m-scene.webp",
+    "assets/products/la-nouvelle-vague/lnv-rose-s-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-rose-xs-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-rouge-m-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-rouge-s-hover.webp",
+    "assets/products/la-nouvelle-vague/lnv-rouge-xs-hover.webp",
+    "assets/products/la-sculpture/client/noir-m-01.jpg",
+    "assets/products/la-sculpture/client/noir-m-02.jpg",
+    "assets/products/la-sculpture/client/noir-m-03.jpg",
+    "assets/products/la-sculpture/client/noir-m-04.jpg",
+    "assets/products/la-sculpture/client/noir-m-05.jpg",
+    "assets/products/la-sculpture/client/noir-s-01.jpg",
+    "assets/products/la-sculpture/client/noir-s-02.jpg",
+    "assets/products/la-sculpture/client/noir-s-03.jpg",
+    "assets/products/la-sculpture/client/noir-s-04.jpg",
+    "assets/products/la-sculpture/client/noir-s-05.jpg",
+    "assets/products/la-sculpture/client/noir-xs-01.jpg",
+    "assets/products/la-sculpture/client/noir-xs-02.jpg",
+    "assets/products/la-sculpture/client/noir-xs-03.jpg",
+    "assets/products/la-sculpture/client/noir-xs-04.jpg",
+    "assets/products/la-sculpture/client/noir-xs-05.jpg",
+    "assets/products/la-sculpture/client/noir-xs-06.jpg",
+    "assets/products/la-sculpture/client/noir-xs-07.jpg",
+    "assets/products/la-sculpture/client/rouge-m-01.jpg",
+    "assets/products/la-sculpture/client/rouge-m-02.jpg",
+    "assets/products/la-sculpture/client/rouge-m-03.jpg",
+    "assets/products/la-sculpture/client/rouge-m-04.jpg",
+    "assets/products/la-sculpture/client/rouge-m-05.jpg",
+    "assets/products/la-sculpture/client/rouge-s-01.jpg",
+    "assets/products/la-sculpture/client/rouge-s-02.jpg",
+    "assets/products/la-sculpture/client/rouge-s-03.jpg",
+    "assets/products/la-sculpture/client/rouge-s-04.jpg",
+    "assets/products/la-sculpture/client/rouge-s-05.jpg",
+    "assets/products/la-sculpture/client/rouge-s-06.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-01.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-02.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-03.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-04.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-05.jpg",
+    "assets/products/la-sculpture/client/rouge-xs-06.jpg",
+    "assets/products/la-sculpture/client/violet-m-01.jpg",
+    "assets/products/la-sculpture/client/violet-m-02.jpg",
+    "assets/products/la-sculpture/client/violet-m-03.jpg",
+    "assets/products/la-sculpture/client/violet-m-04.jpg",
+    "assets/products/la-sculpture/client/violet-m-05.jpg",
+    "assets/products/la-sculpture/client/violet-m-06.jpg",
+    "assets/products/la-sculpture/client/violet-m-07.jpg",
+    "assets/products/la-sculpture/client/violet-s-01.jpg",
+    "assets/products/la-sculpture/client/violet-s-02.jpg",
+    "assets/products/la-sculpture/client/violet-s-03.jpg",
+    "assets/products/la-sculpture/client/violet-s-04.jpg",
+    "assets/products/la-sculpture/client/violet-s-05.jpg",
+    "assets/products/la-sculpture/client/violet-s-06.jpg",
+    "assets/products/la-sculpture/client/violet-xs-01.jpg",
+    "assets/products/la-sculpture/client/violet-xs-02.jpg",
+    "assets/products/la-sculpture/client/violet-xs-03.jpg",
+    "assets/products/la-sculpture/client/violet-xs-04.jpg",
+    "assets/products/la-sculpture/client/violet-xs-05.jpg",
+    "assets/products/la-sculpture/sculpt-black-olive-m.jpg",
+    "assets/products/la-sculpture/sculpt-black-olive-s.jpg",
+    "assets/products/la-sculpture/sculpt-black-olive-xs.jpg",
+    "assets/products/la-sculpture/sculpt-deep-violet-m.jpg",
+    "assets/products/la-sculpture/sculpt-deep-violet-s.jpg",
+    "assets/products/la-sculpture/sculpt-deep-violet-xs.jpg",
+    "assets/products/la-sculpture/sculpt-hot-red-m.jpg",
+    "assets/products/la-sculpture/sculpt-hot-red-s.jpg",
+    "assets/products/la-sculpture/sculpt-hot-red-xs.jpg",
+    "assets/products/la-vague/lavague-black-m.jpg",
+    "assets/products/la-vague/lavague-black-s.jpg",
+    "assets/products/la-vague/lavague-black-xs.jpg",
+    "assets/products/launch-shop-ref/la-sculpture-m-black-olive.jpg",
+    "assets/products/launch-shop-ref/la-sculpture-s-deep-violet.jpg",
+    "assets/products/launch-shop-ref/la-sculpture-xs-hot-red.jpg",
+    "assets/products/review-white/jewelry/charms/16-charm-cherries.jpg",
+    "assets/products/review-white/jewelry/charms/17-charm-grapes.jpg",
+    "assets/products/review-white/jewelry/charms/18-charm-whole-lemon.jpg",
+    "assets/products/review-white/jewelry/charms/19-charm-whole-orange.jpg",
+    "assets/products/review-white/jewelry/charms/20-charm-tomato.jpg",
+    "assets/products/review-white/jewelry/charms/21-charm-lemon-slice.jpg",
+    "assets/products/review-white/jewelry/charms/22-charm-orange-slice.jpg",
+    "assets/products/review-white/jewelry/charms/23-charm-kiwi-slice.jpg",
+    "assets/products/review-white/jewelry/charms/24-charm-watermelon-slice.jpg",
+    "assets/products/review-white/jewelry/charms/25-charm-avocado-half.jpg"
+  ],
+  "fullControl": {
+    "products": 33,
+    "colorProducts": 15,
+    "colorways": 107,
+    "finishProducts": 10,
+    "finishOptions": 30,
+    "locales": [
+      "fr",
+      "en",
+      "es",
+      "tr",
+      "ar"
+    ],
+    "sectionKeys": [
+      "gallery",
+      "summary",
+      "details",
+      "howToWear",
+      "story",
+      "persona",
+      "buyingBullets",
+      "related"
+    ]
+  }
+}

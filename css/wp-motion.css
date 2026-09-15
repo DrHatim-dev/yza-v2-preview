@@ -1,0 +1,22 @@
+/* Motion corrections only; all WordPress resting styles remain owned by its theme. */
+html { scroll-behavior:auto; }
+body *, body *::before, body *::after {
+ transition-property:transform,opacity !important;
+ transition-duration:var(--motion-hover),var(--motion-hover) !important;
+ transition-delay:0s !important;
+ transition-timing-function:var(--ease-out-cubic),linear !important;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+ transition-duration:var(--motion-move) !important;
+ transition-timing-function:var(--ease-in-out-cubic) !important;
+}
+/* Busy indicators remain functional; these are finite requests, not decoration. */
+.woocommerce .blockUI.blockOverlay::before, .woocommerce .loader::before,
+.woocommerce .button.loading::after, .wc-block-grid__product-add-to-cart .loading::after {
+ animation-duration:calc(4 * var(--motion-move)) !important;
+ animation-timing-function:linear !important;
+}
+@media (prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto !important; }
+ body *, body *::before, body *::after { animation:none !important; transition:none !important; }
+}

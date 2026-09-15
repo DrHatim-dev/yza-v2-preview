@@ -1,0 +1,128 @@
+/* Fruit Market additions to the shared La maison presentation. No footer rules. */
+.charm-product .header .nav-item > a[href='/collections/charms'] { text-decoration: underline; text-underline-offset: 6px; }
+.charm-product #productStory, .charm-product #accordion, .charm-product .product-support { display: none; }
+.charm-product #pShort { max-width: none; letter-spacing: 0; animation: none; }
+.charm-product #pPrice { text-transform: uppercase; }
+.charm-product .charm-label { margin: 0 0 8px; font: 400 10px/1.5 var(--font-body); letter-spacing: .2em; text-transform: uppercase; color: var(--bag-muted); }
+.charm-product .charm-finish-grid { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 20px; align-items: center; padding-top: 14px; border-top: 1px solid var(--bag-line); }
+.charm-product .charm-finish-grid > img { width: 92px; height: 112px; object-fit: cover; }
+.charm-product .charm-finish-grid ul { list-style: none; margin: 0; padding: 0; }
+.charm-product .charm-finish-grid li { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--bag-line); font: 400 12px/1.5 var(--font-body); color: #4a4a4a; }
+.charm-product .charm-finish-grid li::before { content: ''; width: 4px; height: 4px; flex: 0 0 4px; border-radius: 50%; background: #de733d; }
+.charm-product #pFinish { margin: 26px 0 0; }
+.charm-product #pFinish > .option__label { display: flex; justify-content: space-between; margin: 0 0 6px; font: 400 10px/1.5 var(--font-body); letter-spacing: .2em; color: var(--bag-muted); text-transform: uppercase; }
+.charm-product #pFinishOpts { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--bag-line); }
+.charm-product #pFinishOpts .chip { display: flex; align-items: baseline; gap: 14px; min-height: 49px; width: 100%; padding: 15px 0 15px 14px; border: 0; border-bottom: 1px solid var(--bag-line); border-left: 2px solid transparent; border-radius: 0; color: var(--bag-muted); background: transparent; font: 400 13px/1.4 var(--font-body); letter-spacing: .12em; text-align: start; box-shadow: none; }
+.charm-product #pFinishOpts .chip::after { display: none; }
+.charm-product #pFinishOpts .chip.is-active { color: var(--bag-ink); border-left-color: var(--bag-ink); }
+.charm-product #pFinishOpts .chip small { font: 400 11px/1.5 var(--font-body); letter-spacing: 0; color: var(--bag-muted); }
+.charm-product #pFinishOpts .chip:disabled { cursor: not-allowed; opacity: .8; }
+.charm-product .charm-eyebrow { display: flex; gap: 12px; align-items: center; margin: 0 0 24px; font: 400 10px/1.5 var(--font-body); letter-spacing: .24em; text-transform: uppercase; color: var(--bag-muted); }
+.charm-product .charm-eyebrow img { width: 16px; height: auto; opacity: .55; }
+.charm-product .charm-story h2 { font: 200 52px/1.08 'Fraunces',Georgia,serif; letter-spacing: -.02em; max-width: 14ch; margin: 0 0 24px; }
+.charm-product .charm-story-body { font: 400 15px/1.8 var(--font-body); max-width: 54ch; color: #4a4a4a; }
+.charm-product .charm-story blockquote { font: italic 300 21px/1.5 'Fraunces',Georgia,serif; margin: 28px 0 0; max-width: 34ch; color: #4a4a4a; border: 0; padding: 0; }
+.charm-product .charm-wear-section { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,520px); gap: 80px; align-items: center; padding-top: 0; }
+.charm-product .charm-wear-section h2 { font: 200 38px/1.15 'Fraunces',Georgia,serif; letter-spacing: -.015em; max-width: 16ch; margin: 24px 0 28px; }
+.charm-product .charm-wear-section > img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.charm-product .charm-wear-section ol { margin: 0; padding: 0; list-style: none; }
+.charm-product .charm-wear-section li { display: flex; gap: 16px; border-bottom: 1px solid var(--bag-line); padding: 14px 0; font: 400 13.5px/1.65 var(--font-body); }
+.charm-product .charm-wear-section li span { flex: 0 0 20px; color: #a59d90; }
+.charm-product .charm-style-tip { font: italic 300 17px/1.65 'Fraunces',Georgia,serif; margin: 26px 0 0; }
+.charm-product .charm-market { background: var(--bag-paper); max-width: none; }
+.charm-product .charm-market-copy { font: 400 15px/1.85 var(--font-body); max-width: 88ch; color: #4a4a4a; margin: 0 0 42px; }
+.charm-product .charm-market-grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(108px,1fr); gap: 14px; overflow-x: auto; scroll-snap-type: x proximity; cursor: grab; user-select: none; }
+.charm-product .charm-market-grid a { cursor: inherit; scroll-snap-align: start; }
+.charm-product .charm-market-grid.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.charm-product .charm-market-grid a { display: flex; flex-direction: column; gap: 14px; text-align: center; font: 400 10px/1.6 var(--font-body); text-transform: uppercase; letter-spacing: .12em; }
+.charm-product .charm-market-grid img { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; background: white; }
+.charm-product .charm-market-grid a[aria-current] span { text-decoration: underline; text-underline-offset: 5px; }
+.charm-product .charm-specs { padding-top: 104px; }
+.charm-product .charm-questions { padding-top: 0; }
+.charm-product .charm-text-link { font: 400 10px/1.6 var(--font-body); letter-spacing: .16em; text-transform: uppercase; border-bottom: 1px solid var(--bag-line); }
+.charm-product .charm-faq details { border-bottom: 1px solid var(--bag-line); }
+.charm-product .charm-faq details:first-child { border-top: 1px solid var(--bag-line); }
+.charm-product .charm-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; font: 400 15px/1.5 var(--font-body); list-style: none; cursor: pointer; }
+.charm-product .charm-faq summary::-webkit-details-marker { display: none; }
+.charm-product .charm-faq summary > span { position: relative; width: 16px; height: 16px; flex: 0 0 16px; }
+.charm-product .charm-faq summary > span::before, .charm-product .charm-faq summary > span::after { content: ''; position: absolute; top: 8px; left: 2px; width: 12px; height: 1px; background: currentColor; }
+.charm-product .charm-faq summary > span::after { transform: rotate(90deg); }
+.charm-product .charm-faq details[open] summary > span::after { transform: rotate(0); }
+.charm-product .charm-faq details > p { font: 400 13.5px/1.8 var(--font-body); color: #4a4a4a; max-width: 66ch; margin: 0; padding: 0 0 24px; }
+.charm-product .charm-guarantees { padding-top: 0; }
+.charm-product .charm-guarantees > div { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--bag-line); border-block: 1px solid var(--bag-line); }
+.charm-product .charm-guarantees article { padding: 32px 28px; background: white; }
+.charm-product .charm-guarantees h2 { font: 400 9.5px/1.5 var(--font-body); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 14px; }
+.charm-product .charm-guarantees p { font: 400 13px/1.75 var(--font-body); color: #4a4a4a; margin: 0; }
+.charm-product .charm-sheet-product { display: flex; align-items: center; gap: 18px; padding: 12px 30px 24px 0; }
+.charm-product .charm-sheet-product img { width: 64px; height: 80px; object-fit: cover; }
+.charm-product .charm-sheet-product h2 { font-size: 22px; margin: 0 0 8px; }
+.charm-product .charm-sheet-product p { margin: 0; font-size: 13px; }
+.charm-product .charm-options #pFinish { margin-top: 0; }
+.charm-product #charmOptions #pShipBar { display: none; }
+.charm-product .charm-options #pAddPrice { display: inline; font: inherit; }
+.charm-product .charm-options #pAddPrice::before { content: '· '; }
+.charm-product .charm-sticky-name { margin-right: 24px; font-size: 14px; }
+.charm-product .cart-upsell__grid { display: grid; grid-template-columns: 1fr; }
+.charm-product .upsell-card { border-radius: 0; box-shadow: none; }
+.charm-product .cart-upsell__title { font: 400 10px/1.5 var(--font-body); letter-spacing: .2em; text-transform: uppercase; }
+.charm-product #similarRail { width: 100%; margin: 0 !important; }
+.charm-product #similarRail .product-card__media { position: relative; aspect-ratio: 4/5; background: var(--bag-paper); }
+.charm-product #similarRail .product-card__img { height: 100%; object-fit: cover; }
+.charm-product #similarRail .product-card__limited { position: absolute; z-index: 1; top: 12px; left: 12px; padding: 4px 9px; border: 1px solid var(--bag-line); background: rgba(255,255,255,.92); color: var(--bag-ink); font: 400 9px/1.5 var(--font-body); letter-spacing: .14em; }
+.charm-product #similarRail .product-card__name { font: 400 13px/1.5 var(--font-body); letter-spacing: 0; }
+.charm-product #similarRail .product-card__price { font: 400 12.5px/1.5 var(--font-body); color: var(--bag-muted); }
+.charm-product #similarRail.yza-swiper--fallback .swiper-wrapper { gap: 32px; }
+.charm-product #similarRail.yza-swiper--fallback .swiper-slide { flex-basis: calc((100% - 96px) / 4); }
+.charm-product :is(.charm-market-grid a,.charm-text-link,.bag-studio-visit):hover { color: #8a6a4a; }
+@media (max-width: 1250px) and (min-width: 861px) {
+  .charm-product .charm-wear-section { gap: 48px; }
+  .charm-product .charm-finish-grid { grid-template-columns: 84px minmax(0,1fr); gap: 14px; }
+  .charm-product .charm-finish-grid > img { width: 84px; }
+  .charm-product #pFinishOpts .chip { flex-wrap: wrap; gap: 4px 14px; }
+}
+@media (max-width: 860px) {
+  .charm-product .product--cg #pName { font-size: 32px; }
+  .charm-product .product-info > #pFinish { display: none; }
+  .charm-product .bag-mobile-gallery { direction: ltr; }
+  .charm-product .product-info > .bag-motif { margin-bottom: 18px; }
+  .charm-product .charm-finish-grid { grid-template-columns: 84px minmax(0,1fr); gap: 18px; }
+  .charm-product .charm-finish-grid > img { width: 84px; height: 104px; }
+  .charm-product .charm-finish-grid li { font-size: 11.5px; }
+  .charm-product #charmProvenance { margin-bottom: 28px; }
+  .charm-product #charmEditorial { display: flex; flex-direction: column; }
+  .charm-product .charm-story { order: 0; padding-top: 0; }
+  .charm-product .charm-story h2 { font-size: 26px; max-width: 22ch; margin-bottom: 18px; }
+  .charm-product .charm-story-body { font-size: 13px; line-height: 1.75; }
+  .charm-product .charm-story blockquote { font-size: 17px; margin-top: 18px; }
+  .charm-product .charm-eyebrow { display: none; }
+  .charm-product .charm-questions { order: 1; padding: 36px 20px; }
+  .charm-product .charm-questions > div:first-child h2, .charm-product .charm-questions .charm-text-link { display: none; }
+  .charm-product .charm-faq { margin-top: 18px; }
+  .charm-product .charm-faq summary { font-size: 13px; padding: 18px 0; }
+  .charm-product .charm-faq details > p { font-size: 12.5px; }
+  .charm-product .charm-wear-section { order: 2; display: flex; flex-direction: column; gap: 24px; padding-top: 20px; }
+  .charm-product .charm-wear-section > div { display: contents; }
+  .charm-product .charm-wear-section .bag-rule { order: 0; align-self: stretch; }
+  .charm-product .charm-wear-section > img { order: 1; width: calc(100% - 20px); align-self: flex-start; }
+  .charm-product .charm-wear-section h2 { display: none; }
+  .charm-product .charm-wear-section ol { order: 2; width: 100%; }
+  .charm-product .charm-wear-section li { font-size: 13px; }
+  .charm-product .charm-style-tip { order: 3; font-size: 16px; margin: 0; }
+  .charm-product .charm-market { order: 3; width: 100%; padding-block: 36px; }
+  .charm-product .charm-market-copy { font-size: 13px; margin-bottom: 24px; }
+  .charm-product .charm-market-grid { display: flex; }
+  .charm-product .charm-market-grid a { flex: 0 0 108px; scroll-snap-align: start; font-size: 9px; }
+  .charm-product .charm-gestures { order: 4; }
+  .charm-product .charm-specs { order: 5; padding-top: 0; width: 100%; }
+  .charm-product .charm-guarantees { order: 6; padding-top: 0; width: 100%; }
+  .charm-product .charm-guarantees > div { grid-template-columns: 1fr; }
+  .charm-product .charm-guarantees article { padding: 24px 20px; }
+  .charm-product .charm-sticky-name { display: none; }
+  .charm-product #pFinishOpts .chip { gap: 6px 12px; flex-wrap: wrap; }
+  .charm-product #mobileProductBarName { flex: 0 0 112px; }
+  .charm-product #mobileProductBarName small { font-size: 8px; letter-spacing: .08em; }
+  .charm-product #mobileProductAdd { padding-inline: 12px; }
+  .charm-product #similarRail.yza-swiper--fallback .swiper-wrapper { gap: 16px; }
+  .charm-product #similarRail.yza-swiper--fallback .swiper-slide { flex-basis: 72%; }
+}

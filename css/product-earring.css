@@ -1,0 +1,132 @@
+/* Boucles mockup, on white. Shared footer remains outside this scope. */
+.earring-product { position: relative; overflow-x: clip; }
+.earring-product .skip-link:not(:focus) { left: 0; transform: translateY(-150%); }
+.earring-product :is(#productRoot,#mobileProductBar) { --bag-paper: #fff; }
+.earring-product .header .nav-item > a[href='/collections/bijoux'] { text-decoration: underline; text-underline-offset: 6px; }
+.earring-product .product--cg { grid-template-columns: minmax(0,1fr) 620px; gap: 56px; padding: 64px 0 96px; align-items: stretch; border-bottom: 1px solid var(--bag-line); }
+.earring-product .product--cg .product-info { grid-column: 1; grid-row: 1; padding: 80px 0 0 64px; max-width: 624px; }
+.earring-product .product--cg .gallery { display: block; grid-column: 2; grid-row: 1; order: 0; position: relative; inset: auto; }
+.earring-product .product--cg .gallery__main { height: auto; min-height: 0; aspect-ratio: 3/4; border-radius: 50% 50% 0 0 / 14% 14% 0 0; background: #fff; }
+.earring-product .product--cg .gallery__main img { object-fit: contain; object-position: center; }
+.earring-product .product--cg .gallery__main::before { display: none; }
+.earring-product .product--cg .gallery__thumbs:not([hidden]) { display: flex; }
+@media (min-width:861px) {
+  .earring-product .product--cg .gallery__thumbs { flex-direction: row; width: 100%; max-height: none; gap: 12px; margin: 20px 0 0; overflow-x: auto; overflow-y: hidden; padding-bottom: 6px; }
+  .earring-product .product--cg .gallery__thumb { flex: 0 0 62px; height: 84px; }
+}
+.earring-product .product--cg #pName { font-size: clamp(42px,4.2vw,60px); line-height: 1.02; letter-spacing: -.02em; max-width: 12ch; margin: 26px 0 0; }
+.earring-product .product--cg #pPrice { font-size: 22px; white-space: nowrap; }
+.earring-product .bag-price-row { margin-top: 24px; padding-bottom: 20px; }
+.earring-product .product--cg #pShort { font-size: 15px; line-height: 1.8; max-width: 46ch; margin-top: 18px; }
+.earring-product :is(#productStory,#accordion,#pBundle,.product-rail-section,#pSize,#pColorWrap,#pVariants,#pFinish) { display: none !important; }
+.earring-product #pScarcity:not([hidden]) { display: block; font: 400 11px/1.6 var(--font-body); margin: 16px 0 0; }
+.earring-product .earring-label { display: flex; justify-content: space-between; font: 400 10px/1.5 var(--font-body); letter-spacing: .2em; text-transform: uppercase; color: var(--bag-muted); margin: 0 0 4px; }
+.earring-product .earring-pair-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--bag-line); }
+.earring-product .earring-pair-list li { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--bag-line); padding: 13px 0; font: 400 13px/1.5 var(--font-body); }
+.earring-product .earring-pair-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: #819750; flex-shrink: 0; }
+.earring-product .earring-pair-list small { margin-left: auto; color: var(--bag-muted); font-size: 11px; text-align: end; }
+.earring-product .earring-box { margin-top: 28px; }
+.earring-product .earring-box p { display: flex; align-items: baseline; gap: 14px; border-block: 1px solid var(--bag-line); padding: 14px; margin: 0; font: 400 12px/1.5 var(--font-body); }
+.earring-product .earring-box p:first-of-type { border-left: 2px solid var(--bag-ink); }
+.earring-product .earring-box strong { font-weight: 400; letter-spacing: .12em; }
+.earring-product .earring-box p span:last-child { color: var(--bag-muted); font-size: 11px; }
+.earring-product .earring-box p.earring-gift-note { border-top: 0; }
+.earring-product #earringProvenance dd { font-size: 11px; }
+.earring-product #earringEditorial h2 { font: 200 40px/1.1 'Fraunces',Georgia,serif; letter-spacing: -.015em; margin: 26px 0; text-transform: none; }
+.earring-product #earringEditorial p:not(.bag-rule) { font: 400 15px/1.85 var(--font-body); color: #4a4a4a; margin: 24px 0; }
+.earring-product .earring-story { max-width: 1100px; text-align: center; padding-block: 110px; }
+.earring-product .earring-story .bag-rule { justify-content: center; }
+.earring-product .earring-story .bag-rule::after { display: none; }
+.earring-product .earring-story .bag-motif { max-width: 300px; margin: 0 auto 30px; }
+.earring-product #earringEditorial .earring-story h2 { font-size: 56px; max-width: 20ch; margin-inline: auto; }
+.earring-product .earring-story > p:not(.bag-rule) { max-width: 64ch; margin-inline: auto !important; }
+.earring-product .earring-story blockquote { font: italic 300 23px/1.5 'Fraunces',Georgia,serif; max-width: 44ch; padding: 0; border: 0; margin: 28px auto 0; }
+.earring-product .earring-making { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,480px); gap: 100px; align-items: center; padding-top: 0; }
+.earring-product .earring-making h2 { max-width: 18ch; }
+.earring-product .earring-making > img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: contain; background: #fff; }
+.earring-product .earring-signs { display: flex; gap: 38px; align-items: center; margin-top: 30px; }
+.earring-product .earring-signs img { width: 30px; height: 30px; object-fit: contain; opacity: .5; }
+.earring-product .earring-gestures { padding-top: 0; }
+.earring-product .earring-gestures .bag-gestures { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.earring-product #earringEditorial .bag-gestures p { font-size: 13px; margin: 14px 0 0; }
+.earring-product .earring-market { padding-top: 0; }
+.earring-product .earring-market-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 32px; }
+.earring-product .earring-market-head .bag-rule { flex: 1; }
+.earring-product .earring-market-head a, .earring-product .earring-questions > div > a { font: 400 10px/1.5 var(--font-body); letter-spacing: .15em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 5px; }
+.earring-product .earring-market-row { display: flex; overflow-x: auto; gap: 32px; scrollbar-width: none; scroll-snap-type: x proximity; overscroll-behavior-x: contain; cursor: grab; user-select: none; padding-bottom: 12px; }
+.earring-product .earring-market-row::-webkit-scrollbar { display: none; }
+.earring-product .earring-market-row.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.earring-product .earring-market-row > a { flex: 0 0 calc((100% - 96px)/4); min-width: 0; scroll-snap-align: start; }
+.earring-product .earring-market-row img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; padding: 9%; border: 1px solid var(--bag-line); background: #fff; }
+.earring-product .earring-market-row h3 { font: 400 11px/1.6 var(--font-body); letter-spacing: .1em; text-transform: uppercase; margin: 16px 0 6px; }
+.earring-product .earring-market-row > a > span { font: 300 15px/1.5 var(--font-body); }
+.earring-product .earring-questions { padding-top: 0; }
+.earring-product .earring-questions details { border-top: 1px solid var(--bag-line); }
+.earring-product .earring-questions details:last-child { border-bottom: 1px solid var(--bag-line); }
+.earring-product .earring-questions summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; cursor: pointer; font: 400 14px/1.6 var(--font-body); }
+.earring-product .earring-questions summary::-webkit-details-marker { display: none; }
+.earring-product .earring-questions summary span::after { content: '+'; font-size: 20px; font-weight: 300; }
+.earring-product .earring-questions details[open] summary span::after { content: '−'; }
+.earring-product #earringEditorial .earring-questions details p { margin-top: 0; font-size: 13px; }
+.earring-product .earring-services { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 48px; padding-top: 0; }
+.earring-product .earring-services article { border-top: 1px solid var(--bag-line); padding-top: 28px; }
+.earring-product .earring-services img { width: 20px; height: 20px; opacity: .5; }
+.earring-product #earringEditorial .earring-services h2 { font-size: 24px; margin: 18px 0 12px; }
+.earring-product #earringEditorial .earring-services p { font-size: 13px; margin: 0; }
+.earring-product #mobileProductBar:not([hidden]) { display: flex; }
+.earring-product #mobileProductBar[hidden] { display: none; }
+.earring-product #mobileProductBarName { flex: 1; }
+.earring-product .earring-sticky-name { display: inline-block; margin-right: 24px; font-size: 14px; }
+.earring-product #mobileProductAdd { max-width: 350px; }
+@media (max-width:1250px) and (min-width:861px) {
+  .earring-product .product--cg { grid-template-columns: minmax(0,1fr) 48%; gap: 32px; }
+  .earring-product .product--cg .product-info { padding: 56px 0 0 32px; }
+  .earring-product .earring-making { gap: 48px; }
+}
+@media (min-width:861px) and (max-width:1150px) {
+  .earring-product .header__inner { height: 88px; min-height: 88px; }
+  .earring-product .header .logo__img { height: 44px; }
+  .earring-product .header .nav { display: none; }
+  .earring-product .bag-menu-slot { display: block; grid-column: 1; grid-row: 1; }
+  .earring-product .bag-menu-slot #burger { display: inline-flex; }
+}
+@media (max-width:860px) {
+  .earring-product .product--cg { display: flex; flex-direction: column; gap: 0; padding: 0 0 32px; border: 0; }
+  .earring-product .product--cg .gallery { order: -1; width: 100%; }
+  .earring-product .product--cg .gallery__main { display: none; }
+  .earring-product .bag-mobile-slide { aspect-ratio: 3/4; background: #fff; }
+  .earring-product .bag-mobile-slide img { object-fit: contain; }
+  .earring-product .product--cg .product-info { padding: 28px 20px 0; max-width: none; }
+  .earring-product .product--cg #pName { font-size: 33px; line-height: 1.06; max-width: 18ch; margin-top: 20px; }
+  .earring-product #earringCollection .bag-rule { font-size: 8px; letter-spacing: .15em; }
+  .earring-product .bag-price-row { margin-top: 16px; padding-bottom: 16px; padding-right: 54px; }
+  .earring-product .product--cg #pShort { font-size: 13px; line-height: 1.75; max-width: none; }
+  .earring-product .earring-pair-list li { gap: 8px; font-size: 12px; }
+  .earring-product .earring-pair-list small { font-size: 10px; max-width: 42%; }
+  .earring-product .earring-box p { flex-wrap: wrap; gap: 4px 12px; }
+  .earring-product #earringProvenance div { padding: 12px 7px; }
+  .earring-product #earringProvenance dt { font-size: 8px; letter-spacing: .1em; }
+  .earring-product #earringProvenance dd { font-size: 10px; }
+  .earring-product .earring-story { padding: 32px 20px 48px; text-align: left; }
+  .earring-product .earring-story .bag-rule { justify-content: flex-start; }
+  .earring-product .earring-story .bag-motif { margin-left: 0; }
+  .earring-product #earringEditorial h2, .earring-product #earringEditorial .earring-story h2 { font-size: 29px; line-height: 1.15; max-width: 22ch; margin: 20px 0; }
+  .earring-product #earringEditorial p:not(.bag-rule) { font-size: 13px; line-height: 1.75; }
+  .earring-product .earring-story blockquote { font-size: 18px; margin-top: 22px; }
+  .earring-product .earring-making { display: flex; flex-direction: column; gap: 24px; align-items: stretch; padding-top: 0; }
+  .earring-product .earring-making > img { max-height: 460px; }
+  .earring-product .earring-gestures .bag-gestures { grid-template-columns: 1fr; }
+  .earring-product .earring-gestures .bag-gestures article { border-right: 0; border-bottom: 1px solid var(--bag-line); padding: 24px 0; }
+  .earring-product .earring-gestures .bag-gestures article:last-child { border-bottom: 0; }
+  .earring-product .earring-market-head { align-items: flex-start; gap: 12px; }
+  .earring-product .earring-market-head .bag-rule { font-size: 8px; letter-spacing: .14em; }
+  .earring-product .earring-market-head a { font-size: 8px; }
+  .earring-product .earring-market-row { gap: 18px; }
+  .earring-product .earring-market-row > a { flex-basis: 150px; }
+  .earring-product .earring-market-row h3 { font-size: 10px; }
+  .earring-product .earring-services { grid-template-columns: 1fr; gap: 30px; }
+  .earring-product .earring-sticky-name { display: none; }
+  .earring-product #mobileProductBarName { flex: 0 1 38%; }
+  .earring-product #mobileProductBarName small { font-size: 8px; letter-spacing: .06em; }
+  .earring-product #mobileProductAdd { padding: 16px 10px; letter-spacing: .12em; }
+}

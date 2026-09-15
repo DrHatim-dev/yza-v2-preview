@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<base href="/yza-v2-preview/"><meta name="robots" content="noindex,nofollow"><script src="/yza-v2-preview/preview.js"></script>
+<link rel="stylesheet" href="/yza-v2-preview/css/motion-tokens.css?v=20260910-motion">
+ <meta charset="UTF-8" />
+  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>B2B Wholesale - YZA</title>
+ <meta name="description" content="Programme wholesale YZA SS26/27 : séries courtes faites main à Marrakech. Templates de commande prêts à l'emploi, présentoir et kit offerts. Demandez votre devis revendeur." />
+ <link rel="canonical" href="/yza-v2-preview/grossistes" />
+ <meta property="og:title" content="B2B Wholesale - YZA" />
+ <meta property="og:description" content="Séries courtes, atelier de femmes à Guéliz. Présentoir et kit marketing offerts. Demandez votre devis revendeur." />
+ <meta property="og:image" content="https://yza-shop.com/assets/products/la-sculpture/sculpture-deep-violet.jpg" />
+ <meta name="twitter:card" content="summary_large_image" />
+ <meta name="theme-color" content="#ffffff" />
+ <link rel="icon" href="/yza-v2-preview/favicon.ico?v=20260703c" sizes="any">
+ <link rel="icon" type="image/png" href="/yza-v2-preview/assets/brand/yza-favicon.png?v=20260703c">
+ <link rel="apple-touch-icon" href="/yza-v2-preview/assets/brand/yza-apple-touch.png?v=20260703c">
+ <link rel="manifest" href="/yza-v2-preview/site.webmanifest">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,400..600&family=Fraunces:ital,opsz,wght@0,9..144,200..600;1,9..144,200..600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/tokens.css?v=20260910-motion" />
+ <link rel="stylesheet" href="css/styles.css?v=20260910-motion" />
+ <style>
+ .b2b-wrap { max-width: 1100px; margin-inline: auto; }
+ .b2b-section { padding-block: clamp(2.5rem, 5vw, var(--space-16)); }
+ .b2b-eyebrow { font-family: var(--font-display); color: var(--color-accent-text); font-size: var(--fs-xs); font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; }
+ .b2b-h2 { font-family: var(--font-display); font-size: var(--fs-2xl); color: var(--color-accent); margin: var(--space-2) 0 var(--space-3); }
+ .b2b-lead { color: var(--color-muted); max-width: 62ch; }
+ .b2b-offer { background: var(--paper-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, var(--space-12)); display: grid; gap: var(--space-6); }
+ .b2b-offer__stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3) var(--space-6); }
+ .b2b-offer__item { display: grid; grid-template-columns: 2.6rem 1fr; gap: var(--space-3); align-items: start; font-size: var(--fs-sm); }
+ .b2b-ico { width: 2.3rem; height: 2.3rem; object-fit: contain; display: block; }
+ .b2b-offer__item .b2b-ico { margin-top: 0.1rem; }
+ .b2b-banner { max-width: 1100px; margin: 0 auto var(--space-4); overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--color-border); }
+ .b2b-banner img { width: 100%; height: clamp(220px, 32vw, 400px); object-fit: cover; display: block; }
+ .b2b-banner figcaption { font-size: var(--fs-xs); color: var(--color-muted); text-transform: uppercase; letter-spacing: 0; padding: var(--space-3) var(--space-4); background: var(--paper-card); }
+ .b2b-offer__item strong { font-weight: 600; }
+ .b2b-templates { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+ .b2b-template { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); display: grid; gap: var(--space-3); align-content: start; background: var(--color-bg); }
+ .b2b-template h3 { font-family: var(--font-display); font-size: var(--fs-lg); }
+ .b2b-template p { color: var(--color-muted); font-size: var(--fs-sm); }
+ .b2b-template ul { list-style: none; display: grid; gap: var(--space-1); font-size: var(--fs-xs); color: var(--color-muted); }
+ .b2b-template button { margin-top: var(--space-2); }
+ .b2b-templates--4 { grid-template-columns: repeat(4, 1fr); }
+ @media (max-width: 1024px) { .b2b-templates--4 { grid-template-columns: repeat(2, 1fr); } }
+ .b2b-quote { display: grid; gap: var(--space-8); }
+ .b2b-fieldset { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: clamp(1.25rem, 3vw, var(--space-8)); display: grid; gap: var(--space-5); min-width: 0; }
+ .b2b-fieldset > legend { font-family: var(--font-display); font-size: var(--fs-lg); padding-inline: var(--space-3); color: var(--color-accent); }
+ .b2b-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4) var(--space-5); }
+ .b2b-field { display: grid; gap: var(--space-2); }
+ .b2b-field--full { grid-column: 1 / -1; }
+ .b2b-field label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--color-muted); }
+ .b2b-field input, .b2b-field textarea { font-family: var(--font-body); font-size: var(--fs-base); padding: 0.7rem 0.85rem; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg); color: var(--color-fg); width: 100%; }
+ #bCompany, #bContact, #bEmail, #bPhone, #bCountry, #bSite { min-height: 44px; }
+ .b2b-field textarea { min-height: 110px; resize: vertical; }
+ .b2b-prod-group h3 { font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin: var(--space-6) 0 var(--space-3); }
+ .b2b-prod { display: grid; grid-template-columns: 56px 1fr auto; gap: var(--space-4); align-items: center; padding-block: var(--space-3); border-bottom: 1px solid var(--color-border); }
+ .b2b-prod__thumb { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); background: var(--paper-card); }
+ .b2b-prod__info { display: grid; gap: 0.1rem; min-width: 0; }
+ .b2b-prod__name { font-size: var(--fs-sm); font-weight: 600; color: var(--color-fg); text-decoration: none; }
+ .b2b-prod__name:hover { text-decoration: underline; }
+ .b2b-prod__thumb-link { display: block; }
+ .b2b-prod__meta { font-size: var(--fs-xs); color: var(--color-muted); }
+ .b2b-prod__qty, .b2b-mqty { display: inline-flex; align-items: center; border: 1px solid var(--color-border); border-radius: 999px; overflow: hidden; }
+ .b2b-prod__qty button, .b2b-mqty button { width: 2.1rem; height: 2.1rem; font-size: 1.1rem; line-height: 1; background: none; color: var(--color-fg); }
+ .b2b-prod__qty input, .b2b-mqty input { width: 2.6rem; text-align: center; border: none; padding: 0.5rem 0; background: none; color: var(--color-fg); -moz-appearance: textfield; }
+ .b2b-prod__qty input::-webkit-outer-spin-button, .b2b-prod__qty input::-webkit-inner-spin-button, .b2b-mqty input::-webkit-outer-spin-button, .b2b-mqty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+ /* Size x colour matrix */
+ .b2b-matrix { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); display: grid; gap: var(--space-4); margin-bottom: var(--space-4); }
+ .b2b-matrix__head { display: flex; gap: var(--space-4); align-items: center; }
+ .b2b-matrix__head img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius); background: var(--paper-card); }
+ .b2b-matrix__head h4 { font-family: var(--font-display); font-size: var(--fs-lg); }
+ .b2b-matrix__head span { font-size: var(--fs-xs); color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+ .b2b-mtable { display: grid; gap: var(--space-2); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+ .b2b-mtable::-webkit-scrollbar { display: none; }
+ .b2b-summary { min-width: 0; }
+ .b2b-mrow { display: grid; grid-template-columns: 8rem repeat(3, 1fr); gap: var(--space-2); align-items: center; }
+ .b2b-mrow--head span { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-muted); text-align: center; }
+ .b2b-mrow__color { font-size: var(--fs-sm); font-weight: 600; }
+ .b2b-mcell { display: flex; justify-content: center; }
+ .b2b-msize { display: none; }
+ .b2b-mcell--empty { color: var(--color-muted); opacity: 0.45; }
+ .b2b-summary { position: sticky; bottom: 0; background: var(--color-bg); border-top: 1px solid var(--color-border); padding: var(--space-4) 0; display: grid; gap: var(--space-2); }
+ .b2b-summary__top { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between; }
+ .b2b-summary__count strong { font-family: var(--font-display); font-size: var(--fs-lg); color: var(--color-accent); }
+ .b2b-status { font-size: var(--fs-sm); }
+ .b2b-status--warn { color: var(--brand-orange); font-weight: 600; }
+ .b2b-status--ok { color: var(--color-muted); }
+ .b2b-status--bonus { color: var(--brand-olive); font-weight: 700; }
+ .b2b-quote__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+ .btn:disabled { opacity: 0.4; pointer-events: none; }
+ .b2b-moq-note { color: var(--color-muted); font-size: var(--fs-sm); margin-top: var(--space-2); }
+ .b2b-moq-note b { color: var(--color-fg); }
+ .b2b-guarantees { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+ .b2b-guarantee { display: grid; gap: var(--space-2); }
+ .b2b-guarantee .b2b-ico { width: 2.7rem; height: 2.7rem; }
+ .b2b-guarantee h4 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.04em; }
+ .b2b-guarantee p { font-size: var(--fs-sm); color: var(--color-muted); }
+ .b2b-stockists { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+ .b2b-stockist { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-5); }
+ .b2b-stockist strong { display: block; font-size: var(--fs-md); font-family: var(--font-display); }
+ .b2b-stockist span { font-size: var(--fs-xs); color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+ .b2b-presence { margin-top: var(--space-6); color: var(--color-muted); font-size: var(--fs-sm); }
+ .b2b-presence b { color: var(--color-fg); font-weight: 600; }
+ @media (max-width: 860px) { .b2b-templates, .b2b-guarantees, .b2b-stockists { grid-template-columns: 1fr; } .b2b-offer__stack, .b2b-grid { grid-template-columns: 1fr; } .b2b-guarantees { grid-template-columns: repeat(2, 1fr); } }
+ @media (max-width: 520px) {
+ .b2b-prod { grid-template-columns: 44px 1fr auto; }
+ .b2b-prod__thumb { width: 44px; height: 44px; }
+ .b2b-matrix { padding: var(--space-3); }
+ .b2b-matrix__head img { width: 52px; height: 52px; }
+ .b2b-mtable { overflow: visible; }
+ .b2b-mrow { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); padding-block: var(--space-2); border-bottom: 1px solid var(--color-border); }
+ .b2b-mrow:last-child { border-bottom: 0; }
+ .b2b-mrow--head { display: none; }
+ .b2b-mrow__color { font-size: var(--fs-sm); }
+ .b2b-mcell { display: grid; grid-template-columns: minmax(44px, 1fr) auto; align-items: center; gap: var(--space-2); justify-content: stretch; }
+ .b2b-msize { display: block; font-size: var(--fs-xs); color: var(--color-muted); text-align: start; }
+ .b2b-prod__qty button, .b2b-mqty button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; font-size: 1rem; }
+ .b2b-prod__qty input, .b2b-mqty input { width: 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; }
+ .b2b-summary__top { gap: var(--space-2); }
+ .b2b-quote__actions { width: 100%; }
+ .b2b-quote__actions .btn { flex: 1 1 auto; }
+ .b2b-show-actions { width: 100%; min-width: 0; }
+ #b2bSalonBtn { max-width: 100%; white-space: normal; }
+ #b2bTradeShowNames { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+ }
+ @media (max-width: 360px) {
+ .b2b-prod { grid-template-columns: 44px minmax(0, 1fr); }
+ .b2b-prod__thumb-link { grid-column: 1; grid-row: 1; }
+ .b2b-prod__info { grid-column: 2; grid-row: 1; }
+ .b2b-prod__qty { grid-column: 1 / -1; grid-row: 2; justify-self: end; }
+ }
+ </style>
+ <!-- ===== AMBIANCE — expressive tweaks + scroll chrome (b2b only) ===== -->
+ <style id="yza-amb-style">
+ /* Neutralise any tone left over in a visitor's localStorage from the old tool. */
+ .yza-amb-fab, .yza-amb-panel { display: none !important; }
+ body[data-page="b2b"] .header,
+ body[data-page="b2b"] .announcement,
+ body[data-page="b2b"] .b2b-section,
+ body[data-page="b2b"] .b2b-h2,
+ body[data-page="b2b"] .b2b-offer,
+ body[data-page="b2b"] .b2b-template,
+ body[data-page="b2b"] .b2b-fieldset,
+ body[data-page="b2b"] .b2b-matrix,
+ body[data-page="b2b"] .b2b-stockist,
+ body[data-page="b2b"] .b2b-banner,
+ body[data-page="b2b"] .btn,
+ body[data-page="b2b"] .b2b-field input,
+ body[data-page="b2b"] .b2b-field textarea {
+   transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear;
+ }
+ html[data-accent="terre"] body[data-page="b2b"] { --color-accent:#c2592b; --color-accent-text:#b0521f; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-status--warn { color:#c2592b; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-status--bonus { color:#7c5a20; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-section .btn--solid { background:#c2592b; border-color:#c2592b; color:#fff; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-section .btn--solid:hover { background:transparent; color:#c2592b; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-banner { border-color:rgba(194,89,43,.32); }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-h2 { color:#c2592b; }
+ html[data-accent="terre"] body[data-page="b2b"] .b2b-eyebrow { color:#b0521f; }
+ html[data-accent="or"] body[data-page="b2b"] { --color-accent:#9a7a28; --color-accent-text:#876a1d; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-status--warn { color:#9a7a28; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-status--bonus { color:#876a1d; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-section .btn--solid { background:#9a7a28; border-color:#9a7a28; color:#fff; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-section .btn--solid:hover { background:transparent; color:#876a1d; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-banner { border-color:rgba(154,122,40,.32); }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-h2 { color:#9a7a28; }
+ html[data-accent="or"] body[data-page="b2b"] .b2b-eyebrow { color:#876a1d; }
+ html[data-rythme="aere"] body[data-page="b2b"] .b2b-section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+ html[data-rythme="aere"] body[data-page="b2b"] .b2b-h2 { font-size: clamp(2.6rem, 5.5vw, 3.8rem); letter-spacing:-0.012em; line-height:1.02; }
+ html[data-rythme="aere"] body[data-page="b2b"] .b2b-eyebrow { letter-spacing: 0.26em; }
+ html[data-rythme="aere"] body[data-page="b2b"] .b2b-lead { font-size: var(--fs-md); max-width: 54ch; }
+ html[data-rythme="aere"] body[data-page="b2b"] .b2b-offer { padding: clamp(2rem, 5vw, 3.5rem); gap: var(--space-8); }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-section { padding-block: clamp(1.25rem, 2.6vw, 2rem); }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-h2 { font-size: var(--fs-xl); margin-block: var(--space-1) var(--space-2); }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-eyebrow { letter-spacing: 0.05em; }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-lead { font-size: var(--fs-sm); }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-offer { padding: var(--space-6); gap: var(--space-3); }
+ html[data-rythme="dense"] body[data-page="b2b"] .b2b-templates { gap: var(--space-3); }
+ html[data-matiere="atelier"] body[data-page="b2b"] { --radius:14px; --radius-lg:18px; --color-border: rgba(46,46,46,.14); }
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-offer,
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-template,
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-fieldset,
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-matrix,
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-stockist {
+   background:#f6f2ea; border-color: rgba(46,46,46,.08);
+   box-shadow: 0 22px 48px -34px rgba(58,38,18,.55);
+ }
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-banner { box-shadow: 0 22px 48px -34px rgba(58,38,18,.55); }
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-template { background:#faf7f1; }
+ html[data-matiere="atelier"] body[data-page="b2b"] .btn { border-radius: 999px; }
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-field input,
+ html[data-matiere="atelier"] body[data-page="b2b"] .b2b-field textarea { border-radius: 12px; }
+ body[data-page="b2b"] .announcement { position: sticky; top: 0; z-index: 51; }
+ body[data-page="b2b"].is-scrolled .announcement { max-height: 4rem; opacity: 1; border-bottom-color: var(--color-border); }
+ body[data-page="b2b"] .header { top: var(--yza-ann-h, 40px); }
+ body[data-page="b2b"].is-scroll-down .header,
+ body[data-page="b2b"].b2b-scrolling-down .header { background: var(--color-bg); border-bottom-color: var(--color-border); box-shadow: 0 1px 20px -12px rgba(0, 0, 0, 0.18); }
+ .yza-amb-fab {
+   position: fixed; left: 20px; bottom: 20px; z-index: 1200;
+   display: inline-flex; align-items: center; gap: .5rem;
+   font-family: var(--font-display); font-size: .72rem; font-weight: 500;
+   text-transform: uppercase; letter-spacing: .14em; color: var(--color-fg);
+   background: #fff; border: 1px solid var(--color-border-strong);
+   padding: .62rem .95rem; cursor: pointer; border-radius: 999px;
+   box-shadow: 0 14px 34px -20px rgba(0,0,0,.4);
+   transition: transform var(--motion-move) var(--ease-out-quint);
+ }
+ .yza-amb-fab:hover { transform: translateY(-1px); box-shadow: 0 18px 40px -20px rgba(0,0,0,.5); }
+ .yza-amb-star { font-size: .85rem; line-height: 1; }
+ .yza-amb-panel {
+   position: fixed; left: 20px; bottom: 74px; z-index: 1200; width: 268px;
+   background: #fff; border: 1px solid var(--color-border-strong);
+   padding: var(--space-5); display: grid; gap: var(--space-5);
+   box-shadow: 0 30px 70px -34px rgba(0,0,0,.5);
+   opacity: 0; transform: translateY(8px) scale(.98); transform-origin: left bottom;
+   pointer-events: none; transition: transform var(--motion-move) var(--ease-out-quint), opacity var(--motion-fade) linear;
+ }
+ .yza-amb-panel.is-open { opacity: 1; transform: none; pointer-events: auto; }
+ .yza-amb-head { display: flex; align-items: baseline; justify-content: space-between; }
+ .yza-amb-title { font-family: var(--font-display); font-size: var(--fs-md); letter-spacing: .02em; }
+ .yza-amb-reset { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; color: var(--color-muted); background: none; border: 0; cursor: pointer; padding: 0; }
+ .yza-amb-reset:hover { color: var(--color-fg); }
+ .yza-amb-group { display: grid; gap: .55rem; }
+ .yza-amb-label { font-size: .62rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; color: var(--color-muted); }
+ .yza-amb-seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--color-border-strong); }
+ .yza-amb-seg button {
+   font-family: var(--font-display); font-size: .68rem; letter-spacing: .04em;
+   padding: .5rem .3rem; background: #fff; color: var(--color-muted); cursor: pointer;
+   border: 0; border-left: 1px solid var(--color-border); transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear;
+ }
+ .yza-amb-seg button:first-child { border-left: 0; }
+ .yza-amb-seg button[aria-pressed="true"] { background: var(--color-fg); color: #fff; }
+ .yza-amb-note { font-size: .64rem; color: var(--color-muted); line-height: 1.5; }
+ @media (max-width: 540px) { .yza-amb-panel { left: 12px; right: 12px; width: auto; } .yza-amb-fab { left: 12px; } }
+ @media print { .yza-amb-fab, .yza-amb-panel { display: none !important; } }
+ </style>
+<style id="yza-chrome-reserve">/* Reserve the final shared header and announcement before chrome.js mounts them. */html:not(.yza-chrome-in) body::before{content:"";display:block;height:calc(var(--header-h,72px) + var(--motion-announcement-reserve,40px))}</style>
+<link rel="preload" as="image" href="assets/b2b/maison/bag-stack.jpg">
+<link rel="stylesheet" href="css/wholesale-maison.css?v=20260910-motion">
+<link rel="stylesheet" href="/yza-v2-preview/css/model-stories.css?v=20260910-motion" />
+<link rel="stylesheet" href="/yza-v2-preview/css/site-header-maison.css?v=20260910-motion">
+<link rel="stylesheet" href="/yza-v2-preview/css/chat-maison.css?v=20260910-motion">
+<script defer src="/yza-v2-preview/js/chat-maison.js?v=20260909-chat-maison"></script>
+<script src="/yza-v2-preview/js/motion.js?v=20260910-motion"></script>
+<link id="cartMaisonCSS" rel="stylesheet" href="/yza-v2-preview/css/cart-maison.css?v=20260910-motion">
+</head>
+<body data-page="b2b" class="wholesale-maison">
+<main class="wholesale-main" id="main" tabindex="-1"><section class="wholesale-hero"><div class="wholesale-hero__copy"><p class="wholesale-hero__season"><span>Wholesale SS26/27</span><i aria-hidden="true"></i><span><span data-lang="fr">Depuis 2022</span><span data-lang="en" hidden>Since 2022</span><span data-lang="es" hidden>Desde 2022</span><span data-lang="tr" hidden>2022’den beri</span><span data-lang="ar" hidden>منذ 2022</span></span></p><h1><span data-lang="fr">Vendre YZA dans<br>votre boutique.</span><span data-lang="en" hidden>Bring YZA into<br>your boutique.</span><span data-lang="es" hidden>Vende YZA en<br>tu boutique.</span><span data-lang="tr" hidden>YZA’yı butiğinize<br>taşıyın.</span><span data-lang="ar" hidden>YZA في<br>متجرك.</span></h1><p class="wholesale-hero__lead"><span data-lang="fr">Des séries limitées, faites à la main à Guéliz. Composez votre sélection ici même — tailles, couleurs, quantités — puis envoyez. Nous revenons avec le lookbook, la line sheet et vos prix B2B.</span><span data-lang="en" hidden>Limited runs, handmade in Guéliz. Build your selection here — sizes, colours and quantities — then send it to us. We’ll reply with the lookbook, line sheet and your B2B prices.</span><span data-lang="es" hidden>Series limitadas, hechas a mano en Guéliz. Compón tu selección aquí — tallas, colores y cantidades — y envíanosla. Te responderemos con el lookbook, la line sheet y tus precios B2B.</span><span data-lang="tr" hidden>Guéliz’de el yapımı sınırlı seriler. Beden, renk ve adetleri burada seçip bize gönderin. Lookbook, ürün listesi ve B2B fiyatlarınızla yanıtlayalım.</span><span data-lang="ar" hidden>إصدارات محدودة مصنوعة يدويًا في كليز. اختاري المقاسات والألوان والكميات هنا ثم أرسليها. نعود إليك باللوك بوك وقائمة المنتجات وأسعار الجملة.</span></p><div class="wholesale-actions"><a class="wholesale-button wholesale-button--solid" href="/yza-v2-preview/grossistes#b2bComposer"><span data-lang="fr">Composer ma commande</span><span data-lang="en" hidden>Build my order</span><span data-lang="es" hidden>Componer mi pedido</span><span data-lang="tr" hidden>Siparişimi oluştur</span><span data-lang="ar" hidden>أنشئي طلبك</span></a><a class="wholesale-button" href="https://wa.me/212693296630?text=Bonjour%20YZA%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20ma%20boutique."><span data-lang="fr">Prendre rendez-vous</span><span data-lang="en" hidden>Book an appointment</span><span data-lang="es" hidden>Reservar una cita</span><span data-lang="tr" hidden>Randevu alın</span><span data-lang="ar" hidden>احجزي موعدًا</span></a></div></div><img src="assets/b2b/maison/bag-stack.jpg" alt="Paniers La Sculpture empilés, en violet" decoding="async" width="1200" height="1600" fetchpriority="high"></section><nav class="wholesale-steps" aria-label="Commande revendeur"><a href="/yza-v2-preview/grossistes#b2bPresets"><span class="wholesale-step-number">01</span><span><strong><span data-lang="fr">Partez d’une sélection type</span><span data-lang="en" hidden>Start with a preset</span><span data-lang="es" hidden>Empieza con una selección</span><span data-lang="tr" hidden>Hazır seçimle başlayın</span><span data-lang="ar" hidden>ابدئي بتشكيلة جاهزة</span></strong><span><span data-lang="fr">Découverte, best-sellers ou collection complète — un clic remplit la feuille.</span><span data-lang="en" hidden>Discovery, best-sellers or the full collection — one click fills the sheet.</span><span data-lang="es" hidden>Descubrimiento, best-sellers o colección completa: un clic rellena la hoja.</span><span data-lang="tr" hidden>Keşif, çok satanlar veya tüm koleksiyon — tek tıklamayla listeyi doldurun.</span><span data-lang="ar" hidden>اكتشاف أو الأكثر مبيعًا أو المجموعة الكاملة — بنقرة واحدة تمتلئ القائمة.</span></span></span></a><a href="/yza-v2-preview/grossistes#b2bSheet"><span class="wholesale-step-number">02</span><span><strong><span data-lang="fr">Ajustez pièce par pièce</span><span data-lang="en" hidden>Adjust piece by piece</span><span data-lang="es" hidden>Ajusta pieza por pieza</span><span data-lang="tr" hidden>Parça parça düzenleyin</span><span data-lang="ar" hidden>عدّلي قطعة بقطعة</span></strong><span><span data-lang="fr">Quantités, tailles et couleurs. Votre récapitulatif se met à jour à chaque choix.</span><span data-lang="en" hidden>Quantities, sizes and colours. Your summary updates with every choice.</span><span data-lang="es" hidden>Cantidades, tallas y colores. Tu resumen se actualiza con cada elección.</span><span data-lang="tr" hidden>Adetler, bedenler ve renkler. Özetiniz her seçimde güncellenir.</span><span data-lang="ar" hidden>الكميات والمقاسات والألوان. يتحدّث ملخصك مع كل اختيار.</span></span></span></a><a href="/yza-v2-preview/grossistes#b2bBuyer"><span class="wholesale-step-number">03</span><span><strong><span data-lang="fr">Envoyez, on répond</span><span data-lang="en" hidden>Send it, we’ll reply</span><span data-lang="es" hidden>Envía y te respondemos</span><span data-lang="tr" hidden>Gönderin, yanıtlayalım</span><span data-lang="ar" hidden>أرسلي وسنردّ</span></strong><span><span data-lang="fr">Line sheet, lookbook et prix B2B par WhatsApp ou sur rendez-vous.</span><span data-lang="en" hidden>Line sheet, lookbook and B2B prices on WhatsApp or by appointment.</span><span data-lang="es" hidden>Line sheet, lookbook y precios B2B por WhatsApp o con cita.</span><span data-lang="tr" hidden>WhatsApp veya randevuyla ürün listesi, lookbook ve B2B fiyatları.</span><span data-lang="ar" hidden>قائمة المنتجات واللوك بوك وأسعار الجملة عبر واتساب أو بموعد.</span></span></span></a></nav>
+<section class="wholesale-composer wholesale-section" id="b2bComposer"><div id="b2bPresets" class="wholesale-presets"><p class="wholesale-eyebrow"><span data-lang="fr">Étape 1 · Un point de départ</span><span data-lang="en" hidden>Step 1 · A starting point</span><span data-lang="es" hidden>Paso 1 · Un punto de partida</span><span data-lang="tr" hidden>Adım 1 · Başlangıç</span><span data-lang="ar" hidden>الخطوة 1 · نقطة البداية</span></p><h2 class="sr-only"><span data-lang="fr">Composez votre commande</span><span data-lang="en" hidden>Build your order</span><span data-lang="es" hidden>Compón tu pedido</span><span data-lang="tr" hidden>Siparişinizi oluşturun</span><span data-lang="ar" hidden>أنشئي طلبك</span></h2><p class="wholesale-presets__intro"><span data-lang="fr">Trois sélections types, prêtes à envoyer. Un clic remplit la feuille de commande — ensuite, ajustez pièce par pièce.</span><span data-lang="en" hidden>Three ready-made selections. One click fills your order sheet — then adjust piece by piece.</span><span data-lang="es" hidden>Tres selecciones listas. Un clic rellena la hoja de pedido; después, ajusta pieza por pieza.</span><span data-lang="tr" hidden>Üç hazır seçim. Tek tıklamayla sipariş listesini doldurun, sonra parça parça düzenleyin.</span><span data-lang="ar" hidden>ثلاث تشكيلات جاهزة. بنقرة واحدة تمتلئ قائمة الطلب — ثم عدّلي قطعة بقطعة.</span></p><div id="b2bTemplates" class="b2b-templates"></div></div><div class="wholesale-rule"><p class="wholesale-eyebrow"><span data-lang="fr">Étape 2 · Votre sélection</span><span data-lang="en" hidden>Step 2 · Your selection</span><span data-lang="es" hidden>Paso 2 · Tu selección</span><span data-lang="tr" hidden>Adım 2 · Seçiminiz</span><span data-lang="ar" hidden>الخطوة 2 · تشكيلتك</span></p><button type="button" id="b2bReset"><span data-lang="fr">Tout remettre à zéro</span><span data-lang="en" hidden>Reset everything</span><span data-lang="es" hidden>Reiniciar todo</span><span data-lang="tr" hidden>Tümünü sıfırla</span><span data-lang="ar" hidden>صفّري الكل</span></button></div><form class="b2b-quote" id="b2bForm" novalidate><div class="wholesale-sheet" id="b2bSheet"><section class="wholesale-group" data-wholesale-group="charms"><header class="wholesale-group-head"><div><h3><span data-lang="fr">Fruit Market · Charms</span><span data-lang="en" hidden>Fruit Market · Charms</span><span data-lang="es" hidden>Fruit Market · Charms</span><span data-lang="tr" hidden>Fruit Market · Charms</span><span data-lang="ar" hidden>Fruit Market · التعليقات</span></h3><p><span data-lang="fr">Raphia crocheté main</span><span data-lang="en" hidden>Hand-crocheted raffia</span><span data-lang="es" hidden>Rafia tejida a mano</span><span data-lang="tr" hidden>El işi rafya</span><span data-lang="ar" hidden>رافيا بالكروشيه اليدوي</span></p></div><span data-group-count="charms">—</span></header><div id="grpCharms"></div></section>
+<section class="wholesale-group" data-wholesale-group="earrings"><header class="wholesale-group-head"><div><h3><span data-lang="fr">Bijoux</span><span data-lang="en" hidden>Jewellery</span><span data-lang="es" hidden>Joyas</span><span data-lang="tr" hidden>Takı</span><span data-lang="ar" hidden>مجوهرات</span></h3><p><span data-lang="fr">Boucles en raphia</span><span data-lang="en" hidden>Raffia earrings</span><span data-lang="es" hidden>Pendientes de rafia</span><span data-lang="tr" hidden>Rafya küpeler</span><span data-lang="ar" hidden>أقراط الرافيا</span></p></div><span data-group-count="earrings">—</span></header><div id="grpEarrings"></div></section>
+<section class="wholesale-group" data-wholesale-group="bags"><header class="wholesale-group-head"><div><h3><span data-lang="fr">Paniers & sacs</span><span data-lang="en" hidden>Baskets & bags</span><span data-lang="es" hidden>Cestas y bolsos</span><span data-lang="tr" hidden>Sepetler ve çantalar</span><span data-lang="ar" hidden>سلال وحقائب</span></h3><p><span data-lang="fr">Taille × couleur</span><span data-lang="en" hidden>Size × colour</span><span data-lang="es" hidden>Talla × color</span><span data-lang="tr" hidden>Beden × renk</span><span data-lang="ar" hidden>المقاس × اللون</span></p></div><span data-group-count="bags">—</span></header><div id="grpBags"></div></section>
+<section class="wholesale-group" data-wholesale-group="rtw"><header class="wholesale-group-head"><div><h3><span data-lang="fr">Prêt-à-porter Jawhara</span><span data-lang="en" hidden>Jawhara ready-to-wear</span><span data-lang="es" hidden>Prêt-à-porter Jawhara</span><span data-lang="tr" hidden>Jawhara hazır giyim</span><span data-lang="ar" hidden>ملابس جوهرة</span></h3><p><span data-lang="fr">Taille libre</span><span data-lang="en" hidden>One size</span><span data-lang="es" hidden>Talla única</span><span data-lang="tr" hidden>Tek beden</span><span data-lang="ar" hidden>مقاس حر</span></p></div><span data-group-count="rtw">—</span></header><div id="grpRtw"></div></section><fieldset class="b2b-fieldset wholesale-buyer" id="b2bBuyer">
+ <legend class="wholesale-buyer__legend"><span data-lang="fr">Votre boutique</span><span data-lang="en" hidden>Your boutique</span><span data-lang="es" hidden>Tu boutique</span><span data-lang="tr" hidden>Butiğınız</span><span data-lang="ar" hidden>متجرك</span><span class="wholesale-buyer__step"><span data-lang="fr">Étape 3 · Pour vous recontacter</span><span data-lang="en" hidden>Step 3 · How to reach you</span><span data-lang="es" hidden>Paso 3 · Para contactarte</span><span data-lang="tr" hidden>Adım 3 · Size ulaşalım</span><span data-lang="ar" hidden>الخطوة 3 · لنتواصل معك</span></span></legend>
+ <p id="b2bBuyerStatus" class="b2b-buyer-error" role="status" aria-live="polite" hidden></p>
+ <div class="b2b-grid">
+ <div class="b2b-field"><label for="bCompany"><span data-lang="fr">Boutique / société *</span><span data-lang="en" hidden>Boutique / company *</span><span data-lang="es" hidden>Boutique / empresa *</span><span data-lang="tr" hidden>Butik / şirket *</span><span data-lang="ar" hidden>البوتيك / الشركة *</span></label><input id="bCompany" name="company" type="text" autocomplete="organization" maxlength="120" required aria-describedby="b2bBuyerStatus"></div>
+ <div class="b2b-field"><label for="bContact"><span data-lang="fr">Nom du contact *</span><span data-lang="en" hidden>Contact name *</span><span data-lang="es" hidden>Nombre de contacto *</span><span data-lang="tr" hidden>İrtibat adı *</span><span data-lang="ar" hidden>اسم جهة الاتصال *</span></label><input id="bContact" name="contact" type="text" autocomplete="name" maxlength="120" required aria-describedby="b2bBuyerStatus"></div>
+ <div class="b2b-field"><label for="bEmail"><span data-lang="fr">E-mail *</span><span data-lang="en" hidden>Email *</span><span data-lang="es" hidden>E-mail *</span><span data-lang="tr" hidden>E-posta *</span><span data-lang="ar" hidden>البريد الإلكتروني *</span></label><input id="bEmail" name="email" type="email" autocomplete="email" maxlength="180" required aria-describedby="b2bBuyerStatus"></div>
+ <div class="b2b-field"><label for="bPhone"><span data-lang="fr">WhatsApp / téléphone</span><span data-lang="en" hidden>WhatsApp / phone</span><span data-lang="es" hidden>WhatsApp / teléfono</span><span data-lang="tr" hidden>WhatsApp / telefon</span><span data-lang="ar" hidden>واتساب / هاتف</span></label><input id="bPhone" name="phone" type="tel" autocomplete="tel" maxlength="50"></div>
+ <div class="b2b-field"><label for="bCountry"><span data-lang="fr">Pays / ville</span><span data-lang="en" hidden>Country / city</span><span data-lang="es" hidden>País / ciudad</span><span data-lang="tr" hidden>Ülke / şehir</span><span data-lang="ar" hidden>الدولة / المدينة</span></label><input id="bCountry" name="location" type="text" maxlength="120"></div>
+ <div class="b2b-field"><label for="bSite"><span data-lang="fr">Site / Instagram (optionnel)</span><span data-lang="en" hidden>Website / Instagram (optional)</span><span data-lang="es" hidden>Sitio web / Instagram (opcional)</span><span data-lang="tr" hidden>Web sitesi / Instagram (isteğe bağlı)</span><span data-lang="ar" hidden>الموقع / إنستغرام (اختياري)</span></label><input id="bSite" name="website" type="text" maxlength="240"></div>
+ <div class="b2b-field" aria-hidden="true" style="position:absolute;left:0;top:0;clip-path:inset(50%);width:1px;height:1px;overflow:hidden"><label for="bAddress2">Adresse 2</label><input id="bAddress2" name="address2" type="text" tabindex="-1" autocomplete="off"></div>
+ </div>
+ <div class="b2b-field b2b-field--full"><label for="bNotes"><span data-lang="fr">Un mot pour nous (délais, personnalisation…)</span><span data-lang="en" hidden>A word for us (lead times, customisation…)</span><span data-lang="es" hidden>Algo para nosotros (plazos, personalización…)</span><span data-lang="tr" hidden>Bizim için bir not (teslim süreleri, kişiselleştirme…)</span><span data-lang="ar" hidden>كلمة لنا (المهل، التخصيص…)</span></label><textarea id="bNotes" name="notes" maxlength="2000"></textarea></div>
+ </fieldset></div><aside class="b2b-summary" id="b2bSummary" aria-label="Votre commande"><div class="wholesale-summary-count"><div class="wholesale-summary-label"><p class="wholesale-eyebrow"><span data-lang="fr">Votre commande</span><span data-lang="en" hidden>Your order</span><span data-lang="es" hidden>Tu pedido</span><span data-lang="tr" hidden>Siparişiniz</span><span data-lang="ar" hidden>طلبك</span></p><span>SS26/27</span></div><div class="wholesale-summary-total"><span><strong id="b2bCount">0</strong><span><span data-lang="fr">pièces</span><span data-lang="en" hidden>pieces</span><span data-lang="es" hidden>piezas</span><span data-lang="tr" hidden>parça</span><span data-lang="ar" hidden>قطع</span></span></span><button type="button" data-summary-toggle aria-expanded="false" aria-controls="wholesaleSummaryDetails"><span data-lang="fr">Revoir et envoyer</span><span data-lang="en" hidden>Review and send</span><span data-lang="es" hidden>Revisar y enviar</span><span data-lang="tr" hidden>İncele ve gönder</span><span data-lang="ar" hidden>راجعي وأرسلي</span></button></div></div><div id="wholesaleSummaryDetails"><div class="wholesale-tiers"><div class="wholesale-tier-progress" aria-hidden="true"><span><i data-tier-progress="0"></i></span><span><i data-tier-progress="1"></i></span><span><i data-tier-progress="2"></i></span></div><p class="wholesale-eyebrow"><span data-lang="fr">Les paliers</span><span data-lang="en" hidden>Order milestones</span><span data-lang="es" hidden>Los niveles</span><span data-lang="tr" hidden>Sipariş aşamaları</span><span data-lang="ar" hidden>مراحل الطلب</span></p><div id="b2bTierRows"></div></div><div id="b2bLines" class="wholesale-lines"></div><div class="wholesale-status"><p class="b2b-status" id="b2bStatus" role="status" aria-live="polite"></p></div><div class="wholesale-summary-actions"><button type="button" class="wholesale-button wholesale-button--solid" id="b2bWhats" disabled><span data-lang="fr">Devis par WhatsApp</span><span data-lang="en" hidden>Quote on WhatsApp</span><span data-lang="es" hidden>Presupuesto por WhatsApp</span><span data-lang="tr" hidden>WhatsApp'tan fiyat teklifi</span><span data-lang="ar" hidden>عرض سعر عبر واتساب</span></button><button type="button" class="wholesale-button" id="b2bEmail" disabled><span data-lang="fr">Devis par e-mail</span><span data-lang="en" hidden>Quote by email</span><span data-lang="es" hidden>Presupuesto por e-mail</span><span data-lang="tr" hidden>E-posta ile fiyat teklifi</span><span data-lang="ar" hidden>عرض سعر عبر البريد الإلكتروني</span></button><p><span data-lang="fr">Line sheets, prix B2B et lookbooks suivent sur demande — par WhatsApp ou sur rendez-vous.</span><span data-lang="en" hidden>Line sheets, B2B prices and lookbooks are available on request — on WhatsApp or by appointment.</span><span data-lang="es" hidden>Line sheets, precios B2B y lookbooks disponibles a pedido — por WhatsApp o con cita.</span><span data-lang="tr" hidden>Ürün listeleri, B2B fiyatları ve lookbooklar talep üzerine — WhatsApp veya randevuyla.</span><span data-lang="ar" hidden>قوائم المنتجات وأسعار الجملة واللوك بوك عند الطلب — عبر واتساب أو بموعد.</span></p></div></div></aside></form></section>
+<section class="wholesale-section wholesale-offer"><div class="wholesale-rule"><p class="wholesale-eyebrow"><span data-lang="fr">Ce que vous obtenez</span><span data-lang="en" hidden>What you receive</span><span data-lang="es" hidden>Lo que obtienes</span><span data-lang="tr" hidden>Size sunduklarımız</span><span data-lang="ar" hidden>ما تحصلين عليه</span></p></div><div class="b2b-offer__stack" id="b2bOffer"></div></section>
+<section class="wholesale-section wholesale-salon" id="b2bShows">
+ <img src="assets/b2b/maison/bag-sculpture.webp" alt="La Sculpture, panier tressé main à Marrakech" decoding="async" width="1100" height="1467" loading="lazy"><div><p class="wholesale-eyebrow"><span data-lang="fr">Sur le terrain</span><span data-lang="en" hidden>On the show floor</span><span data-lang="es" hidden>En el salón</span><span data-lang="tr" hidden>Fuarda</span><span data-lang="ar" hidden>في المعرض</span></p>
+ <h2 class="b2b-h2"><span data-lang="fr">Retrouvons-nous aux salons</span><span data-lang="en" hidden>Meet us at the shows</span><span data-lang="es" hidden>Encontrémonos en los salones</span><span data-lang="tr" hidden>Fuarlarda buluşalim</span><span data-lang="ar" hidden>نلتقي في المعارض</span></h2>
+ <p class="b2b-lead" id="b2bTradeShowCopy"><span data-lang="fr">YZA participe à <b>Who's Next Paris</b> et <b>Coterie New York</b> - deux des plus grands salons de mode internationale. C'est là que tout commence pour la plupart de nos partenariats boutiques : collections au complet, prix B2B, lookbooks - tout en vrai, en un seul rendez-vous.</span><span data-lang="en" hidden>YZA shows at <b>Who's Next Paris</b> and <b>Coterie New York</b> - two of the biggest international fashion trade shows. It's where most of our boutique partnerships begin: full collections, B2B prices, lookbooks - all in person, in one meeting.</span><span data-lang="es" hidden>YZA participa en <b>Who's Next Paris</b> y <b>Coterie New York</b> - dos de los mayores salones de moda internacional. Es donde empiezan la mayoría de nuestras asociaciones con boutiques: colecciones completas, precios B2B, lookbooks - todo en persona, en una sola reunión.</span><span data-lang="tr" hidden>YZA, <b>Who's Next Paris</b> ve <b>Coterie New York</b>'ta yer alıyor - uluslararası modanın en büyük iki fuarı. Boutique ortaklıklarımızın çoğu burada başlıyor: tam koleksiyonlar, B2B fiyatları, lookbooklar - hepsi gerçek hayatta, tek bir toplantıda.</span><span data-lang="ar" hidden>YZA تشارك في <b>Who's Next Paris</b> و<b>Coterie New York</b> — من أكبر معارض الموضة الدولية. هنا تبدأ معظم شراكاتنا مع البوتيكات: تشكيلات كاملة، أسعار B2B، لوك بوكات — كل شيء وجهًا لوجه، في لقاء واحد.</span></p>
+ <div class="b2b-show-actions">
+ <button type="button" class="wholesale-button wholesale-button--solid" id="b2bSalonBtn"><span data-lang="fr">Prenons rendez-vous au salon</span><span data-lang="en" hidden>Book a meeting at the show</span><span data-lang="es" hidden>Reservemos una cita en el salón</span><span data-lang="tr" hidden>Fuarda randevu alalım</span><span data-lang="ar" hidden>لنحجز موعدًا في المعرض</span></button>
+ <span id="b2bTradeShowNames">Who's Next Paris  ·  Coterie New York</span>
+ </div>
+ </div></section>
+<section class="wholesale-section wholesale-stockists">
+ <p class="wholesale-eyebrow"><span data-lang="fr">Déjà chez elles</span><span data-lang="en" hidden>Already on their shelves</span><span data-lang="es" hidden>Ya en sus estantes</span><span data-lang="tr" hidden>Zaten onlarda</span><span data-lang="ar" hidden>موجودة عندهن بالفعل</span></p>
+ <h2 class="b2b-h2"><span data-lang="fr">Nos points de vente</span><span data-lang="en" hidden>Where to find us</span><span data-lang="es" hidden>Nuestros puntos de venta</span><span data-lang="tr" hidden>Satış noktalarımız</span><span data-lang="ar" hidden>نقاط بيعنا</span></h2>
+ <div class="b2b-stockists" id="b2bStockists"></div>
+ <p class="b2b-presence" id="b2bExportCountries">
+ <span data-lang="fr"><b>Export B2B - boutiques indépendantes depuis 2022 :</b> France · Espagne · Italie · Grèce · Afrique du Sud · États-Unis · Japon.<br>Contactez-nous pour la liste de nos boutiques partenaires en France et à l'international.</span>
+ <span data-lang="en" hidden><b>B2B Export - independent boutiques since 2022:</b> France · Spain · Italy · Greece · South Africa · USA · Japan.<br>Contact us for our full list of partner boutiques in France and internationally.</span>
+ <span data-lang="es" hidden><b>Export B2B - boutiques independientes desde 2022:</b> Francia · España · Italia · Grecia · Sudáfrica · EE.UU. · Japón.<br>Contáctanos para la lista completa de nuestras boutiques colaboradoras en Francia e internacionalmente.</span>
+ <span data-lang="tr" hidden><b>B2B Export - bağımsız butikler, 2022'den beri:</b> Fransa · İspanya · İtalya · Yunanistan · Güney Afrika · ABD · Japonya.<br>Fransa ve uluslararası ortağı butiklerimizin tam listesi için bize ulaşın.</span>
+ <span data-lang="ar" hidden><b>تصدير B2B — بوتيكات مستقلة منذ 2022:</b> فرنسا · إسبانيا · إيطاليا · اليونان · جنوب أفريقيا · الولايات المتحدة · اليابان.<br>تواصلي معنا للحصول على قائمة بوتيكاتنا الشريكة في فرنسا وعلى الصعيد الدولي.</span>
+ </p>
+ </section></main>
+
+ <script defer src="/yza-v2-preview/catalog-current.js?v=20260814fc3m8"></script>
+
+ <script defer src="js/products.js?v=20260814fc3m8"></script>
+  <script defer src="js/tracking.js?v=20260704g"></script>
+  <script defer src="js/yza-track.js?v=20260824a"></script>
+ <script defer src="js/media.js?v=20260713c"></script>
+ <script defer src="js/i18n.js?v=20260910-bestsellers-nav"></script>
+<script defer src="js/currency.js?v=20260805b"></script>
+ <script defer src="js/cart.js?v=20260910-motion"></script>
+ <script defer src="js/chrome.js?v=20260910-motion"></script>
+ <script defer src="/yza-v2-preview/js/model-stories-data.js?v=20260910-expanded-models"></script>
+<script defer src="/yza-v2-preview/js/model-stories.js?v=20260910-motion"></script>
+<script defer src="js/main.js?v=20260910-motion"></script>
+ <script>
+ document.addEventListener('DOMContentLoaded', function () {
+ var t = YZA.i18n;
+ if (t && typeof t.detect === 'function') t.lang = t.detect();
+ var MOQ = 10, TIER1 = 30, BULK = 50;
+var managedBookableShows = [
+  { name: "Who's Next Paris", city: 'Paris' },
+ { name: 'Coterie New York', city: 'New York' }
+ ];
+ var managedB2bPageSettings = null;
+ function lang() { return (t && t.lang) || 'fr'; }
+ function L5(fr, en, es, tr, ar) { var l = lang(); return l === 'en' ? en : l === 'es' ? es : l === 'tr' ? tr : l === 'ar' ? ar : fr; }
+ function L(fr, en) { return L5(fr, en, en, en, en); } // back-compat shim
+ // Catalog copy and media are release-managed. Encode at the final HTML boundary
+ // for both text and quoted attributes; quote-only encoding leaves entity and tag
+ // injection possible when the same helper is reused in text nodes.
+ function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c]; }); }
+ function h(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c]; }); }
+ function pickL5(value) { value = value && typeof value === 'object' ? value : {}; return value[lang()] || value.fr || ''; }
+
+ // OFFER: [fr_title, en_title, es_title, tr_title, ar_title, fr_desc, en_desc, es_desc, tr_desc, ar_desc, icon]
+ var OFFER = [
+ ['Séries courtes', 'Short runs', 'Series limitadas', 'Sınırlı seriler', 'إصدارات محدودة', 'Faites main, en petites quantités. Pas de sur-stock - vos clientes ne retrouvent pas la même pièce partout.', 'Hand-made, in small batches. No overstock - your clients won\'t find the same piece everywhere.', 'Hechas a mano, en pequeñas cantidades. Sin sobrestock - tus clientes no encontrarán la misma pieza en todas partes.', 'El yapımı, küçük miktarlarda. Stok fazlası yok - müşterileriniz aynı parçayı her yerde bulmaz.', 'مصنوعة يدويًا بكميات محدودة. لا مخزون زائد — زبوناتك لن يجدن نفس القطعة في كل مكان.', 'svc-limited'],
+ ['Présentoir + kit marketing offerts', 'Free display + marketing kit', 'Expositor + kit marketing gratis', 'Ücretsiz teşhir + pazarlama kiti', 'عرض مجاني + مجموعة تسويقية', 'Présentoir YZA, lookbook, cartes et étiquettes dorées gravées, prêts pour votre vitrine.', 'YZA display, lookbook, cards and engraved golden tags, ready for your window.', 'Expositor YZA, lookbook, tarjetas y etiquetas doradas grabadas, listos para tu escaparate.', 'YZA teşhir standı, lookbook, kartlar ve işlemeli altın etiketler, vitrininiz için hazır.', 'حامل العرض YZA، اللوك بوك، البطاقات والعلامات الذهبية المنقوشة — كل شيء جاهز لواجهة متجرك.', 'svc-gift'],
+ ['Livraison Maroc offerte', 'Free Morocco delivery', 'Envío gratis en Marruecos', 'Fas\'ta ücretsiz teslimat', 'توصيل مجاني في المغرب', 'Offerte au Maroc dès 1 500 DH ; ailleurs, expédition suivie dans le monde entier.', 'Free within Morocco from 1,500 DH; elsewhere, tracked shipping worldwide.', 'Gratis en Marruecos desde 1.500 DH; en el extranjero, envío rastreable a todo el mundo.', 'Fas\'ta 1.500 DH\'den itibaren ücretsiz; başka ülkelerde, dünya genelinde takipli kargo.', 'مجاني في المغرب من 1.500 درهم؛ في بقية الدول، شحن مع تتبع إلى جميع أنحاء العالم.', 'svc-delivery'],
+ ['Line sheets &amp; prix B2B', 'Line sheets &amp; B2B prices', 'Line sheets &amp; precios B2B', 'Line sheets &amp; B2B fiyatları', 'Line sheets وأسعار B2B', 'Partagés sur demande - par WhatsApp ou sur rendez-vous, jamais en public.', 'Shared on request - over WhatsApp or by appointment, never in the open.', 'A pedido - por WhatsApp o con cita, nunca en público.', 'Talep üzerine paylaşılır - WhatsApp veya randevu ile, asla açıkta değil.', 'تُشارَك عند الطلب — عبر واتساب أو بموعد، لا في العلن أبدًا.', 'svc-community'],
+ ['Réparations à vie à l\'atelier', 'Lifetime atelier repairs', 'Reparaciones de por vida en el atelier', 'Atölyede ömür boyu onarım', 'إصلاح مدى الحياة في الأتيليه', 'Chaque pièce YZA revient se faire réparer chez nous, à Guéliz, sans limite de temps.', 'Every YZA piece comes back to us in Guéliz for repair, with no time limit.', 'Cada pieza YZA vuelve a nuestro atelier en Guéliz para repararse, sin límite de tiempo.', 'Her YZA parçası, süresiz olarak onarım için Guéliz\'deki atölyemize geri gelir.', 'كل قطعة YZA ترجع إلينا في Guéliz للإصلاح، بلا حد زمني.', 'svc-repair'],
+ ['Fait main par des femmes', 'Hand-made by women', 'Hecho a mano por mujeres', 'Kadınlar tarafından el yapımı', 'صُنع يدويًا بأيدي نساء', '100 % crochet et tressage main, par notre atelier de femmes à Marrakech. More hands, fewer machines.', '100% hand crochet and weaving, by our women\'s atelier in Marrakech. More hands, fewer machines.', '100 % crochet y trenzado a mano, por nuestro atelier de mujeres en Marrakech. Más manos, menos máquinas.', '%100 el tığ işi ve örgü, Marrakech\'teki kadın atölyemiz tarafından. Daha fazla el, daha az makine.', '100% كروشيه وضفر يدوي، بأيدي أتيليهنا النسائي في مراكش. أيدٍ أكثر، آلات أقل.', 'svc-handmade'],
+ ];
+ function offerRows() {
+ var rows = OFFER.slice(0,5);
+ var exclusive = managedB2bPageSettings && Array.isArray(managedB2bPageSettings.guarantees)
+   ? managedB2bPageSettings.guarantees.find(function (entry) { return entry.id === 'exclusive-editions' && entry.enabled; }) : null;
+ if (exclusive) rows.push(['fr','en','es','tr','ar'].map(function (key) { return h(exclusive.title[key] || exclusive.title.fr || ''); }).concat(['fr','en','es','tr','ar'].map(function (key) { return h(exclusive.description[key] || exclusive.description.fr || ''); }), ['svc-limited']));
+ else if (!managedB2bPageSettings && typeof GUAR !== 'undefined' && GUAR) rows.push(GUAR[0]);
+ else rows.push(OFFER[5]);
+ return rows;
+ }
+ var bIco = function (f) { return '<img aria-hidden="true" class="b2b-ico" src="assets/brand/icons/' + f + '.png" alt="" width="40" height="40" loading="lazy" decoding="async">'; };
+ var offerEl = document.getElementById('b2bOffer');
+ if (offerEl) offerEl.innerHTML = offerRows().map(function (o) { return '<div class="b2b-offer__item">' + bIco(o[10]) + '<span><strong>' + L5(o[0], o[1], o[2], o[3], o[4]) + '</strong><br>' + L5(o[5], o[6], o[7], o[8], o[9]) + '</span></div>'; }).join('');
+
+ // GUAR: [fr_title, en_title, es_title, tr_title, ar_title, fr_desc, en_desc, es_desc, tr_desc, ar_desc, icon]
+ var GUAR = [
+ ['Éditions exclusives', 'Exclusive editions', 'Exclusive editions', 'Exclusive editions', 'Exclusive editions', 'Créez une série avec une couleur ou une finition spécifique à votre boutique.', 'Create a run with a colour or finish exclusive to your boutique.', 'Create a run with a colour or finish exclusive to your boutique.', 'Create a run with a colour or finish exclusive to your boutique.', 'Create a run with a colour or finish exclusive to your boutique.', 'svc-limited'],
+ ['Fait main', 'Hand-made', 'Hand-made', 'Hand-made', 'Hand-made', 'Atelier de femmes à Guéliz, crochet et tressage main. Parfaitement imparfait.', 'Made by women in Guéliz, hand crochet and weaving. Perfectly imperfect.', 'Made by women in Guéliz, hand crochet and weaving.', 'Made by women in Guéliz, hand crochet and weaving.', 'Made by women in Guéliz, hand crochet and weaving.', 'svc-handmade'],
+ ['Réparations à vie', 'Lifetime repairs', 'Lifetime repairs', 'Lifetime repairs', 'Lifetime repairs', 'Offertes sur chaque pièce YZA, à notre atelier, sans limite de temps.', 'Free on every YZA piece, at our atelier, no time limit.', 'Free on every YZA piece, at our atelier.', 'Free on every YZA piece, at our atelier.', 'Free on every YZA piece, at our atelier.', 'svc-repair'],
+ ['Capsules B2B', 'B2B capsules', 'B2B capsules', 'B2B capsules', 'B2B capsules', 'Des séries pensées pour le B2B — vêtements sans tailles, pour faciliter vos commandes.', 'Capsule runs designed for B2B — one-size garments, to simplify your orders.', 'Capsule runs designed for B2B — one-size garments.', 'Capsule runs designed for B2B — one-size garments.', 'Capsule runs designed for B2B — one-size garments.', 'svc-gift'],
+ ['Offre adaptée aux boutiques indépendantes', 'Built for independent boutiques', 'Built for independent boutiques', 'Built for independent boutiques', 'Built for independent boutiques', 'Une offre sur mesure pour les boutiques indépendantes.', 'A tailored offer for independent boutiques.', 'A tailored offer for independent boutiques.', 'A tailored offer for independent boutiques.', 'A tailored offer for independent boutiques.', 'svc-community'],
+ ];
+ var guarEl = document.getElementById('b2bGuarantees');
+ if (guarEl) guarEl.innerHTML = GUAR.map(function (g) { return '<div class="b2b-guarantee">' + '<h4>' + L5(g[0], g[1], g[2], g[3], g[4]) + '</h4><p>' + L5(g[5], g[6], g[7], g[8], g[9]) + '</p></div>'; }).join('');
+
+ var STOCKISTS = [
+ ['Hanout Boutique', 'Marrakech'], ['Jaad Riad Resort', 'Marrakech'], ['Atelier 44 - M Avenue', 'Marrakech'],
+ ['Las Chicas De Tanger', 'Tanger'], ['Mimsa - Le Casablanca Hotel', 'Casablanca'], ['Bee on 6th', 'Rabat'],
+ ];
+ var stoEl = document.getElementById('b2bStockists');
+ if (stoEl) stoEl.innerHTML = STOCKISTS.map(function (s) { return '<div class="b2b-stockist"><strong>' + s[0] + '</strong><span>' + s[1] + '</span></div>'; }).join('');
+
+ /* ---- Bag size×colour matrices ---- */
+ var SIZE_ORDER = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'];
+ // Built live from the catalog (YZA.bagRows) so the B2B matrix always matches the shop.
+ function buildBagModels() {
+ var order = ['la-sculpture', 'la-nouvelle-vague'];
+ var byFam = {};
+ var promoOk = typeof YZA.isLaunchPromoProduct === 'function' ? YZA.isLaunchPromoProduct : function (product) { return product && product.launchPromo !== false; };
+ (YZA.bagRows || []).forEach(function (row) {
+ var fh = row.familyHandle; if (!fh) return;
+ var items = (row.items || []).filter(function (it) { return promoOk(YZA.getProduct ? YZA.getProduct(it.handle) : null); });
+ if (!items.length) return;
+  var representative = items[0] || {};
+  var representativeProduct = representative.handle && YZA.getProduct ? YZA.getProduct(representative.handle) : null;
+  var representativeView = representativeProduct && YZA.resolveProductColorView
+    ? YZA.resolveProductColorView(representativeProduct, representative.colorSlug || representativeProduct.defaultColorSlug || '')
+    : representativeProduct;
+  if (!byFam[fh]) byFam[fh] = {
+   handle: fh,
+   family: representativeProduct && Object.prototype.hasOwnProperty.call(representativeProduct, 'bagFamilyTitle')
+    ? t.pick(representativeProduct.bagFamilyTitle) : t.pick(row.familyTitle),
+   note: (representativeProduct && Object.prototype.hasOwnProperty.call(representativeProduct, 'bagFamilyEyebrow')
+    ? t.pick(representativeProduct.bagFamilyEyebrow) : t.pick(row.familyEyebrow)) || '',
+   img: (representativeView && representativeView.img) || representative.img || row.img,
+   alt: t.pick((representativeView && representativeView.imageAlt) || (representativeProduct && representativeProduct.imageAlt) || row.familyTitle),
+   colors: [], colorSlugs: {}, colorHex: {}, avail: {}, handles: {}, sizes: [], sizeLabels: {}
+  };
+ var cn = t.pick(row.color);
+ byFam[fh].colorSlugs[cn] = row.colorSlug || "";
+ var swatch = representativeView && representativeView.selectedColorway;
+ var hex = swatch && (swatch.swatchHex || swatch.hex) || row.hex || row.swatchHex || "";
+ byFam[fh].colorHex[cn] = /^#[0-9a-f]{6}$/i.test(hex) ? hex : "";
+ if (byFam[fh].colors.indexOf(cn) === -1) byFam[fh].colors.push(cn);
+  byFam[fh].avail[cn] = items.map(function (it) { return it.size; });
+  if (!byFam[fh].handles[cn]) byFam[fh].handles[cn] = {};
+  items.forEach(function (it) {
+   if (!it || !it.size || !it.handle) return;
+   var code = String(it.size);
+   var product = YZA.getProduct ? YZA.getProduct(it.handle) : null;
+   var releasedLabel = YZA.productSizeLabel ? YZA.productSizeLabel(product, code)
+    : (product && product.sizeLabels && product.sizeLabels[code]);
+   byFam[fh].handles[cn][code] = it.handle;
+   if (byFam[fh].sizes.indexOf(code) === -1) byFam[fh].sizes.push(code);
+   byFam[fh].sizeLabels[code] = t.pick(releasedLabel || {}) || code;
+  });
+ });
+ var keys = order.filter(function (f) { return byFam[f]; })
+ .concat(Object.keys(byFam).filter(function (f) { return order.indexOf(f) === -1; }));
+ return keys.map(function (f) {
+  byFam[f].sizes.sort(function (left, right) {
+   var li = SIZE_ORDER.indexOf(left), ri = SIZE_ORDER.indexOf(right);
+   if (li === -1) li = SIZE_ORDER.length;
+   if (ri === -1) ri = SIZE_ORDER.length;
+   return li - ri || left.localeCompare(right);
+  });
+  return byFam[f];
+ });
+ }
+ var BAG_MODELS = buildBagModels();
+ function qtyBox(name, extra) {
+ return '<span class="b2b-mqty"><button type="button" data-step="-1" aria-label="-"> - </button>' +
+ '<input class="b2b-qty" type="number" min="0" step="1" value="0" inputmode="numeric" data-name="' + esc(name) + '" ' + (extra || '') + ' aria-label="' + esc(name) + '">' +
+ '<button type="button" data-step="1" aria-label="+">+</button></span>';
+ }
+ function matrixHTML(m) {
+ var head = '<div class="b2b-mrow b2b-mrow--head"><span></span>' + m.sizes.map(function (s) { return '<span>' + esc(m.sizeLabels[s] || s) + '</span>'; }).join('') + '</div>';
+ var rows = m.colors.map(function (c) {
+ var cells = m.sizes.map(function (s) {
+ if (m.avail[c].indexOf(s) === -1) return '<span class="b2b-mcell b2b-mcell--empty"> - </span>';
+  var sizeLabel = m.sizeLabels[s] || s;
+  return '<span class="b2b-mcell"><span class="b2b-msize">' + esc(sizeLabel) + '</span>' + qtyBox(m.family + ' ' + c + ' ' + sizeLabel, 'data-handle="' + esc((m.handles[c] && m.handles[c][s]) || '') + '" data-family="' + esc(m.family) + '" data-family-id="' + esc(m.handle) + '" data-color="' + esc(c) + '" data-color-slug="' + esc(m.colorSlugs[c]) + '" data-size="' + esc(s) + '"') + '</span>';
+ }).join('');
+ return '<div class="b2b-mrow"><span class="b2b-mrow__color">' + (m.colorHex[c] ? '<i class="wholesale-swatch" style="background:' + m.colorHex[c] + '" aria-hidden="true"></i>' : '') + esc(c) + '</span>' + cells + '</div>';
+ }).join('');
+    return '<div class="b2b-matrix" style="--bag-sizes:' + m.sizes.length + '"><div class="b2b-matrix__head"><img src="' + esc(m.img) + '" alt="' + esc(m.alt || m.family) + '" width="96" height="120" decoding="async"><div><h4>' + esc(m.family) + '</h4><span>' + esc(m.note) + '</span></div><span class="wholesale-family-count">—</span></div><div class="b2b-mtable">' + head + rows + '</div></div>';
+ }
+ var bagsEl = document.getElementById('grpBags');
+ if (bagsEl) bagsEl.innerHTML = BAG_MODELS.map(matrixHTML).join('');
+
+ /* ---- Accessory + RTW rows with thumbnails ---- */
+ function rowHTML(p) {
+ var slug = p.defaultColorSlug || '';
+ var view = slug && YZA.resolveProductColorView ? YZA.resolveProductColorView(p, slug) : p;
+ var name = t.pick(p.name);
+ var href = '/produits/' + encodeURIComponent(p.handle || '') + (slug ? '?color=' + encodeURIComponent(slug) : '');
+ var imageAlt = t.pick((view && view.imageAlt) || p.imageAlt || p.name) || name;
+ return '<div class="b2b-prod">' +
+      '<a class="b2b-prod__thumb-link" href="' + esc(href) + '" target="_blank" rel="noopener" title="' + esc(name) + '"><img class="b2b-prod__thumb" src="' + esc((view && view.img) || p.img) + '" alt="' + esc(imageAlt) + '" loading="lazy" width="84" height="112" decoding="async"></a>' +
+ '<span class="b2b-prod__info"><a class="b2b-prod__name" href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(name) + '</a><span class="b2b-prod__meta">' + esc(t.pick((view && view.short) || p.short || {}) || '') + '</span></span>' +
+ qtyBox(name, 'data-handle="' + esc(p.handle || '') + '" data-cat="' + esc(p.category || '') + '"').replace('b2b-mqty', 'b2b-prod__qty') +
+ '</div>';
+ }
+ function group(cats) { var list = []; cats.forEach(function (c) { list = list.concat(YZA.byCategory ? YZA.byCategory(c) : []); }); var promoOk = typeof YZA.isLaunchPromoProduct === 'function' ? YZA.isLaunchPromoProduct : function (p) { return p && p.launchPromo !== false; }; return list.filter(function (p) { return p && !p.bundle && promoOk(p); }).map(rowHTML).join(''); }
+ var charmsEl = document.getElementById('grpCharms'); if (charmsEl) charmsEl.innerHTML = group(['charms']);
+ var earringsEl = document.getElementById('grpEarrings'); if (earringsEl) earringsEl.innerHTML = group(['earrings']);
+ var rtwEl = document.getElementById('grpRtw'); if (rtwEl) rtwEl.innerHTML = group(['rtw']);
+ if (earringsEl) earringsEl.innerHTML = group(['earrings']);
+
+ var form = document.getElementById('b2bForm');
+ function total() { var n = 0; form.querySelectorAll('.b2b-qty').forEach(function (i) { n += Math.max(0, parseInt(i.value || '0', 10) || 0); }); return n; }
+ function refresh() {
+ var n = total();
+ var c = document.getElementById('b2bCount'); if (c) c.textContent = n;
+ var w = document.getElementById('b2bWhats'), em = document.getElementById('b2bEmail');
+ var ok = n >= MOQ;
+ if (w) w.disabled = !ok; if (em) em.disabled = !ok;
+ var s = document.getElementById('b2bStatus');
+ if (s) {
+ if (n < MOQ) { s.textContent = L5('Ajoutez au moins ' + MOQ + ' pièces, puis envoyez votre demande.', 'Add at least ' + MOQ + ' pieces, then send your request.', 'Añade al menos ' + MOQ + ' piezas y envía tu solicitud.', 'En az ' + MOQ + ' parça ekleyip talebinizi gönderin.', 'أضيفي ' + MOQ + ' قطع على الأقل، ثم أرسلي طلبك.'); s.className = 'b2b-status b2b-status--warn'; }
+ else if (n >= BULK) { s.textContent = L5('Belle sélection. Envoyez-la - line sheets & prix B2B suivent sur demande.', 'Lovely selection. Send it over - line sheets & B2B prices follow on request.', 'Bonita selección. Envíala - line sheets y precios B2B a pedido.', 'Güzel seçim. Gönder - line sheets ve B2B fiyatları talep üzerine.', 'تشكيلة رائعة. أرسليها — line sheets وأسعار B2B عند الطلب.'); s.className = 'b2b-status b2b-status--bonus'; }
+ else if (n >= TIER1) { s.textContent = L5('Belle sélection. Envoyez-la - line sheets & prix B2B suivent sur demande.', 'Lovely selection. Send it over - line sheets & B2B prices follow on request.', 'Bonita selección. Envíala - line sheets y precios B2B a pedido.', 'Güzel seçim. Gönder - line sheets ve B2B fiyatları talep üzerine.', 'تشكيلة رائعة. أرسليها — line sheets وأسعار B2B عند الطلب.'); s.className = 'b2b-status b2b-status--bonus'; }
+ else { s.textContent = L5('Votre sélection est prête. Envoyez-la - on revient vers vous avec les prix B2B.', 'Your selection is ready. Send it over - we\'ll come back to you with B2B prices.', 'Tu selección está lista. Envíala - te contamos los precios B2B.', 'Seçiminiz hazır. Gönderin - B2B fiyatlarıyla size geri döneceğiz.', 'تشكيلتك جاهزة. أرسليها — سنعود إليك بأسعار B2B.'); s.className = 'b2b-status b2b-status--ok'; }
+ }
+ YZA.renderWholesaleMaison?.({ minimum:MOQ, tierOne:TIER1, bulk:BULK });
+ }
+ form.addEventListener('click', function (e) {
+ var b = e.target.closest('button[data-step]'); if (!b) return;
+ var input = b.parentElement.querySelector('input');
+ if (YZA.b2bComposer) YZA.b2bComposer.selectedPreset = null;
+ input.value = Math.max(0, (parseInt(input.value || '0', 10) || 0) + parseInt(b.dataset.step, 10));
+ refresh();
+ });
+ form.addEventListener('input', function (event) {
+ if (event.target.matches('.b2b-qty')) {
+ event.target.value = Math.max(0, parseInt(event.target.value || '0', 10) || 0);
+ YZA.b2bComposer.selectedPreset = null;
+ }
+ refresh();
+ });
+ form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+ /* ---- Templates ---- */
+ function dataOf(input) { if (input.dataset.familyId) return { family: input.dataset.family || '', familyId: input.dataset.familyId, color: input.dataset.color, size: input.dataset.size, cat: 'bags' }; return { cat: input.dataset.cat || '' }; }
+ // Preset totals derive from the currently available catalog and managed rules.
+ var TEMPLATES = {
+ decouverte: function (d) { if (d.familyId === 'la-sculpture' && d.size === 'S') return 1; if (d.cat === 'earrings') return 1; return 0; }, // 3 + 7 = 10
+ bestsellers: function (d) { if (d.cat === 'charms') return 1; if (d.cat === 'earrings') return 1; if (d.familyId === 'la-sculpture' && d.size === 'S') return 1; if (d.familyId === 'la-nouvelle-vague' && (d.size === 'S' || d.size === 'M')) return 1; return 0; }, // 10+7+3+6 = 26
+ complete: function (d) { if (d.cat === 'charms') return 2; if (d.cat === 'earrings') return 1; if (d.cat === 'rtw' || d.cat === 'tops' || d.cat === 'pareos' || d.cat === 'pants' || d.cat === 'bottoms') return 1; if (d.familyId) return 1; return 0; }, // 20+7+9+18 = 54
+ // Single-category fills - sized to each category's economics.
+ charmsOnly: function (d) { return d.cat === 'charms' ? 3 : 0; }, // 10 charms x3 = 30 -> -10%
+ accOnly: function (d) { return d.cat === 'earrings' ? 2 : 0; }, // 7 earrings x2 = 14
+ bagsOnly: function (d) { return d.familyId ? 1 : 0; }, // all 18 bag combos x1
+ clothesOnly: function (d) { return (d.cat === 'rtw' || d.cat === 'tops' || d.cat === 'pareos' || d.cat === 'pants' || d.cat === 'bottoms') ? 2 : 0; }, // 9 x2 = 18
+ };
+ function applyTemplate(key) {
+ var fn = TEMPLATES[key]; if (typeof fn !== 'function') return;
+ form.querySelectorAll('.b2b-qty').forEach(function (i) { i.value = Math.max(0, Math.floor(fn(dataOf(i)) || 0)); });
+ YZA.b2bComposer.selectedPreset = key;
+ refresh();
+ document.getElementById('b2bSheet').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+ }
+ YZA.b2bComposer = {
+ selectedPreset: null,
+ refresh: refresh,
+ presetQuantity: function (key, input) { var fn = TEMPLATES[key]; return typeof fn === 'function' ? Math.max(0, Math.floor(fn(dataOf(input)) || 0)) : 0; },
+ thresholds: function () { return { minimum:MOQ, tierOne:TIER1, bulk:BULK }; }
+ };
+ function presetCard(key, name, description) {
+ return '<button type="button" class="b2b-template" data-tpl="' + h(key) + '" aria-pressed="false"><span class="wholesale-preset-name">' + h(name) + '</span><span class="wholesale-preset-hint"></span><span class="wholesale-preset-description">' + h(description) + '</span><span class="wholesale-preset-lines"></span><span class="wholesale-preset-total"></span></button>';
+ }
+ // TPL_CARDS: [key, fr_name, en_name, es_name, tr_name, ar_name, fr_desc, en_desc, es_desc, tr_desc, ar_desc, [list_items]]
+ var TPL_CARDS = [
+ ['decouverte', 'Découverte', 'Discovery', 'Descubrimiento', 'Keşif', 'الاكتشاف', 'Une première sélection pour faire entrer YZA chez vous.', 'A first selection to bring YZA into your store.', 'Una primera selección para que YZA entre en tu boutique.', 'YZA\'yı butiğinize taşımak için ilk seçim.', 'أول تشكيلة لإدخال YZA إلى متجرك.', ['La Sculpture S · 3 couleurs', 'Boucles fruit en raffia', L5('Prix B2B sur demande', 'B2B prices on request', 'Precios B2B a pedido', 'B2B fiyatları talep üzerine', 'أسعار B2B عند الطلب')]],
+ ['bestsellers', 'Best-sellers', 'Best-sellers', 'Best-sellers', 'En çok satanlar', 'الأكثر مبيعًا', 'Les pièces qui partent le plus vite de l\'atelier.', 'The pieces that leave the atelier fastest.', 'Las piezas que salen más rápido del atelier.', 'Atölyeden en hızlı çıkan parçalar.', 'القطع التي تغادر الأتيليه أسرع.', ['Charms · boucles', 'La Sculpture S · La Nouvelle Vague S & M', L5('Prix B2B sur demande', 'B2B prices on request', 'Precios B2B a pedido', 'B2B fiyatları talep üzerine', 'أسعار B2B عند الطلب')]],
+ ['complete', 'Collection complète', 'Full collection', 'Colección completa', 'Tam koleksiyon', 'التشكيلة الكاملة', 'Un assortiment large, toutes catégories réunies.', 'A wide assortment, every category in one go.', 'Un surtido amplio, todas las categorías de un vistazo.', 'Geniş bir çeşit, tek seferde tüm kategoriler.', 'تشكيلة واسعة، كل الفئات دفعة واحدة.', ['Charms · boucles', 'Jawhara · sacs La Sculpture & La Nouvelle Vague', L5('Prix B2B sur demande', 'B2B prices on request', 'Precios B2B a pedido', 'B2B fiyatları talep üzerine', 'أسعار B2B عند الطلب')]],
+ ];
+ var tplEl = document.getElementById('b2bTemplates');
+ if (tplEl) {
+ tplEl.innerHTML = TPL_CARDS.map(function (c) { return presetCard(c[0], L5(c[1],c[2],c[3],c[4],c[5]), L5(c[6],c[7],c[8],c[9],c[10])); }).join('');
+ tplEl.addEventListener('click', function (e) { var b = e.target.closest('[data-tpl]'); if (b) applyTemplate(b.dataset.tpl); });
+ }
+ // CAT_CARDS: [key, fr_name, en_name, es_name, tr_name, ar_name, fr_desc, en_desc, es_desc, tr_desc, ar_desc]
+ var CAT_CARDS = [
+ ['charmsOnly', 'Charms', 'Charms', 'Charms', 'Charms', 'Charms', 'Tout un mur de charms - chaque fruit crocheté main en raffia par Fatima.', 'A whole charm wall - each fruit hand-crocheted in raffia by Fatima.', 'Un muro entero de charms - cada fruta tejida a mano en rafia por Fatima.', 'Tüm bir charms duvarı - her meyve Fatima tarafından rafiadan elle tığ ile örülmüş.', 'جدار كامل من الـ charms — كل ثمرة منسوجة يدويًا بالرافيا من قِبَل فاطمة.'],
+ ['accOnly', 'Bijoux', 'Jewellery', 'Joyas', 'Takı', 'مجوهرات', 'Boucles en raffia : tout le Fruit Market d\'un coup.', 'Raffia earrings: the whole Fruit Market at once.', 'Pendientes de rafia: todo el Fruit Market de un solo pedido.', 'Rafya küpeler: tüm Fruit Market tek seferde.', 'أقراط من الرافيا: Fruit Market بالكامل دفعة واحدة.'],
+ ['bagsOnly', 'Paniers & sacs', 'Baskets & bags', 'Cestas & bolsos', 'Sepetler & çantalar', 'السلال والحقائب', 'Le mur de sacs au complet - La Sculpture et La Nouvelle Vague.', 'The full bag wall - La Sculpture and La Nouvelle Vague.', 'El muro de bolsos completo - La Sculpture y La Nouvelle Vague.', 'Tam çanta duvarı - La Sculpture ve La Nouvelle Vague.', 'الجدار الكامل من الحقائب — La Sculpture وLa Nouvelle Vague.'],
+ ['clothesOnly', 'Prêt-à-porter', 'Ready-to-wear', 'Prêt-à-porter', 'Hazır giyim', 'ملابس جاهزة', 'La garde-robe Jawhara, taille libre, du XS au XXL.', 'The Jawhara wardrobe, size-free, XS to XXL.', 'El guardarropa Jawhara, talla libre, de XS a XXL.', 'Jawhara gardırobu, serbest beden, XS\'ten XXL\'e.', 'خزانة ملابس Jawhara، مقاس حر، من XS إلى XXL.'],
+ ];
+ var tplCatEl = document.getElementById('b2bTemplatesCat');
+ if (tplCatEl) {
+ tplCatEl.innerHTML = CAT_CARDS.map(function (c) {
+ return '<article class="b2b-template"><h3>' + L5(c[1], c[2], c[3], c[4], c[5]) + '</h3><p>' + L5(c[6], c[7], c[8], c[9], c[10]) + '</p>' +
+ '<button type="button" class="btn btn--outline" data-tpl="' + c[0] + '">' + L5('Pré-remplir', 'Pre-fill', 'Pre-rellenar', 'Ön doldurum', 'ملء مسبق') + '</button></article>';
+ }).join('');
+ tplCatEl.addEventListener('click', function (e) { var b = e.target.closest('[data-tpl]'); if (b) applyTemplate(b.dataset.tpl); });
+ }
+
+ function quantityKey(input) { return [input.dataset.handle, input.dataset.colorSlug || '', input.dataset.size || ''].join('|'); }
+ function renderLocalizedB2bCatalog() {
+  var quantities = new Map(Array.from(form.querySelectorAll('.b2b-qty')).map(function (input) { return [quantityKey(input), input.value]; }));
+  if (offerEl) offerEl.innerHTML = offerRows().map(function (o) { return '<div class="b2b-offer__item">' + bIco(o[10]) + '<span><strong>' + L5(o[0], o[1], o[2], o[3], o[4]) + '</strong><br>' + L5(o[5], o[6], o[7], o[8], o[9]) + '</span></div>'; }).join('');
+  if (!managedB2bPageSettings && guarEl) guarEl.innerHTML = GUAR.map(function (g) { return '<div class="b2b-guarantee"><h4>' + L5(g[0], g[1], g[2], g[3], g[4]) + '</h4><p>' + L5(g[5], g[6], g[7], g[8], g[9]) + '</p></div>'; }).join('');
+  BAG_MODELS = buildBagModels();
+  if (bagsEl) bagsEl.innerHTML = BAG_MODELS.map(matrixHTML).join('');
+  if (charmsEl) charmsEl.innerHTML = group(['charms']);
+  if (rtwEl) rtwEl.innerHTML = group(['rtw']);
+ if (earringsEl) earringsEl.innerHTML = group(['earrings']);
+  if (!managedB2bPageSettings && tplEl) tplEl.innerHTML = TPL_CARDS.map(function (c) { return presetCard(c[0], L5(c[1],c[2],c[3],c[4],c[5]), L5(c[6],c[7],c[8],c[9],c[10])); }).join('');
+  if (!managedB2bPageSettings && tplCatEl) tplCatEl.innerHTML = CAT_CARDS.map(function (c) {
+   return '<article class="b2b-template"><h3>' + L5(c[1], c[2], c[3], c[4], c[5]) + '</h3><p>' + L5(c[6], c[7], c[8], c[9], c[10]) + '</p><button type="button" class="btn btn--outline" data-tpl="' + c[0] + '">' + L5('Pré-remplir', 'Pre-fill', 'Pre-rellenar', 'Ön doldurum', 'ملء مسبق') + '</button></article>';
+  }).join('');
+  if (form) Array.from(form.querySelectorAll('.b2b-qty')).forEach(function (input) { input.value = quantities.get(quantityKey(input)) || '0'; });
+ }
+
+ /* ---- Quote message ---- */
+ function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+ function buildMessage() {
+ var lines = [];
+ form.querySelectorAll('.b2b-qty').forEach(function (i) { var q = parseInt(i.value || '0', 10); if (q > 0) lines.push('- ' + i.dataset.name + ' x ' + q); });
+ var n = total();
+ var head = ['Demande de devis B2B - YZA', 'Boutique: ' + val('bCompany'), 'Contact: ' + val('bContact'), 'E-mail: ' + val('bEmail'), 'WhatsApp/Tel: ' + val('bPhone'), 'Pays/Ville: ' + val('bCountry'), val('bSite') ? ('Site: ' + val('bSite')) : ''].filter(Boolean);
+ var notes = val('bNotes');
+ return head.join('\n') + '\n\nSelection (' + n + ' pieces):\n' + (lines.length ? lines.join('\n') : '(a preciser)') + (notes ? ('\n\nNote: ' + notes) : '') + '\n\nMerci de m\'envoyer les line sheets, prix B2B & lookbooks. Page: ' + location.href;
+ }
+ function selectionSnapshot() {
+  var rows = [];
+  form.querySelectorAll('.b2b-qty').forEach(function (input) {
+  var qty = parseInt(input.value || '0', 10) || 0;
+  if (qty < 1) return;
+  rows.push({
+   handle: input.dataset.handle || '', label: input.dataset.name || '',
+   category: input.dataset.cat || '', family: input.dataset.family || '',
+   color: input.dataset.color || '', size: input.dataset.size || '', qty: qty
+  });
+  });
+  return rows;
+ }
+ function randomOperation() {
+  try {
+   var bytes = new Uint8Array(18); crypto.getRandomValues(bytes);
+   return 'b2b_' + Array.prototype.map.call(bytes, function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+  } catch (err) { return 'b2b_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 14); }
+ }
+ function inquiryPayload(channel) {
+  var payload = {
+   channel: channel, company: val('bCompany'), contact: val('bContact'), email: val('bEmail'),
+   phone: val('bPhone'), location: val('bCountry'), website: val('bSite'), notes: val('bNotes'),
+   lang: (YZA.i18n && YZA.i18n.lang) || document.documentElement.lang || 'fr',
+   total: total(), selection: selectionSnapshot(), _hp: val('bAddress2')
+  };
+  var signature = JSON.stringify(payload);
+  var storageKey = 'yza.b2b.inquiry.' + channel;
+  var saved = null;
+  try { saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null'); } catch (err) {}
+  if (!saved || saved.signature !== signature || !/^[A-Za-z0-9_-]{20,100}$/.test(saved.operationId || '')) {
+   saved = { operationId: randomOperation(), signature: signature };
+   try { sessionStorage.setItem(storageKey, JSON.stringify(saved)); } catch (err) {}
+  }
+  payload.operationId = saved.operationId;
+  return payload;
+ }
+ function captureInquiry(channel) {
+  var payload = inquiryPayload(channel);
+  return fetch('/b2b-inquiry.php', {
+   method: 'POST', credentials: 'same-origin', cache: 'no-store', keepalive: true,
+   headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+   body: JSON.stringify(payload)
+  }).then(function (response) {
+   return response.json().catch(function () { return {}; }).then(function (body) {
+    if (!response.ok || !body || !body.ok) throw new Error('b2b_capture_failed');
+    return body;
+   });
+  });
+ }
+ function validateBuyer() {
+ var ids = ['bCompany', 'bContact', 'bEmail'];
+ var invalid = null;
+ ids.forEach(function (id) {
+ var el = document.getElementById(id);
+ var bad = !el || !el.value.trim() || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+ if (el) { el.classList.toggle('is-invalid', bad); el.setAttribute('aria-invalid', String(bad)); }
+ if (!invalid && bad) invalid = el;
+ });
+ var status = document.getElementById('b2bStatus');
+ var buyerStatus = document.getElementById('b2bBuyerStatus');
+ if (buyerStatus) { buyerStatus.hidden = !invalid; if (!invalid) buyerStatus.textContent = ''; }
+ if (invalid) {
+ if (status) { status.textContent = L5('Complétez boutique, contact et e-mail avant l’envoi.', 'Complete boutique, contact and email before sending.', 'Completa boutique, contacto y e-mail antes de enviar.', 'Göndermeden önce butik, iletişim ve e-posta alanlarını doldurun.', 'أكملي بيانات البوتيك وجهة الاتصال والبريد الإلكتروني قبل الإرسال.'); status.className = 'b2b-status b2b-status--warn'; }
+ if (buyerStatus && status) buyerStatus.textContent = status.textContent;
+ invalid.focus();
+ return false;
+ }
+ if (total() < MOQ) {
+ if (status) { status.textContent = L5('Ajoutez au moins ' + MOQ + ' pièces avant l’envoi.', 'Add at least ' + MOQ + ' pieces before sending.', 'Añade al menos ' + MOQ + ' piezas antes de enviar.', 'Göndermeden önce en az ' + MOQ + ' parça ekleyin.', 'أضيفي ' + MOQ + ' قطع على الأقل قبل الإرسال.'); status.className = 'b2b-status b2b-status--warn'; }
+ return false;
+ }
+ return true;
+ }
+ var w = document.getElementById('b2bWhats');
+ if (w) w.addEventListener('click', function () {
+  if (!validateBuyer()) return;
+  var phone = ((YZA.brand && YZA.brand.whatsapp) || '').replace(/\D/g, '');
+  var target = window.open('', '_blank');
+  try { if (target) target.opener = null; } catch (err) {}
+  w.disabled = true;
+  captureInquiry('whatsapp').catch(function () {
+   var status = document.getElementById('b2bStatus');
+   if (status) { status.textContent = L5('La demande n’a pas pu être enregistrée, mais WhatsApp reste disponible.', 'The request could not be saved, but WhatsApp is still available.', 'No se pudo guardar la solicitud, pero WhatsApp sigue disponible.', 'Talep kaydedilemedi, ancak WhatsApp kullanılabilir.', 'تعذّر حفظ الطلب، لكن واتساب ما زال متاحًا.'); status.className = 'b2b-status b2b-status--warn'; }
+  }).finally(function () {
+   w.disabled = false;
+   var href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(buildMessage());
+   if (target && !target.closed) target.location.href = href; else window.open(href, '_blank', 'noopener');
+   YZA.analytics?.track('b2b_quote_whatsapp', { count: total() });
+   try { YZA.analytics?.track('b2b_enquiry', { count: total(), channel: 'whatsapp' }); } catch (err) {}
+  });
+ });
+ var em = document.getElementById('b2bEmail');
+ if (em) em.addEventListener('click', function () {
+  if (!validateBuyer()) return;
+  em.disabled = true;
+  captureInquiry('email').catch(function () {
+   var status = document.getElementById('b2bStatus');
+   if (status) { status.textContent = L5('La demande n’a pas pu être enregistrée, mais l’e-mail reste disponible.', 'The request could not be saved, but email is still available.', 'No se pudo guardar la solicitud, pero el correo sigue disponible.', 'Talep kaydedilemedi, ancak e-posta kullanılabilir.', 'تعذّر حفظ الطلب، لكن البريد الإلكتروني ما زال متاحًا.'); status.className = 'b2b-status b2b-status--warn'; }
+  }).finally(function () {
+   em.disabled = false;
+   YZA.analytics?.track('b2b_quote_email', { count: total() });
+   try { YZA.analytics?.track('b2b_enquiry', { count: total(), channel: 'email' }); } catch (err) {}
+   window.location.href = 'mailto:contact@yza-shop.com?subject=' + encodeURIComponent('Demande de devis B2B - YZA') + '&body=' + encodeURIComponent(buildMessage());
+  });
+ });
+
+ var salonBtn = document.getElementById('b2bSalonBtn');
+ if (salonBtn) salonBtn.addEventListener('click', function () {
+ var phone = ((YZA.brand && YZA.brand.whatsapp) || '').replace(/\D/g, '');
+ var showNames = managedBookableShows.map(function (entry) {
+  return [entry.name, entry.city].filter(Boolean).join(' - ');
+ }).join(' / ') || L5('notre prochain salon', 'our next show', 'nuestro próximo salón', 'bir sonraki fuarımız', 'معرضنا القادم');
+ var msg = L5(
+ 'Bonjour ! Je souhaite prendre rendez-vous avec YZA à ' + showNames + '. Boutique : ' + (val('bCompany') || ' - '),
+ 'Hello! I\'d like to book a meeting with YZA at ' + showNames + '. Store: ' + (val('bCompany') || ' - '),
+ '¡Hola! Quiero reservar una cita con YZA en ' + showNames + '. Boutique: ' + (val('bCompany') || ' - '),
+ 'Merhaba! ' + showNames + ' etkinliğinde YZA ile randevu almak istiyorum. Butik: ' + (val('bCompany') || ' - '),
+ 'مرحبًا! أودّ حجز موعد مع YZA في ' + showNames + '. البوتيك: ' + (val('bCompany') || ' - ')
+ );
+ window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+ });
+
+ /* Public, price-free page settings managed from the authenticated dashboard.
+    The checked-in content above remains a resilient fallback if this small
+    endpoint is temporarily unavailable. */
+ function managedPresetFunction(rules) {
+  rules = Array.isArray(rules) ? rules : [];
+  return function (d) {
+   var quantity = 0;
+   rules.forEach(function (rule) {
+    if (!rule || (rule.size && rule.size !== d.size)) return;
+    if (rule.kind === 'category' && rule.value === d.cat) quantity += Number(rule.quantity) || 0;
+    if (rule.kind === 'family') {
+     var stableFamily = ({ 'La Sculpture':'la-sculpture', 'La Nouvelle Vague':'la-nouvelle-vague' })[rule.value] || rule.value;
+     if (stableFamily === d.familyId) quantity += Number(rule.quantity) || 0;
+    }
+    if (rule.kind === 'all_families' && d.familyId) quantity += Number(rule.quantity) || 0;
+   });
+   return quantity;
+  };
+ }
+ function managedPresetCard(preset) { return presetCard(preset.id, pickL5(preset.label), pickL5(preset.description));
+ }
+ function applyManagedB2bPage(settings) {
+  if (!settings || typeof settings !== 'object') return;
+  managedB2bPageSettings = settings;
+  if (offerEl) offerEl.innerHTML = offerRows().map(function (o) { return '<div class="b2b-offer__item">' + bIco(o[10]) + '<span><strong>' + L5(o[0],o[1],o[2],o[3],o[4]) + '</strong><br>' + L5(o[5],o[6],o[7],o[8],o[9]) + '</span></div>'; }).join('');
+  if (settings.moq) {
+   MOQ = Number(settings.moq.minimumPieces) || MOQ;
+   TIER1 = Number(settings.moq.tierOnePieces) || TIER1;
+   BULK = Number(settings.moq.bulkPieces) || BULK;
+  }
+  if (Array.isArray(settings.stockists)) {
+   var publicStockists = settings.stockists.filter(function (entry) { return entry && entry.enabled; })
+    .sort(function (a, b) { return Number(a.sortOrder) - Number(b.sortOrder); });
+   if (stoEl) stoEl.innerHTML = publicStockists.map(function (entry) {
+    return '<div class="b2b-stockist"><strong>' + h(entry.name) + '</strong><span>' +
+     h([entry.city, entry.country].filter(Boolean).join(' · ')) + '</span></div>';
+   }).join('');
+  }
+  if (Array.isArray(settings.guarantees)) {
+   var publicGuarantees = settings.guarantees.filter(function (entry) { return entry && entry.enabled; })
+    .sort(function (a, b) { return Number(a.sortOrder) - Number(b.sortOrder); });
+   if (guarEl) guarEl.innerHTML = publicGuarantees.map(function (entry) {
+    return '<div class="b2b-guarantee"><h4>' + h(pickL5(entry.title)) + '</h4><p>' +
+     h(pickL5(entry.description)) + '</p></div>';
+   }).join('');
+  }
+  if (Array.isArray(settings.exportCountries)) {
+   var exportEl = document.getElementById('b2bExportCountries');
+   if (exportEl) exportEl.innerHTML = '<b>' + h(L5('Export B2B - boutiques indépendantes depuis 2022 :',
+    'B2B Export - independent boutiques since 2022:', 'Export B2B - boutiques independientes desde 2022:',
+    "B2B Export - bağımsız butikler, 2022'den beri:", 'تصدير B2B — بوتيكات مستقلة منذ 2022:')) +
+    '</b> ' + h(settings.exportCountries.join(' · '));
+  }
+  if (Array.isArray(settings.tradeShows)) {
+   var shows = settings.tradeShows.filter(function (entry) { return entry && entry.enabled; })
+     .sort(function (a, b) { return Number(a.sortOrder) - Number(b.sortOrder); });
+   managedBookableShows = shows.filter(function (entry) { return entry.bookingEnabled; });
+   var tradeCopy = document.getElementById('b2bTradeShowCopy');
+   if (tradeCopy) tradeCopy.textContent = shows.length
+    ? L5('Découvrez nos collections au complet, les matières et les finitions. Un rendez-vous pour parler de votre boutique, consulter les lookbooks et préparer votre sélection.',
+      'Discover the full collections, materials and finishes. Meet us to talk about your boutique, browse the lookbooks and prepare your selection.',
+      'Descubre las colecciones completas, los materiales y los acabados. Una cita para hablar de tu boutique, consultar los lookbooks y preparar tu selección.',
+      'Tüm koleksiyonları, malzemeleri ve detayları keşfedin. Butiğiniz hakkında konuşmak, lookbooklara göz atmak ve seçiminizi hazırlamak için buluşalım.',
+      'اكتشفي التشكيلات الكاملة والمواد والتفاصيل. موعد للحديث عن متجرك، وتصفح كتيبات الإطلالات، وتحضير اختياراتك.')
+    : L5('Nos prochains rendez-vous professionnels seront annoncés ici.',
+      'Our next trade appointments will be announced here.',
+      'Nuestras próximas citas profesionales se anunciarán aquí.',
+      'Bir sonraki profesyonel buluşmalarımız burada duyurulacak.',
+      'سنعلن عن مواعيدنا المهنية القادمة هنا.');
+   var showLabel = document.getElementById('b2bTradeShowNames');
+   if (showLabel) showLabel.textContent = shows.map(function (entry) {
+    return entry.city && !String(entry.name).toLowerCase().includes(String(entry.city).toLowerCase()) ? entry.name + ' · ' + entry.city : entry.name;
+   }).join(' · ');
+   if (salonBtn) salonBtn.hidden = managedBookableShows.length === 0;
+  }
+  if (Array.isArray(settings.presets)) {
+   var presets = settings.presets.filter(function (entry) { return entry && entry.enabled; })
+    .sort(function (a, b) { return Number(a.sortOrder) - Number(b.sortOrder); });
+   presets.forEach(function (entry) { TEMPLATES[entry.id] = managedPresetFunction(entry.rules); });
+   var primaryIds = { decouverte:true, bestsellers:true, complete:true };
+   if (tplEl) tplEl.innerHTML = presets.filter(function (entry) { return primaryIds[entry.id]; })
+    .map(managedPresetCard).join('');
+   if (tplCatEl) tplCatEl.innerHTML = presets.filter(function (entry) { return !primaryIds[entry.id]; })
+    .map(managedPresetCard).join('');
+  }
+  refresh();
+ }
+ fetch('/b2b-page.php', { credentials:'same-origin', cache:'no-store', headers:{ Accept:'application/json' } })
+  .then(function (response) { if (!response.ok) throw new Error('settings'); return response.json(); })
+  .then(function (payload) { if (payload && payload.ok) applyManagedB2bPage(payload.settings); })
+  .catch(function () {});
+ if (YZA.i18n && typeof YZA.i18n.onChange === 'function') {
+  YZA.i18n.onChange(function () {
+   renderLocalizedB2bCatalog();
+   if (managedB2bPageSettings) applyManagedB2bPage(managedB2bPageSettings);
+   else refresh();
+  });
+ }
+
+ renderLocalizedB2bCatalog();
+ refresh();
+ });
+ </script>
+ <!-- Client 2026-07-21: the floating "AMBIANCE" tool was an internal design-tweak
+      widget (colour / rhythm / texture presets, saved to localStorage). It has no
+      business on a page shown to wholesale buyers, so the script that injected the
+      button + panel is removed. The .yza-amb-* CSS below is now inert but harmless,
+      and the transition rules at the top of that block are still doing real work. -->
+<script defer src="js/wholesale-maison.js?v=20260910-shared-header"></script>
+</body>
+</html>

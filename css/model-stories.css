@@ -1,0 +1,72 @@
+/* Editorial-only styles: no shared header, footer, or commerce selectors. */
+body main .model-gallery-host { display:block !important; width:100%; max-width:1280px; margin:0 auto !important; padding:0 !important; overflow:visible !important; columns:auto !important; scroll-margin-top:110px; }
+body main .model-gallery { --model-gap:16px; width:100%; min-width:0; color:#292724; }
+body.home-maison[data-page="home"] #girlsPreviewGrid > .model-gallery { width:100%; max-width:none; flex:none; }
+body main .model-gallery__track { display:grid; grid-template-rows:repeat(2,auto); grid-auto-flow:column; grid-auto-columns:calc((100% - 3 * var(--model-gap)) / 4); gap:26px var(--model-gap); overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-padding:0; scrollbar-width:none; overscroll-behavior-x:contain; cursor:grab; padding:3px 0; margin:0; direction:ltr; -webkit-overflow-scrolling:touch; }
+body main .model-gallery__track::-webkit-scrollbar { display:none; }
+body main .model-gallery__track.is-dragging { cursor:grabbing; scroll-snap-type:none; user-select:none; }
+body main .model-story { display:block; min-width:0; width:100%; margin:0; padding:0; color:inherit; background:#fff; text-decoration:none; scroll-snap-align:start; -webkit-user-drag:none; }
+body main .model-story__photo { display:block; position:relative; width:100%; aspect-ratio:4 / 5; overflow:hidden; margin:0; padding:0; background:#fff; }
+body main .model-story__photo img { display:block; width:100%; height:100%; max-width:none; margin:0; object-fit:cover; transition: transform var(--motion-enter) var(--ease-out-cubic); pointer-events:none; }
+body main .model-story__open { position:absolute; right:12px; bottom:12px; width:30px; height:30px; display:grid; place-items:center; background:#fff; color:#292724; font:400 18px/1 var(--font-body,'Jost',sans-serif); opacity:0; transform:translateY(5px); transition: transform var(--motion-move) var(--ease-out-quint), opacity var(--motion-fade) linear; }
+body main .model-story__caption { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:2px 10px; padding:12px 0 0; font:400 12px/1.5 var(--font-body,'Jost',sans-serif); letter-spacing:.015em; text-transform:none; }
+body main .model-story__caption strong { font:500 13px/1.5 var(--font-body,'Jost',sans-serif); letter-spacing:.025em; }
+body main .model-story__caption > span { color:#6a655e; font-size:11px; overflow-wrap:anywhere; }
+body main .model-gallery__controls { display:flex; align-items:center; gap:24px; padding:25px 0 0; min-width:0; font:400 11px/1.4 var(--font-body,'Jost',sans-serif); letter-spacing:.035em; }
+body main .model-gallery__hint { color:#6a655e; }
+body main .model-gallery__progress { height:1px; background:#e4e1dc; flex:1; overflow:hidden; }
+body main .model-gallery__progress > span { display:block; height:100%; background:#605d57; transition: transform var(--motion-move) var(--ease-out-quint); }
+body main .model-gallery__count { white-space:nowrap; font-variant-numeric:tabular-nums; color:#605d57; }
+body main .model-gallery__arrows { display:flex; gap:8px; }
+body main .model-gallery__arrows button { display:grid; place-items:center; width:44px; height:44px; padding:11px; border:1px solid #dad6d0; border-radius:0; color:#292724; background:#fff; cursor:pointer; transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear; }
+body main .model-gallery__arrows svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.2; }
+body main .model-gallery__arrows button:disabled { opacity:.3; cursor:default; }
+body main .model-story:focus-visible, body main .model-gallery__track:focus-visible, body main .model-gallery__arrows button:focus-visible, body main .model-stories-link:focus-visible { outline:2px solid #96644a; outline-offset:-2px; }
+body main .model-stories-section { display:block; padding:88px 36px; margin:0; border-top:1px solid #e4e1dc; background:#fff; text-align:center; clear:both; }
+body main .model-stories-heading { max-width:660px; margin:0 auto 38px; }
+body main .model-stories-eyebrow { margin:0 0 18px; font:400 11px/1.4 var(--font-body,'Jost',sans-serif); letter-spacing:.22em; text-transform:uppercase; color:#736f68; }
+body main #modelStoriesTitle { margin:0; padding:0; max-width:none; font:300 clamp(30px,3.4vw,46px)/1.1 'Fraunces',serif; letter-spacing:-.035em; text-transform:none; color:#38352f; }
+body main .model-stories-intro { margin:18px auto 0; max-width:50ch; font:400 15px/1.8 var(--font-body,'Jost',sans-serif); color:#6a655e; }
+body main .model-stories-link { display:inline-block; margin-top:32px; padding:6px 0; border-bottom:1px solid #89847b; font:400 11px/1.6 var(--font-body,'Jost',sans-serif); letter-spacing:.08em; text-decoration:none; text-transform:uppercase; color:#292724; }
+body main .model-gallery--pair { max-width:680px; margin:auto; }
+body main .model-gallery--pair .model-gallery__track { grid-template-rows:auto; grid-auto-columns:calc((100% - var(--model-gap)) / 2); cursor:auto; }
+body main .model-gallery--pair .model-story__photo { aspect-ratio:4 / 5; }
+body.home-maison main #homeGirls .container-wide { padding-inline:36px; }
+body.home-maison main #homeGirls .section-head { padding-inline:0; margin-bottom:38px; }
+body.home-maison main #homeGirls .section-cta { padding-inline:0; margin-top:40px; }
+body[data-page="girls"] main #girlsWall .container-wide { max-width:1352px; padding-inline:36px; }
+body[data-page="girls"] main #girlsWall h2 { max-width:none; margin:0 auto 20px; font:300 clamp(30px,3.4vw,46px)/1.15 'Fraunces',serif; letter-spacing:-.035em; }
+body[data-page="girls"] main #girlsWall .girls-loadmore { display:none; }
+@media (hover:hover) and (pointer:fine) {
+  body main .model-story:hover .model-story__photo img { transform:scale(1.025); }
+  body main .model-story:hover .model-story__open, body main .model-story:focus-visible .model-story__open { opacity:1; transform:none; }
+  body main .model-gallery__track.is-dragging .model-story img { transform:none; }
+  body main .model-gallery__arrows button:not(:disabled):hover { color:#fff; border-color:#393630; background:#393630; }
+}
+@media (max-width:1100px) {
+  body main .model-gallery { --model-gap:12px; }
+  body main .model-stories-section { padding-inline:20px; }
+  body.home-maison main #homeGirls .container-wide, body[data-page="girls"] main #girlsWall .container-wide { padding-inline:20px; }
+}
+@media (max-width:700px) {
+  body main .model-gallery { --model-gap:10px; }
+  body main .model-gallery__track { grid-auto-columns:calc((100% - var(--model-gap)) / 2); row-gap:20px; }
+  body main .model-story__caption { display:block; padding-top:8px; text-align:start; }
+  body main .model-story__caption strong { display:block; font-size:12px; }
+  body main .model-story__caption > span { display:block; font-size:10px; }
+  body main .model-gallery__controls { gap:12px; padding-top:20px; }
+  body main .model-gallery__hint { max-width:98px; font-size:10px; }
+  body main .model-gallery__arrows { gap:5px; }
+  body main .model-stories-section { padding:56px 18px; }
+  body main .model-stories-heading { margin-bottom:28px; }
+  body main .model-stories-intro { font-size:14px; }
+  body.home-maison main #homeGirls .container-wide, body[data-page="girls"] main #girlsWall .container-wide { padding-inline:18px; }
+  body.home-maison main #homeGirls .section-head { margin-bottom:30px; }
+  body.home-maison main #homeGirls #girlsFeedTitle { font-size:34px !important; }
+  body.home-maison main #homeGirls .girls-feed__intro { font-size:14px; line-height:1.8; }
+  body.home-maison main #homeGirls .section-cta { margin-top:30px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body main .model-gallery *, body main .model-gallery *::before { transition:none !important; scroll-behavior:auto !important; }
+  body main .model-story:is(:hover,:focus-visible) .model-story__photo img { transform:none; }
+}

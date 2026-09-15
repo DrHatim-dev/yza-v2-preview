@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<base href="/yza-v2-preview/"><meta name="robots" content="noindex,nofollow"><script src="/yza-v2-preview/preview.js"></script>
+<link rel="stylesheet" href="/yza-v2-preview/css/motion-tokens.css?v=20260910-motion">
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offre privée — un charm offert | YZA</title>
+  <!-- PAGE PRIVEE. Le lien est envoye a la main par Nawal a une trentaine de personnes ;
+       elle n'est referencee NULLE PART : ni dans la navigation (injectee par chrome.js),
+       ni dans sitemap.xml, ni dans un lien du site. noindex/nofollow empeche les moteurs
+       de la faire remonter si quelqu'un la partage. Ne pas l'ajouter au sitemap.
+       Le code promo n'apparait NULLE PART dans ce fichier : le serveur l'ecrit apres
+       inscription. L'ecrire ici le mettrait a la vue de tous et rendrait le formulaire
+       facultatif — c'etait le defaut de la premiere version. -->
+  
+  <!-- APERCU DU LIEN (WhatsApp, Instagram, Messenger, SMS).
+       Sans ces balises, WhatsApp retombait sur l'icone d'application et affichait un carre
+       orange avec « YZA » ecrit en police systeme — pas le logo de la maison.
+       og-charmy.jpg = le VRAI logo trilingue en blanc sur l'orange exact de l'icone
+       (196,94,41), 1200x630. Le dessin tient entierement dans le carre central : WhatsApp
+       rogne parfois l'apercu en carre, et le logo reste alors intact.
+       Ces balises ne referencent RIEN : `noindex` ci-dessus reste maitre. Elles servent
+       uniquement a ce que le lien envoye a la main ait l'air de ce qu'il est. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="YZA" />
+  <meta property="og:title" content="Un charm offert — offre privée YZA" />
+  <meta property="og:description" content="Une invitation pour 30 personnes : le charm en raphia de votre choix, offert. Crocheté main à Marrakech." />
+  <meta property="og:url" content="https://yza-shop.com/offre-charmy" />
+  <meta property="og:image" content="https://yza-shop.com/assets/brand/og-charmy.jpg?v=20260811a" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="YZA" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Un charm offert — offre privée YZA" />
+  <meta name="twitter:description" content="Une invitation pour 30 personnes : le charm en raphia de votre choix, offert." />
+  <meta name="twitter:image" content="https://yza-shop.com/assets/brand/og-charmy.jpg?v=20260811a" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="/yza-v2-preview/favicon.ico?v=20260703c" sizes="any">
+  <link rel="icon" type="image/png" href="/yza-v2-preview/assets/brand/yza-favicon.png?v=20260703c">
+  <link rel="apple-touch-icon" href="/yza-v2-preview/assets/brand/yza-apple-touch.png?v=20260703c">
+  <link rel="manifest" href="/yza-v2-preview/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,400..600&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=20260910-motion" />
+  <link rel="stylesheet" href="css/styles.css?v=20260910-motion" />
+<style id="yza-chrome-reserve">/* Reserve the final shared header and announcement before chrome.js mounts them. */html:not(.yza-chrome-in) body::before{content:"";display:block;height:calc(var(--header-h,72px) + var(--motion-announcement-reserve,40px))}</style>
+<style>
+/* Styles PROPRES A CETTE PAGE, gardes ici plutot que dans css/styles.css : une operation
+   d'une semaine n'a pas a faire changer la feuille de style de tout le site, ni a forcer
+   un bump de version sur les 48 pages. */
+.cy{max-width:680px;margin-inline:auto;padding-inline:var(--space-5)}
+.cy [hidden]{display:none}          /* filet : `hidden` gagne toujours sur cette page */
+
+/* ---- hero ---- */
+.cy-hero{text-align:center;padding-block:var(--space-12) var(--space-6)}
+/* PAS la classe `.eyebrow` du site : styles.css la met en `display:none` PARTOUT
+   (`.eyebrow, .b2b-eyebrow { display:none }`). D'ou une classe a nous. */
+.cy-eyebrow{margin:0;color:var(--terracotta,#c2551f);letter-spacing:.18em;
+  text-transform:uppercase;font-size:.7rem;font-weight:500}
+.cy-hero h1{font-family:var(--font-serif);font-weight:400;line-height:1.08;
+  font-size:clamp(2rem,7vw,3.1rem);margin-top:var(--space-4);letter-spacing:-.01em}
+.cy-hero h1 em{font-style:italic;color:var(--terracotta,#c2551f)}
+.cy-lede{margin-top:var(--space-5);font-size:1.0625rem;line-height:1.7;max-width:34em;margin-inline:auto}
+.cy-rule{display:flex;align-items:center;justify-content:center;gap:var(--space-3);
+  margin-block:var(--space-8);color:var(--terracotta,#c2551f)}
+.cy-rule::before,.cy-rule::after{content:"";height:1px;width:min(90px,18vw);background:currentColor;opacity:.35}
+.cy-rule span{font-size:.6rem;line-height:1}
+
+/* ---- grille des charms ----
+   Une GRILLE, pas un carrousel : les dix doivent etre visibles sans faire glisser.
+   5 colonnes en large, 3 puis 2 en etroit — jamais de defilement horizontal. */
+.cy-strip{margin-top:var(--space-6)}
+.cy-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-3)}
+@media (max-width:760px){.cy-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:430px){.cy-grid{grid-template-columns:repeat(2,1fr)}}
+.cy-chip{margin:0;text-align:center;border:1px solid var(--color-border);
+  display:flex;flex-direction:column;transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear}
+.cy-chip:hover{border-color:var(--color-fg)}
+.cy-chip img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;display:block}
+.cy-chip figcaption{padding:0 var(--space-2) var(--space-2);display:flex;flex-direction:column;gap:2px;
+  margin-top:auto}
+.cy-chip b{font-weight:400;font-size:.78rem;line-height:1.25;color:var(--color-fg)}
+/* Le prix barre + « offert » : la valeur du cadeau doit se voir, sinon « offert » ne veut
+   rien dire. La CONDITION (panier a 1 000 DH) est rappelee juste dessous, en direct. */
+.cy-chip i{font-style:normal;font-size:.72rem;color:var(--terracotta,#c2551f)}
+.cy-chip i s{color:var(--color-muted);text-decoration-thickness:1px;margin-right:.35em}
+/* La piece choisie : une seule a la fois. */
+.cy-chip.is-picked{border-color:var(--terracotta,#c2551f);box-shadow:inset 0 0 0 1px var(--terracotta,#c2551f)}
+/* min-height 44px au doigt : mesure a 36px, sous le seuil tactile recommande. */
+.cy-add{margin-top:var(--space-2);width:100%;padding:.5rem .25rem;min-height:36px;border:1px solid var(--color-fg);
+  background:var(--color-bg);color:var(--color-fg);font:inherit;font-size:.68rem;
+  letter-spacing:.09em;text-transform:uppercase;cursor:pointer;
+  transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear}
+.cy-add:hover{background:var(--color-fg);color:#fff}
+.cy-chip.is-picked .cy-add{background:var(--terracotta,#c2551f);border-color:var(--terracotta,#c2551f);color:#fff}
+.cy-strip__cap{margin-top:var(--space-4);text-align:center;font-size:.8125rem;line-height:1.6;
+  color:var(--color-muted)}
+/* Etat en direct : ou en est son panier par rapport aux 1 000 DH. */
+.cy-status{margin-top:var(--space-3);text-align:center;font-size:.875rem;line-height:1.6}
+.cy-status[data-etat="ok"]{color:var(--terracotta,#c2551f)}
+.cy-status[data-etat="manque"]{color:var(--color-fg)}
+
+/* ---- blocs « pourquoi » ---- */
+.cy-why{margin-top:var(--space-10);border:1px solid var(--color-border-strong);
+  padding:var(--space-8) var(--space-6);background:#fdfaf7}
+.cy-why + .cy-why{margin-top:var(--space-5)}
+.cy-why h2{font-family:var(--font-serif);font-weight:400;font-size:1.3rem;margin:0 0 var(--space-4)}
+.cy-why p{margin:0 0 var(--space-3);line-height:1.7}
+.cy-why p:last-child{margin-bottom:0}
+.cy-why dl{margin:0;display:grid;gap:var(--space-3)}
+.cy-why dt{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta,#c2551f)}
+.cy-why dd{margin:2px 0 0;line-height:1.6}
+
+/* ---- etapes ---- */
+.cy-steps{list-style:none;margin:var(--space-10) 0 0;padding:0;display:grid;gap:var(--space-5)}
+.cy-steps li{display:grid;grid-template-columns:1.9rem 1fr;gap:var(--space-4);align-items:start}
+.cy-steps b{font-family:var(--font-serif);font-weight:400;font-size:1.3rem;
+  color:var(--terracotta,#c2551f);line-height:1.3}
+.cy-steps p{margin:0;line-height:1.65}
+/* NE PAS cibler `span` tout court : les blocs de langue sont des <span hidden>, et
+   display:block bat le display:none du navigateur — l'anglais s'affichait sous le francais. */
+.cy-sub{display:block;margin-top:3px;color:var(--color-muted);font-size:.9375rem;line-height:1.55}
+
+/* ---- formulaire ---- */
+.cy-card{margin-top:var(--space-10);border:1px solid var(--color-fg);padding:var(--space-9) var(--space-6)}
+.cy-card h2{font-family:var(--font-serif);font-weight:400;font-size:1.5rem;margin:0 0 var(--space-2);text-align:center}
+.cy-card__sub{margin:0 auto var(--space-7);text-align:center;color:var(--color-muted);
+  font-size:.9375rem;max-width:38ch}
+.cy-form{display:grid;gap:var(--space-4)}
+.cy-form .field{display:grid;gap:var(--space-2)}
+.cy-form label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted)}
+.cy-form input{width:100%;padding:.75rem .9rem;border:1px solid var(--color-border-strong);
+  background:var(--color-bg);color:var(--color-fg);font:inherit;font-size:1rem;
+  transition: transform var(--motion-hover) ease, opacity var(--motion-hover) linear}
+.cy-form input:hover{border-color:var(--color-fg)}
+.cy-form input:focus-visible{outline:2px solid var(--terracotta,#c2551f);outline-offset:1px}
+.cy-form input[aria-invalid="true"]{border-color:#d90b0b}
+.cy-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cy-err{margin:0;color:#d90b0b;font-size:.875rem;min-height:1.2em}
+.cy-legal{margin-top:var(--space-5);color:var(--color-muted);font-size:.8125rem;line-height:1.6;text-align:center}
+
+/* ---- apres inscription ---- */
+.cy-done{display:none;text-align:center}
+.cy-done.is-on{display:block}
+.cy-card.is-done .cy-form,.cy-card.is-done .cy-card__sub{display:none}
+.cy-code{display:inline-block;margin-top:var(--space-4);padding:var(--space-4) var(--space-9);
+  border:1px dashed var(--terracotta,#c2551f);background:#fdf6f1;
+  font-size:1.85rem;letter-spacing:.2em;font-weight:500;color:var(--terracotta,#c2551f)}
+
+/* ---- signature + mentions ---- */
+.cy-sign{margin-top:var(--space-10);text-align:center;font-size:.9375rem;line-height:1.7;color:var(--color-muted)}
+.cy-sign strong{display:block;font-family:var(--font-serif);font-weight:400;font-size:1.05rem;
+  color:var(--color-fg);margin-bottom:2px}
+.cy-fine{margin-top:var(--space-10);padding-top:var(--space-6);border-top:1px solid var(--color-border);
+  color:var(--color-muted);font-size:.8125rem;line-height:1.7;padding-bottom:var(--space-16)}
+.cy-fine li{margin-top:var(--space-2)}
+@media (max-width:600px){
+  .cy-hero{padding-block:var(--space-8) var(--space-5)}
+  .cy-card{padding:var(--space-7) var(--space-4)}
+  .cy-why{padding:var(--space-6) var(--space-4)}
+  .cy-add{min-height:44px;font-size:.72rem}   /* cible tactile confortable */
+}
+</style>
+<link rel="stylesheet" href="/yza-v2-preview/css/site-header-maison.css?v=20260910-motion">
+<link rel="stylesheet" href="/yza-v2-preview/css/chat-maison.css?v=20260910-motion">
+<script defer src="/yza-v2-preview/js/chat-maison.js?v=20260909-chat-maison"></script>
+<script src="/yza-v2-preview/js/motion.js?v=20260910-motion"></script>
+<link id="cartMaisonCSS" rel="stylesheet" href="/yza-v2-preview/css/cart-maison.css?v=20260910-motion">
+</head>
+<body data-page="charmy">
+<main>
+  <div class="cy">
+
+    <header class="cy-hero">
+      <p class="cy-eyebrow"><span data-lang="fr">Offre privée · 30 personnes</span><span data-lang="en" hidden>Private offer · 30 people</span></p>
+      <h1><span data-lang="fr">Choisissez votre charm.<br><em>Il est pour nous.</em></span><span data-lang="en" hidden>Pick your charm.<br><em>It's on us.</em></span></h1>
+      <p class="cy-lede">
+        <span data-lang="fr">Nawal a choisi trente personnes à qui envoyer ce lien. Vous en faites partie. Laissez-nous quatre lignes, et le charm en raphia de votre choix passe à <strong>0 DH</strong> sur votre prochaine commande.</span>
+        <span data-lang="en" hidden>Nawal picked thirty people to send this link to. You're one of them. Leave us four lines, and the raffia charm of your choice drops to <strong>0 DH</strong> on your next order.</span>
+      </p>
+    </header>
+
+    <div class="cy-rule" aria-hidden="true"><span>◆</span></div>
+
+    <!-- Les dix charms, lus dans le catalogue du site : la liste ne peut pas se perimer,
+         et « celui que vous voulez » cesse d'etre une abstraction. -->
+    <section class="cy-strip" data-cy-strip hidden>
+      <div class="cy-grid" data-cy-grid></div>
+      <p class="cy-strip__cap">
+        <span data-lang="fr">Dix charms, crochetés main à Guéliz. <strong>Vous en choisissez un</strong> — en choisir un autre remplace le premier.</span>
+        <span data-lang="en" hidden>Ten charms, hand-crocheted in Guéliz. <strong>You pick one</strong> — picking another replaces the first.</span>
+      </p>
+      <!-- Etat en direct du panier : rempli par le script, jamais en dur. -->
+      <p class="cy-status" data-cy-status hidden></p>
+    </section>
+
+    <section class="cy-why">
+      <h2><span data-lang="fr">Pourquoi on offre un charm</span><span data-lang="en" hidden>Why we're giving a charm away</span></h2>
+      <p>
+        <span data-lang="fr">C'est la plus petite pièce de la maison. Un fruit en raphia crocheté main, dans notre atelier de Guéliz — un ancien bar des années 1940, où ce sont des femmes qui travaillent.</span>
+        <span data-lang="en" hidden>It's the smallest piece in the house. A hand-crocheted raffia fruit, made in our Guéliz atelier — a former 1940s bar, where the work is done by women.</span>
+      </p>
+      <p>
+        <span data-lang="fr">C'est aussi, presque toujours, par elle qu'on entre chez YZA. On en accroche un à un sac, on le tient dans la main, et on comprend le reste. Alors on préfère vous en offrir un plutôt que d'essayer de vous le vendre.</span>
+        <span data-lang="en" hidden>It's also, almost always, how people come into YZA. You clip one onto a bag, you hold it, and the rest makes sense. So we'd rather give you one than try to sell it to you.</span>
+      </p>
+      <p>
+        <span data-lang="fr">Si la maison vous plaît, vous reviendrez. Sinon, vous aurez gardé un joli fruit en raphia. Les deux nous vont.</span>
+        <span data-lang="en" hidden>If you like the house, you'll come back. If not, you'll have kept a rather nice raffia fruit. Either way works for us.</span>
+      </p>
+    </section>
+
+    <section class="cy-why">
+      <h2><span data-lang="fr">Pourquoi on vous demande vos coordonnées</span><span data-lang="en" hidden>Why we're asking for your details</span></h2>
+      <dl>
+        <div>
+          <dt><span data-lang="fr">Nom et ville</span><span data-lang="en" hidden>Name and city</span></dt>
+          <dd><span data-lang="fr">Pour préparer le colis — et pour savoir jusqu'où voyagent nos pièces.</span><span data-lang="en" hidden>To get the parcel ready — and to know how far our pieces travel.</span></dd>
+        </div>
+        <div>
+          <dt><span data-lang="fr">Téléphone</span><span data-lang="en" hidden>Phone</span></dt>
+          <dd><span data-lang="fr">Parce qu'on répond sur WhatsApp, en vrai. C'est comme ça qu'on travaille.</span><span data-lang="en" hidden>Because we answer on WhatsApp, for real. That's how we work.</span></dd>
+        </div>
+        <div>
+          <dt><span data-lang="fr">E-mail</span><span data-lang="en" hidden>Email</span></dt>
+          <dd><span data-lang="fr">C'est là qu'arrive votre code. Et les nouvelles de l'atelier, quand il y en a de vraies.</span><span data-lang="en" hidden>That's where your code lands. Plus news from the atelier, when there's real news.</span></dd>
+        </div>
+      </dl>
+      <p style="margin-top:var(--space-5)">
+        <span data-lang="fr">Quatre champs, pas un de plus. On ne revend rien, on n'écrit pas tous les jours, et vous partez quand vous voulez.</span>
+        <span data-lang="en" hidden>Four fields, not one more. We don't sell anything on, we don't email every day, and you can leave whenever you like.</span>
+      </p>
+    </section>
+
+    <ol class="cy-steps">
+      <li>
+        <b>1</b>
+        <p>
+          <span data-lang="fr">Inscrivez-vous ci-dessous. <strong>Votre code s'affiche aussitôt</strong>, et vous le recevez aussi par e-mail.</span>
+          <span data-lang="en" hidden>Sign up below. <strong>Your code appears straight away</strong>, and we email it to you too.</span>
+          <span class="cy-sub">
+            <span data-lang="fr">Il est rattaché à votre e-mail : il ne marche que pour vous, avec cette adresse.</span>
+            <span data-lang="en" hidden>It's tied to your email: it only works for you, with that address.</span>
+          </span>
+        </p>
+      </li>
+      <li>
+        <b>2</b>
+        <p>
+          <span data-lang="fr">Composez un panier de <strong>1 000 DH ou plus</strong>, et glissez-y le charm que vous voulez.</span>
+          <span data-lang="en" hidden>Build a cart of <strong>1,000 DH or more</strong>, and drop in the charm you want.</span>
+          <span class="cy-sub">
+            <span data-lang="fr">Le charm compte dans le total : c'est le panier entier qui doit atteindre 1 000 DH.</span>
+            <span data-lang="en" hidden>The charm counts towards the total: it's the whole cart that must reach 1,000 DH.</span>
+          </span>
+        </p>
+      </li>
+      <li>
+        <b>3</b>
+        <p>
+          <span data-lang="fr">Au paiement, saisissez <strong>votre code</strong> dans « Code promo ». Le charm tombe à 0 DH.</span>
+          <span data-lang="en" hidden>At checkout, enter <strong>your code</strong> under "Promo code". The charm drops to 0 DH.</span>
+          <span class="cy-sub">
+            <span data-lang="fr">Réglez avec l'e-mail utilisé ci-dessous — c'est lui qui ouvre le droit.</span>
+            <span data-lang="en" hidden>Check out with the email you enter below — that's what unlocks it.</span>
+          </span>
+        </p>
+      </li>
+    </ol>
+
+    <section class="cy-card" data-cy-card>
+      <h2><span data-lang="fr">Recevoir mon code</span><span data-lang="en" hidden>Get my code</span></h2>
+      <p class="cy-card__sub"><span data-lang="fr">Une minute, et le charm est à vous.</span><span data-lang="en" hidden>One minute, and the charm is yours.</span></p>
+
+      <form class="cy-form" data-cy-form novalidate>
+        <!-- Piege a robots.
+             NE JAMAIS le nommer `company`, `organization`, `address`, `nom`… : ce sont des
+             champs que les navigateurs et gestionnaires de mots de passe remplissent TOUT
+             SEULS, `autocomplete="off"` ou pas. Teste le 2026-08-11 : nomme `company`, il
+             etait pre-rempli et le serveur jetait l'inscription en silence — la visiteuse
+             voyait « voici votre code » avec une case VIDE.
+             Un nom sans aucune signification n'accroche aucune heuristique de remplissage.
+             Filet supplementaire cote serveur : la valeur n'est retenue contre la
+             visiteuse que si elle DIFFERE de tous ses champs visibles. -->
+        <input class="cy-hp" type="text" name="yza_hp_note" id="yza_hp_note" tabindex="-1"
+               autocomplete="off" aria-hidden="true" data-1p-ignore data-lpignore="true" data-form-type="other">
+
+        <div class="field">
+          <label for="cy-name"><span data-lang="fr">Nom et prénom</span><span data-lang="en" hidden>Full name</span></label>
+          <input id="cy-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cy-phone"><span data-lang="fr">Téléphone</span><span data-lang="en" hidden>Phone</span></label>
+          <input id="cy-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+212 6 00 00 00 00" required>
+        </div>
+        <div class="field">
+          <label for="cy-email">E-mail</label>
+          <input id="cy-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cy-city"><span data-lang="fr">Ville</span><span data-lang="en" hidden>City</span></label>
+          <input id="cy-city" name="city" autocomplete="address-level2" placeholder="Marrakech" required>
+        </div>
+
+        <p class="cy-err" data-cy-err role="alert" aria-live="polite"></p>
+        <button class="btn btn--solid btn--block" type="submit" data-cy-submit>
+          <span data-lang="fr">Recevoir mon code</span><span data-lang="en" hidden>Get my code</span>
+        </button>
+      </form>
+
+      <div class="cy-done" data-cy-done role="status" aria-live="polite">
+        <p><span data-lang="fr">C'est noté. Voici votre code :</span><span data-lang="en" hidden>All set. Here is your code:</span></p>
+        <!-- Volontairement vide : le serveur ecrit le code apres inscription. -->
+        <p class="cy-code" data-cy-code>&nbsp;</p>
+        <p class="cy-legal" style="margin-top:var(--space-6)">
+          <span data-lang="fr">Il est aussi parti par e-mail, et il est <strong>déjà posé dans votre panier</strong> — vous n'aurez pas à le retaper. Il s'applique dès que votre panier atteint 1 000 DH et contient un charm.</span>
+          <span data-lang="en" hidden>It's on its way by email too, and it's <strong>already in your cart</strong> — no need to type it again. It kicks in once your cart reaches 1,000 DH and holds a charm.</span>
+        </p>
+        <a class="btn btn--outline" href="#" data-cy-remonter style="margin-top:var(--space-6)">
+          <span data-lang="fr">Choisir mon charm</span><span data-lang="en" hidden>Choose my charm</span>
+        </a>
+        <!-- « Continuer mes achats », avec ce qui manque pour déclencher l'offre. Le libellé
+             est écrit par le script depuis le panier réel — jamais un montant en dur. -->
+        <a class="btn btn--solid btn--block cy-shop" href="/yza-v2-preview/collections" data-cy-shop hidden
+           style="margin-top:var(--space-3)"></a>
+      </div>
+
+      <p class="cy-legal">
+        <span data-lang="fr">Vos coordonnées servent à cette offre et aux nouvelles de l'atelier. Vous pouvez vous désinscrire à tout moment.</span>
+        <span data-lang="en" hidden>Your details are used for this offer and for news from the atelier. You can unsubscribe at any time.</span>
+      </p>
+    </section>
+
+    <p class="cy-sign">
+      <strong>Nawal</strong>
+      <span data-lang="fr">Fondatrice de YZA · 66 rue Yougoslavie, Guéliz, Marrakech</span>
+      <span data-lang="en" hidden>Founder of YZA · 66 rue Yougoslavie, Guéliz, Marrakech</span>
+    </p>
+
+    <ul class="cy-fine">
+      <li><span data-lang="fr">Offre limitée à 30 personnes et à un charm par personne, une seule fois.</span><span data-lang="en" hidden>Limited to 30 people and one charm per person, once only.</span></li>
+      <li><span data-lang="fr">Le code est nominatif : il n'est valable qu'avec l'e-mail utilisé à l'inscription, et ne peut pas être transmis.</span><span data-lang="en" hidden>The code is personal: it only works with the email used at signup, and cannot be passed on.</span></li>
+      <li><span data-lang="fr">Il expire le 18 août 2026 à minuit (heure du Maroc).</span><span data-lang="en" hidden>It expires on 18 August 2026 at midnight (Morocco time).</span></li>
+      <li><span data-lang="fr">Valable sur un panier de 1 000 DH ou plus, contenant au moins un charm.</span><span data-lang="en" hidden>Valid on a cart of 1,000 DH or more containing at least one charm.</span></li>
+      <li><span data-lang="fr">Si votre panier contient plusieurs charms, l'offre porte sur le moins cher.</span><span data-lang="en" hidden>If your cart contains several charms, the offer applies to the least expensive one.</span></li>
+      <li><span data-lang="fr">Non cumulable avec un autre code promo. Les remises automatiques (paliers charms) restent acquises.</span><span data-lang="en" hidden>Cannot be combined with another promo code. Automatic discounts (charm tiers) still apply.</span></li>
+    </ul>
+
+  </div>
+</main>
+
+<script>
+/* Deux choses : peindre la bande des dix charms, et gerer l'inscription.
+
+   La bande est lue dans YZA.byCategory('charms') — le portail de visibilite du site, pas
+   YZA.products qui est BRUT : une piece retiree du catalogue ne doit pas reapparaitre ici.
+   Si le catalogue n'est pas encore charge, la bande reste simplement cachee ; elle est
+   illustrative, la page se tient sans elle. */
+(function () {
+  var ECHAPPE = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+
+  function peindreLesCharms() {
+    var YZAo = window.YZA;
+    if (!YZAo || typeof YZAo.byCategory !== 'function') { return false; }
+    var liste = YZAo.byCategory('charms');
+    if (!liste || !liste.length) { return false; }
+    var hote = document.querySelector('[data-cy-grid]');
+    var bloc = document.querySelector('[data-cy-strip]');
+    if (!hote || !bloc) { return false; }
+    var nom = function (p) {
+      try { return (YZAo.i18n && YZAo.i18n.pick) ? YZAo.i18n.pick(p.name) : (p.name.fr || p.name); }
+      catch (e) { return ''; }
+    };
+    var enFr = !document.documentElement.lang || document.documentElement.lang === 'fr';
+    var html = '';
+    liste.forEach(function (p) {
+      if (!p.img || !(p.price > 0)) { return; }
+      /* « Charm tranche de citron en raphia » -> « tranche de citron » : dans une grille de
+         dix charms, repeter « charm » et « en raphia » dix fois n'apprend rien. */
+      var n = String(nom(p) || '').replace(/^Charm\s+/i, '').replace(/\s+en raphia$/i, '')
+                                  .replace(/\s+Raffia\s+Charm$/i, '').replace(/^Raffia\s+/i, '');
+      html += '<figure class="cy-chip" data-handle="' + ECHAPPE(p.handle) + '">'
+            + '<img src="' + ECHAPPE(p.img) + '" alt="' + ECHAPPE(n) + '" loading="lazy" decoding="async">'
+            + '<figcaption><b>' + ECHAPPE(n) + '</b>'
+            + '<i><s>' + Math.round(p.price / 100) + ' DH</s>' + (enFr ? 'offert' : 'free') + '</i>'
+            + '<button type="button" class="cy-add" data-add="' + ECHAPPE(p.handle) + '">'
+            + (enFr ? 'Choisir' : 'Pick') + '</button></figcaption></figure>';
+    });
+    if (!html) { return false; }
+    hote.innerHTML = html;
+    bloc.hidden = false;
+    refletePanier();
+    return true;
+  }
+
+  /* « 1000 » -> « 1 000 » : espace fine insecable, comme partout ailleurs sur le site.
+     Sans ca, le message en direct jurait avec le reste de la page. */
+  function dh(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+
+  /* SEUIL de l'offre. Repris de YZA.coupons pour ne pas ecrire « 1 000 » deux fois :
+     si le seuil change un jour dans la definition du coupon, la page suit. */
+  function seuilDh() {
+    try { return (YZA.coupons && YZA.coupons.CHARMY && YZA.coupons.CHARMY.minDh) || 1000; }
+    catch (e) { return 1000; }
+  }
+
+  /* La piece choisie DEPUIS CETTE PAGE. On la reconnait a `src`, pose a l'ajout : un charm
+     que la visiteuse aurait mis dans son panier ailleurs ne doit pas etre retire par un
+     clic ici. */
+  function choisiActuel() {
+    try {
+      var l = (YZA.cart.items || []).filter(function (i) { return i.src === 'offre-charmy'; });
+      return l.length ? l[l.length - 1] : null;
+    } catch (e) { return null; }
+  }
+
+  /* Remet l'ecran d'accord avec le panier : la vignette choisie, et l'etat en direct.
+     Appelee au rendu ET a chaque `yza:cartchange` — donc aussi quand elle retire une
+     ligne depuis le tiroir, sans quoi la page continuerait d'afficher « Choisi ». */
+  function refletePanier() {
+    var enFr = !document.documentElement.lang || document.documentElement.lang === 'fr';
+    var choisi = choisiActuel();
+    [].forEach.call(document.querySelectorAll('.cy-chip'), function (c) {
+      var estChoisi = !!choisi && c.getAttribute('data-handle') === choisi.handle;
+      c.classList.toggle('is-picked', estChoisi);
+      var b = c.querySelector('.cy-add');
+      if (b) { b.textContent = estChoisi ? (enFr ? 'Choisi ✓' : 'Picked ✓') : (enFr ? 'Choisir' : 'Pick'); }
+    });
+
+    var seuil = seuilDh();
+    var sousTotal = 0;
+    try { sousTotal = Math.round(YZA.cart.subtotalCents() / 100); } catch (e) {}
+    var manque = seuil - sousTotal;
+
+    /* Le bouton « Continuer mes achats » porte le montant qui manque. Il change de nature
+       une fois le seuil franchi : continuer a dire « encore 0 DH » n'aiderait personne,
+       et a ce moment-la ce qu'elle veut, c'est finir sa commande. */
+    var shop = document.querySelector('[data-cy-shop]');
+    if (shop) {
+      shop.hidden = false;
+      if (manque > 0) {
+        shop.setAttribute('href', '/collections');
+        shop.textContent = enFr
+          ? 'Continuer mes achats · encore ' + dh(manque) + ' DH'
+          : 'Keep shopping · ' + dh(manque) + ' DH to go';
+      } else {
+        shop.setAttribute('href', '/checkout.html');
+        shop.textContent = enFr ? 'Finaliser ma commande' : 'Complete my order';
+      }
+    }
+
+    var etat = document.querySelector('[data-cy-status]');
+    if (!etat) { return; }
+    if (!choisi) { etat.hidden = true; return; }
+    etat.hidden = false;
+    if (manque > 0) {
+      etat.setAttribute('data-etat', 'manque');
+      etat.textContent = enFr
+        ? 'Votre charm est dans le panier. Encore ' + dh(manque) + ' DH pour atteindre ' + dh(seuil) + ' DH — et il passe à 0 DH.'
+        : 'Your charm is in the cart. ' + dh(manque) + ' DH more to reach ' + dh(seuil) + ' DH — then it drops to 0 DH.';
+    } else {
+      etat.setAttribute('data-etat', 'ok');
+      etat.textContent = enFr
+        ? 'Votre panier atteint ' + dh(seuil) + ' DH : votre charm est offert au paiement.'
+        : 'Your cart has reached ' + dh(seuil) + ' DH: your charm is free at checkout.';
+    }
+  }
+
+  /* Ajout au panier, par delegation : les boutons n'existent pas encore au chargement. */
+  document.addEventListener('click', function (e) {
+    /* « Choisir mon charm » apres inscription : la grille est juste au-dessus, autant y
+       remonter plutot que d'envoyer la visiteuse sur une autre page. */
+    var haut = e.target.closest ? e.target.closest('[data-cy-remonter]') : null;
+    if (haut) {
+      e.preventDefault();
+      var grille = document.querySelector('[data-cy-strip]');
+      if (grille && !grille.hidden) { grille.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      else { window.location.href = '/collections/charms'; }
+      return;
+    }
+    var b = e.target.closest ? e.target.closest('.cy-add') : null;
+    if (!b) { return; }
+    e.preventDefault();
+    var handle = b.getAttribute('data-add');
+    if (!handle || !window.YZA || !YZA.cart || typeof YZA.cart.add !== 'function') { return; }
+
+    /* UN SEUL charm offert. Choisir en remplace un autre plutot que de les empiler : le
+       coupon n'en offre qu'un (le moins cher), donc un panier a trois charms lui en
+       ferait payer deux sans qu'elle l'ait voulu.
+       On ne retire QUE la piece venue de cette page (`src`), jamais un charm qu'elle
+       aurait ajoute ailleurs. Re-cliquer sur celui deja choisi le retire. */
+    var precedent = choisiActuel();
+    if (precedent) { YZA.cart.remove(precedent.handle, precedent.variant || '', precedent.colorSlug || '', precedent.releaseId || ''); }
+    if (!precedent || precedent.handle !== handle) {
+      YZA.cart.add(handle, '', 1, { source: 'offre-charmy' });
+    }
+    refletePanier();
+  });
+
+  /* Le panier peut changer ailleurs : tiroir, autre onglet, retrait d'une ligne. La
+     grille doit suivre, sinon elle affirmerait « Choisi » sur une piece disparue. */
+  document.addEventListener('yza:cartchange', refletePanier);
+
+  /* products.js est en `defer` : il peut n'etre pas encore la. On tente tout de suite,
+     puis au chargement, puis on abandonne — sans jamais boucler indefiniment. */
+  if (!peindreLesCharms()) {
+    window.addEventListener('load', function () {
+      if (!peindreLesCharms()) { setTimeout(peindreLesCharms, 600); }
+    });
+  }
+})();
+
+/* Inscription. On poste sur subscribe.php — le meme point d'entree que la pop-up — avec
+   `source: 'charmy'` : c'est lui qui declenche cote serveur le plafond des 30 places, la
+   colonne « ville » et l'e-mail d'accueil qui porte le code.
+   Le code n'est PAS invente ici : on affiche celui que le serveur renvoie. */
+(function () {
+  var form = document.querySelector('[data-cy-form]');
+  if (!form) return;
+  var card = document.querySelector('[data-cy-card]');
+  var done = document.querySelector('[data-cy-done]');
+  var codeEl = document.querySelector('[data-cy-code]');
+  var err  = document.querySelector('[data-cy-err]');
+  var btn  = form.querySelector('[data-cy-submit]');
+  var busy = false;
+
+  function fr() {
+    return !document.documentElement.lang || document.documentElement.lang === 'fr';
+  }
+  function dire(msg) { err.textContent = msg; }
+  function libelle(txt) { btn.textContent = txt; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (busy) return;
+    dire('');
+
+    var champs = { name: 'cy-name', phone: 'cy-phone', email: 'cy-email', city: 'cy-city' };
+    var val = {}, manque = null;
+    for (var k in champs) {
+      var el = document.getElementById(champs[k]);
+      val[k] = (el.value || '').trim();
+      el.setAttribute('aria-invalid', val[k] ? 'false' : 'true');
+      if (!val[k] && !manque) { manque = el; }
+    }
+    if (manque) {
+      dire(fr() ? 'Merci de remplir les quatre champs.' : 'Please fill in all four fields.');
+      manque.focus();
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val.email)) {
+      document.getElementById('cy-email').setAttribute('aria-invalid', 'true');
+      dire(fr() ? 'Cette adresse e-mail semble incorrecte.' : 'That email address looks wrong.');
+      document.getElementById('cy-email').focus();
+      return;
+    }
+
+    busy = true;
+    btn.disabled = true;
+    libelle(fr() ? 'Un instant…' : 'One moment…');
+
+    fetch('subscribe.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: val.name, phone: val.phone, email: val.email, city: val.city,
+        source: 'charmy', page: 'offre-charmy',
+        lang: (document.documentElement.lang || 'fr'),
+        _hp: (form.querySelector('input[name="yza_hp_note"]') || {}).value || ''
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (j) {
+      busy = false;
+      /* PAS DE SUCCES SANS CODE. `ok: true` sans code, c'est le piege a robots qui a
+         jete l'inscription en silence : rien n'est enregistre, et afficher « voici votre
+         code » au-dessus d'une case vide serait un mensonge — c'est exactement ce qui
+         s'est produit le 2026-08-11. On preferera toujours un message honnete. */
+      if (j && j.ok && j.code) {
+        codeEl.textContent = j.code;
+        /* On pose le code dans son panier tout de suite : elle n'a plus a le retaper au
+           paiement, et il est deja rattache a l'adresse qu'elle vient de donner — la seule
+           avec laquelle le serveur l'acceptera. Le serveur revalide tout au moment de la
+           commande ; ceci n'est qu'un raccourci d'affichage. */
+        try {
+          if (window.YZA && YZA.cart && typeof YZA.cart.setCoupon === 'function') {
+            YZA.cart.setCoupon(j.code, val.email);
+          }
+        } catch (e2) { /* le panier n'est pas encore la : elle saisira le code a la main */ }
+        /* Reveille la grille et le bouton « Continuer mes achats » : setCoupon emet deja
+           cet evenement, mais s'il a echoue le bouton resterait muet sans libelle. */
+        try { document.dispatchEvent(new CustomEvent('yza:cartchange')); } catch (e3) {}
+        card.classList.add('is-done');
+        done.classList.add('is-on');
+        done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      btn.disabled = false;
+      libelle(fr() ? 'Recevoir mon code' : 'Get my code');
+      if (j && j.ok && !j.code) {
+        dire(fr() ? 'Votre inscription n’a pas été enregistrée. Réessayez, ou écrivez-nous sur WhatsApp — on vous envoie le code à la main.'
+                  : 'Your signup wasn’t saved. Try again, or message us on WhatsApp — we’ll send the code by hand.');
+        return;
+      }
+      /* 'full' : les 30 places sont prises. On le dit franchement plutot que de laisser
+         croire que l'inscription a marche. */
+      dire(j && j.reason === 'full'
+        ? (fr() ? 'Les 30 places sont prises. Écrivez-nous sur WhatsApp, on trouvera autre chose.'
+                : 'All 30 places are taken. Message us on WhatsApp and we’ll sort something out.')
+        : (fr() ? 'Un souci est survenu. Réessayez dans un instant.'
+                : 'Something went wrong. Please try again in a moment.'));
+    })
+    .catch(function () {
+      busy = false;
+      btn.disabled = false;
+      libelle(fr() ? 'Recevoir mon code' : 'Get my code');
+      dire(fr() ? 'Connexion perdue. Réessayez dans un instant.' : 'Connection lost. Please try again.');
+    });
+  });
+})();
+</script>
+
+  <script defer src="/yza-v2-preview/catalog-current.js?v=20260814fc3m8"></script>
+
+  <script defer src="js/products.js?v=20260814fc3m8"></script>
+  <script defer src="js/tracking.js?v=20260704g"></script>
+  <script defer src="js/yza-track.js?v=20260824a"></script>
+  <script defer src="js/media.js?v=20260713c"></script>
+  <script defer src="js/i18n.js?v=20260910-bestsellers-nav"></script>
+<script defer src="js/currency.js?v=20260805b"></script>
+  <script defer src="js/cart.js?v=20260910-motion"></script>
+  <script defer src="js/chrome.js?v=20260910-motion"></script>
+  <script defer src="js/main.js?v=20260910-motion"></script>
+</body>
+</html>
