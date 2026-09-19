@@ -73,6 +73,10 @@
       orderNo: pendingOperation ? pendingOperation.number : '',
     };
 
+    // Keep the displayed country and the first shipping quote in sync.
+    // Preserve an existing destination; new checkouts start in the Morocco market.
+    if (!state.ship.country) state.ship.country = 'MA';
+
     var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); };
     var T = function (k) { return YZA.i18n.t(k); };
     var M = YZA.checkoutMaison;
@@ -137,7 +141,7 @@
       if (isPickup()) return 'morocco';
       var cc = normCountry(state.ship.country);
       if (cc) return YZA.geo.regionOf(cc);
-      return (YZA.geo && YZA.geo.fromTimezone) ? YZA.geo.fromTimezone() : 'other';
+      return 'morocco';
     }
     var isIntl = function () { return state.method === 'iban' || state.method === 'paypal'; };
 
@@ -258,8 +262,7 @@
     // (YZA.geo.regionOf), and a typed "Maroc" can never resolve to one. Changing it
     // re-renders the summary so the fee updates live.
     function countryField() {
-      var cur = normCountry(state.ship.country) ||
-        ((YZA.geo && YZA.geo.primary && YZA.geo.primary[YZA.geo.fromTimezone()]) || '');
+      var cur = normCountry(state.ship.country);
       var c = (YZA.geo && YZA.geo.countries) || {};
       var opt = function (o) {
         return '<option value="' + esc(o[0]) + '"' + (o[0] === cur ? ' selected' : '') + '>' + esc(o[1]) + '</option>';
