@@ -1,0 +1,35 @@
+body.purchase-first .product-info { padding-top:16px !important; }
+body.purchase-first #pName { margin-bottom:8px !important; font-size:clamp(28px,3vw,42px) !important; }
+body.purchase-first #pShort { margin:10px 0 14px !important; font-size:14px !important; line-height:1.5 !important; }
+body.purchase-first .product-info > .option { margin-block:10px !important; }
+body.purchase-first #pAdd { min-height:50px !important; margin-top:8px !important; }
+body.purchase-first #purchaseAvailability { margin:0 0 8px; font:400 12px/1.5 var(--font-body); color:#454545; }
+body.purchase-first #purchaseService { margin:12px 0 22px; font:400 12px/1.6 var(--font-body); color:#555; }
+body.purchase-first #mobileProductBar { display:none !important; }
+#purchaseSticky { position:fixed; z-index:90; bottom:0; left:0; right:0; display:flex; justify-content:center; background:#fff; border-top:1px solid #ddd; padding:12px 24px calc(12px + env(safe-area-inset-bottom)); }
+#purchaseSticky[hidden] { display:none; }
+#purchaseSticky button { width:min(100%,560px); min-height:48px; padding:12px 20px; background:#2e2e2e; color:#fff; border:1px solid #2e2e2e; font:400 12px/1.5 var(--font-body); letter-spacing:.08em; cursor:pointer; }
+#purchaseSticky button:disabled { opacity:.55; cursor:not-allowed; }
+#purchaseSticky button:focus-visible { outline:2px solid #a84820; outline-offset:3px; }
+body.purchase-sticky-visible { padding-bottom:88px; }
+body.purchase-sticky-visible .chat-launcher { bottom:100px !important; }
+@media(max-width:700px){
+ body.purchase-first .product-info { padding:18px !important; }
+ body.purchase-first #pName { font-size:28px !important; }
+ #purchaseSticky { padding-inline:18px; }
+
+}
+
+body.purchase-first .product--cg { padding-top:24px !important; }
+body.purchase-first #pVariantOpts { flex-direction:row !important; gap:8px !important; border:0 !important; }
+body.purchase-first #pVariantOpts .chip--variant { flex:1; flex-direction:column; align-items:flex-start; justify-content:center; gap:3px; min-height:56px; padding:8px !important; border:1px solid #ddd !important; }
+body.purchase-first #pVariantOpts .chip--variant.is-active { border-color:#2e2e2e !important; }
+body.purchase-first #pVariantOpts .bag-size-price { margin-left:0; }
+body.purchase-first #pShort { font-size:13px !important; }
+body.purchase-first #pAdd { padding:14px !important; }
+
+body.purchase-first #pName { font-size:32px !important; line-height:1.1 !important; margin:0 0 8px !important; }
+body.purchase-first .bag-price-row { margin:0 !important; padding:0 !important; gap:8px !important; }
+body.purchase-first #pPrice { margin:0 !important; padding:0 !important; font-size:24px !important; }
+body.purchase-first .product-info > .option { margin-block:7px !important; }
+body.purchase-first #purchaseDescription { font:400 14px/1.7 var(--font-body); }

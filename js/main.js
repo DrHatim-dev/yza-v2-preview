@@ -3856,10 +3856,9 @@
  variantWrap.classList.remove('option--size-rail');
  }
 
- // Product description sits directly on top of the Add-to-cart button (client request):
- // move the editorial story block to just before .option--add, after the size selector.
+ // Keep editorial content after purchase controls.
  { const _story = $('#productStory'); const _addBtn = $('#pAdd'); const _add = _addBtn && _addBtn.closest('.option--add');
-   if (_story && _add && _add.parentNode) _add.parentNode.insertBefore(_story, _add); }
+   if (_story && _add && _add.parentNode) _add.after(_story); }
 
  const detailRows = [];
  // SKU intentionally hidden from customers (client request) — kept in data for internal use.
@@ -4066,6 +4065,7 @@
   YZA.renderCharmMaison?.({ product: p, canonicalProduct });
   YZA.renderClothingMaison?.({ product: p, canonicalProduct, members });
   YZA.renderEarringMaison?.({ product: p, canonicalProduct });
+  YZA.purchaseFirst?.(p);
   YZA.modelStories?.renderPage();
  }
 
