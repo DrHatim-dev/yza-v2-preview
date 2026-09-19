@@ -296,5 +296,5 @@
  <!-- Perf 2026-07-24 : les videos data-lazy-video (charm) ne chargent leurs octets
       qu'a l'approche du viewport - meme motif que bandVideoIO dans main.js. -->
  <script>(function(){var vids=document.querySelectorAll('video[data-lazy-video]');if(!vids.length)return;function promote(v){if(document.hidden||matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause();return;}if(!v.getAttribute('src')&&v.dataset.src){v.src=v.dataset.src;v.load();}var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){});}if(!('IntersectionObserver' in window)){vids.forEach(promote);return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){promote(e.target);}else if(e.target.pause)e.target.pause();});},{threshold:0.2,rootMargin:'300px 0px'});vids.forEach(function(v){io.observe(v);});})();</script>
-</body>
+<script defer src="/yza-v2-preview/js/seo-coherence.js?v=20260919"></script></body>
 </html>
