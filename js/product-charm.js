@@ -7,7 +7,7 @@
   const pick = (value) => typeof value === 'string' ? value : YZA.i18n.pick(value || {});
   const price = (value) => YZA.i18n.formatPrice(value);
   const asset = (name) => `/yza-v2-preview/assets/brand/pdp/${name}`;
-  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async" ${extra}>`;
+  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="${extra.includes('fetchpriority=') ? 'eager' : 'lazy'}" decoding="async" ${extra}>`;
   const rule = (title, aside = '') => `<p class="bag-rule"><span>${esc(title)}</span>${aside ? `<span>${esc(aside)}</span>` : ''}</p>`;
   const words = {
     fr: { announcement: 'Fait main à Marrakech, un fruit à la fois', crochet: 'Crocheté main', material: 'Raphia teint main', finishes: 'Les finitions', ring: 'L’anneau', included: 'Inclus', ring2: 'Anneau doré 2 cm', ring3: 'Anneau doré 3 cm', includedNote: 'Inclus avec le charm', studioOnly: 'Sur les bundles, ou au studio', studio: 'Voir la pièce au studio, Guéliz', atelier: 'Atelier', handmade: 'Crochet main', dimensions: 'Dimensions', story: 'Le récit', gestures: 'Les quatre gestes', madeIn: 'Façonné à Guéliz, Marrakech', dye: 'Teinture', loop: 'Boucle', tag: 'Étiquette', dyeText: 'Le raffia naturel est teint à la main dans les couleurs emblématiques de l’atelier.', loopText: 'La boucle en raffia prolonge le fruit et accueille son anneau doré.', tagText: 'La petite plaque YZA gravée signe la pièce, finie à la main à Guéliz.', wear: 'Comment le porter', wearTitle: 'Il ne se clipse pas qu’au sac.', market: 'Le Fruit Market', specs: 'La fiche', collection: 'Collection', season: 'Saison', attachment: 'Attache', packaging: 'Emballage', questions: 'Questions fréquentes', questionTitle: 'Les petites choses à savoir.', allQuestions: 'Toutes les questions', faqCare: 'Comment entretenir mon charm ?', faqMaterial: 'Qu’est-ce qui rend chaque fruit unique ?', faqRing: 'Et si je souhaite un autre anneau ?', faqGift: 'Est-il prêt à offrir ?', delivery: 'Livraison', returns: 'Retours', payment: 'Paiement', continue: 'Continuer la collection', choose: 'Choisir mon charm', close: 'Fermer', upsell: 'Complétez le marché' },
@@ -48,7 +48,9 @@
     rail.firstElementChild?.click();
     const thumbs = [...rail.querySelectorAll('.gallery__thumb')];
     thumbs.forEach((thumb, index) => {
-      thumb.setAttribute('aria-label', `${pick(p.name)} — ${index + 1}/${thumbs.length}`);
+      const mediaNames = {fr:['Photo','Vidéo'],en:['Photo','Video'],es:['Foto','Vídeo'],tr:['Fotoğraf','Video'],ar:['صورة','فيديو']};
+      const mediaName = (mediaNames[YZA.i18n.lang] || mediaNames.fr)[thumb.dataset.gtype === 'video' ? 1 : 0];
+      thumb.setAttribute('aria-label', `${mediaName} — ${pick(p.name)} — ${index + 1}/${thumbs.length}`);
       thumb.setAttribute('aria-pressed', String(index === 0));
     });
     YZA.productMaison.mobileGallery(p);

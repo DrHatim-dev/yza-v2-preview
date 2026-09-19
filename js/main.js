@@ -356,7 +356,7 @@
     'lnv-rouge-xs': { img: 'assets/products/la-nouvelle-vague/lnv-rouge-xs-hover.webp?v=20260726l' },
     // La Nouvelle Vague M · Bleu — real street shot, bag carried (client-provided 2026-07-15).
     // Keys are matched with `item.img.includes(k)`, so they still hit despite the ?v= cache-bust.
-    'lnv-bleu-m': { img: 'assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.jpg' },
+    'lnv-bleu-m': { img: 'assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.optimized.webp' },
     // La Nouvelle Vague S · Bleu — le panier sur la chaise en rotin, dans la palmeraie
     // (cliente 2026-07-26, IMG_6891). Remplace le plan de la terrasse du port : le sac est
     // plus gros, la lumiere est plus nette et les anses perlees se lisent en vignette.
@@ -884,11 +884,11 @@
  const c = storyCopy();
  const duoSets = [
  ['assets/yza-girls/girls-rin-look-1.jpg', 'assets/yza-girls/girls-rin-look-2.jpg'],
- ['assets/products/bag-sculpture-red-seated.jpg', 'assets/products/charms-on-bag.jpg'],
+ ['assets/products/bag-sculpture-red-seated.optimized.webp', 'assets/products/charms-on-bag.optimized.webp'],
  ['assets/yza-girls/girls-rin-look-3.jpg', 'assets/products/bag-sculpture-group.jpg'],
  ];
  if (setIndex % 3 === 1) {
- const full = ['assets/lifestyle/hero.jpg', 'assets/lifestyle/editorial-grapes.jpg'][setIndex % 2];
+ const full = ['assets/lifestyle/hero.optimized.webp', 'assets/lifestyle/editorial-grapes.optimized.webp'][setIndex % 2];
  return `<section class="product-story product-story--wide" data-reveal>
  <div class="product-story__image"><img src="${full}" alt="${esc(T().t('alt.editorial.worn'))}" loading="lazy" width="1480" height="920" decoding="async"></div>
  <div class="product-story__copy product-story__copy--overlay">
@@ -1456,7 +1456,7 @@
  // real-luxury-charms.mp4 ("L'orange, qui se balance") dropped at the client's request.
  const shots = [
  { src: 'assets/products/fruit-market/styling/charms-atelier-raffia-detail.jpg', cap: t.t('charm.style.cap1'), width: 720, height: 961, type: 'image' },
- { src: 'assets/products/charms/charm-grappe-portee.jpg?v=20260721a', cap: t.t('charm.style.cap2'), width: 1000, height: 1500, type: 'image' },
+ { src: 'assets/products/charms/charm-grappe-portee.optimized.webp?v=20260721a', cap: t.t('charm.style.cap2'), width: 1000, height: 1500, type: 'image' },
  { src: 'assets/video/fruit-stall-charms.mp4?v=20260713l', cap: t.t('charm.style.cap3'), width: 720, height: 1280, type: 'video' },
  { src: 'assets/products/fruit-market/styling/charms-raffia-basket-bowl.jpg', cap: t.t('charm.style.cap4'), width: 1080, height: 1440, type: 'image' },
  ];
@@ -2048,7 +2048,7 @@
  bags: 'col.bags',
  })[collState.cat] || 'col.all';
  const tEl = $('#collectionTitleText'); if (tEl) { tEl.setAttribute('data-i18n', titleKey); tEl.textContent = T().t(titleKey); }
- const cEl = $('#collectionCount'); if (cEl) cEl.textContent = list.length;
+ const cEl = $('#collectionCount'); if (cEl) cEl.textContent = ' ' + list.length;
  const descKey = ({ charms: 'col.desc.charms', earrings: 'col.desc.accessories', accessories: 'col.desc.accessories', bags: 'col.desc.bags', rtw: 'col.desc.rtw', tops: 'col.desc.rtw', pareos: 'col.desc.rtw', pants: 'col.desc.rtw', bottoms: 'col.desc.rtw' })[collState.cat] || 'col.desc.all';
  const dEl = $('#collectionDesc'); if (dEl) { dEl.setAttribute('data-i18n', descKey); dEl.textContent = T().t(descKey); }
  // Top-level pills mirror the site nav exactly (Charms · Accessories · Bags · Prêt-à-porter).
@@ -3526,7 +3526,7 @@
  // Les .thumb.jpg n'ont été générés que pour les JPG (La Nouvelle Vague). Les PNG
  // Sculpture n'en ont aucun : les viser produisait un 404 par vignette, rattrapé par
  // l'onerror mais payé en requête. On ne réécrit donc que les .jpg.
- const galThumb = (u) => (isBagGallery && u) ? u.replace(/\.jpe?g(\?[^"'#]*)?$/i, '.thumb.jpg') : u;
+ const galThumb = (u) => u && /\.optimized\.webp$/i.test(u) ? u.replace(/\.webp$/i, '.thumb.webp') : (isBagGallery && u) ? u.replace(/\.jpe?g(\?[^"'#]*)?$/i, '.thumb.jpg') : u;
  // Pas de `background` en style en dur ici : il l'emporterait sur la feuille de styles.
  // Les bandes qui comblent le cadre d'une video letterboxee doivent etre BLANCHES, jamais
  // grises — elles doivent se raccorder aux photos produit sur fond blanc de la meme
@@ -3535,8 +3535,8 @@
  // styles.css ; elle etait deja correcte, c'est ce style en ligne qui l'annulait.
  const videoMainMarkup = (src, poster) => `<video id="galMainVid" autoplay muted loop playsinline src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} style="width:100%;height:100%;object-fit:contain;display:block"></video>`;
   const releasedImageAlt = t.pick(p.imageAlt || {}) || pageName;
-  const imageMainMarkup = (src, altName) => `<img id="galMainImg" src="${esc(src)}" alt="${esc(altName || releasedImageAlt)}" fetchpriority="high" width="900" height="1180" decoding="async" data-zoomable onerror="this.onerror=null;this.src='${esc(gal[0] || p.img || '')}'">`;
- const galleryThumbAria = (altName, index, total) => `${altName || releasedImageAlt} — ${index + 1}/${total}`;
+  const imageMainMarkup = (src, altName) => `<img id="galMainImg" src="${esc(src)}" alt="${esc(altName || releasedImageAlt)}" loading="eager" fetchpriority="high" width="900" height="1180" decoding="async" data-zoomable onerror="this.onerror=null;this.src='${esc(gal[0] || p.img || '')}'">`;
+ const galleryThumbAria = (altName, index, total, video = false) => { const labels = {fr:['Photo','Vidéo'],en:['Photo','Video'],es:['Foto','Vídeo'],tr:['Fotoğraf','Video'],ar:['صورة','فيديو']}; return `${(labels[t.lang] || labels.fr)[video ? 1 : 0]} ${index + 1}/${total} — ${altName || releasedImageAlt}`; };
  // Tracks the name for the image currently in the gallery; updated on variant swap so
  // zoom + thumb-rebuild label the SELECTED variant, not the base product.
   let currentGalleryAlt = releasedImageAlt;
@@ -3544,7 +3544,7 @@
  $('#galThumbs').innerHTML = mediaItems.map((it, i) => {
  const isVid = it.type === 'video';
  const thumbSrc = isVid ? (it.poster || gal[0] || it.src) : it.src;
- return `<button class="gallery__thumb${i === 0 ? ' is-active' : ''}${isVid ? ' gallery__thumb--play' : ''}" data-src="${esc(it.src)}" data-poster="${esc(isVid ? (it.poster || '') : '')}" data-gtype="${isVid ? 'video' : 'img'}" aria-label="${esc(galleryThumbAria(currentGalleryAlt, i, mediaItems.length))}"><img aria-hidden="true" src="${esc(galThumb(thumbSrc))}" onerror="this.onerror=null;this.src='${esc(thumbSrc)}'" alt="" loading="lazy" width="76" height="100" decoding="async">${isVid ? '<span class="gallery__play-icon" aria-hidden="true"></span>' : ''}</button>`;
+ return `<button class="gallery__thumb${i === 0 ? ' is-active' : ''}${isVid ? ' gallery__thumb--play' : ''}" data-src="${esc(it.src)}" data-poster="${esc(isVid ? (it.poster || '') : '')}" data-gtype="${isVid ? 'video' : 'img'}" aria-label="${esc(galleryThumbAria(currentGalleryAlt, i, mediaItems.length, isVid))}"><img aria-hidden="true" src="${esc(galThumb(thumbSrc))}" onerror="this.onerror=null;this.src='${esc(thumbSrc)}'" alt="" loading="lazy" width="76" height="100" decoding="async">${isVid ? '<span class="gallery__play-icon" aria-hidden="true"></span>' : ''}</button>`;
  }).join('');
  $('#galThumbs').onclick = (e) => {
  const b = e.target.closest('.gallery__thumb'); if (!b) return;
@@ -3607,7 +3607,7 @@
  $('#galThumbs').innerHTML = items.map((it, i) => {
  const isVid = it.type === 'video';
  const thumbSrc = isVid ? (it.poster || g[0] || it.src) : it.src;
- return `<button class="gallery__thumb${i === 0 ? ' is-active' : ''}${isVid ? ' gallery__thumb--play' : ''}" data-src="${esc(it.src)}" data-poster="${esc(isVid ? (it.poster || '') : '')}" data-gtype="${isVid ? 'video' : 'img'}" aria-label="${esc(galleryThumbAria(currentGalleryAlt, i, items.length))}"><img aria-hidden="true" src="${esc(galThumb(thumbSrc))}" onerror="this.onerror=null;this.src='${esc(thumbSrc)}'" alt="" loading="lazy" width="76" height="100" decoding="async">${isVid ? '<span class="gallery__play-icon" aria-hidden="true"></span>' : ''}</button>`;
+ return `<button class="gallery__thumb${i === 0 ? ' is-active' : ''}${isVid ? ' gallery__thumb--play' : ''}" data-src="${esc(it.src)}" data-poster="${esc(isVid ? (it.poster || '') : '')}" data-gtype="${isVid ? 'video' : 'img'}" aria-label="${esc(galleryThumbAria(currentGalleryAlt, i, items.length, isVid))}"><img aria-hidden="true" src="${esc(galThumb(thumbSrc))}" onerror="this.onerror=null;this.src='${esc(thumbSrc)}'" alt="" loading="lazy" width="76" height="100" decoding="async">${isVid ? '<span class="gallery__play-icon" aria-hidden="true"></span>' : ''}</button>`;
  }).join('');
  $('#galThumbs').hidden = items.length <= 1;
  }

@@ -1546,7 +1546,7 @@ const PRODUCTS = [
  "img": "assets/lookbook-ss26-27/embedded/p30_img01_xref1219_8b2d1136309d.jpeg",
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p30_img01_xref1219_8b2d1136309d.jpeg",
- "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg"
+ "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp"
  ],
  "familyHandle": "jawhara-pareos",
  "familyOrder": 1,
@@ -1962,7 +1962,7 @@ const PRODUCTS = [
  "img": "assets/lookbook-ss26-27/embedded/p29_img01_xref1212_d56a9ef89119.jpeg",
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p29_img01_xref1212_d56a9ef89119.jpeg",
- "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg"
+ "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp"
  ],
  "familyHandle": "jawhara-pareos",
  "familyOrder": 2,
@@ -3877,12 +3877,12 @@ const PRODUCTS = [
  "ar": "Iconic basket bags"
  },
  "season": "All Seasons 2026",
- "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
- "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.jpeg",
- "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.jpeg"
+ "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.optimized.webp"
  ],
  "familyHandle": "la-sculpture",
  "familyOrder": 1,
@@ -4280,7 +4280,7 @@ const PRODUCTS = [
  "img": "assets/products/bag-sculpture-violet-solo.webp",
  "gallery": [
  "assets/products/bag-sculpture-violet-solo.webp",
- "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.jpeg",
+ "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p41_img03_xref1315_841b5b884798.jpeg"
  ],
  "familyHandle": "la-sculpture",
@@ -4675,10 +4675,10 @@ const PRODUCTS = [
  "ar": "Iconic basket bags"
  },
  "season": "All Seasons 2026",
- "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
- "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.jpeg",
+ "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p48_img02_xref1346_42bfdc1a3e34.jpeg",
  "assets/lookbook-ss26-27/embedded/p48_img03_xref1347_e6608af984d1.jpeg"
  ],
@@ -5075,7 +5075,7 @@ const PRODUCTS = [
  "img": "assets/products/bag-nouvelle-vague-still.webp",
  "gallery": [
  "assets/products/bag-nouvelle-vague-still.webp",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg"
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp"
  ],
  "familyHandle": "la-nouvelle-vague",
  "familyOrder": 1,
@@ -5446,7 +5446,7 @@ const PRODUCTS = [
  "img": "assets/products/bag-nouvelle-vague-still-pink.webp",
  "gallery": [
  "assets/products/bag-nouvelle-vague-still-pink.webp",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg"
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp"
  ],
  "familyHandle": "la-nouvelle-vague",
  "familyOrder": 2,
@@ -5818,7 +5818,7 @@ const PRODUCTS = [
  "img": "assets/products/bag-nouvelle-vague-still-2.webp",
  "gallery": [
  "assets/products/bag-nouvelle-vague-still-2.webp",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg"
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp"
  ],
  "familyHandle": "la-nouvelle-vague",
  "familyOrder": 3,
@@ -6189,15 +6189,15 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-cherries-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-cherries-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-cherries-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-cherries-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-08.jpg",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-10.webp",
- "assets/products/accessories-clean/cherries-accessory-clean.png",
+ "assets/products/accessories-clean/cherries-accessory-clean.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p58_img02_xref1416_b7482fc1dffb.jpeg",
  "assets/lookbook-ss26-27/embedded/p59_img01_xref1426_ab1030bf5e96.jpeg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-58.jpg",
@@ -6544,15 +6544,15 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-grapes-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-grapes-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-grapes-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-grapes-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-08.jpg",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-10.webp",
- "assets/products/accessories-clean/grapes-accessory-clean.png",
+ "assets/products/accessories-clean/grapes-accessory-clean.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p59_img01_xref1426_ab1030bf5e96.jpeg",
  "assets/lookbook-ss26-27/embedded/p57_img04_xref1411_21775b2a985c.jpeg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-58.jpg",
@@ -6897,9 +6897,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-07.webp",
@@ -7246,9 +7246,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-07.webp",
@@ -7595,9 +7595,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-tomato-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-tomato-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-tomato-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-tomato-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-07.webp",
@@ -7944,9 +7944,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-02.jpg",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-03.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-06.webp",
@@ -8293,9 +8293,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-07.webp",
@@ -8643,15 +8643,15 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-09.webp",
- "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+ "assets/products/accessories-clean/kiwi-raffia-earrings-clean.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p59_img01_xref1426_ab1030bf5e96.jpeg",
  "assets/products/accessories-clean/watermelon-slice-accessory-clean.webp",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-58.jpg",
@@ -8990,9 +8990,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-02.jpg",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-03.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-07.webp",
@@ -9343,9 +9343,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.png",
+ "img": "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.optimized.webp",
  "gallery": [
- "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-07.webp",
@@ -9929,9 +9929,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+ "img": "assets/products/accessories-clean/kiwi-raffia-earrings-clean.optimized.webp",
  "gallery": [
- "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+ "assets/products/accessories-clean/kiwi-raffia-earrings-clean.optimized.webp",
    "assets/lifestyle/accessories/kiwi-earrings-packshot.webp",
    "assets/lifestyle/accessories/kiwi-earrings-01.webp"
  ],
@@ -10917,12 +10917,12 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/products/accessories-clean/grapes-accessory-clean.png",
+ "img": "assets/products/accessories-clean/grapes-accessory-clean.optimized.webp",
  "lifestyleVideo": "assets/lifestyle/accessories/grapes-earrings.mp4",
  "gallery": [
- "assets/products/accessories-clean/grapes-accessory-clean.png",
+ "assets/products/accessories-clean/grapes-accessory-clean.optimized.webp",
    "assets/lifestyle/accessories/grapes-earrings-packshot.webp",
- "assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.jpeg",
+ "assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.optimized.webp",
  "assets/lifestyle/accessories/grapes-earrings-souk.webp",
    "assets/lifestyle/accessories/grapes-earrings-violet-01.webp",
    "assets/lifestyle/accessories/grapes-earrings-violet-02.webp",
@@ -11176,9 +11176,9 @@ const PRODUCTS = [
  "ar": "Fruit Market"
  },
  "season": "All Seasons",
- "img": "assets/products/accessories-clean/cherries-accessory-clean.png",
+ "img": "assets/products/accessories-clean/cherries-accessory-clean.optimized.webp",
  "gallery": [
- "assets/products/accessories-clean/cherries-accessory-clean.png",
+ "assets/products/accessories-clean/cherries-accessory-clean.optimized.webp",
    "assets/lifestyle/accessories/cherry-earrings-packshot.webp",
  "assets/lookbook-ss26-27/embedded/p58_img02_xref1416_b7482fc1dffb.jpeg",
    "assets/lifestyle/accessories/cherry-earrings-piscine.webp",
@@ -12952,12 +12952,12 @@ const BAG_ROWS = [
  "ar": "مقاس XS، لون أحمر."
  },
  "price": 80000,
- "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
- "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.jpeg",
- "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.jpeg"
+ "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.optimized.webp"
  ],
  "url": "/produits/la-sculpture-xs-basket-bag-ss26?color=rouge"
  },
@@ -12987,12 +12987,12 @@ const BAG_ROWS = [
  "ar": "مقاس S، لون أحمر."
  },
  "price": 93000,
- "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
- "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.jpeg",
- "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.jpeg"
+ "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.optimized.webp"
  ],
  "url": "/produits/la-sculpture-s-basket-bag-ss26?color=rouge"
  },
@@ -13022,12 +13022,12 @@ const BAG_ROWS = [
  "ar": "مقاس M، لون أحمر."
  },
  "price": 100000,
- "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
- "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.jpeg",
- "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.jpeg"
+ "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.optimized.webp"
  ],
  "url": "/produits/la-sculpture-m-basket-bag-ss26?color=rouge"
  }
@@ -13108,7 +13108,7 @@ const BAG_ROWS = [
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p41_img03_xref1315_841b5b884798.jpeg",
  "assets/lookbook-ss26-27/embedded/p44_img01_xref1329_bf91110d6d83.jpeg",
- "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.jpeg"
+ "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.optimized.webp"
  ],
  "url": "/produits/la-sculpture-xs-basket-bag-ss26?color=violet"
  },
@@ -13142,7 +13142,7 @@ const BAG_ROWS = [
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p41_img03_xref1315_841b5b884798.jpeg",
  "assets/lookbook-ss26-27/embedded/p44_img01_xref1329_bf91110d6d83.jpeg",
- "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.jpeg"
+ "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.optimized.webp"
  ],
  "url": "/produits/la-sculpture-s-basket-bag-ss26?color=violet"
  },
@@ -13176,7 +13176,7 @@ const BAG_ROWS = [
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p41_img03_xref1315_841b5b884798.jpeg",
  "assets/lookbook-ss26-27/embedded/p44_img01_xref1329_bf91110d6d83.jpeg",
- "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.jpeg"
+ "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.optimized.webp"
  ],
  "url": "/produits/la-sculpture-m-basket-bag-ss26?color=violet"
  }
@@ -13253,10 +13253,10 @@ const BAG_ROWS = [
  "ar": "مقاس XS، لون أسود."
  },
  "price": 80000,
- "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
- "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.jpeg",
+ "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p48_img02_xref1346_42bfdc1a3e34.jpeg",
  "assets/lookbook-ss26-27/embedded/p48_img03_xref1347_e6608af984d1.jpeg"
  ],
@@ -13288,10 +13288,10 @@ const BAG_ROWS = [
  "ar": "مقاس S، لون أسود."
  },
  "price": 93000,
- "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
- "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.jpeg",
+ "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p48_img02_xref1346_42bfdc1a3e34.jpeg",
  "assets/lookbook-ss26-27/embedded/p48_img03_xref1347_e6608af984d1.jpeg"
  ],
@@ -13323,10 +13323,10 @@ const BAG_ROWS = [
  "ar": "مقاس M، لون أسود."
  },
  "price": 100000,
- "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
- "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.jpeg",
+ "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p48_img02_xref1346_42bfdc1a3e34.jpeg",
  "assets/lookbook-ss26-27/embedded/p48_img03_xref1347_e6608af984d1.jpeg"
  ],
@@ -13372,10 +13372,10 @@ const BAG_ROWS = [
  "ar": "Active edition"
  },
  "colorSlug": "edition",
- "img": "assets/products/la-vague/lavague-black-s.jpg",
+ "img": "assets/products/la-vague/lavague-black-s.optimized.webp",
  "gallery": [
- "assets/products/la-vague/lavague-black-xs.jpg",
- "assets/products/la-vague/lavague-black-s.jpg",
+ "assets/products/la-vague/lavague-black-xs.optimized.webp",
+ "assets/products/la-vague/lavague-black-s.optimized.webp",
  "assets/products/la-vague/lavague-black-m.jpg"
  ],
  "items": [
@@ -13405,9 +13405,9 @@ const BAG_ROWS = [
  "ar": "XS scale, blue finish."
  },
  "price": 49000,
- "img": "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg",
+ "img": "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp",
  "gallery": [
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg",
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p51_img01_xref1366_21749db6b994.jpeg",
  "assets/lookbook-ss26-27/embedded/p52_img01_xref1373_10bd8ebf12c0.jpeg"
  ],
@@ -13442,7 +13442,7 @@ const BAG_ROWS = [
  "img": "assets/lookbook-ss26-27/embedded/p51_img01_xref1366_21749db6b994.jpeg",
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p51_img01_xref1366_21749db6b994.jpeg",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg",
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p52_img01_xref1373_10bd8ebf12c0.jpeg"
  ],
  "url": "/produits/la-nouvelle-vague-s-basket-bag-ss26?color=rose"
@@ -13476,7 +13476,7 @@ const BAG_ROWS = [
  "img": "assets/lookbook-ss26-27/embedded/p52_img01_xref1373_10bd8ebf12c0.jpeg",
  "gallery": [
  "assets/lookbook-ss26-27/embedded/p52_img01_xref1373_10bd8ebf12c0.jpeg",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg",
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p51_img01_xref1366_21749db6b994.jpeg"
  ],
  "url": "/produits/la-nouvelle-vague-m-basket-bag-ss26?color=bleu-ciel"
@@ -14817,7 +14817,7 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-05.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-06.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-07.jpg",
- "assets/lookbook-ss26-27/pages/yza-lookbook-page-08.jpg",
+ "assets/lookbook-ss26-27/pages/yza-lookbook-page-08.optimized.webp",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-09.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-10.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-11.jpg",
@@ -14825,8 +14825,8 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-13.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-14.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-15.jpg",
- "assets/lookbook-ss26-27/pages/yza-lookbook-page-16.jpg",
- "assets/lookbook-ss26-27/pages/yza-lookbook-page-17.jpg",
+ "assets/lookbook-ss26-27/pages/yza-lookbook-page-16.optimized.webp",
+ "assets/lookbook-ss26-27/pages/yza-lookbook-page-17.optimized.webp",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-18.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-19.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-20.jpg",
@@ -14860,7 +14860,7 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-48.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-49.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-50.jpg",
- "assets/lookbook-ss26-27/pages/yza-lookbook-page-51.jpg",
+ "assets/lookbook-ss26-27/pages/yza-lookbook-page-51.optimized.webp",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-52.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-53.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-54.jpg",
@@ -14879,7 +14879,7 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/embedded/p29_img01_xref1212_d56a9ef89119.jpeg",
  "assets/lookbook-ss26-27/embedded/p29_img02_xref1213_fe747a323e9f.jpeg",
  "assets/lookbook-ss26-27/embedded/p29_img03_xref1214_6b93fb974a48.jpeg",
- "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg",
+ "assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p30_img01_xref1219_8b2d1136309d.jpeg",
  "assets/lookbook-ss26-27/embedded/p30_img02_xref1220_f762d6e64853.jpeg",
  "assets/lookbook-ss26-27/embedded/p30_img03_xref1221_6a80517bd62a.jpeg",
@@ -14887,23 +14887,23 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/embedded/p32_img04_xref1239_3935f6e23a7c.jpeg",
  "assets/lookbook-ss26-27/embedded/p38_img01_xref1287_56cb4d596aa0.jpeg",
  "assets/lookbook-ss26-27/embedded/p38_img04_xref1290_050054976c5b.jpeg",
- "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.jpeg",
+ "assets/lookbook-ss26-27/embedded/p40_img01_xref1305_5ae097cc9e5a.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p41_img03_xref1315_841b5b884798.jpeg",
- "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.jpeg",
- "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.jpeg",
+ "assets/lookbook-ss26-27/embedded/p42_img01_xref1321_1a08834f9d69.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p43_img01_xref1325_6be88260cccd.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p44_img01_xref1329_bf91110d6d83.jpeg",
- "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.jpeg",
- "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.jpeg",
- "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.jpeg",
+ "assets/lookbook-ss26-27/embedded/p45_img01_xref1333_caaad580c061.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p46_img01_xref1337_7dae31225680.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p47_img01_xref1341_0932d247e77e.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p48_img01_xref1345_c06ef6230440.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p48_img02_xref1346_42bfdc1a3e34.jpeg",
  "assets/lookbook-ss26-27/embedded/p48_img03_xref1347_e6608af984d1.jpeg",
- "assets/lookbook-ss26-27/embedded/p48_img04_xref1348_332e7fac044c.jpeg",
- "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.jpeg",
+ "assets/lookbook-ss26-27/embedded/p48_img04_xref1348_332e7fac044c.optimized.webp",
+ "assets/lookbook-ss26-27/embedded/p50_img01_xref1362_b250c91a59d1.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p51_img01_xref1366_21749db6b994.jpeg",
  "assets/lookbook-ss26-27/embedded/p52_img01_xref1373_10bd8ebf12c0.jpeg",
  "assets/lookbook-ss26-27/embedded/p53_img01_xref1380_788fc851111b.jpeg",
- "assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.jpeg",
+ "assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.optimized.webp",
  "assets/lookbook-ss26-27/embedded/p56_img02_xref1402_2ffff76a0151.jpeg",
  "assets/lookbook-ss26-27/embedded/p57_img04_xref1411_21775b2a985c.jpeg",
  "assets/lookbook-ss26-27/embedded/p58_img02_xref1416_b7482fc1dffb.jpeg",
@@ -14911,12 +14911,12 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/embedded/p60_img01_xref2285_8f75334c5653.webp",
  "assets/products/accessories-clean/lemon-slice-necklace-clean.webp",
  "assets/products/accessories-clean/orange-slice-necklace-clean.webp",
- "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+ "assets/products/accessories-clean/kiwi-raffia-earrings-clean.optimized.webp",
  "assets/products/accessories-clean/watermelon-slice-accessory-clean.webp",
  "assets/products/accessories-clean/orange-raffia-earrings-clean.webp",
  "assets/products/accessories-clean/lemon-raffia-earrings-clean.webp",
- "assets/products/accessories-clean/grapes-accessory-clean.png",
- "assets/products/accessories-clean/cherries-accessory-clean.png",
+ "assets/products/accessories-clean/grapes-accessory-clean.optimized.webp",
+ "assets/products/accessories-clean/cherries-accessory-clean.optimized.webp",
  "assets/products/accessories-clean/tomatoes-earrings-clean.webp",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-26.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-27.jpg",
@@ -14938,61 +14938,61 @@ const ASSET_MANIFEST = {
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-58.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-59.jpg",
  "assets/lookbook-ss26-27/pages/yza-lookbook-page-60.jpg",
- "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-avocado-half-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-avocado-half-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-cherries-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-cherries-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-08.jpg",
  "assets/original-shop/charms/raffia-cherries-charm-ss26-10.webp",
- "assets/original-shop/charms/raffia-grapes-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-grapes-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-08.jpg",
  "assets/original-shop/charms/raffia-grapes-charm-ss26-10.webp",
- "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-kiwi-slice-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-02.jpg",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-03.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-06.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-lemon-slice-charm-ss26-08.webp",
- "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-orange-slice-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-tomato-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-tomato-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-tomato-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-02.jpg",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-03.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-watermelon-slice-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-07.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-08.webp",
  "assets/original-shop/charms/raffia-whole-lemon-charm-ss26-09.webp",
- "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.png",
+ "assets/original-shop/charms/raffia-whole-orange-charm-ss26-01.optimized.webp",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-02.webp",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-03.jpg",
  "assets/original-shop/charms/raffia-whole-orange-charm-ss26-07.webp",
@@ -15421,21 +15421,21 @@ PRODUCTS.forEach((p) => { INTERNAL_PRICE_FIELDS.forEach((f) => { delete p[f]; })
 // raffia-fruits linesheet), one distinct image per product (charm loop / earring hoop / necklace chain).
 const ACCESSORY_IMAGES = {
  'raffia-cherries-charm-ss26': 'assets/products/fruit-market/charm-cherries.jpg',
- 'raffia-grapes-charm-ss26': 'assets/products/fruit-market/charm-grapes.jpg',
+ 'raffia-grapes-charm-ss26': 'assets/products/fruit-market/charm-grapes.optimized.webp',
  'raffia-whole-orange-charm-ss26': 'assets/products/fruit-market/charm-whole-orange.jpg',
- 'raffia-whole-lemon-charm-ss26': 'assets/products/fruit-market/charm-whole-lemon.jpg',
- 'raffia-tomato-charm-ss26': 'assets/products/fruit-market/charm-tomato.jpg',
+ 'raffia-whole-lemon-charm-ss26': 'assets/products/fruit-market/charm-whole-lemon.optimized.webp',
+ 'raffia-tomato-charm-ss26': 'assets/products/fruit-market/charm-tomato.optimized.webp',
  'raffia-lemon-slice-charm-ss26': 'assets/products/fruit-market/charm-lemon-slice.jpg',
  // Client studio photograph — replaces the generated lifestyle card image.
- 'raffia-orange-slice-charm-ss26': 'assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.png',
+ 'raffia-orange-slice-charm-ss26': 'assets/original-shop/charms/raffia-orange-slice-charm-ss26-01.optimized.webp',
  'raffia-kiwi-slice-charm-ss26': 'assets/products/fruit-market/charm-kiwi-slice.jpg',
  'raffia-watermelon-slice-charm-ss26': 'assets/products/fruit-market/charm-watermelon-slice.jpg',
  'raffia-avocado-half-charm-ss26': 'assets/products/fruit-market/charm-avocado.jpg',
- 'watermelon-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-watermelon.jpg',
+ 'watermelon-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-watermelon.optimized.webp',
  'kiwi-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-kiwi.jpg',
  'lemon-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-lemon.jpg',
  'orange-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-orange.jpg',
- 'grapes-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-grapes.jpg',
+ 'grapes-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-grapes.optimized.webp',
  'cherries-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-cherries.jpg',
  'tomatoes-raffia-earrings-ss26': 'assets/products/fruit-market/earrings-tomato.jpg',
  'lemon-slice-raffia-necklace-ss26': 'assets/products/fruit-market/necklace-lemon-slice.jpg',
@@ -15453,7 +15453,7 @@ const ACCESSORY_IMAGES = {
  // AI 'rtw-clean' nano-banana stills. These heroes are also the first entry in PRODUCT_MEDIA.
  'yza-scarf-top-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p33_img02_xref1247_4e3188b3ffc2.jpeg',
  'yza-button-up-shirt-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p29_img02_xref1213_fe747a323e9f.jpeg',
- 'yza-pareo-skirt-short-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg',
+ 'yza-pareo-skirt-short-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp',
  'yza-pareo-skirt-midi-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p30_img02_xref1220_f762d6e64853.jpeg',
  'yza-pareo-skirt-long-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p29_img03_xref1214_6b93fb974a48.jpeg',
  'yza-pareo-skirt-x-long-jawhara-ss26': 'assets/lookbook-ss26-27/embedded/p38_img01_xref1287_56cb4d596aa0.jpeg',
@@ -15471,28 +15471,28 @@ PRODUCTS.forEach((p) => {
 
 // Per-product "in-use / vibe" hover image (charm styled on a raffia bag, sunny close-up). Shown on card hover.
 const HOVER_IMAGES = {
- 'raffia-cherries-charm-ss26': 'assets/original-shop/charms/raffia-cherries-charm-ss26-01.png',
+ 'raffia-cherries-charm-ss26': 'assets/original-shop/charms/raffia-cherries-charm-ss26-01.optimized.webp',
  'raffia-grapes-charm-ss26': 'assets/products/fruit-market/vibe/vibe-grapes.jpg',
- 'raffia-whole-orange-charm-ss26': 'assets/products/fruit-market/vibe/vibe-whole-orange.jpg',
+ 'raffia-whole-orange-charm-ss26': 'assets/products/fruit-market/vibe/vibe-whole-orange.optimized.webp',
  'raffia-whole-lemon-charm-ss26': 'assets/products/fruit-market/vibe/vibe-whole-lemon.jpg',
- 'raffia-tomato-charm-ss26': 'assets/products/fruit-market/vibe/vibe-tomato.jpg',
- 'raffia-lemon-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-lemon-slice.jpg',
- 'raffia-orange-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-orange-slice.jpg',
+ 'raffia-tomato-charm-ss26': 'assets/products/fruit-market/vibe/vibe-tomato.optimized.webp',
+ 'raffia-lemon-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-lemon-slice.optimized.webp',
+ 'raffia-orange-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-orange-slice.optimized.webp',
  'raffia-kiwi-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-kiwi-slice.jpg',
- 'raffia-watermelon-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-watermelon-slice.jpg',
- 'raffia-avocado-half-charm-ss26': 'assets/products/fruit-market/vibe/vibe-avocado.jpg',
+ 'raffia-watermelon-slice-charm-ss26': 'assets/products/fruit-market/vibe/vibe-watermelon-slice.optimized.webp',
+ 'raffia-avocado-half-charm-ss26': 'assets/products/fruit-market/vibe/vibe-avocado.optimized.webp',
  // Earrings - worn-on-model hover (5 lookbook, 2 AI-generated portraits)
  'lemon-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p53_img01_xref1380_788fc851111b.jpeg',
- 'grapes-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.jpeg',
+ 'grapes-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p55_img01_xref1397_f3009f829bf8.optimized.webp',
  'tomatoes-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p56_img02_xref1402_2ffff76a0151.jpeg',
- 'orange-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p56_img03_xref1403_fde2f9db3673.jpeg',
+ 'orange-raffia-earrings-ss26': 'assets/lookbook-ss26-27/embedded/p56_img03_xref1403_fde2f9db3673.optimized.webp',
  'watermelon-raffia-earrings-ss26': 'assets/products/fruit-market/vibe/vibe-watermelon-earrings.jpg',
  'kiwi-raffia-earrings-ss26': 'assets/products/fruit-market/vibe/vibe-kiwi-earrings.jpg',
  'cherries-raffia-earrings-ss26': 'assets/products/fruit-market/vibe/vibe-cherries-earrings.jpg',
  // Necklaces - worn-on-model hover (1 lookbook, 4 AI-generated portraits)
  'grapes-raffia-necklace-ss26': 'assets/lookbook-ss26-27/embedded/p57_img03_xref1410_1be99390666d.jpeg',
  'lemon-slice-raffia-necklace-ss26': 'assets/products/fruit-market/vibe/vibe-lemon-slice-necklace.jpg',
- 'orange-slice-raffia-necklace-ss26': 'assets/products/fruit-market/vibe/vibe-orange-slice-necklace.jpg',
+ 'orange-slice-raffia-necklace-ss26': 'assets/products/fruit-market/vibe/vibe-orange-slice-necklace.optimized.webp',
  'watermelon-slice-raffia-necklace-ss26': 'assets/products/fruit-market/vibe/vibe-watermelon-slice-necklace.jpg',
  'cherries-raffia-necklace-ss26': 'assets/products/fruit-market/vibe/vibe-cherries-necklace.jpg',
 };
@@ -15568,9 +15568,9 @@ const LNV_SIZES = [
 const SCULPT_COLOR_FILE = { noir: 'black-olive', rouge: 'hot-red', violet: 'deep-violet' };
 // Real angle + situation shots per colourway, appended after the size card on the product page.
 const SCULPT_ANGLES = {
- noir: ['assets/products/bag-sculpture-black.jpg', 'assets/products/bag-sculpture-black-detail.jpg', 'assets/products/bag-sculpture-black-still.jpg'],
- rouge: ['assets/products/bag-sculpture-red.jpg', 'assets/products/bag-sculpture-red-seated.jpg', 'assets/products/bag-sculpture-red-detail.jpg', 'assets/products/bag-sculpture-red-still.jpg'],
- violet: ['assets/products/bag-sculpture-violet.jpg', 'assets/products/bag-sculpture-violet-stack.jpg'],
+ noir: ['assets/products/bag-sculpture-black.jpg', 'assets/products/bag-sculpture-black-detail.optimized.webp', 'assets/products/bag-sculpture-black-still.jpg'],
+ rouge: ['assets/products/bag-sculpture-red.optimized.webp', 'assets/products/bag-sculpture-red-seated.optimized.webp', 'assets/products/bag-sculpture-red-detail.optimized.webp', 'assets/products/bag-sculpture-red-still.optimized.webp'],
+ violet: ['assets/products/bag-sculpture-violet.optimized.webp', 'assets/products/bag-sculpture-violet-stack.jpg'],
 };
 const SCULPT_LAUNCH_DIR = 'assets/products/launch-shop-ref/';
 const sculptLaunchImg = (color, size) => `${SCULPT_LAUNCH_DIR}la-sculpture-${String(size).toLowerCase()}-${color}.jpg`;
@@ -15748,7 +15748,7 @@ SCULPT_SIZE_COPY.forEach((s) => {
  // Size-comparison cards first (XS/S/M to scale), then real angle + situation shots
  // of La Sculpture so the product page shows the bag from several views, not just the cards.
  const gallery = ['hot-red', 'deep-violet', 'black-olive'].map((color) => sculptLaunchImg(color, s.size))
- .concat(['assets/products/bag-sculpture-violet-stack.jpg', 'assets/products/bag-sculpture-black-detail.jpg', 'assets/products/bag-sculpture-red-seated.jpg', 'assets/products/bag-sculpture-group.jpg']);
+ .concat(['assets/products/bag-sculpture-violet-stack.jpg', 'assets/products/bag-sculpture-black-detail.optimized.webp', 'assets/products/bag-sculpture-red-seated.optimized.webp', 'assets/products/bag-sculpture-group.jpg']);
  p.gallery = gallery;
  p.img = s.size === 'S' ? gallery[1] : s.size === 'M' ? gallery[2] : gallery[0];
 });
@@ -15767,7 +15767,7 @@ SCULPT_SIZE_COPY.forEach((s) => {
 const PRODUCT_MEDIA = {
   'raffia-avocado-half-charm-ss26': [
     { type: 'image', src: 'assets/products/charms/client/avocado-half-01.jpg' },
-    { type: 'image', src: 'assets/products/charms/client/avocado-half-02.jpg' },
+    { type: 'image', src: 'assets/products/charms/client/avocado-half-02.optimized.webp' },
     { type: 'video', src: 'assets/lifestyle/charms/charm-d08f3acaf82b.mp4', poster: 'assets/lifestyle/charms/charm-d08f3acaf82b-poster.jpg' },
   ],
   'raffia-tomato-charm-ss26': [
@@ -15791,16 +15791,16 @@ const PRODUCT_MEDIA = {
     { type: 'video', src: 'assets/lifestyle/charms/charm-c5fb0ffd41ab.mp4', poster: 'assets/lifestyle/charms/charm-c5fb0ffd41ab-poster.jpg' },
   ],
   'raffia-grapes-charm-ss26': [
-    { type: 'image', src: 'assets/products/charms/client/grapes-01.jpg' },
+    { type: 'image', src: 'assets/products/charms/client/grapes-01.optimized.webp' },
     { type: 'image', src: 'assets/products/charms/client/grapes-02.jpg' },
     { type: 'video', src: 'assets/lifestyle/charms/charm-a7c647c95af5.mp4', poster: 'assets/lifestyle/charms/charm-a7c647c95af5-poster.jpg' },
   ],
   'raffia-lemon-slice-charm-ss26': [
-    { type: 'image', src: 'assets/products/charms/client/lemon-slice-01.jpg' },
+    { type: 'image', src: 'assets/products/charms/client/lemon-slice-01.optimized.webp' },
     { type: 'video', src: 'assets/lifestyle/charms/charm-f09995fb69e4.mp4', poster: 'assets/lifestyle/charms/charm-f09995fb69e4-poster.jpg' },
   ],
   'raffia-orange-slice-charm-ss26': [
-    { type: 'image', src: 'assets/products/charms/client/orange-slice-01.jpg' },
+    { type: 'image', src: 'assets/products/charms/client/orange-slice-01.optimized.webp' },
     { type: 'image', src: 'assets/products/charms/client/orange-slice-02.jpg' },
     { type: 'image', src: 'assets/products/charms/client/orange-slice-04.jpg' },
     { type: 'image', src: 'assets/products/charms/client/orange-slice-05.jpg' },
@@ -15814,7 +15814,7 @@ const PRODUCT_MEDIA = {
   'raffia-watermelon-slice-charm-ss26': [
     { type: 'image', src: 'assets/products/charms/client/watermelon-slice-01.jpg' },
     { type: 'image', src: 'assets/products/charms/client/watermelon-slice-03.jpg' },
-    { type: 'image', src: 'assets/products/charms/client/watermelon-slice-04.jpg' },
+    { type: 'image', src: 'assets/products/charms/client/watermelon-slice-04.optimized.webp' },
     { type: 'video', src: 'assets/lifestyle/charms/charm-922dd93c197c.mp4', poster: 'assets/lifestyle/charms/charm-922dd93c197c-poster.jpg' },
   ],
   // Ready-to-wear: real Jawhara photography from the client shoot + SS26 lookbook
@@ -15825,11 +15825,11 @@ const PRODUCT_MEDIA = {
   // instead, led by the black halter shot — it reads unmistakably as a TOP, where the
   // white full-length shots are hard to tell apart from the palazzo card.
   'yza-scarf-top-jawhara-ss26': [
-    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-01.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-02.jpg' },
+    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-01.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-02.optimized.webp' },
     { type: 'image', src: 'assets/products/jawhara/client/top-foulard-03.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-04.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-05.jpg' },
+    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-04.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/top-foulard-05.optimized.webp' },
   ],
   // Chemise: client confirmed the lookbook hero is the right piece, asked for more
   // photos. NB chemise-01/02 are the same editorial look as the paréo courte (the
@@ -15839,17 +15839,17 @@ const PRODUCT_MEDIA = {
     { type: 'image', src: 'assets/products/jawhara/client/chemise-01.jpg' },
     { type: 'image', src: 'assets/products/jawhara/client/chemise-02.jpg' },
     { type: 'image', src: 'assets/products/jawhara/client/chemise-03.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/chemise-04.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/chemise-05.jpg' },
+    { type: 'image', src: 'assets/products/jawhara/client/chemise-04.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/chemise-05.optimized.webp' },
   ],
   // Paréo COURTE: the lookbook still showed a skirt whose ruffle sweeps the floor —
   // i.e. the longue, on the courte's card. Client pointed to this editorial: the real
   // mini, white, worn with the white shirt. -04 is the hand-embroidered Amazigh sign.
   'yza-pareo-skirt-short-jawhara-ss26': [
-    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-01.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-02.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-03.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-04.jpg' },
+    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-01.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-02.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-03.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/pareo-courte-04.optimized.webp' },
   ],
   'yza-pareo-skirt-midi-jawhara-ss26': [
     { type: 'image', src: 'assets/lookbook-ss26-27/embedded/p30_img02_xref1220_f762d6e64853.jpeg' },
@@ -15866,9 +15866,9 @@ const PRODUCT_MEDIA = {
   // colour, on the most expensive RTW piece. These are the client's own /Pantalon Wrap
   // folder: the real pink wrap trousers, full length.
   'yza-wrap-pants-jawhara-ss26': [
-    { type: 'image', src: 'assets/products/jawhara/client/wrap-01.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/wrap-02.jpg' },
-    { type: 'image', src: 'assets/products/jawhara/client/wrap-03.jpg' },
+    { type: 'image', src: 'assets/products/jawhara/client/wrap-01.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/wrap-02.optimized.webp' },
+    { type: 'image', src: 'assets/products/jawhara/client/wrap-03.optimized.webp' },
   ],
   'yza-palazzo-pants-jawhara-ss26': [
     { type: 'image', src: 'assets/products/jawhara/client/palazzo-02.jpg' },
@@ -20752,7 +20752,7 @@ YZA.cartDisplayVariant = function (line) {
 // charm's own real photo where that finish wasn't shot — same charm, only the loop
 // hardware differs. Vision-classified + completed 2026-07-01.
 const CHARM_FINISH_IMAGES = {
-  'raffia-avocado-half-charm-ss26':    { loop: 'assets/products/charms/client/avocado-half-01.jpg', r2: 'assets/products/charms/finish/avocado-ring.jpg', r3: 'assets/products/charms/client/avocado-half-02.jpg' },
+  'raffia-avocado-half-charm-ss26':    { loop: 'assets/products/charms/client/avocado-half-01.jpg', r2: 'assets/products/charms/finish/avocado-ring.jpg', r3: 'assets/products/charms/client/avocado-half-02.optimized.webp' },
   'raffia-cherries-charm-ss26':        { loop: 'assets/products/charms/finish/cherries-loop.jpg', r2: 'assets/products/charms/finish/cherries-ring.jpg', r3: 'assets/products/charms/client/cherries-01.jpg' },
   'raffia-grapes-charm-ss26':          { loop: 'assets/products/charms/finish/grapes-loop.jpg', r2: 'assets/products/charms/finish/grapes-ring.jpg', r3: 'assets/products/charms/client/grapes-02.jpg' },
   // Kiwi : les variantes generees kiwi-loop.jpg et kiwi-ring.jpg sont RETIREES (cliente
@@ -20762,7 +20762,7 @@ const CHARM_FINISH_IMAGES = {
   // les puces loop/r2 laissent simplement la photo produit en place.
   'raffia-kiwi-slice-charm-ss26':      { r3: 'assets/products/charms/client/kiwi-slice-01.jpg' },
   'raffia-lemon-slice-charm-ss26':     { loop: 'assets/products/charms/finish/lemon-slice-loop.jpg', r2: 'assets/products/charms/finish/lemon-slice-ring.jpg', r3: 'assets/products/fruit-market/charm-lemon-slice.jpg' },
-  'raffia-orange-slice-charm-ss26':    { loop: 'assets/products/charms/client/orange-slice-01.jpg', r2: 'assets/products/charms/finish/orange-slice-ring.jpg', r3: 'assets/products/charms/client/orange-slice-02.jpg' },
+  'raffia-orange-slice-charm-ss26':    { loop: 'assets/products/charms/client/orange-slice-01.optimized.webp', r2: 'assets/products/charms/finish/orange-slice-ring.jpg', r3: 'assets/products/charms/client/orange-slice-02.jpg' },
   'raffia-whole-lemon-charm-ss26':     { loop: 'assets/products/charms/client/whole-lemon-01.jpg', r2: 'assets/products/charms/finish/whole-lemon-ring.jpg', r3: 'assets/products/charms/client/whole-lemon-02.jpg' },
   'raffia-whole-orange-charm-ss26':    { loop: 'assets/products/fruit-market/charm-whole-orange.jpg', r2: 'assets/products/charms/finish/whole-orange-ring.jpg', r3: 'assets/products/charms/client/whole-orange-01.jpg' },
   'raffia-tomato-charm-ss26':          { loop: 'assets/products/charms/finish/tomato-loop.jpg', r2: 'assets/products/charms/finish/tomato-ring.jpg', r3: 'assets/products/charms/client/tomato-01.jpg' },
@@ -21019,7 +21019,7 @@ const LNV_MEDIA_20260806 = {
  'bleu-xs':  { carte: 'assets/products/la-nouvelle-vague/lnv-bleu-xs-hover.webp?v=20260806b',  survol: 'assets/products/la-nouvelle-vague/client/bleu-xs-01.jpg' },
  'bleu-s':   { carte: 'assets/products/la-nouvelle-vague/lnv-bleu-s-hover.webp?v=20260806b',   survol: 'assets/products/la-nouvelle-vague/client/bleu-s-01.jpg' },
  // Seul cas sans fichier `-hover.webp` : BAG_HOVER servait deja cette prise de rue.
- 'bleu-m':   { carte: 'assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.jpg?v=20260806b', survol: 'assets/products/la-nouvelle-vague/client/bleu-m-01.jpg' },
+ 'bleu-m':   { carte: 'assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.optimized.webp?v=20260806b', survol: 'assets/products/la-nouvelle-vague/client/bleu-m-01.optimized.webp' },
  'rose-xs':  { carte: 'assets/products/la-nouvelle-vague/lnv-rose-xs-hover.webp?v=20260806b',  survol: 'assets/products/la-nouvelle-vague/client/rose-xs-01.jpg' },
  'rose-s':   { carte: 'assets/products/la-nouvelle-vague/lnv-rose-s-hover.webp?v=20260806b',   survol: 'assets/products/la-nouvelle-vague/client/rose-s-01.jpg' },
  /* M · Vert Sapin : prise de vue choisie par la proprietaire le 2026-08-06. L'ancienne

@@ -7,7 +7,7 @@
   const pick = (value) => typeof value === 'string' ? value : (YZA.i18n?.pick(value || {}) || '');
   const price = (value) => YZA.i18n.formatPrice(value);
   const asset = (name) => `/yza-v2-preview/assets/brand/pdp/clothing/${name}`;
-  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async" ${extra}>`;
+  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="${extra.includes('fetchpriority=') ? 'eager' : 'lazy'}" decoding="async" ${extra}>`;
   const rule = (title, aside = '') => `<p class="bag-rule"><span>${esc(title)}</span>${aside ? `<span>${esc(aside)}</span>` : ''}</p>`;
   const motif = '<img src="/yza-v2-preview/assets/brand/pdp/yza-sign-06.png" alt="" width="20" height="20">';
   const labels = {
@@ -49,7 +49,9 @@
       if (lead) rail.prepend(lead);
     }
     [...rail.children].forEach((thumb, index) => {
-      thumb.setAttribute('aria-label', `${pick(p.name)} — ${index + 1}/${rail.children.length}`);
+      const mediaNames = {fr:['Photo','Vidéo'],en:['Photo','Video'],es:['Foto','Vídeo'],tr:['Fotoğraf','Video'],ar:['صورة','فيديو']};
+      const mediaName = (mediaNames[YZA.i18n.lang] || mediaNames.fr)[thumb.dataset.gtype === 'video' ? 1 : 0];
+      thumb.setAttribute('aria-label', `${mediaName} — ${pick(p.name)} — ${index + 1}/${rail.children.length}`);
       thumb.setAttribute('aria-pressed', String(index === 0));
     });
     rail.firstElementChild?.click();

@@ -10,7 +10,7 @@
     "handle": "la-sculpture-xs-basket-bag-ss26",
     "group": "bags",
     "color": "rouge",
-    "src": "/yza-v2-preview/assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.png",
+    "src": "/yza-v2-preview/assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.optimized.webp",
     "width": 1086,
     "height": 1448,
     "hover": ""
@@ -46,7 +46,7 @@
     "handle": "la-sculpture-s-basket-bag-ss26",
     "group": "bags",
     "color": "violet",
-    "src": "/yza-v2-preview/assets/collections/best-sellers/la-sculpture-s-basket-bag-ss26-main.png",
+    "src": "/yza-v2-preview/assets/collections/best-sellers/la-sculpture-s-basket-bag-ss26-main.optimized.webp",
     "width": 1086,
     "height": 1448,
     "hover": ""

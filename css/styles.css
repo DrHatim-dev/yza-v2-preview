@@ -5468,7 +5468,7 @@ body.has-product-bar .store-widget { bottom: calc(88px + env(safe-area-inset-bot
 /* ============================================================
    Full-width newsletter band (−10% first order) + simpler header
    ============================================================ */
-.news-band { position: relative; width: 100%; min-height: 460px; display: grid; place-items: center; padding: clamp(3rem, 7vw, 6rem) 1.25rem; overflow: hidden; text-align: center; background: #d9d3c7 center/cover no-repeat; background-image: url("../yza-v2-preview/assets/lifestyle/hero.jpg"); }
+.news-band { position: relative; width: 100%; min-height: 460px; display: grid; place-items: center; padding: clamp(3rem, 7vw, 6rem) 1.25rem; overflow: hidden; text-align: center; background: #d9d3c7 center/cover no-repeat; background-image: url("../yza-v2-preview/assets/lifestyle/hero.optimized.webp"); }
 .news-band__overlay { position: absolute; inset: 0; z-index: 0; background: rgba(26, 22, 18, 0.4); }
 .news-band__inner { position: relative; z-index: 1; width: min(620px, 100%); color: #fff; }
 .news-band__form { margin: 0 0 var(--space-6); }

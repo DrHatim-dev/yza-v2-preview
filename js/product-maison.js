@@ -8,7 +8,7 @@
   const price = (value) => YZA.i18n.formatPrice(value);
   const asset = (name) => `/yza-v2-preview/assets/brand/pdp/${name}`;
   const motif = () => `<img src="${asset('yza-sign-06.png')}" alt="" width="20" height="20">`;
-  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async" ${extra}>`;
+  const image = (src, alt, extra = '') => `<img src="${esc(src)}" alt="${esc(alt)}" loading="${extra.includes('fetchpriority=') ? 'eager' : 'lazy'}" decoding="async" ${extra}>`;
   const rule = (title, aside = '') => `<p class="bag-rule"><span>${esc(title)}</span>${aside ? `<span>${esc(aside)}</span>` : ''}</p>`;
   const labels = {
     fr: { announcement: 'Fait main à Marrakech, un panier à la fois', colors: 'Coloris — ', format: 'Format', guide: 'Guide des tailles', studio: 'Voir la pièce au studio, Guéliz', story: 'Le récit', gestures: 'Les quatre gestes', makers: 'Fatima et les femmes de l’atelier', formats: 'Les formats — ce qui rentre dedans', current: 'Cette page', view: 'Voir la pièce', specs: 'La fiche', collection: 'Collection', season: 'Saison', material: 'Matières', dimensions: 'Dimensions', packaging: 'Emballage', movement: 'En mouvement', included: 'Ce qui arrive avec le sac', gift: 'Prêt à offrir', repairs: 'La réparation à vie', repairText: 'À l’atelier de Guéliz, les réparations YZA sont offertes. À distance, seuls les frais d’envoi peuvent s’appliquer.', questions: 'Questions fréquentes', questionTitle: 'Ce qu’on nous demande le plus souvent.', allQuestions: 'Toutes les questions', workshop: 'Atelier', handmade: 'Fait main', series: 'Série', seriesValue: '15 pièces par coloris', family: 'La famille', choose: 'Choisir ma pièce', close: 'Fermer', hours: '35 à 85 h par sac', handDays: 'Plusieurs jours par sac', notes: ['Porté au bras', 'Journée', 'Marché, plage'], making: 'La fabrication', care: 'Composition & entretien', delivery: 'Livraison, échanges & retours', details: 'Taille & détails' },
@@ -207,7 +207,9 @@
     const first = thumbs.find((thumb) => thumb.dataset.gtype === 'img' && /\/client\/.*-01\./.test(thumb.dataset.src));
     if (first) { rail.prepend(first); first.click(); }
     Array.from(rail.children).forEach((thumb, index) => {
-      thumb.setAttribute('aria-label', `${pick(p.name)} — ${index + 1}/${thumbs.length}`);
+      const mediaNames = {fr:['Photo','Vidéo'],en:['Photo','Video'],es:['Foto','Vídeo'],tr:['Fotoğraf','Video'],ar:['صورة','فيديو']};
+      const mediaName = (mediaNames[YZA.i18n.lang] || mediaNames.fr)[thumb.dataset.gtype === 'video' ? 1 : 0];
+      thumb.setAttribute('aria-label', `${mediaName} — ${pick(p.name)} — ${index + 1}/${thumbs.length}`);
       thumb.setAttribute('aria-pressed', String(thumb.classList.contains('is-active')));
     });
   }

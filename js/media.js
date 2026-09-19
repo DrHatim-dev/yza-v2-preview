@@ -266,7 +266,7 @@ YZA.media = {
  ar: 'احمليها كقطعة موضة، ليست مجرد إكسسوار. التفاصيل اليدوية تبقي كل حلقة حيّة بشكل خفيّ.',
  },
  label: { fr: 'edition limitee / finition main', en: 'limited edition / hand finishing', es: 'edición limitada / acabado a mano', tr: 'sınırlı üretim / el bitirme', ar: 'إصدار محدود / تشطيب يدوي' },
- images: [girlAsset('girls-rim-violet.jpg'), girlAsset('girls-fanny-purple.jpg'), 'assets/products/bag-sculpture-violet.jpg'],
+ images: [girlAsset('girls-rim-violet.jpg'), girlAsset('girls-fanny-purple.jpg'), 'assets/products/bag-sculpture-violet.optimized.webp'],
  cta: '/collections/sacs',
  },
  noir: {
@@ -279,7 +279,7 @@ YZA.media = {
  ar: 'الأسود يمنح الجديلة طابعاً غرافيكياً أكثر. يعمل في المتجر المحلي وعلى إنستغرام لأنه سهل الارتداء.',
  },
  label: { fr: '15 par taille et couleur', en: '15 per size and colour', es: '15 por talla y color', tr: 'Beden ve renk başına 15', ar: '15 لكل مقاس ولون' },
- images: ['assets/products/bag-sculpture-black.jpg', 'assets/products/bag-sculpture-black-detail.jpg', 'assets/products/bag-sculpture-black-still.jpg'],
+ images: ['assets/products/bag-sculpture-black.jpg', 'assets/products/bag-sculpture-black-detail.optimized.webp', 'assets/products/bag-sculpture-black-still.jpg'],
  cta: '/collections/sacs',
  },
  rouge: {
@@ -292,7 +292,7 @@ YZA.media = {
  ar: 'الأحمر يبرز المقابض والخرز والتجميع. لون يجعل التفاصيل مقروءة.',
  },
  label: { fr: 'finition couleur / non refait', en: 'colour finishing / not remade', es: 'acabado en color / no repetido', tr: 'renk bitirme / tekrar üretilmez', ar: 'تشطيب لوني / لن يُعاد' },
- images: ['assets/products/bag-sculpture-red.jpg', 'assets/products/bag-sculpture-red-seated.jpg', 'assets/products/charms-on-bag.jpg'],
+ images: ['assets/products/bag-sculpture-red.optimized.webp', 'assets/products/bag-sculpture-red-seated.optimized.webp', 'assets/products/charms-on-bag.optimized.webp'],
  cta: '/collections/sacs',
  },
  charms: {
@@ -305,7 +305,7 @@ YZA.media = {
  ar: 'يمكن للقطعة أن تستغرق ساعات: الشكل، التوتر والبطاقة الذهبية تصنع الفرق بين تذكار وقطعة موضة.',
  },
  label: { fr: '2 a 3 h de crochet / bundle 3 charms', en: '2 to 3h crochet / 3 charm bundle', es: '2 a 3 h de ganchillo / pack de 3 charms', tr: '2-3 saat tığ işi / 3 charm paketi', ar: '2 إلى 3 ساعات كروشيه / طقم 3 قطع' },
- images: ['assets/products/charm-orange-hero.jpg', 'assets/products/charms-cluster.jpg', 'assets/products/charms-on-bag.jpg'],
+ images: ['assets/products/charm-orange-hero.optimized.webp', 'assets/products/charms-cluster.jpg', 'assets/products/charms-on-bag.optimized.webp'],
  cta: '/collections/charms',
  },
  rtw: {
@@ -401,7 +401,7 @@ YZA.media.charmEditorialBreaks = [
  tr: 'Kiraz, kivi, limon, domates: Fruit Market koleksiyonu tek ya da küme hâlinde, her çantayla taşınır.',
  ar: 'كرز، كيوي، ليمون، طماطم — مجموعة Fruit Market تُرتدى منفردةً أو في حزمة، مع أي حقيبة.',
  },
- images: ['assets/products/fruit-market/vibe/vibe-watermelon-slice.jpg', 'assets/products/fruit-market/charm-orange-slice.jpg'],
+ images: ['assets/products/fruit-market/vibe/vibe-watermelon-slice.optimized.webp', 'assets/products/fruit-market/charm-orange-slice.optimized.webp'],
  },
 ];
 
@@ -436,7 +436,7 @@ YZA.media.accessoryEditorialBreaks = [
  tr: 'Kiraz, üzüm, limon, kivi: koleksiyon her sezon değişir. Biten geri gelmez.',
  ar: 'كرز، عنب، ليمون، كيوي — المجموعة تتجدد كل موسم. ما نفد، لن يعود.',
  },
- images: ['assets/products/fruit-market/earrings-watermelon.jpg', 'assets/products/fruit-market/earrings-lemon.jpg'],
+ images: ['assets/products/fruit-market/earrings-watermelon.optimized.webp', 'assets/products/fruit-market/earrings-lemon.jpg'],
  },
 ];
 
@@ -556,7 +556,7 @@ Object.assign(YZA.media.productStories.jaune, {
  ar: 'أصفر YZA هو شمس مراكش تُحمَل عليك: سلة عبّاد الشمس، ليمونة كروشيه، لمسة توقظ الإطلالة كلها. مع الأبيض أو أزرق ماجوريل أو إطلالة العطلة، يجعل القطعة توقيعًا.',
  },
  label: { fr: 'Fruit Market / crochet main', en: 'Fruit Market / hand crochet', es: 'Fruit Market / ganchillo a mano', tr: 'Fruit Market / elle tığ işi', ar: 'Fruit Market / كروشيه يدوي' },
- images: ['assets/products/fruit-market/styling/charms-raffia-basket-bowl.jpg', 'assets/products/fruit-market/styling/charms-fruit-market-bundle.jpg', 'assets/products/fruit-market/charm-whole-lemon.jpg'],
+ images: ['assets/products/fruit-market/styling/charms-raffia-basket-bowl.jpg', 'assets/products/fruit-market/styling/charms-fruit-market-bundle.jpg', 'assets/products/fruit-market/charm-whole-lemon.optimized.webp'],
  cta: '/collections/charms',
 });
 Object.assign(YZA.media.productStories.violet, {
@@ -572,7 +572,7 @@ Object.assign(YZA.media.productStories.rouge, {
  cta: '/produits/la-sculpture-xs-basket-bag-ss26',
 });
 Object.assign(YZA.media.productStories.charms, {
- images: ['assets/products/fruit-market/charm-cherries.jpg', 'assets/products/fruit-market/charm-orange-slice.jpg', 'assets/products/fruit-market/vibe/vibe-watermelon-slice.jpg'],
+ images: ['assets/products/fruit-market/charm-cherries.jpg', 'assets/products/fruit-market/charm-orange-slice.optimized.webp', 'assets/products/fruit-market/vibe/vibe-watermelon-slice.optimized.webp'],
  cta: '/collections/charms',
 });
 Object.assign(YZA.media.productStories.rtw, {
@@ -589,7 +589,7 @@ YZA.media.productStories.accessories = {
  ar: 'الأقراط تحافظ على نفس لغة القطع: كروشيه يدوي، رافيا، ثمرة، تغليف هدية.',
  },
  label: { fr: 'gift-ready / crochet main', en: 'gift-ready / hand crochet', es: 'listo para regalo / ganchillo a mano', tr: 'hediyeye hazır / elle tığ işi', ar: 'جاهز للهدية / كروشيه يدوي' },
- images: ['assets/products/fruit-market/earrings-watermelon.jpg', 'assets/products/fruit-market/earrings-lemon.jpg', 'assets/products/fruit-market/earrings-kiwi.jpg'],
+ images: ['assets/products/fruit-market/earrings-watermelon.optimized.webp', 'assets/products/fruit-market/earrings-lemon.jpg', 'assets/products/fruit-market/earrings-kiwi.jpg'],
  cta: '/collections/bijoux',
 };
 YZA.media.pickStory = function pickStory(product) {

@@ -28,7 +28,7 @@
     "name": "Bijoux en raphia",
     "title": "Bijoux en raphia — YZA",
     "desc": "Boucles d'oreilles fruits, crochetées main en raphia à Marrakech. La touche de couleur qui signe une tenue. Fait main, garanti, dès 250 DH.",
-    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg",
+    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.optimized.webp",
     "url": "https://yza-shop.com/collections/bijoux"
   },
   "earrings": {
@@ -36,7 +36,7 @@
     "name": "Boucles d'oreilles fruits",
     "title": "Boucles d'oreilles en raphia — YZA",
     "desc": "Pastèque, citron, cerises : des boucles d'oreilles fruits crochetées main par La Fatima à Guéliz. Légères, colorées, faites pour être remarquées. Éditions limitées.",
-    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg",
+    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.optimized.webp",
     "url": "https://yza-shop.com/collections/boucles-d-oreilles"
   },
   "tops": {
@@ -52,7 +52,7 @@
     "name": "Jupes paréo Jawhara",
     "title": "Jupes paréo Jawhara — YZA",
     "desc": "Jupes paréo Jawhara, une taille pour toutes — on les noue à sa guise. Coupées et finies main à Marrakech. Se roulent petit, se portent partout, de la plage à la ville.",
-    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp",
     "url": "https://yza-shop.com/collections/jupes-pareo"
   },
   "pants": {
@@ -68,14 +68,14 @@
     "name": "Bas Jawhara",
     "title": "Bas Jawhara — YZA",
     "desc": "Jupes paréo et pantalons Jawhara, coupés et cousus main à l'atelier de Guéliz. Pièces solaires, faites pour voyager. Le vestiaire moderne de Marrakech.",
-    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.optimized.webp",
     "url": "https://yza-shop.com/collections/bas"
   },
   "bestsellers": {
     "name": "Best Sellers",
     "title": "Best Sellers — YZA",
     "desc": "Découvrez la sélection Best Sellers YZA : sacs en raphia, charms, bijoux et prêt-à-porter Jawhara, faits main à Marrakech.",
-    "image": "https://yza-shop.com/assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.png",
+    "image": "https://yza-shop.com/assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.optimized.webp",
     "url": "https://yza-shop.com/collections/best-sellers",
     "handles": [
       "la-sculpture-xs-basket-bag-ss26",
@@ -92,11 +92,11 @@
       "yza-palazzo-pants-jawhara-ss26"
     ],
     "media": {
-      "la-sculpture-xs-basket-bag-ss26": "assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.png",
+      "la-sculpture-xs-basket-bag-ss26": "assets/collections/best-sellers/la-sculpture-xs-basket-bag-ss26-main.optimized.webp",
       "yza-pareo-skirt-midi-jawhara-ss26": "assets/collections/best-sellers/yza-pareo-skirt-midi-jawhara-ss26-main.webp",
       "watermelon-raffia-earrings-ss26": "assets/collections/best-sellers/watermelon-raffia-earrings-ss26-main.webp",
       "raffia-whole-orange-charm-ss26": "assets/collections/best-sellers/raffia-whole-orange-charm-ss26-main.jpg",
-      "la-sculpture-s-basket-bag-ss26": "assets/collections/best-sellers/la-sculpture-s-basket-bag-ss26-main.png",
+      "la-sculpture-s-basket-bag-ss26": "assets/collections/best-sellers/la-sculpture-s-basket-bag-ss26-main.optimized.webp",
       "kiwi-raffia-earrings-ss26": "assets/collections/best-sellers/kiwi-raffia-earrings-ss26-main.webp",
       "raffia-cherries-charm-ss26": "assets/collections/best-sellers/raffia-cherries-charm-ss26-main.jpg",
       "yza-scarf-top-jawhara-ss26": "assets/collections/best-sellers/yza-scarf-top-jawhara-ss26-main.webp",

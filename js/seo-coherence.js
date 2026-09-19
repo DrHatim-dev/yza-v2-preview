@@ -32,7 +32,7 @@
       });
     }
     if (document.body.dataset.page === 'collections') {
-      const name = document.querySelector('h1')?.innerText.trim();
+      const name = (document.querySelector('#collectionTitleText') || document.querySelector('h1'))?.innerText.trim();
       if (name) {
         title = name + ' — YZA';
         const copy = {fr:'Découvrez les pièces YZA faites à la main à Marrakech : détails, couleurs et prix pour choisir votre prochaine pièce.',en:'Explore YZA pieces handmade in Marrakech. Discover the details, colours and prices to choose your next piece.',es:'Descubre las piezas YZA hechas a mano en Marrakech, sus detalles, colores y precios.',tr:'Marakeş’te el yapımı YZA parçalarını, detaylarını, renklerini ve fiyatlarını keşfedin.',ar:'اكتشفي قطع YZA المصنوعة يدويًا في مراكش، مع التفاصيل والألوان والأسعار لاختيار قطعتك القادمة.'};

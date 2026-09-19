@@ -61,7 +61,7 @@
       "colorways": {
         "bleu": {
           "slug": "bleu",
-          "image": "assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.jpg",
+          "image": "assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.optimized.webp",
           "active": true,
           "swatchHex": "#87B8D8"
         },
@@ -166,19 +166,19 @@
       "colorways": {
         "rouge": {
           "slug": "rouge",
-          "image": "assets/products/review-white/bags/04-sculpture-m-hot-red.png",
+          "image": "assets/products/review-white/bags/04-sculpture-m-hot-red.optimized.webp",
           "active": true,
           "swatchHex": "#C0322C"
         },
         "violet": {
           "slug": "violet",
-          "image": "assets/products/review-white/bags/07-sculpture-m-deep-violet.png",
+          "image": "assets/products/review-white/bags/07-sculpture-m-deep-violet.optimized.webp",
           "active": true,
           "swatchHex": "#4A2D6B"
         },
         "noir": {
           "slug": "noir",
-          "image": "assets/products/review-white/bags/01-sculpture-m-black-olive.png",
+          "image": "assets/products/review-white/bags/01-sculpture-m-black-olive.optimized.webp",
           "active": true,
           "swatchHex": "#2C3020"
         }
@@ -201,19 +201,19 @@
       "colorways": {
         "rouge": {
           "slug": "rouge",
-          "image": "assets/products/review-white/bags/05-sculpture-s-hot-red.png",
+          "image": "assets/products/review-white/bags/05-sculpture-s-hot-red.optimized.webp",
           "active": true,
           "swatchHex": "#C0322C"
         },
         "violet": {
           "slug": "violet",
-          "image": "assets/products/review-white/bags/08-sculpture-s-deep-violet.png",
+          "image": "assets/products/review-white/bags/08-sculpture-s-deep-violet.optimized.webp",
           "active": true,
           "swatchHex": "#4A2D6B"
         },
         "noir": {
           "slug": "noir",
-          "image": "assets/products/review-white/bags/02-sculpture-s-black-olive.png",
+          "image": "assets/products/review-white/bags/02-sculpture-s-black-olive.optimized.webp",
           "active": true,
           "swatchHex": "#2C3020"
         }
@@ -236,19 +236,19 @@
       "colorways": {
         "rouge": {
           "slug": "rouge",
-          "image": "assets/products/review-white/bags/06-sculpture-xs-hot-red.png",
+          "image": "assets/products/review-white/bags/06-sculpture-xs-hot-red.optimized.webp",
           "active": true,
           "swatchHex": "#C0322C"
         },
         "violet": {
           "slug": "violet",
-          "image": "assets/products/review-white/bags/09-sculpture-xs-deep-violet.png",
+          "image": "assets/products/review-white/bags/09-sculpture-xs-deep-violet.optimized.webp",
           "active": true,
           "swatchHex": "#4A2D6B"
         },
         "noir": {
           "slug": "noir",
-          "image": "assets/products/review-white/bags/03-sculpture-xs-black-olive.png",
+          "image": "assets/products/review-white/bags/03-sculpture-xs-black-olive.optimized.webp",
           "active": true,
           "swatchHex": "#2C3020"
         }
@@ -1533,7 +1533,7 @@
     "assets/products/charms-2026-08/whole-orange-anneau.webp": [
       "raffia-whole-orange-charm-ss26"
     ],
-    "assets/products/charms/client/avocado-half-02.jpg": [
+    "assets/products/charms/client/avocado-half-02.optimized.webp": [
       "raffia-avocado-half-charm-ss26"
     ],
     "assets/products/charms/client/cherries-02.jpg": [
@@ -1560,7 +1560,7 @@
     "assets/products/charms/client/watermelon-slice-03.jpg": [
       "raffia-watermelon-slice-charm-ss26"
     ],
-    "assets/products/charms/client/watermelon-slice-04.jpg": [
+    "assets/products/charms/client/watermelon-slice-04.optimized.webp": [
       "raffia-watermelon-slice-charm-ss26"
     ],
     "assets/products/charms/client/whole-lemon-02.jpg": [
@@ -1602,10 +1602,10 @@
     "assets/products/jawhara/client/chemise-03.jpg": [
       "yza-button-up-shirt-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/chemise-04.jpg": [
+    "assets/products/jawhara/client/chemise-04.optimized.webp": [
       "yza-button-up-shirt-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/chemise-05.jpg": [
+    "assets/products/jawhara/client/chemise-05.optimized.webp": [
       "yza-button-up-shirt-jawhara-ss26"
     ],
     "assets/products/jawhara/client/palazzo-02.jpg": [
@@ -1629,52 +1629,52 @@
     "assets/products/jawhara/client/palazzo-12.jpg": [
       "yza-palazzo-pants-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/pareo-courte-01.jpg": [
+    "assets/products/jawhara/client/pareo-courte-01.optimized.webp": [
       "yza-pareo-skirt-short-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/pareo-courte-02.jpg": [
+    "assets/products/jawhara/client/pareo-courte-02.optimized.webp": [
       "yza-pareo-skirt-short-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/pareo-courte-03.jpg": [
+    "assets/products/jawhara/client/pareo-courte-03.optimized.webp": [
       "yza-pareo-skirt-short-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/pareo-courte-04.jpg": [
+    "assets/products/jawhara/client/pareo-courte-04.optimized.webp": [
       "yza-pareo-skirt-short-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/top-foulard-01.jpg": [
+    "assets/products/jawhara/client/top-foulard-01.optimized.webp": [
       "yza-scarf-top-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/top-foulard-02.jpg": [
+    "assets/products/jawhara/client/top-foulard-02.optimized.webp": [
       "yza-scarf-top-jawhara-ss26"
     ],
     "assets/products/jawhara/client/top-foulard-03.jpg": [
       "yza-scarf-top-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/top-foulard-04.jpg": [
+    "assets/products/jawhara/client/top-foulard-04.optimized.webp": [
       "yza-scarf-top-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/top-foulard-05.jpg": [
+    "assets/products/jawhara/client/top-foulard-05.optimized.webp": [
       "yza-scarf-top-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/wrap-01.jpg": [
+    "assets/products/jawhara/client/wrap-01.optimized.webp": [
       "yza-wrap-pants-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/wrap-02.jpg": [
+    "assets/products/jawhara/client/wrap-02.optimized.webp": [
       "yza-wrap-pants-jawhara-ss26"
     ],
-    "assets/products/jawhara/client/wrap-03.jpg": [
+    "assets/products/jawhara/client/wrap-03.optimized.webp": [
       "yza-wrap-pants-jawhara-ss26"
     ],
-    "assets/products/la-nouvelle-vague/client/bleu-m-01.jpg": [
+    "assets/products/la-nouvelle-vague/client/bleu-m-01.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/client/bleu-m-02.jpg": [
+    "assets/products/la-nouvelle-vague/client/bleu-m-02.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/client/bleu-m-03.jpg": [
+    "assets/products/la-nouvelle-vague/client/bleu-m-03.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/client/bleu-m-04.jpg": [
+    "assets/products/la-nouvelle-vague/client/bleu-m-04.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
     "assets/products/la-nouvelle-vague/client/bleu-m-05.jpg": [
@@ -1725,7 +1725,7 @@
     "assets/products/la-nouvelle-vague/client/rouge-xs-02.jpg": [
       "la-nouvelle-vague-xs-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/lnv-bleu-m.jpg": [
+    "assets/products/la-nouvelle-vague/lnv-bleu-m.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
     "assets/products/la-nouvelle-vague/lnv-bleu-s-hover.webp": [
@@ -1743,7 +1743,7 @@
     "assets/products/la-nouvelle-vague/lnv-rose-m-scene.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/lnv-rose-m.jpg": [
+    "assets/products/la-nouvelle-vague/lnv-rose-m.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
     "assets/products/la-nouvelle-vague/lnv-rose-s-hover.webp": [
@@ -1761,7 +1761,7 @@
     "assets/products/la-nouvelle-vague/lnv-rouge-m-hover.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
-    "assets/products/la-nouvelle-vague/lnv-rouge-m.jpg": [
+    "assets/products/la-nouvelle-vague/lnv-rouge-m.optimized.webp": [
       "la-nouvelle-vague-m-basket-bag-ss26"
     ],
     "assets/products/la-nouvelle-vague/lnv-rouge-s-hover.webp": [
@@ -1932,31 +1932,31 @@
     "assets/products/la-sculpture/client/violet-xs-05.jpg": [
       "la-sculpture-xs-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/01-sculpture-m-black-olive.png": [
+    "assets/products/review-white/bags/01-sculpture-m-black-olive.optimized.webp": [
       "la-sculpture-m-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/02-sculpture-s-black-olive.png": [
+    "assets/products/review-white/bags/02-sculpture-s-black-olive.optimized.webp": [
       "la-sculpture-s-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/03-sculpture-xs-black-olive.png": [
+    "assets/products/review-white/bags/03-sculpture-xs-black-olive.optimized.webp": [
       "la-sculpture-xs-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/04-sculpture-m-hot-red.png": [
+    "assets/products/review-white/bags/04-sculpture-m-hot-red.optimized.webp": [
       "la-sculpture-m-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/05-sculpture-s-hot-red.png": [
+    "assets/products/review-white/bags/05-sculpture-s-hot-red.optimized.webp": [
       "la-sculpture-s-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/06-sculpture-xs-hot-red.png": [
+    "assets/products/review-white/bags/06-sculpture-xs-hot-red.optimized.webp": [
       "la-sculpture-xs-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/07-sculpture-m-deep-violet.png": [
+    "assets/products/review-white/bags/07-sculpture-m-deep-violet.optimized.webp": [
       "la-sculpture-m-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/08-sculpture-s-deep-violet.png": [
+    "assets/products/review-white/bags/08-sculpture-s-deep-violet.optimized.webp": [
       "la-sculpture-s-basket-bag-ss26"
     ],
-    "assets/products/review-white/bags/09-sculpture-xs-deep-violet.png": [
+    "assets/products/review-white/bags/09-sculpture-xs-deep-violet.optimized.webp": [
       "la-sculpture-xs-basket-bag-ss26"
     ]
   },
@@ -2115,9 +2115,9 @@
     "assets/catalog/jawhara-v1/top-halter-a/vert-fonce.webp",
     "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.thumb.webp",
     "assets/catalog/jawhara-v1/top-halter-a/violet-lilas.webp",
-    "assets/products/accessories-clean/cherries-accessory-clean.png",
-    "assets/products/accessories-clean/grapes-accessory-clean.png",
-    "assets/products/accessories-clean/kiwi-raffia-earrings-clean.png",
+    "assets/products/accessories-clean/cherries-accessory-clean.optimized.webp",
+    "assets/products/accessories-clean/grapes-accessory-clean.optimized.webp",
+    "assets/products/accessories-clean/kiwi-raffia-earrings-clean.optimized.webp",
     "assets/products/accessories-clean/lemon-raffia-earrings-clean.webp",
     "assets/products/accessories-clean/lemon-slice-necklace-clean.webp",
     "assets/products/accessories-clean/orange-raffia-earrings-clean.webp",
@@ -2127,27 +2127,27 @@
     "assets/products/bag-nouvelle-vague-still-2.webp",
     "assets/products/bag-nouvelle-vague-still-pink.webp",
     "assets/products/bag-nouvelle-vague-still.webp",
-    "assets/products/bag-sculpture-black-detail.jpg",
+    "assets/products/bag-sculpture-black-detail.optimized.webp",
     "assets/products/bag-sculpture-black-still.jpg",
     "assets/products/bag-sculpture-black.jpg",
     "assets/products/bag-sculpture-group.jpg",
-    "assets/products/bag-sculpture-red-detail.jpg",
-    "assets/products/bag-sculpture-red-seated.jpg",
-    "assets/products/bag-sculpture-red-still.jpg",
-    "assets/products/bag-sculpture-red.jpg",
+    "assets/products/bag-sculpture-red-detail.optimized.webp",
+    "assets/products/bag-sculpture-red-seated.optimized.webp",
+    "assets/products/bag-sculpture-red-still.optimized.webp",
+    "assets/products/bag-sculpture-red.optimized.webp",
     "assets/products/bag-sculpture-violet-solo.webp",
     "assets/products/bag-sculpture-violet-stack.jpg",
-    "assets/products/bag-sculpture-violet.jpg",
+    "assets/products/bag-sculpture-violet.optimized.webp",
     "assets/products/charms/client/avocado-half-01.jpg",
-    "assets/products/charms/client/avocado-half-02.jpg",
+    "assets/products/charms/client/avocado-half-02.optimized.webp",
     "assets/products/charms/client/cherries-01.jpg",
     "assets/products/charms/client/cherries-02.jpg",
-    "assets/products/charms/client/grapes-01.jpg",
+    "assets/products/charms/client/grapes-01.optimized.webp",
     "assets/products/charms/client/grapes-02.jpg",
     "assets/products/charms/client/kiwi-slice-01.jpg",
     "assets/products/charms/client/kiwi-slice-02.jpg",
-    "assets/products/charms/client/lemon-slice-01.jpg",
-    "assets/products/charms/client/orange-slice-01.jpg",
+    "assets/products/charms/client/lemon-slice-01.optimized.webp",
+    "assets/products/charms/client/orange-slice-01.optimized.webp",
     "assets/products/charms/client/orange-slice-02.jpg",
     "assets/products/charms/client/orange-slice-04.jpg",
     "assets/products/charms/client/orange-slice-05.jpg",
@@ -2155,7 +2155,7 @@
     "assets/products/charms/client/tomato-02.jpg",
     "assets/products/charms/client/watermelon-slice-01.jpg",
     "assets/products/charms/client/watermelon-slice-03.jpg",
-    "assets/products/charms/client/watermelon-slice-04.jpg",
+    "assets/products/charms/client/watermelon-slice-04.optimized.webp",
     "assets/products/charms/client/whole-lemon-01.jpg",
     "assets/products/charms/client/whole-lemon-02.jpg",
     "assets/products/charms/client/whole-orange-01.jpg",
@@ -2184,46 +2184,46 @@
     "assets/products/earrings-2026-07/watermelon-earrings-card.webp",
     "assets/products/fruit-market/charm-avocado.jpg",
     "assets/products/fruit-market/charm-cherries.jpg",
-    "assets/products/fruit-market/charm-grapes.jpg",
+    "assets/products/fruit-market/charm-grapes.optimized.webp",
     "assets/products/fruit-market/charm-kiwi-slice.jpg",
     "assets/products/fruit-market/charm-lemon-slice.jpg",
-    "assets/products/fruit-market/charm-tomato.jpg",
+    "assets/products/fruit-market/charm-tomato.optimized.webp",
     "assets/products/fruit-market/charm-watermelon-slice.jpg",
-    "assets/products/fruit-market/charm-whole-lemon.jpg",
+    "assets/products/fruit-market/charm-whole-lemon.optimized.webp",
     "assets/products/fruit-market/charm-whole-orange.jpg",
     "assets/products/fruit-market/earrings-cherries.jpg",
-    "assets/products/fruit-market/earrings-grapes.jpg",
+    "assets/products/fruit-market/earrings-grapes.optimized.webp",
     "assets/products/fruit-market/earrings-kiwi.jpg",
     "assets/products/fruit-market/earrings-lemon.jpg",
     "assets/products/fruit-market/earrings-orange.jpg",
     "assets/products/fruit-market/earrings-tomato.jpg",
-    "assets/products/fruit-market/earrings-watermelon.jpg",
+    "assets/products/fruit-market/earrings-watermelon.optimized.webp",
     "assets/products/fruit-market/necklace-cherries.jpg",
     "assets/products/fruit-market/necklace-grapes.jpg",
     "assets/products/fruit-market/necklace-lemon-slice.jpg",
     "assets/products/fruit-market/necklace-orange-slice.jpg",
     "assets/products/fruit-market/necklace-watermelon-slice.jpg",
-    "assets/products/fruit-market/vibe/vibe-avocado.jpg",
+    "assets/products/fruit-market/vibe/vibe-avocado.optimized.webp",
     "assets/products/fruit-market/vibe/vibe-cherries-earrings.jpg",
     "assets/products/fruit-market/vibe/vibe-cherries-necklace.jpg",
     "assets/products/fruit-market/vibe/vibe-grapes.jpg",
     "assets/products/fruit-market/vibe/vibe-kiwi-earrings.jpg",
     "assets/products/fruit-market/vibe/vibe-kiwi-slice.jpg",
     "assets/products/fruit-market/vibe/vibe-lemon-slice-necklace.jpg",
-    "assets/products/fruit-market/vibe/vibe-lemon-slice.jpg",
-    "assets/products/fruit-market/vibe/vibe-orange-slice-necklace.jpg",
-    "assets/products/fruit-market/vibe/vibe-orange-slice.jpg",
-    "assets/products/fruit-market/vibe/vibe-tomato.jpg",
+    "assets/products/fruit-market/vibe/vibe-lemon-slice.optimized.webp",
+    "assets/products/fruit-market/vibe/vibe-orange-slice-necklace.optimized.webp",
+    "assets/products/fruit-market/vibe/vibe-orange-slice.optimized.webp",
+    "assets/products/fruit-market/vibe/vibe-tomato.optimized.webp",
     "assets/products/fruit-market/vibe/vibe-watermelon-earrings.jpg",
     "assets/products/fruit-market/vibe/vibe-watermelon-slice-necklace.jpg",
-    "assets/products/fruit-market/vibe/vibe-watermelon-slice.jpg",
+    "assets/products/fruit-market/vibe/vibe-watermelon-slice.optimized.webp",
     "assets/products/fruit-market/vibe/vibe-whole-lemon.jpg",
-    "assets/products/fruit-market/vibe/vibe-whole-orange.jpg",
+    "assets/products/fruit-market/vibe/vibe-whole-orange.optimized.webp",
     "assets/products/jawhara/client/chemise-01.jpg",
     "assets/products/jawhara/client/chemise-02.jpg",
     "assets/products/jawhara/client/chemise-03.jpg",
-    "assets/products/jawhara/client/chemise-04.jpg",
-    "assets/products/jawhara/client/chemise-05.jpg",
+    "assets/products/jawhara/client/chemise-04.optimized.webp",
+    "assets/products/jawhara/client/chemise-05.optimized.webp",
     "assets/products/jawhara/client/palazzo-01.jpg",
     "assets/products/jawhara/client/palazzo-02.jpg",
     "assets/products/jawhara/client/palazzo-06.jpg",
@@ -2232,19 +2232,19 @@
     "assets/products/jawhara/client/palazzo-10.jpg",
     "assets/products/jawhara/client/palazzo-11.jpg",
     "assets/products/jawhara/client/palazzo-12.jpg",
-    "assets/products/jawhara/client/pareo-courte-01.jpg",
-    "assets/products/jawhara/client/pareo-courte-02.jpg",
-    "assets/products/jawhara/client/pareo-courte-03.jpg",
-    "assets/products/jawhara/client/pareo-courte-04.jpg",
-    "assets/products/jawhara/client/top-foulard-01.jpg",
-    "assets/products/jawhara/client/top-foulard-02.jpg",
+    "assets/products/jawhara/client/pareo-courte-01.optimized.webp",
+    "assets/products/jawhara/client/pareo-courte-02.optimized.webp",
+    "assets/products/jawhara/client/pareo-courte-03.optimized.webp",
+    "assets/products/jawhara/client/pareo-courte-04.optimized.webp",
+    "assets/products/jawhara/client/top-foulard-01.optimized.webp",
+    "assets/products/jawhara/client/top-foulard-02.optimized.webp",
     "assets/products/jawhara/client/top-foulard-03.jpg",
-    "assets/products/jawhara/client/top-foulard-04.jpg",
-    "assets/products/jawhara/client/top-foulard-05.jpg",
-    "assets/products/jawhara/client/wrap-01.jpg",
-    "assets/products/jawhara/client/wrap-02.jpg",
-    "assets/products/jawhara/client/wrap-03.jpg",
-    "assets/products/la-nouvelle-vague/client/bleu-m-01.jpg",
+    "assets/products/jawhara/client/top-foulard-04.optimized.webp",
+    "assets/products/jawhara/client/top-foulard-05.optimized.webp",
+    "assets/products/jawhara/client/wrap-01.optimized.webp",
+    "assets/products/jawhara/client/wrap-02.optimized.webp",
+    "assets/products/jawhara/client/wrap-03.optimized.webp",
+    "assets/products/la-nouvelle-vague/client/bleu-m-01.optimized.webp",
     "assets/products/la-nouvelle-vague/client/bleu-s-01.jpg",
     "assets/products/la-nouvelle-vague/client/bleu-xs-01.jpg",
     "assets/products/la-nouvelle-vague/client/rose-m-01.jpg",
@@ -2323,8 +2323,8 @@
     "assets/products/la-sculpture/sculpt-hot-red-s.jpg",
     "assets/products/la-sculpture/sculpt-hot-red-xs.jpg",
     "assets/products/la-vague/lavague-black-m.jpg",
-    "assets/products/la-vague/lavague-black-s.jpg",
-    "assets/products/la-vague/lavague-black-xs.jpg",
+    "assets/products/la-vague/lavague-black-s.optimized.webp",
+    "assets/products/la-vague/lavague-black-xs.optimized.webp",
     "assets/products/launch-shop-ref/la-sculpture-m-black-olive.jpg",
     "assets/products/launch-shop-ref/la-sculpture-s-deep-violet.jpg",
     "assets/products/launch-shop-ref/la-sculpture-xs-hot-red.jpg",
