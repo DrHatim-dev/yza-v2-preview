@@ -1,0 +1,68 @@
+/* Shared product presentation across the V2 homepage and collection pages. */
+body:is([data-page="home"],[data-page="collections"]) {
+ --catalog-gutter:64px; --catalog-gap:32px; --catalog-row-gap:48px;
+ --catalog-ink:#2e2e2e; --catalog-muted:#646464;
+}
+body.home-maison[data-page="home"] main :is(#bestSellers,.offer-section) {
+ padding:72px var(--catalog-gutter) !important; margin:0 !important;
+}
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) {
+ width:100% !important; max-width:none !important; margin:0 !important;
+}
+body[data-page="collections"] #collectionGrid { padding:36px var(--catalog-gutter) 72px !important; }
+body[data-page="home"] :is(#bestGrid,#offerGrid) { padding:0 !important; }
+body[data-page="home"] :is(#bestGrid,#offerGrid),
+body[data-page="collections"]:not(.bags-maison) #collectionGrid,
+body[data-page="collections"] .bags-family-cards {
+ display:grid !important; grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+ gap:var(--catalog-row-gap) var(--catalog-gap) !important;
+}
+body[data-page="collections"] :is(#collectionGrid,.bags-family-cards)[data-density="3"] { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+body[data-page="collections"] :is(#collectionGrid,.bags-family-cards)[data-density="6"] { grid-template-columns:repeat(6,minmax(0,1fr)) !important; }
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card { margin:0 !important; padding:0 !important; min-width:0; }
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__media {
+ aspect-ratio:4/5 !important; margin:0 !important; border:0 !important;
+ background:#fff; box-shadow:0 0 0 1px #ececec !important;
+}
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__info {
+ position:static !important; inset:auto !important; transform:none !important;
+ opacity:1 !important; pointer-events:auto !important; display:flex !important;
+ flex-direction:column !important; align-items:flex-start !important; gap:5px !important;
+ padding:14px 0 0 !important; margin:0 !important; background:transparent !important; text-align:start !important;
+}
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__name {
+ font:400 13px/1.5 var(--font-body) !important; letter-spacing:0 !important; text-transform:none !important; color:var(--catalog-ink) !important;
+}
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__price {
+ font:400 12.5px/1.5 var(--font-body) !important; letter-spacing:0 !important; color:var(--catalog-muted) !important; margin:0 !important;
+}
+body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__limited {
+ position:absolute !important; inset:12px auto auto 12px !important; z-index:2;
+ width:auto !important; padding:4px 9px !important; border:1px solid #e2e2e2 !important;
+ background:#fff !important; color:#2e2e2e !important;
+ font:400 9px/1.4 var(--font-body) !important; letter-spacing:.1em !important;
+}
+html[data-yza-mood="night"] body.rtw-maison { --catalog-ink:#f4f1eb; --catalog-muted:#c8c4bd; }
+body.home-maison[data-page="home"] .nv-showcase { padding-inline:var(--catalog-gutter); }
+body.home-maison[data-page="home"] .nv-grid { max-width:none; }
+body.home-maison[data-page="home"] main .nv-txt { background:#a84820; color:#fff; }
+body.home-maison[data-page="home"] main .nv-txt__title,
+body.home-maison[data-page="home"] main .nv-txt__sub { color:#fff !important; }
+body.home-maison[data-page="home"] main a.nv-txt__cta {
+ background:#fff !important; color:#813616 !important; opacity:1; border:1px solid #fff;
+}
+body.home-maison[data-page="home"] main a.nv-txt__cta:hover { background:#f8eee7 !important; }
+body.home-maison[data-page="home"] main a.nv-txt__cta:focus-visible { outline:2px solid #fff; outline-offset:5px; }
+@media(max-width:1100px) {
+ body:is([data-page="home"],[data-page="collections"]) { --catalog-gutter:24px; --catalog-gap:20px; }
+}
+@media(max-width:700px) {
+ body:is([data-page="home"],[data-page="collections"]) { --catalog-gutter:18px; --catalog-gap:16px; --catalog-row-gap:32px; }
+ body.home-maison[data-page="home"] main :is(#bestSellers,.offer-section) { padding-block:48px !important; }
+ body[data-page="collections"] #collectionGrid { padding-block:24px 48px !important; }
+ body[data-page="home"] :is(#bestGrid,#offerGrid),
+ body[data-page="collections"]:not(.bags-maison) #collectionGrid,
+ body[data-page="collections"] :is(#collectionGrid,.bags-family-cards)[data-density],
+ body[data-page="collections"] .bags-family-cards { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+ body:is([data-page="home"],[data-page="collections"]) :is(#bestGrid,#offerGrid,#collectionGrid) .product-card__limited { inset:8px auto auto 8px !important; padding:4px 5px !important; font-size:7px !important; }
+}
