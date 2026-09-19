@@ -70,6 +70,7 @@
     if (root.matches?.(selectors)) candidates.unshift(root);
     candidates.forEach(el => {
       if (seen.has(el) || el.dataset.motionState === 'observed') return;
+      if (el.closest('[data-instant-content]')) { seen.add(el); el.classList.add('is-visible'); return; }
       if (el.closest('[hidden], [aria-hidden="true"], .drawer, .cart-drawer, .lead-chat, .gallery-zoom')) return;
       // A reveal wrapper owns its descendants; never animate both levels.
       if (el.parentElement?.closest('[data-reveal]')) { seen.add(el); el.classList.add('is-visible'); return; }
