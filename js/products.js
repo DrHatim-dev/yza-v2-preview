@@ -198,7 +198,7 @@ YZA.servicePolicy = {
  freeShippingDh: 150000,
  freeShippingAccessoriesDh: 50000,
  b2bMoqBags: 10,
- shipping: { fr: 'Expédition suivie sous 2 à 5 jours ouvrés. Livraison Maroc offerte dès 500 DH (accessoires) ou 1 500 DH (sacs & prêt-à-porter).', en: 'Tracked shipping in 2 to 5 business days. Free Morocco delivery from 500 DH (accessories) or 1,500 DH (bags & ready-to-wear).' },
+ shipping: { fr: 'Expédition suivie sous 48 h pour les pièces en stock. Livraison Maroc offerte dès 500 DH (accessoires) ou 1 500 DH (sacs & prêt-à-porter).', en: 'Tracked dispatch within 48 hours for in-stock pieces. Free Morocco delivery from 500 DH (accessories) or 1,500 DH (bags & ready-to-wear).' },
  packaging: { fr: "Emballage prêt à offrir, avec étiquette YZA et mot de l\"atelier.", en: "Gift-ready packaging with YZA tag and atelier note." },
  guarantee: { fr: "Garantie à vie : vos pièces se réparent à vie à l'atelier de Guéliz, elles ne se jettent pas. Et vous avez 30 jours pour changer d'avis — retour non porté, dans son état d'origine.", en: "Lifetime guarantee: your pieces are repaired for life at the Guéliz atelier, never thrown away. And you have 30 days to change your mind — returned unworn, in original condition." },
  repairs: { fr: "Réparations à vie offertes à l\"atelier de Guéliz. À distance, seuls les frais d\"envoi peuvent s\"appliquer.", en: "Lifetime repairs are free at the Guéliz atelier. For remote repairs, shipping may apply." },
@@ -830,8 +830,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -1445,8 +1445,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -1860,8 +1860,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -2276,8 +2276,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -2691,8 +2691,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -3111,8 +3111,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -3526,8 +3526,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz’de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -3776,8 +3776,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA أنيق وبسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli gönderim. Guéliz'de stüdyodan teslim alma mümkün.",
  "ar": "شحن متتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في Guéliz."
@@ -4125,8 +4125,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -4524,8 +4524,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -4923,8 +4923,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -5294,8 +5294,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -5665,8 +5665,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -6037,8 +6037,8 @@ const PRODUCTS = [
  "ar": "تغليف YZA بسيط، جاهز للهدية أو الاستلام من الاستوديو."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’de stüdyo teslimi mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في قوليز."
@@ -6445,8 +6445,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -6800,8 +6800,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -7149,8 +7149,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -7498,8 +7498,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -7847,8 +7847,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -8196,8 +8196,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -8545,8 +8545,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -8893,8 +8893,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -9244,8 +9244,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -9583,8 +9583,8 @@ const PRODUCTS = [
  "ar": "جاهزة للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشاً على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en el estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz'deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع في غضون 2 إلى 5 أيام عمل. الاستلام من الأستوديو متاح في Guéliz."
@@ -9834,8 +9834,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -10079,11 +10079,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -10323,11 +10323,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -10573,8 +10573,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -10822,8 +10822,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -11079,11 +11079,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -11337,11 +11337,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -11590,11 +11590,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -11838,8 +11838,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -12086,8 +12086,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -12336,8 +12336,8 @@ const PRODUCTS = [
  "ar": "جاهز للإهداء، مع اسم الحرفية التي صنعت القطعة منقوشًا على بطاقة YZA."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
  "es": "Envío con seguimiento en 2 a 5 días hábiles. Recogida en estudio disponible en Guéliz.",
  "tr": "2 ila 5 iş günü içinde takipli kargo. Guéliz’deki stüdyodan teslim alma mevcut.",
  "ar": "شحن مع تتبع خلال 2 إلى 5 أيام عمل. الاستلام من الاستوديو متاح في جيليز."
@@ -12588,11 +12588,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -12842,11 +12842,11 @@ const PRODUCTS = [
  "ar": "Gift-ready: the piece comes in a pretty black box signed YZA, and the first name of the artisan who made it is written on the hand tag."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "es": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "tr": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz.",
- "ar": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "es": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "tr": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz.",
+ "ar": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  },
  "returns": {
  "fr": "Retours 30 jours : la pièce revient non portée, dans son état d’origine.",
@@ -17958,8 +17958,8 @@ const NORMALIZED_CARD_IMAGES = {
  "en": "30-day guarantee: the piece comes back unworn, in its original condition."
  },
  "shipping": {
- "fr": "Expédition suivie sous 2 à 5 jours ouvrés. Retrait studio possible à Guéliz.",
- "en": "Tracked shipping in 2 to 5 business days. Studio pickup available in Guéliz."
+ "fr": "Expédition suivie sous 48 h pour les pièces en stock. Retrait studio possible à Guéliz.",
+ "en": "Tracked dispatch within 48 hours for in-stock pieces. Studio pickup available in Guéliz."
  }
  },
  {

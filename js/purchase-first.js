@@ -32,7 +32,7 @@
   if(!status){status=document.createElement('p');status.id='purchaseAvailability';}
   block.prepend(status);
   let service=document.querySelector('#purchaseService');
-  if(!service){service=document.createElement('p');service.id='purchaseService';}
+  if(!service){service=document.createElement('div');service.id='purchaseService';}
   const fr=Y.i18n.lang==='fr';
   service.textContent=Y.i18n.t('pp.ship.txt');
   block.after(service);
@@ -47,8 +47,8 @@
    const text=label+' — '+price;
    if(button.textContent!==text)button.textContent=text;
    button.disabled=add.disabled;
-   const dispatch=pick(p.shipping)||(fr?'Délai d’expédition à confirmer sur WhatsApp.':'Dispatch timing confirmed on WhatsApp.');
-   status.textContent=(add.disabled?label:(fr?'Disponible':'Available'))+' · '+dispatch;
+   const dispatch=pick(Y.servicePolicy?.shipping)||pick(p.shipping)||(fr?'Délai d’expédition à confirmer sur WhatsApp.':'Dispatch timing confirmed on WhatsApp.');
+   status.textContent=add.disabled?label:(fr?'Disponible':'Available')+' · '+dispatch;
   };
   sync();
   const mutation=new MutationObserver(sync);mutation.observe(add,{attributes:true,childList:true,subtree:true});

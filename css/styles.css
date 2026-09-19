@@ -6398,3 +6398,7 @@ html[data-yza-mood="night"] .product-card:has(.product-card__img[src*=".night.we
 
 /* Existing Swiper rails share the same movement curve as native gallery controls. */
 .yza-swiper .swiper-wrapper { transition-property:transform; transition-timing-function:var(--ease-in-out-cubic); }
+
+.service-policy-block { text-align:start; padding-block:12px; }
+.service-policy-block h3 { font:500 14px/1.5 var(--font-body); margin:0 0 10px; }
+.service-policy-block p { font:400 12px/1.65 var(--font-body); margin:0 0 10px; }

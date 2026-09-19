@@ -1110,7 +1110,7 @@
  }
  }
 
- // Colours still sold in the shop. Any other worn colourway is a sold-out batch (never remade).
+ // Colours still sold in the shop. Any other worn colourway is a sold-out batch (handmade to order once sold out).
  const GIRLS_IN_STORE_COLORS = ['violet', 'rouge', 'noir', 'bleu', 'rose'];
  function girlSoldOut(girl) { return GIRLS_IN_STORE_COLORS.indexOf(String((girl && girl.color) || '').toLowerCase()) === -1; }
  function scarcityPill(extra = '') { return `<span class="scarcity-pill${extra}">${esc(T().t('girls.soldOut'))}</span>`; }

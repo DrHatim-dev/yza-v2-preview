@@ -353,7 +353,7 @@ const footerServiceCopy = () => {
  const copy = {
  fr: {
  shippingTitle: 'Livraison suivie',
- shippingText: 'Livraison Maroc offerte d\u00e8s 1 500 DH. Et si tu passes, le studio de Gu\u00e9liz t\u2019accueille pour le retrait.',
+ shippingText: YZA.pickText(YZA.servicePolicy.summary),
  helpTitle: 'Besoin d\'aide ? Contactez-nous',
  helpText: 'Tailles, couleurs, id\u00e9es cadeau, ce qui reste en boutique \u2014 \u00e9cris-nous sur WhatsApp, une vraie personne r\u00e9pond.',
  newsTitle: 'Le club YZA Girls',
@@ -363,7 +363,7 @@ const footerServiceCopy = () => {
  },
  en: {
  shippingTitle: 'Tracked delivery',
- shippingText: 'Free Morocco delivery from 1,500 DH. And if you are in town, the Gu\u00e9liz studio is open for pickup.',
+ shippingText: YZA.pickText(YZA.servicePolicy.summary),
  helpTitle: 'We actually answer',
  helpText: 'Sizes, colours, gift ideas, what is still on the shelf \u2014 write to us on WhatsApp, a real person replies.',
  newsTitle: 'The YZA Girls club',
@@ -373,7 +373,7 @@ const footerServiceCopy = () => {
  },
  es: {
  shippingTitle: 'Envio con seguimiento',
- shippingText: 'Envio gratis en Marruecos desde 1.500 DH. Y si pasas por aqui, el estudio de Gu\u00e9liz te espera para recoger.',
+ shippingText: YZA.pickText(YZA.servicePolicy.summary),
  helpTitle: 'Respondemos de verdad',
  helpText: 'Tallas, colores, ideas de regalo, lo que queda en tienda \u2014 escribenos por WhatsApp, contesta una persona de verdad.',
  newsTitle: 'El club YZA Girls',
@@ -383,7 +383,7 @@ const footerServiceCopy = () => {
  },
  tr: {
  shippingTitle: 'Takipli teslimat',
- shippingText: 'Fas ici 1.500 DH uzeri ucretsiz kargo. Sehirdeysen Gu\u00e9liz studyosu teslim almak icin acik.',
+ shippingText: YZA.pickText(YZA.servicePolicy.summary),
  helpTitle: 'Gercekten cevap veriyoruz',
  helpText: 'Beden, renk, hediye fikri, rafta ne kaldigi \u2014 WhatsApp uzerinden yaz, gercek bir insan cevaplar.',
  newsTitle: 'YZA Girls kulübü',
@@ -393,7 +393,7 @@ const footerServiceCopy = () => {
  },
  ar: {
  shippingTitle: 'توصيل متتبع',
- shippingText: 'توصيل مجاني في المغرب ابتداء من 1,500 درهم. وإن مررت بالمدينة، ستوديو كليز يستقبلك للاستلام.',
+ shippingText: YZA.pickText(YZA.servicePolicy.summary),
  helpTitle: 'نجيبك فعلا',
  helpText: 'المقاسات، الالوان، فكرة هدية، ما تبقى في المحل - راسلينا على واتساب، يرد عليك انسان حقيقي.',
  newsTitle: 'نادي YZA Girls',
