@@ -38,7 +38,8 @@
     const key = `${context}:${YZA.i18n?.lang || 'fr'}`;
     if (mounted.get(host)?.key === key && host.querySelector('.model-gallery')) return;
     mounted.get(host)?.destroy();
-    const list = context === 'home' ? ["rim-yellow", "fanny-yellow", "amelie-vague-s", "amelie-fuschia", "josephine-marron", "snap-flowers", "rim-yellow-blue", "fanny-xs-nude", "amelie-bougainvillier"].map(id => YZA.media.yzaGirls.find(g => g.id === id)).filter(Boolean).map(g => ({name:g.name,city:g.product + ' · ' + g.city,account:'yzahandmade',category:'bags',url:'/yza-v2-preview/collections/sacs',width:960,height:1200,position:'50% 50%',alt:YZA.i18n.pick(g.alt),homeCopy:true,variants:[{src:g.src,width:960}]})) : (groups[context] || photos);
+    let list = context === 'home' ? ["rim-yellow", "fanny-yellow", "amelie-vague-s", "amelie-fuschia", "josephine-marron", "snap-flowers", "rim-yellow-blue", "fanny-xs-nude", "amelie-bougainvillier"].map(id => YZA.media.yzaGirls.find(g => g.id === id)).filter(Boolean).map(g => ({name:g.name,city:g.product + ' · ' + g.city,account:'yzahandmade',category:'bags',url:'/yza-v2-preview/collections/sacs',width:960,height:1200,position:'50% 50%',alt:YZA.i18n.pick(g.alt),homeCopy:true,variants:[{src:g.src,width:960}]})) : (groups[context] || photos);
+    if (context === "studio") list = list.filter(p => !/^Hiba$/i.test(p.name || "") && p.account !== "_hibaberrada");
     const pair = false;
     const c = words();
     host.classList.add('model-gallery-host');

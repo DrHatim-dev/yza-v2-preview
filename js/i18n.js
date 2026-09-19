@@ -830,8 +830,8 @@ const i18n = {
       const page = (document.body && document.body.dataset && document.body.dataset.page) || 'home';
       const val = (k) => { const v = this.t(k); return v && v !== k ? v : ''; };
       const setMeta = (sel, content) => { if (!content) return; const el = document.querySelector(sel); if (el) el.setAttribute('content', content); };
-      const title = val('meta.' + page + '.title');
-      const desc = val('meta.' + page + '.desc');
+      const title = ['product','collections'].includes(page) ? '' : val('meta.' + page + '.title');
+      const desc = ['product','collections'].includes(page) ? '' : val('meta.' + page + '.desc');
       if (title) { document.title = title; setMeta('meta[property="og:title"]', title); }
       if (desc) { setMeta('meta[name="description"]', desc); setMeta('meta[property="og:description"]', desc); }
       // Build a per-language URL that keeps existing params (?cat=, ?handle=); fr is the clean default.

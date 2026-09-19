@@ -8,6 +8,8 @@
  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
  const T = () => YZA.i18n;
  const params = new URLSearchParams(location.search);
+ // Public colour alias; retain the catalog's legacy rose identity and image filenames.
+ if (/la-nouvelle-vague-/.test(location.pathname) && params.get('color') === 'vert-sapin') params.set('color', 'rose');
  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
  // ---- Clean-URL routing ----
@@ -1112,7 +1114,7 @@
 
  // Colours still sold in the shop. Any other worn colourway is a sold-out batch (handmade to order once sold out).
  const GIRLS_IN_STORE_COLORS = ['violet', 'rouge', 'noir', 'bleu', 'rose'];
- function girlSoldOut(girl) { return GIRLS_IN_STORE_COLORS.indexOf(String((girl && girl.color) || '').toLowerCase()) === -1; }
+ function girlSoldOut(girl) { return !!girl?.archivedLook || GIRLS_IN_STORE_COLORS.indexOf(String((girl && girl.color) || '').toLowerCase()) === -1; }
  function scarcityPill(extra = '') { return `<span class="scarcity-pill${extra}">${esc(T().t('girls.soldOut'))}</span>`; }
 
  function girlsCardHTML(girl, index = 0, compact = false) {
@@ -4066,6 +4068,7 @@
   YZA.renderClothingMaison?.({ product: p, canonicalProduct, members });
   YZA.renderEarringMaison?.({ product: p, canonicalProduct });
   YZA.purchaseFirst?.(p);
+  YZA.correctProductPresentation?.(p);
   YZA.modelStories?.renderPage();
  }
 

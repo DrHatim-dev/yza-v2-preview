@@ -20579,13 +20579,13 @@ YZA.productSeoView = function (productOrHandle, explicitColorSlug) {
  const baseSocialTitle = product.socialTitle || baseSeoTitle;
  const seoTitle = ownValue('seoTitle') || (colorway ? appendColor(baseSeoTitle, colorway.name) : baseSeoTitle);
  const seoDescription = ownValue('seoDescription')
-  || (colorway && (colorway.short || colorway.desc))
-  || product.seoDescription || product.short || product.desc;
+  || product.seoDescription || product.short || product.desc
+  || (colorway && (colorway.short || colorway.desc));
  const socialTitle = ownValue('socialTitle') || ownValue('seoTitle')
   || (colorway ? appendColor(baseSocialTitle, colorway.name) : baseSocialTitle);
  const socialDescription = ownValue('socialDescription') || ownValue('seoDescription')
-  || (colorway && (colorway.desc || colorway.short))
-  || product.socialDescription || product.seoDescription || product.short || product.desc;
+  || product.socialDescription || product.seoDescription || product.short || product.desc
+  || (colorway && (colorway.desc || colorway.short));
  return {
   seoTitle: cloneValue(seoTitle),
   seoDescription: cloneValue(seoDescription),

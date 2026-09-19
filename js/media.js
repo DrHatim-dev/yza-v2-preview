@@ -620,6 +620,7 @@ const GIRL_LOOK_MATCH = {
 };
 
 YZA.media.yzaGirls.forEach((girl) => {
+ if (/La Vague/i.test(girl.product || '')) { girl.archivedLook = true; girl.lookProductHandles = []; girl.lookHref = '/yza-v2-preview/collections/sacs'; return; }
  const handles = GIRL_LOOK_MATCH[girl.color] || ['trio-charms-fruit-market'];
  girl.lookProductHandles = handles.filter((handle) => !YZA.getProduct || YZA.getProduct(handle));
  girl.lookHref = girl.lookProductHandles[0]

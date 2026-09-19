@@ -1,1 +1,74 @@
-{"charms":{"slug":"charms","name":"Charms en raphia","title":"Charms & breloques en raphia — YZA","desc":"Charms (breloques) et porte-clés fruits en raphia crochetés main par La Fatima à l'atelier de Guéliz. Des cartes postales de Marrakech en format poche, dès 100 DH. Éditions limitées, jamais refaites.","image":"https://yza-shop.com/assets/products/fruit-market/charm-cherries.jpg","url":"https://yza-shop.com/collections/charms"},"bags":{"slug":"sacs","name":"Sacs panier en raphia","title":"Sacs panier marocain en raphia — YZA","desc":"Le panier marocain réinventé : La Sculpture et La Nouvelle Vague, tressées main à Marrakech en raphia, doum et feuille de bananier, finitions cuir. Faites pour durer, réparées à vie. Éditions limitées.","image":"https://yza-shop.com/assets/products/launch-shop-ref/la-sculpture-xs-hot-red.jpg","url":"https://yza-shop.com/collections/sacs"},"rtw":{"slug":"pret-a-porter","name":"Prêt-à-porter Jawhara","title":"Prêt-à-porter Jawhara — YZA","desc":"La collection Jawhara : tops, jupes paréo et pantalons coupés et cousus main à Guéliz, brodés de signes berbères et finis de pompons de perles. Le vestiaire moderne de Marrakech.","image":"https://yza-shop.com/assets/lookbook-ss26-27/embedded/p33_img02_xref1247_4e3188b3ffc2.jpeg","url":"https://yza-shop.com/collections/pret-a-porter"},"accessories":{"slug":"bijoux","name":"Bijoux en raphia","title":"Bijoux en raphia — YZA","desc":"Boucles d'oreilles fruits, crochet?es main en raphia ? Marrakech. La touche de couleur qui signe une tenue. Fait main, garanti, d?s 250 DH.","image":"https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg","url":"https://yza-shop.com/collections/bijoux"},"earrings":{"slug":"boucles-d-oreilles","name":"Boucles d'oreilles fruits","title":"Boucles d'oreilles en raphia — YZA","desc":"Pastèque, citron, cerises : des boucles d'oreilles fruits crochetées main par La Fatima à Guéliz. Légères, colorées, faites pour être remarquées. Éditions limitées.","image":"https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg","url":"https://yza-shop.com/collections/boucles-d-oreilles"},"tops":{"slug":"hauts","name":"Hauts Jawhara","title":"Hauts Jawhara — YZA","desc":"Tops foulard et bateau de la collection Jawhara, coupés et cousus main à Guéliz. Tissu léger, signes berbères brodés, pompons de perles. Du souk au bord de mer.","image":"https://yza-shop.com/assets/lookbook-ss26-27/embedded/p33_img02_xref1247_4e3188b3ffc2.jpeg","url":"https://yza-shop.com/collections/hauts"},"pareos":{"slug":"jupes-pareo","name":"Jupes paréo Jawhara","title":"Jupes paréo Jawhara — YZA","desc":"Jupes paréo Jawhara, une taille pour toutes — on les noue à sa guise. Coupées et finies main à Marrakech. Se roulent petit, se portent partout, de la plage à la ville.","image":"https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg","url":"https://yza-shop.com/collections/jupes-pareo"},"pants":{"slug":"pants","name":"Pantalons Jawhara","title":"Pantalons Jawhara — YZA","desc":"Pantalons palazzo et fluides de la collection Jawhara, coupés main à Guéliz. Larges, légers, faits pour marcher au pas de Marrakech. Le prêt-à-porter YZA.","image":"https://yza-shop.com/assets/products/jawhara/client/palazzo-02.jpg","url":"https://yza-shop.com/collections/pants"},"bottoms":{"slug":"bas","name":"Bas Jawhara","title":"Bas Jawhara — YZA","desc":"Jupes paréo et pantalons Jawhara, coupés et cousus main à l'atelier de Guéliz. Pièces solaires, faites pour voyager. Le vestiaire moderne de Marrakech.","image":"https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg","url":"https://yza-shop.com/collections/bas"}}
+{
+  "charms": {
+    "slug": "charms",
+    "name": "Charms en raphia",
+    "title": "Charms & breloques en raphia — YZA",
+    "desc": "Charms et porte-clés fruits en raphia teint et crocheté à la main dans notre atelier de Guéliz, à Marrakech. Découvrez les éditions limitées YZA.",
+    "image": "https://yza-shop.com/assets/products/fruit-market/charm-cherries.jpg",
+    "url": "https://yza-shop.com/collections/charms"
+  },
+  "bags": {
+    "slug": "sacs",
+    "name": "Sacs panier en raphia",
+    "title": "Sacs panier marocain en raphia — YZA",
+    "desc": "Le panier marocain réinventé : La Sculpture et La Nouvelle Vague, tressées main à Marrakech en raphia, doum et feuille de bananier, finitions cuir. Faites pour durer, réparées à vie. Éditions limitées.",
+    "image": "https://yza-shop.com/assets/products/launch-shop-ref/la-sculpture-xs-hot-red.jpg",
+    "url": "https://yza-shop.com/collections/sacs"
+  },
+  "rtw": {
+    "slug": "pret-a-porter",
+    "name": "Prêt-à-porter Jawhara",
+    "title": "Prêt-à-porter Jawhara — YZA",
+    "desc": "La collection Jawhara : tops, jupes paréo et pantalons coupés et cousus main à Guéliz, brodés de signes berbères et finis de pompons de perles. Le vestiaire moderne de Marrakech.",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p33_img02_xref1247_4e3188b3ffc2.jpeg",
+    "url": "https://yza-shop.com/collections/pret-a-porter"
+  },
+  "accessories": {
+    "slug": "bijoux",
+    "name": "Bijoux en raphia",
+    "title": "Bijoux en raphia — YZA",
+    "desc": "Boucles d'oreilles fruits, crochet?es main en raphia ? Marrakech. La touche de couleur qui signe une tenue. Fait main, garanti, d?s 250 DH.",
+    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg",
+    "url": "https://yza-shop.com/collections/bijoux"
+  },
+  "earrings": {
+    "slug": "boucles-d-oreilles",
+    "name": "Boucles d'oreilles fruits",
+    "title": "Boucles d'oreilles en raphia — YZA",
+    "desc": "Pastèque, citron, cerises : des boucles d'oreilles fruits crochetées main par La Fatima à Guéliz. Légères, colorées, faites pour être remarquées. Éditions limitées.",
+    "image": "https://yza-shop.com/assets/products/fruit-market/earrings-watermelon.jpg",
+    "url": "https://yza-shop.com/collections/boucles-d-oreilles"
+  },
+  "tops": {
+    "slug": "hauts",
+    "name": "Hauts Jawhara",
+    "title": "Hauts Jawhara — YZA",
+    "desc": "Tops foulard et bateau de la collection Jawhara, coupés et cousus main à Guéliz. Tissu léger, signes berbères brodés, pompons de perles. Du souk au bord de mer.",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p33_img02_xref1247_4e3188b3ffc2.jpeg",
+    "url": "https://yza-shop.com/collections/hauts"
+  },
+  "pareos": {
+    "slug": "jupes-pareo",
+    "name": "Jupes paréo Jawhara",
+    "title": "Jupes paréo Jawhara — YZA",
+    "desc": "Jupes paréo Jawhara, une taille pour toutes — on les noue à sa guise. Coupées et finies main à Marrakech. Se roulent petit, se portent partout, de la plage à la ville.",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg",
+    "url": "https://yza-shop.com/collections/jupes-pareo"
+  },
+  "pants": {
+    "slug": "pants",
+    "name": "Pantalons Jawhara",
+    "title": "Pantalons Jawhara — YZA",
+    "desc": "Pantalons palazzo et fluides de la collection Jawhara, coupés main à Guéliz. Larges, légers, faits pour marcher au pas de Marrakech. Le prêt-à-porter YZA.",
+    "image": "https://yza-shop.com/assets/products/jawhara/client/palazzo-02.jpg",
+    "url": "https://yza-shop.com/collections/pants"
+  },
+  "bottoms": {
+    "slug": "bas",
+    "name": "Bas Jawhara",
+    "title": "Bas Jawhara — YZA",
+    "desc": "Jupes paréo et pantalons Jawhara, coupés et cousus main à l'atelier de Guéliz. Pièces solaires, faites pour voyager. Le vestiaire moderne de Marrakech.",
+    "image": "https://yza-shop.com/assets/lookbook-ss26-27/embedded/p29_img04_xref1215_ea0a78123e7b.jpeg",
+    "url": "https://yza-shop.com/collections/bas"
+  }
+}
