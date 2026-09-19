@@ -33,3 +33,14 @@ body.purchase-first .bag-price-row { margin:0 !important; padding:0 !important; 
 body.purchase-first #pPrice { margin:0 !important; padding:0 !important; font-size:24px !important; }
 body.purchase-first .product-info > .option { margin-block:7px !important; }
 body.purchase-first #purchaseDescription { font:400 14px/1.7 var(--font-body); }
+
+/* On phones, present purchase essentials before the image gallery and story. */
+@media(max-width:700px) {
+ body.purchase-first .product--cg { display:grid !important; grid-template-columns:minmax(0,1fr) !important; gap:10px !important; padding:18px !important; }
+ body.purchase-first .product--cg .product-info { display:contents !important; }
+ body.purchase-first .product-info > * { order:2; }
+ body.purchase-first .product-info > :is(#pName,.bag-price-row,#pPrice,#pShort,#pColorWrap,#pVariants,#pSize,#pFinish,.option--add,#purchaseService) { order:0; }
+ body.purchase-first .product--cg .gallery { order:1 !important; position:relative !important; top:auto !important; margin-top:20px; }
+ body.purchase-first #pName { font-size:28px !important; }
+ body.purchase-first #purchaseService { margin-bottom:4px; }
+}
