@@ -878,3 +878,7 @@ const i18n = {
 };
 
 YZA.i18n = i18n;
+
+// User-supplied French wording for the isolated V2 preview.
+STR['nav.copyNew'] = {fr:'Nouveau',en:'New',es:'Novedades',tr:'Yeni',ar:'جديد'};
+STR['nav.studio'].fr = 'YZA Studio';

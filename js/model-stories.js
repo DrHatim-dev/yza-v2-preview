@@ -28,8 +28,8 @@
   function photoHTML(p) {
     const c = words();
     return `<a class="model-story" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" draggable="false" aria-label="${esc(p.name)} — ${esc(c.source)}">
-      <figure class="model-story__photo"><img src="${esc(p.variants[0].src)}" srcset="${p.variants.map(v => `${esc(v.src)} ${v.width}w`).join(', ')}" sizes="(max-width: 700px) calc((100vw - 46px) / 2), (max-width: 1100px) calc((100vw - 76px) / 4), 300px" width="${p.width}" height="${p.height}" alt="${esc(c[p.category])} · @${esc(p.account)}" loading="lazy" decoding="async" draggable="false" style="object-position:${p.position}"><span class="model-story__open" aria-hidden="true">↗</span></figure>
-      <span class="model-story__caption" dir="auto"><strong>${esc(p.name)}</strong><span>${esc(p.city || '@' + p.account)}</span></span>
+      <figure class="model-story__photo"><img src="${esc(p.variants[0].src)}" srcset="${p.variants.map(v => `${esc(v.src)} ${v.width}w`).join(', ')}" sizes="(max-width: 700px) calc((100vw - 46px) / 2), (max-width: 1100px) calc((100vw - 76px) / 4), 300px" width="${p.width}" height="${p.height}" alt="${esc(p.alt || (c[p.category] + ' · @' + p.account))}" loading="lazy" decoding="async" draggable="false" style="object-position:${p.position}"><span class="model-story__open" aria-hidden="true">↗</span></figure>
+      <span class="model-story__caption" dir="auto"><strong>${esc(p.name)}</strong><span>${esc(p.city || '@' + p.account)}</span>${p.homeCopy ? '<span>Voir ce qu’on a en ce moment</span>' : ''}</span>
     </a>`;
   }
 
@@ -38,7 +38,7 @@
     const key = `${context}:${YZA.i18n?.lang || 'fr'}`;
     if (mounted.get(host)?.key === key && host.querySelector('.model-gallery')) return;
     mounted.get(host)?.destroy();
-    const list = groups[context] || photos;
+    const list = context === 'home' ? ["rim-yellow", "fanny-yellow", "amelie-vague-s", "amelie-fuschia", "josephine-marron", "snap-flowers", "rim-yellow-blue", "fanny-xs-nude", "amelie-bougainvillier"].map(id => YZA.media.yzaGirls.find(g => g.id === id)).filter(Boolean).map(g => ({name:g.name,city:g.product + ' · ' + g.city,account:'yzahandmade',category:'bags',url:'/yza-v2-preview/collections/sacs',width:960,height:1200,position:'50% 50%',alt:YZA.i18n.pick(g.alt),homeCopy:true,variants:[{src:g.src,width:960}]})) : (groups[context] || photos);
     const pair = false;
     const c = words();
     host.classList.add('model-gallery-host');

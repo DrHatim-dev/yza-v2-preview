@@ -4,7 +4,7 @@
   const YZA = window.YZA = window.YZA || {};
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const copy = {
-    fr: ['Livraison offerte dès 500 DH · Retrait au studio, Guéliz', 'Pause', 'Lire le film', 'Vue'],
+    fr: ['Livraison offerte au Maroc dès 500 DH (accessoires) · 1 500 DH (sacs & prêt-à-porter)', 'Pause', 'Lire le film', 'Vue'],
     en: ['Free shipping from 500 DH · Studio pickup, Guéliz', 'Pause', 'Play film', 'View'],
     es: ['Envío gratis desde 500 DH · Recogida en el estudio, Guéliz', 'Pausa', 'Reproducir', 'Vista'],
     tr: ['500 DH üzeri ücretsiz teslimat · Guéliz stüdyosundan teslim', 'Duraklat', 'Filmi oynat', 'Görünüm'],
@@ -39,14 +39,14 @@
     if (bestTitle) bestTitle.textContent = ({ fr: 'Coups de cœur', en: 'Our favourites', es: 'Nuestros favoritos', tr: 'Favorilerimiz', ar: 'قطعنا المفضّلة' })[YZA.i18n?.lang] || 'Coups de cœur';
     const headingCopy = {
       craft: { fr: 'Les détails qui font la différence.', en: 'The details that make the difference.', es: 'Los detalles que marcan la diferencia.', tr: 'Fark yaratan detaylar.', ar: 'التفاصيل التي تصنع الفرق.' },
-      atelier: { fr: 'Fait par des femmes, à Guéliz', en: 'Made by women, in Guéliz', es: 'Hecho por mujeres, en Guéliz', tr: 'Guéliz’de kadınlar tarafından yapıldı', ar: 'صُنع بأيدي نساء في كليز' },
+      atelier: { fr: 'Plus de mains, moins de machines.', en: 'Made by women, in Guéliz', es: 'Hecho por mujeres, en Guéliz', tr: 'Guéliz’de kadınlar tarafından yapıldı', ar: 'صُنع بأيدي نساء في كليز' },
     };
     for (const [key, values] of Object.entries(headingCopy)) {
       const heading = document.querySelector(`[data-home-heading="${key}"]`);
       if (heading) heading.textContent = values[YZA.i18n?.lang] || values.fr;
     }
     const studio = header.querySelector('.home-studio-link[href="/studio"],.home-studio-link[href="studio"]');
-    if (studio) studio.textContent = ({ fr: 'Le Studio', en: 'The Studio', es: 'El estudio', tr: 'Stüdyo', ar: 'الاستوديو' })[YZA.i18n?.lang] || 'Le Studio';
+    if (studio) studio.textContent = ({ fr: 'YZA Studio', en: 'The Studio', es: 'El estudio', tr: 'Stüdyo', ar: 'الاستوديو' })[YZA.i18n?.lang] || 'Le Studio';
     document.querySelectorAll('[data-home-slide]').forEach((button) => {
       button.setAttribute('aria-label', `${words()[3]} ${Number(button.dataset.homeSlide) + 1}`);
     });

@@ -1032,9 +1032,7 @@
  // Fixed full-bleed product grid (Jacquemus "New In" style) instead of a carousel — 2 per category.
  const maisonHome = document.body.classList.contains('home-maison');
  YZA.renderHomeMaison?.();
- const bestList = maisonHome
- ? ['la-sculpture-xs-basket-bag-ss26', 'yza-pareo-skirt-midi-jawhara-ss26', 'raffia-whole-orange-charm-ss26', 'kiwi-raffia-earrings-ss26'].map(h => YZA.getProduct(h)).filter(p => p && promoOk(p))
- : ['charms', 'bags', 'rtw', 'accessories'].flatMap(g => YZA.byCategory(g).filter(p => !p.bundle && promoOk(p) && !offerHandles.includes(p.handle)).slice(0, 2)).slice(0, 8);
+ const bestList = ["raffia-cherries-charm-ss26", "raffia-grapes-charm-ss26", "la-sculpture-s-basket-bag-ss26", "la-sculpture-m-basket-bag-ss26", "yza-scarf-top-jawhara-ss26", "yza-button-up-shirt-jawhara-ss26", "watermelon-raffia-earrings-ss26", "kiwi-raffia-earrings-ss26"].map(h => YZA.getProduct(h)).filter(Boolean);
  const bestGrid = $('#bestGrid');
  if (bestGrid) bestGrid.innerHTML = bestList.map((p, i) => cardHTML(p, i, false, { used: usedHomeImg })).join('');
 
@@ -1057,12 +1055,13 @@
  if (tg) {
  tg.setAttribute('data-placeholder', 'reviews');
  tg.classList.add('reviews-editorial', 'reviews-editorial--trio');
- const allReviews = YZA.testimonials || [];
+ const reviewNames = ['Chloé', 'Common Saints', 'Wafaa T.'];
+ const allReviews = reviewNames.map(name => (YZA.testimonials || []).find(r => r.name === name)).filter(Boolean);
  // strip trailing emoji/space so a quote never ends on a broken 😍 / ❤️
  const EMOJI_END = /(?:️|[☀-➿]|[⬀-⯿]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDFFF]|\s)+$/;
  const clean = (s) => String(s || '').trim().replace(EMOJI_END, '').trim();
  const isVerified = (r) => !!(r.place && r.place.fr === 'Avis vérifié');
- let PER = maisonHome ? 8 : 3;
+ let PER = 3;
  const pages = Math.max(1, Math.ceil(allReviews.length / PER));
  let page = 0;
  let updateCount = () => {};
