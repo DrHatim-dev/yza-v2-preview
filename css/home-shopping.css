@@ -44,3 +44,13 @@ body.home-maison[data-page="home"] .service-strip-section .service-card p { max-
  body.home-maison[data-page="home"] .service-strip-section .service-strip { grid-template-columns:1fr; gap:32px; }
  body.home-maison[data-page="home"] .service-strip-section .service-card__icon { min-height:52px; }
 }
+
+/* Reviews fill complete rows; every saved review is available through Show all. */
+body.home-maison[data-page="home"] #testimonialsGrid { width:100%; max-width:none; }
+body.home-maison[data-page="home"] #testimonialsGrid .reviews-trio { width:100%; max-width:none; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; background:transparent; border:0; }
+body.home-maison[data-page="home"] #avis .review-card { min-width:0; border:1px solid var(--home-line,#e2e2e2); margin:0 -1px -1px 0; }
+body.home-maison[data-page="home"] #avis .reviews-visible-count { margin:0 0 12px; font-size:12px; color:#767676; }
+@media (max-width:900px) { body.home-maison[data-page="home"] #testimonialsGrid .reviews-trio { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:480px) { body.home-maison[data-page="home"] #testimonialsGrid .reviews-trio { grid-template-columns:1fr; } }
+
+body.home-maison[data-page="home"] #avis .review-card { scroll-margin-top:150px; }

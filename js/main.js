@@ -1054,12 +1054,14 @@
  tg.setAttribute('data-placeholder', 'reviews');
  tg.classList.add('reviews-editorial', 'reviews-editorial--trio');
  const reviewNames = ['Chloé', 'Common Saints', 'Wafaa T.'];
- const allReviews = reviewNames.map(name => (YZA.testimonials || []).find(r => r.name === name)).filter(Boolean);
+ const savedReviews = (YZA.testimonials || []).filter(r => r.name && t.pick(r.text));
+ const featuredReviews = reviewNames.map(name => savedReviews.find(r => r.name === name)).filter(Boolean);
+ const allReviews = featuredReviews.concat(savedReviews.filter(r => !featuredReviews.includes(r)));
  // strip trailing emoji/space so a quote never ends on a broken 😍 / ❤️
  const EMOJI_END = /(?:️|[☀-➿]|[⬀-⯿]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDFFF]|\s)+$/;
  const clean = (s) => String(s || '').trim().replace(EMOJI_END, '').trim();
  const isVerified = (r) => !!(r.place && r.place.fr === 'Avis vérifié');
- let PER = 3;
+ let PER = maisonHome ? 8 : 3;
  const pages = Math.max(1, Math.ceil(allReviews.length / PER));
  let page = 0;
  let updateCount = () => {};
@@ -1071,6 +1073,8 @@
  const draw = () => {
  const slice = allReviews.slice(page * PER, page * PER + PER);
  tg.innerHTML = '<div class="reviews-trio">' + slice.map(card).join('') + '</div>';
+ const status = document.getElementById('reviewsVisibleCount');
+ if (status) status.textContent = slice.length + ' / ' + allReviews.length;
  updateCount();
  };
  const go = (dir) => { page = (page + dir + pages) % pages; draw(); };
@@ -1078,9 +1082,9 @@
  // Reviews advance only through their existing controls.
  const wrap = $('.reviews-more-wrap');
  if (wrap && maisonHome) {
- const moreLabels = { fr: ['Voir plus d’avis', 'Réduire les avis'], en: ['More reviews', 'Fewer reviews'], es: ['Más opiniones', 'Menos opiniones'], tr: ['Daha fazla yorum', 'Daha az yorum'], ar: ['المزيد من الآراء', 'آراء أقل'] };
+ const moreLabels = { fr: ['Voir les ' + allReviews.length + ' avis', 'Réduire les avis'], en: ['View all ' + allReviews.length + ' reviews', 'Fewer reviews'], es: ['Ver las ' + allReviews.length + ' opiniones', 'Menos opiniones'], tr: [allReviews.length + ' yorumun tümünü gör', 'Daha az yorum'], ar: ['عرض جميع الآراء (' + allReviews.length + ')', 'آراء أقل'] };
  const labels = moreLabels[t.lang] || moreLabels.fr;
- wrap.innerHTML = '<button type="button" class="home-button" aria-expanded="false">' + labels[0] + '</button>';
+ wrap.innerHTML = '<p class="reviews-visible-count" id="reviewsVisibleCount" role="status" aria-live="polite">' + Math.min(PER, allReviews.length) + ' / ' + allReviews.length + '</p><button type="button" class="home-button" aria-expanded="false" aria-controls="testimonialsGrid">' + labels[0] + '</button>';
  wrap.hidden = allReviews.length <= 8;
  const button = wrap.querySelector('button');
  button.addEventListener('click', () => {
@@ -1089,6 +1093,8 @@
  button.textContent = labels[expanded ? 1 : 0];
  PER = expanded ? allReviews.length : 8;
  draw();
+ // Keep the newly revealed reviews (or the start of the grid) in view after resizing.
+ tg.querySelectorAll('.review-card')[expanded ? 8 : 0]?.scrollIntoView({block:'start', behavior:'instant'});
  });
  } else if (wrap && pages > 1) {
  wrap.innerHTML = '<div class="reviews-nav"><button type="button" class="reviews-nav__btn" data-dir="-1" aria-label="Avis précédents"><svg class="reviews-nav__chev" viewBox="0 0 10 16" aria-hidden="true"><path d="M7 2 2 8 7 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="reviews-nav__count" aria-hidden="true"></span><button type="button" class="reviews-nav__btn" data-dir="1" aria-label="Avis suivants"><svg class="reviews-nav__chev" viewBox="0 0 10 16" aria-hidden="true"><path d="M3 2 8 8 3 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>';
