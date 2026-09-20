@@ -4570,131 +4570,112 @@
 })();
 
 
-/* APERCU TACTILE DES CARTES PRODUIT (cliente 2026-08-05).
-   AVANT : sur mobile, chaque carte a l'ecran alternait toute seule photo produit <->
-   photo portee toutes les 2,6 s (setInterval pilote par un IntersectionObserver). La
-   cliente n'en voulait pas : ca bougeait sans qu'on ait rien demande, et pendant un
-   defilement toute la grille clignotait.
-   MAINTENANT : le doigt pose sur la carte revele la photo portee, le doigt leve la
-   retire. C'est le pendant tactile exact du :hover de l'ordinateur, et il n'y a plus
-   aucune minuterie dans ce fichier.
-   Le point delicat est de distinguer l'APPUI du DEFILEMENT : sans ca, poser le doigt
-   pour faire defiler rallumerait les photos portees au passage, c'est-a-dire tres
-   exactement le clignotement qu'on vient de supprimer. */
+/* Product-card image browsing: the selected PDP gallery is the source of truth.
+   Applied after every render, including recommendations, filters and colour changes. */
 (function () {
-  var wired = new WeakSet();
-  var MOVE_CANCEL = 10;      // px de tolerance : au-dela, c'est un defilement
-  var releaseActive = null;  // apercu en cours, pour pouvoir le couper globalement
-  var touchMode = window.matchMedia && window.matchMedia('(hover: none)').matches;
-  /* Plus de garde `prefers-reduced-motion` : elle n'existait qu'a cause de l'animation
-     AUTOMATIQUE. Un apercu declenche par la visiteuse elle-meme n'est pas du mouvement
-     subi, et le fondu est de toute facon deja neutralise en CSS sous ce reglage. */
-  if (!touchMode) return;    // au pointeur, c'est :hover en CSS qui fait le travail
-
-  function wire(card) {
-    if (!card || wired.has(card)) return;
-    if (!card.querySelector('.product-card__img--hover, .product-card__vid')) return;
-    wired.add(card);
-    var visible = false;
-
-    function setAlt(on) {
-      visible = !!on;
-      card.classList.toggle('is-touch-preview', visible);
-      /* DEFAUT SIGNALE PAR LA CLIENTE (28/07) : sur mobile, les cartes M Noir et
-         M Violet de La Sculpture ne montraient rien. La bascule ci-dessus rend bien la
-         video visible (opacity:1 via .is-touch-preview), mais son `src` n'etait JAMAIS
-         renseigne et play() n'etait JAMAIS appele : le src est pose paresseusement dans
-         hoverIn(), qui depend de `mouseover` — un evenement qui n'existe pas sur un
-         ecran tactile. On revelait donc une video VIDE par-dessus la photo produit, ce
-         qui se voit exactement comme "il ne se passe rien".
-         On charge et on lance donc ici, cote tactile, ce que le survol fait cote
-         pointeur. Le chargement paresseux est meilleur qu'avant : la video ne part au
-         reseau qu'au moment ou un doigt se pose sur CETTE carte. Auparavant il suffisait
-         que la carte defile a l'ecran pour que la minuterie la reclame. */
-      var v = card.querySelector('.product-card__vid');
-      if (!v) return;
-      try {
-        if (visible) {
-          if (!v.getAttribute('src') && v.dataset.hoverVideo) v.setAttribute('src', v.dataset.hoverVideo);
-          v.muted = true;               // condition sine qua non de l'autoplay mobile
-          playWhenReady(v);
-        } else if (!v.paused) {
-          v.pause();
-        }
-      } catch (err) {}
+  const states = new WeakMap();
+  const normalize = src => String(src || '').split('?')[0].replace(/^.*?assets\//, 'assets/');
+  const unavailable = new Set(["assets/lifestyle/rtw/top-halter-a-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/top-halter-a-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/top-halter-a-bordeaux-jour.webp", "assets/lifestyle/rtw/top-halter-a-noir-nuit-jour.webp", "assets/lifestyle/rtw/top-halter-a-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/top-halter-a-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/top-halter-a-vert-fonce-jour.webp", "assets/lifestyle/rtw/top-halter-a-violet-lilas-jour.webp", "assets/lifestyle/rtw/chemise-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/chemise-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/chemise-bordeaux-jour.webp", "assets/lifestyle/rtw/chemise-noir-nuit-jour.webp", "assets/lifestyle/rtw/chemise-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/chemise-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/chemise-vert-fonce-jour.webp", "assets/lifestyle/rtw/chemise-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-jaune-safran-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-violet-lilas-jour.webp", "assets/lifestyle/rtw/pantalon-large-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/pantalon-large-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/pantalon-large-bordeaux-jour.webp", "assets/lifestyle/rtw/pantalon-large-noir-nuit-jour.webp", "assets/lifestyle/rtw/pantalon-large-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/pantalon-large-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/pantalon-large-vert-fonce-jour.webp", "assets/lifestyle/rtw/pantalon-large-violet-lilas-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-bleu-sama-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-bordeaux-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-jaune-safran-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-noir-nuit-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-vert-fonce-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-violet-lilas-jour.webp", "assets/products/charms-2026-08/grapes-anneau.webp", "assets/products/charms-2026-08/whole-lemon-anneau.webp", "assets/products/charms-2026-08/whole-orange-anneau.webp", "assets/products/charms-2026-08/lemon-slice-anneau.webp", "assets/products/charms-2026-08/orange-slice-anneau.webp", "assets/products/charms-2026-08/avocado-half-anneau.webp", "assets/lifestyle/rtw/top-halter-b-bleu-sama-jour.webp", "assets/catalog/jawhara-v1/top-halter-b/jaune-safran.webp", "assets/lifestyle/rtw/top-halter-b-vert-amande-clair-jour.webp"]);
+  const still = src => typeof src === 'string' && /\.(webp|png|jpe?g)(\?|$)/i.test(src);
+  let scheduled = false;
+  function enhance(card) {
+    const media = card.querySelector('.product-card__media, .upsell-card__img');
+    const front = media?.querySelector('img:not(.product-card__img--hover)');
+    if (!front) return;
+    const url = new URL(media.href, document.baseURI);
+    const handle = card.dataset.productHandle || card.dataset.staticProduct || url.pathname.split('/').filter(Boolean).pop();
+    const product = YZA.getProduct?.(handle);
+    if (!product) return;
+    const slug = url.searchParams.get('color') || product.defaultColorSlug || '';
+    const view = YZA.resolveProductColorView?.(product, slug) || product;
+    const gallery = [...(view.gallery || []), ...(view.media || []).filter(m => m.type === 'image').map(m => m.src)].filter(src => still(src) && !unavailable.has(normalize(src)));
+    const primary = normalize(front.getAttribute('src'));
+    const alternate = gallery.find(src => normalize(src) !== primary && !(product.category === 'charms' && /anneau/i.test(src))) || front.getAttribute('src');
+    const detailOnly = normalize(alternate) === primary;
+    if (!alternate) return;
+    let back = media.querySelector('.product-card__img--hover');
+    if (!back) {
+      back = document.createElement('img');
+      back.className = 'product-card__img product-card__img--hover';
+      back.alt = ''; back.setAttribute('aria-hidden', 'true');
+      back.loading = 'lazy'; back.decoding = 'async';
+      back.width = front.width || 640; back.height = front.height || 800;
+      media.append(back);
     }
-
-    /* CES DEUX ETAPES SONT NECESSAIRES — mesure faite dans le navigateur, pas deduite.
-       Les deux ordres « evidents » echouent, chacun en silence :
-       1. `src` puis play() immediat  -> AbortError (« play() interrupted ») : le
-          chargement vient d'etre relance, currentTime reste a 0, rien ne demarre.
-       2. `src` puis attendre canplay -> INTERBLOCAGE : la balise porte preload="none",
-          donc poser src ne charge RIEN. canplay ne se declenche jamais et on attend
-          indefiniment.
-       Ce qui marche : appeler play() D'ABORD (c'est lui qui declenche le chargement
-       malgre preload="none"), puis, si la promesse est rejetee, retenter une seule fois
-       quand la video devient lisible. Verifie : les deux videos passent en readyState 4
-       et avancent, et le chemin de RETENTE est bien celui qui aboutit — ce n'est pas
-       une precaution decorative, c'est lui qui fait jouer la video.
-       Le garde `visible` evite de lancer une lecture apres que la carte est deja
-       revenue sur la photo produit. */
-    function playWhenReady(v) {
-      if (!visible) return;
-      var pr = v.play();
-      if (!pr || !pr.catch) return;
-      pr.catch(function () {
-        if (!visible) return;
-        v.addEventListener('canplay', function () {
-          if (!visible) return;
-          var p2 = v.play();
-          if (p2 && p2.catch) p2.catch(function () {});   // autoplay refuse : on n'insiste pas
-        }, { once: true });
-      });
+    if (back.getAttribute('src') !== alternate) back.setAttribute('src', alternate);
+    if (detailOnly) back.style.objectFit = 'cover'; else back.removeAttribute('style');
+    media.classList.toggle('card-image-detail', detailOnly);
+    // An alternate still is available: don't cover it with a legacy hover video.
+    media.classList.remove('has-hover-video');
+    media.querySelectorAll('.product-card__vid').forEach(v => { v.pause(); v.remove(); });
+    let state = states.get(media);
+    const key = primary + '|' + alternate;
+    if (state) {
+      if (state.key !== key) { state.key = key; state.show(0); }
+      return;
     }
-    var startX = 0, startY = 0, pressing = false, previewTimer = 0;
-
-    function release() {
-      clearTimeout(previewTimer);
-      pressing = false;
-      releaseActive = null;
-      setAlt(false);
-    }
-
-    /* Tous les ecouteurs restent `passive: true` : on ne bloque JAMAIS le defilement.
-       L'apercu est purement visuel, la carte reste un lien — un appui bref revele la
-       photo portee puis ouvre la fiche, comme un survol suivi d'un clic. */
-    card.addEventListener('touchstart', function (e) {
-      var t = e.touches && e.touches[0];
-      startX = t ? t.clientX : 0;
-      startY = t ? t.clientY : 0;
-      pressing = true;
-      releaseActive = release;
-      previewTimer = setTimeout(() => { if (pressing) setAlt(true); }, YZA.motion.duration('hover'));
-    }, { passive: true });
-
-    card.addEventListener('touchmove', function (e) {
-      if (!pressing) return;
-      var t = e.touches && e.touches[0];
-      if (!t) return;
-      if (Math.abs(t.clientX - startX) > MOVE_CANCEL || Math.abs(t.clientY - startY) > MOVE_CANCEL) {
-        release();   // le doigt file : c'est un defilement, on rend la photo produit
+    media.classList.add('card-image-browser', 'swiper-no-swiping');
+    front.classList.add('product-card__img');
+    const controls = document.createElement('div');
+    controls.className = 'card-image-controls';
+    const name = media.getAttribute('aria-label') || front.alt;
+    controls.setAttribute('role', 'group'); controls.setAttribute('aria-label', name);
+    const buttons = [0, 1].map(i => {
+      const button = document.createElement('button'); button.type = 'button';
+      button.setAttribute('aria-label', `${name} — Photo ${i + 1} / 2`);
+      controls.append(button); return button;
+    });
+    media.insertAdjacentElement('afterend', controls);
+    state = { key, index: 0, suppressUntil: 0, show(index) {
+      state.index = index;
+      media.dataset.imageIndex = String(index);
+      buttons.forEach((b, i) => b.setAttribute('aria-pressed', String(i === index)));
+    }};
+    states.set(media, state); state.show(0);
+    buttons.forEach((b, i) => b.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); state.show(i); }));
+    let gesture = null;
+    media.addEventListener('pointerdown', e => {
+      if ((e.pointerType === 'mouse' && window.innerWidth > 767) || !e.isPrimary) return;
+      e.stopPropagation();
+      if (e.pointerType === 'mouse') e.preventDefault();
+      state.suppressUntil = 0;
+      gesture = { x: e.clientX, y: e.clientY, id: e.pointerId, axis: '', dx: 0 };
+    });
+    media.addEventListener('pointermove', e => {
+      if (!gesture || gesture.id !== e.pointerId) return;
+      const dx = e.clientX - gesture.x, dy = e.clientY - gesture.y;
+      if (!gesture.axis && Math.max(Math.abs(dx), Math.abs(dy)) > 8) gesture.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+      if (gesture.axis !== 'x') return;
+      e.stopPropagation(); if (e.cancelable) e.preventDefault();
+      gesture.dx = dx;
+      state.suppressUntil = Date.now() + 700;
+      const shift = Math.max(-1, Math.min(0, -state.index + dx / media.clientWidth));
+      media.style.setProperty('--card-image-shift', `${shift * 100}%`);
+      media.classList.add('is-image-dragging');
+      if (!media.hasPointerCapture(e.pointerId)) media.setPointerCapture(e.pointerId);
+    });
+    function finish(e) {
+      if (!gesture) return;
+      if (gesture.axis === 'x') {
+        e.stopPropagation();
+        if (e.type !== 'pointercancel' && Math.abs(gesture.dx) > Math.min(60, media.clientWidth * .18)) state.show(gesture.dx < 0 ? 1 : 0);
       }
-    }, { passive: true });
-
-    card.addEventListener('touchend', release, { passive: true });
-    card.addEventListener('touchcancel', release, { passive: true });
+      gesture = null; media.classList.remove('is-image-dragging'); media.style.removeProperty('--card-image-shift');
+    }
+    media.addEventListener('pointerup', finish);
+    media.addEventListener('pointercancel', finish);
+    media.addEventListener('lostpointercapture', finish);
+    // Keep the surrounding product rail from also consuming the same image swipe.
+    media.addEventListener('touchstart', e => e.stopPropagation(), { passive: true });
+    media.addEventListener('touchmove', e => { if (gesture?.axis === 'x') e.stopPropagation(); }, { passive: true });
   }
-
-  function scan() {
-    document.querySelectorAll('.product-card').forEach(wire);
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan);
-  else scan();
-  new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
-  /* Un seul ecouteur pour toute la page, pas un par carte : quitter l'onglet le doigt
-     encore pose ne declenche aucun touchend, et l'apercu resterait fige au retour. */
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) { if (releaseActive) releaseActive(); }
-    else scan();
-  });
+  // Capture before main.js's delegated navigation handler.
+  document.addEventListener('click', e => {
+    const media = e.target.closest('.card-image-browser');
+    if (media && Date.now() < (states.get(media)?.suppressUntil || 0)) { e.preventDefault(); e.stopImmediatePropagation(); }
+  }, true);
+  function scan() { scheduled = false; document.querySelectorAll('.product-card, .upsell-card').forEach(enhance); }
+  function schedule() { if (!scheduled) { scheduled = true; requestAnimationFrame(scan); } }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan); else scan();
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'href'] });
 })();

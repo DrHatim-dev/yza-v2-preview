@@ -26,3 +26,7 @@ body.home-maison[data-page="home"] [data-instant-content],body.home-maison[data-
 
 body.home-maison[data-page="home"] .home-hero .brand-hero__media { max-height:none; max-width:none; padding:0; margin:0; overflow:hidden; }
 body.home-maison[data-page="home"] .home-hero .brand-hero__video { display:block; width:100%; height:100%; max-height:none; margin:0; object-fit:cover; }
+
+body.home-maison[data-page="home"] #bestSellers .home-best-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:28px; }
+body.home-maison[data-page="home"] #bestSellers .home-best-heading h2 { margin:0; }
+body.home-maison[data-page="home"] #bestSellers .home-best-heading a { align-self:auto; white-space:nowrap; }
