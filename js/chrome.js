@@ -244,7 +244,7 @@ const navMega = (active) => {
 
  // "The House" mega replaced by a plain YZA Studio link → studio (no dropdown).
  const studioLink = `<div class="nav-item"><a href="studio"${(active === 'nav.studio' || active === 'footer.house') ? ' aria-current="page"' : ''}>YZA Studio</a></div>`;
- return navLink('nav.copyNew', '/collections') + navLink('nav.charms', collectionUrl('charms')) + navLink('nav.bags', collectionUrl('bags')) + navLink('nav.rtw', collectionUrl('rtw')) + navLink('nav.accessories', collectionUrl('accessories')) + studioLink + navLink('nav.b2b', 'grossistes');
+ return navLink('nav.bestSellers', '/collections/best-sellers') + navLink('nav.charms', collectionUrl('charms')) + navLink('nav.bags', collectionUrl('bags')) + navLink('nav.rtw', collectionUrl('rtw')) + navLink('nav.accessories', collectionUrl('accessories')) + studioLink + navLink('nav.b2b', 'grossistes');
 };
 
 /* Mobile drawer - nested accordion. Every section starts closed so the full
@@ -262,7 +262,7 @@ const drawerAccordion = () => {
  </li>`;
 
  const boutique = [
- link('nav.copyNew', '/collections'),
+ link('nav.bestSellers', '/collections/best-sellers'),
  link('nav.charms', collectionUrl('charms')),
  link('nav.rtw', collectionUrl('rtw')),
  link('nav.bags', collectionUrl('bags')),
