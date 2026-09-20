@@ -84,7 +84,7 @@
       document.getElementById('sortSelect').value = next.sort;
       if (!list.length) document.getElementById('collectionGrid').innerHTML = `<div class="charms-empty"><p>${esc(c.empty)}</p><button type="button" class="charms-text-link" data-charms-reset>${esc(c.reset)}</button></div>`;
       document.getElementById('charmsCraft').innerHTML = `<div><p class="charms-eyebrow">${esc(c.craft)}</p><h2>${esc(c.craftTitle)}</h2></div><div><p>${esc(c.craftText)}</p><p>${esc(c.styling)}</p><a href="/studio" class="charms-text-link">${esc(c.studioLink)} <span aria-hidden="true">↗</span></a></div>`;
-      document.querySelectorAll('#charmStyling video').forEach(video => { video.controls = true; video.autoplay = false; video.pause(); });
+      document.querySelectorAll('#charmStyling video').forEach(video => { video.controls = true; video.autoplay = true; video.muted = true; video.defaultMuted = true; video.playsInline = true; });
     }
   };
 })();

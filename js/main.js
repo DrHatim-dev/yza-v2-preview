@@ -714,7 +714,7 @@
  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
  const sourceForViewport = () => mobileQuery.matches ? video.dataset.mobileSrc : video.dataset.desktopSrc;
  const posterForViewport = () => mobileQuery.matches ? video.dataset.mobilePoster : video.dataset.desktopPoster;
- let canLoadVideo = false;
+ let canLoadVideo = true;
 
  const setPoster = () => {
  const poster = posterForViewport();
@@ -749,10 +749,6 @@
 
  const syncVideo = () => {
  setPoster();
- if (motionQuery.matches) {
- unloadVideo();
- return;
- }
 
  if (!canLoadVideo) {
  section.classList.add('hero--poster-only');
@@ -775,7 +771,7 @@
  mobileQuery.addEventListener?.('change', syncVideo);
  motionQuery.addEventListener?.('change', syncVideo);
  const loadOnIntent = () => {
- if (canLoadVideo || motionQuery.matches) return;
+ if (canLoadVideo) return;
  canLoadVideo = true;
  syncVideo();
  };
@@ -1140,7 +1136,7 @@
  // observer and disconnect it first - otherwise each switch leaks another observer.
  let bandVideoIO = null;
  const pauseAmbientVideos = () => {
-   if (document.hidden || YZA.motion.preference.matches) {
+   if (document.hidden) {
      $$('.video-band__media, .product-card__vid').forEach(v => v.pause());
    }
  };
@@ -1153,7 +1149,8 @@
  bandVideoIO = new IntersectionObserver((entries) => {
  entries.forEach((e) => {
  const v = e.target;
- if (e.isIntersecting && !YZA.motion.preference.matches && !document.hidden) {
+ v.autoplay = true; v.muted = true; v.defaultMuted = true; v.playsInline = true;
+ if (e.isIntersecting && !document.hidden) {
  // Lazy load: the heavy band clips ship as data-src + preload="none" so they cost
  // zero bytes on first paint; promote to a real src only as they near the viewport.
  if (!v.getAttribute('src') && v.dataset.src) { v.src = v.dataset.src; v.load(); }
@@ -4678,4 +4675,58 @@
   function schedule() { if (!scheduled) { scheduled = true; requestAnimationFrame(scan); } }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan); else scan();
   new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'href'] });
+})();
+
+/* Autoplay remaining inline/catalog videos as they become visible. Home, Studio,
+   rotators and video bands retain their existing visibility and pause controls. */
+(function () {
+  const states = new Map();
+  const owned = v => v.matches('[data-home-video], .brand-hero__video, [data-studio-video-src], .video-band__media') || v.closest('[data-home-rotator]');
+  const visible = v => {
+    const rect = v.getBoundingClientRect(), style = getComputedStyle(v);
+    return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < innerHeight && rect.right > 0 && rect.left < innerWidth && style.visibility !== 'hidden' && style.display !== 'none' && Number(style.opacity) > 0 && !v.closest('[hidden], [aria-hidden="true"]');
+  };
+  function sync(v, state) {
+    if (!v.isConnected) { observer?.unobserve(v); states.delete(v); return; }
+    const inView = !document.hidden && visible(v);
+    state.inView = inView;
+    if (!inView || state.userPaused) {
+      if (!v.paused) { state.systemPause = true; v.pause(); }
+      return;
+    }
+    if (!v.getAttribute('src') && !v.querySelector('source[src]')) {
+      const src = v.dataset.src || v.dataset.hoverVideo || v.dataset.videoSrc || v.dataset.srcHd;
+      if (src) v.src = src;
+      v.querySelectorAll('source[data-src]').forEach(source => { source.src = source.dataset.src; });
+    }
+    if (v.paused) v.play().catch(() => { /* Keep native play available if the browser blocks autoplay. */ });
+  }
+  const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    entries.forEach(entry => { const state = states.get(entry.target); if (state) sync(entry.target, state); });
+  }, { threshold: [0, .1] }) : null;
+  function scan() {
+    document.querySelectorAll('video').forEach(v => {
+      if (owned(v) || states.has(v)) return;
+      v.autoplay = true; v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
+      // Background video cards already have a linked image surface; other films keep native pause/play.
+      if (!v.classList.contains('product-card__vid')) v.controls = true;
+      const state = { userPaused: false, systemPause: false, inView: false };
+      states.set(v, state);
+      v.addEventListener('pause', () => {
+        if (state.systemPause) state.systemPause = false;
+        else if (state.inView && visible(v) && !document.hidden && !v.ended) state.userPaused = true;
+      });
+      v.addEventListener('play', () => { state.userPaused = false; });
+      observer?.observe(v); sync(v, state);
+    });
+    states.forEach((state, v) => { if (!v.isConnected) { observer?.unobserve(v); states.delete(v); } });
+  }
+  let queued = false;
+  const schedule = () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; scan(); states.forEach((state, v) => sync(v, state)); }); } };
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden','aria-hidden','class'] });
+  document.addEventListener('visibilitychange', schedule);
+  // Retry playback after a real interaction if device autoplay policy rejected the first attempt.
+  document.addEventListener('pointerup', schedule, { passive: true });
+  if (!observer) document.addEventListener('scroll', schedule, { passive: true });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan); else scan();
 })();

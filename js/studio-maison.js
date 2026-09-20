@@ -42,6 +42,7 @@
     });
   }
   function film(video, motion) {
+    video.autoplay = true; video.muted = true; video.defaultMuted = true; video.playsInline = true; video.loop = true;
     const button = video.parentElement.querySelector('[data-studio-film-toggle]');
     let visible = false, userPaused = false, userPlayed = false;
     function label() {
@@ -49,7 +50,7 @@
       button.setAttribute('aria-label', button.textContent);
     }
     function sync() {
-      if (!visible || document.hidden || userPaused || (motion.matches && !userPlayed)) { video.pause(); return; }
+      if (!visible || document.hidden || userPaused) { video.pause(); return; }
       if (!video.getAttribute('src')) video.src = video.dataset.studioVideoSrc;
       video.muted = true;
       video.play().catch(label);

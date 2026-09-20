@@ -70,7 +70,8 @@
         buttons[i].setAttribute('aria-pressed', String(active));
         const video = slide.querySelector('video');
         if (!video) return;
-        if (active && visible && !motion.matches && !document.hidden) {
+        video.autoplay = true; video.muted = true; video.defaultMuted = true; video.playsInline = true;
+        if (active && visible && !document.hidden) {
           if (!video.src) video.src = video.dataset.src;
           video.play().catch(() => {});
         } else video.pause();
@@ -118,11 +119,11 @@
   function film(video) {
     const hero = video.classList.contains('brand-hero__video');
     const src = video.dataset.src || video.dataset.srcHd;
-    const saveData = !!navigator.connection?.saveData;
     video.preload = hero ? 'auto' : 'none';
     video.muted = true; video.defaultMuted = true; video.loop = true; video.playsInline = true;
     video.removeAttribute('data-src');
-    if (hero) { video.autoplay = true; video.src = src; } else video.removeAttribute('autoplay');
+    video.autoplay = true;
+    if (hero) video.src = src;
     const button = (hero ? video.closest('.home-hero') : video.parentElement).querySelector('[data-home-video-toggle]');
     let visible = false, userPaused = false, userPlayed = false;
     const update = () => {
@@ -132,7 +133,7 @@
       button.setAttribute('aria-pressed', String(!video.paused));
     };
     function sync() {
-      if (!visible || document.hidden || userPaused || (!hero && (motion.matches || saveData) && !userPlayed)) video.pause();
+      if (!visible || document.hidden || userPaused) video.pause();
       else {
         if (!video.getAttribute('src')) video.src = src;
         video.muted = true;
