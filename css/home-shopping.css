@@ -23,3 +23,6 @@ body.home-maison[data-page="home"] [data-instant-content],body.home-maison[data-
  body.home-maison[data-page="home"] #homeCategories .cat-card img { height:160px; }
  body.home-maison[data-page="home"] #homeCategories .cat-card .media { height:160px; }
 }
+
+body.home-maison[data-page="home"] .home-hero .brand-hero__media { max-height:none; max-width:none; padding:0; margin:0; overflow:hidden; }
+body.home-maison[data-page="home"] .home-hero .brand-hero__video { display:block; width:100%; height:100%; max-height:none; margin:0; object-fit:cover; }
