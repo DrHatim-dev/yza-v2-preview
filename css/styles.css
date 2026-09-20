@@ -6437,3 +6437,17 @@ html[data-yza-mood="night"] .product-card:has(.product-card__img[src*=".night.we
 @media (hover:hover) and (pointer:fine) and (min-width:768px) { .card-image-detail .product-card__img--hover { transform:scale(1.18); } }
 
 @media (hover:none), (pointer:coarse), (max-width:767px) { .card-image-detail[data-image-index="1"] .product-card__img--hover { scale:1.18; } }
+
+/* Product photography fills the card frame in every collection and viewing state.
+   Cover preserves proportions; overflow clipping keeps hover/swipe media inside the border. */
+body .product-card .product-card__media,
+body .blog-product-card__media,
+body .upsell-card__img { overflow:hidden; padding:0 !important; }
+body .product-card .product-card__media > img.product-card__img,
+body .blog-product-card__media > img,
+body .upsell-card__img > img {
+ display:block; width:100% !important; height:100% !important;
+ max-width:none !important; max-height:none !important;
+ margin:0 !important; padding:0 !important; object-fit:cover !important;
+ object-position:center; box-sizing:border-box;
+}
