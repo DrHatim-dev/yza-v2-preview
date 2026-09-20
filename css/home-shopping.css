@@ -30,3 +30,17 @@ body.home-maison[data-page="home"] .home-hero .brand-hero__video { display:block
 body.home-maison[data-page="home"] #bestSellers .home-best-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:28px; }
 body.home-maison[data-page="home"] #bestSellers .home-best-heading h2 { margin:0; }
 body.home-maison[data-page="home"] #bestSellers .home-best-heading a { align-self:auto; white-space:nowrap; }
+
+/* Compact three-promise band matching the approved homepage reference. */
+body.home-maison[data-page="home"] .service-strip-section { padding:48px 0 !important; background:#fff; border-block:1px solid var(--home-line, #e6e6e6); }
+body.home-maison[data-page="home"] .service-strip-section .section-head:empty { display:none; }
+body.home-maison[data-page="home"] .service-strip-section .container-wide { max-width:1280px; margin-inline:auto; }
+body.home-maison[data-page="home"] .service-strip-section .service-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:64px; padding:0; align-items:start; }
+body.home-maison[data-page="home"] .service-strip-section .service-card { gap:14px; }
+body.home-maison[data-page="home"] .service-strip-section .service-card__icon { min-height:72px; }
+body.home-maison[data-page="home"] .service-strip-section .service-card p { max-width:34ch; margin:0 auto; line-height:1.7; }
+@media (max-width:767px) {
+ body.home-maison[data-page="home"] .service-strip-section { padding:32px 0 !important; }
+ body.home-maison[data-page="home"] .service-strip-section .service-strip { grid-template-columns:1fr; gap:32px; }
+ body.home-maison[data-page="home"] .service-strip-section .service-card__icon { min-height:52px; }
+}

@@ -2699,6 +2699,11 @@
  ? 'footer-service__item footer-service__trust-item'
  : 'service-card';
  strip.innerHTML = keys.map((key) => YZA.serviceCard(key, className)).join('');
+ // The homepage reassurance card uses the concise guarantee; detailed terms remain in the policy block.
+ if (strip.dataset.serviceStrip === 'home' && YZA.servicePolicy?.guaranteeSummary) {
+   const copy = strip.querySelector('.service-card p');
+   if (copy) copy.textContent = T().pick(YZA.servicePolicy.guaranteeSummary);
+ }
  });
  }
 
