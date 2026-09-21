@@ -6,7 +6,13 @@
  const localized=k=>Object.fromEntries(Object.entries(COPY).map(([l,c])=>[l,c[k]]));
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  Y.servicePolicy=Object.assign(Y.servicePolicy||{},{freeShippingAccessoriesDh:50000,freeShippingDh:150000,returnsDays:30,dispatchHours:48,madeToOrderWeeks:3,shipping:localized('shortDispatch'),summary:localized('shipping'),returns:localized('returns'),editions:localized('editions')});
- Y.servicePolicy.guaranteeSummary={"fr": "Réparées à vie à l’atelier de Guéliz — une pièce YZA se répare, elle ne se jette pas. Et 30 jours pour changer d’avis : retour non porté, dans son état d’origine.", "en": "Repaired for life at our Guéliz atelier — a YZA piece is repaired, never thrown away. And 30 days to change your mind: return unworn, in its original condition.", "es": "Reparaciones de por vida en el taller de Guéliz: una pieza YZA se repara, no se tira. Y 30 días para cambiar de opinión: devolución sin usar y en su estado original.", "tr": "Guéliz atölyesinde ömür boyu onarım — bir YZA parçası atılmaz, onarılır. Fikrinizi değiştirmek için 30 gün: kullanılmamış, orijinal durumunda iade.", "ar": "إصلاح مدى الحياة في ورشة كيليز — قطعة YZA تُصلَح ولا تُرمى. ولديك 30 يوماً لتغيير رأيك: تُعاد القطعة غير مستعملة وبحالتها الأصلية."};
+ // Homepage promise band: two lines at most on every screen (~50 characters). The full
+ // guarantee, returns and handmade wording stays in the policy block and the product pages.
+ const HOME={
+  returns:{"fr": "Réparée à vie. Retournable 30 jours, non portée.", "en": "Repaired for life. Returnable for 30 days, unworn.", "es": "Reparada de por vida. Devolución 30 días, sin usar.", "tr": "Ömür boyu onarım. Kullanılmadıysa 30 gün iade.", "ar": "تُصلَح مدى الحياة، وتُعاد خلال 30 يوماً غير مستعملة."},
+  handmade:{"fr": "Faite à Guéliz — sans machine, sans sous-traitance.", "en": "Made in Guéliz — no machines, no outsourcing.", "es": "Hecha en Guéliz — sin máquinas ni subcontratación.", "tr": "Guéliz'de yapılır — makine yok, fason yok.", "ar": "تُصنع في كيليز — بلا آلات ولا مناولة."},
+ };
+ Y.servicePolicy.guaranteeSummary=HOME.returns;
  Y.serviceBlockHTML=()=>{const c=current();return '<section class="service-policy-block"><h3>'+esc(c.title)+'</h3>'+['shipping','dispatch','returns','editions'].map(k=>'<p>'+esc(c[k])+'</p>').join('')+'</section>';};
  Y.serviceLongText=()=>Y.serviceBlockHTML();
  for(const [key,field] of [['morocco-delivery','shipping'],['returns','returns'],['limited','editions']]){
@@ -29,6 +35,11 @@
    const markup=Y.serviceBlockHTML();if(el.innerHTML!==markup){el.removeAttribute('data-i18n');el.setAttribute('data-yza-service-block','');el.innerHTML=markup;}
   });
   document.querySelectorAll('#sameDayDelivery').forEach(el=>{if(el.textContent!==c.sameDay)el.textContent=c.sameDay;});
+  document.querySelectorAll('[data-service-strip="home"] [data-service-card]').forEach(card=>{
+   const copy=HOME[card.dataset.serviceCard];const p=card.querySelector('p');
+   const text=copy&&(copy[Y.i18n?.lang]||copy.en);
+   if(p&&text&&p.textContent!==text)p.textContent=text;
+  });
  }
  Y.renderServicePolicy=render;
  document.addEventListener('DOMContentLoaded',()=>{
