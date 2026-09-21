@@ -1006,11 +1006,7 @@ const PRODUCTS = [
  "ar": "أخضر ملكي"
  }
  ],
- "availableSizes": [
- "S",
- "M",
- "L"
- ],
+ "availableSizes": [],
  "variants": [
  {
  "product_handle": "yza-button-up-shirt-jawhara-ss26",
