@@ -4585,6 +4585,84 @@
   const normalize = src => String(src || '').split('?')[0].replace(/^.*?assets\//, 'assets/');
   const unavailable = new Set(["assets/lifestyle/rtw/top-halter-a-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/top-halter-a-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/top-halter-a-bordeaux-jour.webp", "assets/lifestyle/rtw/top-halter-a-noir-nuit-jour.webp", "assets/lifestyle/rtw/top-halter-a-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/top-halter-a-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/top-halter-a-vert-fonce-jour.webp", "assets/lifestyle/rtw/top-halter-a-violet-lilas-jour.webp", "assets/lifestyle/rtw/chemise-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/chemise-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/chemise-bordeaux-jour.webp", "assets/lifestyle/rtw/chemise-noir-nuit-jour.webp", "assets/lifestyle/rtw/chemise-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/chemise-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/chemise-vert-fonce-jour.webp", "assets/lifestyle/rtw/chemise-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-courte-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-midi-violet-lilas-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bleu-sama-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-bordeaux-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-jaune-safran-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-noir-nuit-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-vert-fonce-jour.webp", "assets/lifestyle/rtw/jupe-pareo-maxi-violet-lilas-jour.webp", "assets/lifestyle/rtw/pantalon-large-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/pantalon-large-bleu-majorelle-jour.webp", "assets/lifestyle/rtw/pantalon-large-bordeaux-jour.webp", "assets/lifestyle/rtw/pantalon-large-noir-nuit-jour.webp", "assets/lifestyle/rtw/pantalon-large-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/pantalon-large-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/pantalon-large-vert-fonce-jour.webp", "assets/lifestyle/rtw/pantalon-large-violet-lilas-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-blanc-jasmin-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-bleu-sama-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-bordeaux-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-jaune-safran-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-noir-nuit-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-rouge-coquelicot-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-vert-amande-clair-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-vert-fonce-jour.webp", "assets/lifestyle/rtw/pantalon-pareo-violet-lilas-jour.webp", "assets/products/charms-2026-08/grapes-anneau.webp", "assets/products/charms-2026-08/whole-lemon-anneau.webp", "assets/products/charms-2026-08/whole-orange-anneau.webp", "assets/products/charms-2026-08/lemon-slice-anneau.webp", "assets/products/charms-2026-08/orange-slice-anneau.webp", "assets/products/charms-2026-08/avocado-half-anneau.webp", "assets/lifestyle/rtw/top-halter-b-bleu-sama-jour.webp", "assets/catalog/jawhara-v1/top-halter-b/jaune-safran.webp", "assets/lifestyle/rtw/top-halter-b-vert-amande-clair-jour.webp"]);
   const still = src => typeof src === 'string' && /\.(webp|png|jpe?g)(\?|$)/i.test(src);
+  // Card hovers mirror the live storefront (yza-shop.com), read from its home, collection
+  // and product-page grids on 2026-09-21. A listed product gets exactly the live hover — or
+  // none where live shows none; `primary` is the live front image, used when this card's
+  // front already is the live hover. Unlisted products keep the gallery rule below.
+  const LIVE_CARD_HOVERS = (() => {
+    const charm = (img, n) => ({ img, primary: `assets/normalized/assets/products/review-white/jewelry/charms/${n}.jpg` });
+    const earring = (name, img, video = '') => ({ img: 'assets/lifestyle/accessories/' + img, primary: `assets/products/earrings-2026-07/${name}-earrings-card.webp`, video: video && 'assets/lifestyle/accessories/' + video });
+    const none = { img: '' };
+    return {
+      'raffia-cherries-charm-ss26': charm('assets/products/charms/client/cherries-02.jpg', '16-charm-cherries'),
+      'raffia-grapes-charm-ss26': charm('assets/products/charms-2026-08/grapes-anneau.webp', '17-charm-grapes'),
+      'raffia-whole-lemon-charm-ss26': charm('assets/products/charms-2026-08/whole-lemon-anneau.webp', '18-charm-whole-lemon'),
+      'raffia-whole-orange-charm-ss26': charm('assets/products/charms-2026-08/whole-orange-anneau.webp', '19-charm-whole-orange'),
+      'raffia-tomato-charm-ss26': charm('assets/products/charms/client/tomato-02.jpg', '20-charm-tomato'),
+      'raffia-lemon-slice-charm-ss26': charm('assets/products/charms-2026-08/lemon-slice-anneau.webp', '21-charm-lemon-slice'),
+      'raffia-orange-slice-charm-ss26': charm('assets/products/charms-2026-08/orange-slice-anneau.webp', '22-charm-orange-slice'),
+      'raffia-kiwi-slice-charm-ss26': charm('assets/products/charms/client/kiwi-slice-02.jpg', '23-charm-kiwi-slice'),
+      'raffia-watermelon-slice-charm-ss26': charm('assets/products/charms/client/watermelon-slice-03.jpg', '24-charm-watermelon-slice'),
+      'raffia-avocado-half-charm-ss26': charm('assets/products/charms-2026-08/avocado-half-anneau.webp', '25-charm-avocado-half'),
+      'watermelon-raffia-earrings-ss26': earring('watermelon', 'watermelon-earrings-porte.webp', 'watermelon-earrings-v2-hover.mp4'),
+      'kiwi-raffia-earrings-ss26': earring('kiwi', 'kiwi-earrings-porte.webp'),
+      'avocado-raffia-earrings-ss26': earring('avocado', 'avocado-earrings-01.webp'),
+      'lemon-raffia-earrings-ss26': earring('lemon', 'lemon-earrings-cafe.webp'),
+      'orange-raffia-earrings-ss26': earring('orange', 'orange-earrings-01.webp'),
+      'grapes-raffia-earrings-ss26': earring('grapes', 'grapes-earrings-souk.webp'),
+      'cherries-raffia-earrings-ss26': earring('cherries', 'cherry-earrings-piscine.webp', 'cherry-earrings-hover.mp4'),
+      'tomatoes-raffia-earrings-ss26': earring('tomato', 'tomato-earrings-riad.webp', 'tomato-earrings-hover.mp4'),
+      // Live ready-to-wear cards keep the packshot, with no hover anywhere.
+      'yza-scarf-top-jawhara-ss26': none, 'yza-bandeau-top-jawhara-ss26': none,
+      'yza-button-up-shirt-jawhara-ss26': none, 'yza-palazzo-pants-jawhara-ss26': none,
+      'yza-wrap-pants-jawhara-ss26': none, 'yza-pareo-skirt-short-jawhara-ss26': none,
+      'yza-pareo-skirt-midi-jawhara-ss26': none, 'yza-pareo-skirt-long-jawhara-ss26': none,
+    };
+  })();
+  // Live shows bag hovers only on the bags collection, one per colour: [primary, hover].
+  const LIVE_BAG_HOVERS = (() => {
+    const white = n => `assets/products/review-white/bags/${n}.png`;
+    const client = n => `assets/products/la-sculpture/client/${n}.jpg`;
+    const lnv = n => `assets/products/la-nouvelle-vague/${n}`;
+    return {
+      'la-sculpture-xs-basket-bag-ss26': { rouge: [white('06-sculpture-xs-hot-red'), client('rouge-xs-01')], violet: [white('09-sculpture-xs-deep-violet'), client('violet-xs-01')], noir: [white('03-sculpture-xs-black-olive'), client('noir-xs-01')] },
+      'la-sculpture-s-basket-bag-ss26': { rouge: [white('05-sculpture-s-hot-red'), client('rouge-s-01')], violet: [white('08-sculpture-s-deep-violet'), client('violet-s-01')], noir: [white('02-sculpture-s-black-olive'), client('noir-s-01')] },
+      'la-sculpture-m-basket-bag-ss26': { rouge: [white('04-sculpture-m-hot-red'), client('rouge-m-01')], violet: [white('07-sculpture-m-deep-violet'), client('violet-m-01')], noir: [white('01-sculpture-m-black-olive'), client('noir-m-01')] },
+      'la-nouvelle-vague-xs-basket-bag-ss26': { bleu: [lnv('lnv-bleu-xs-hover.webp'), lnv('lnv-bleu-xs.jpg')], rouge: [lnv('lnv-rouge-xs-hover.webp'), lnv('lnv-rouge-xs.jpg')], rose: [lnv('lnv-rose-xs-hover.webp'), lnv('lnv-rose-xs.jpg')] },
+      'la-nouvelle-vague-s-basket-bag-ss26': { bleu: [lnv('lnv-bleu-s-hover.webp'), lnv('lnv-bleu-s.jpg')], rouge: [lnv('lnv-rouge-s-hover.webp'), lnv('lnv-rouge-s.jpg')], rose: [lnv('lnv-rose-s-hover.webp'), lnv('lnv-rose-s.jpg')] },
+      'la-nouvelle-vague-m-basket-bag-ss26': { bleu: ['assets/lifestyle/review-accessories/L07-nouvelle-vague-m-bleu-street.jpg', lnv('lnv-bleu-m.jpg')], rouge: [lnv('lnv-rouge-m-hover.webp'), lnv('lnv-rouge-m.jpg')], rose: [lnv('lnv-rose-m-scene.webp'), lnv('lnv-rose-m.jpg')] },
+    };
+  })();
+  function liveCardHover(handle, slug, primary) {
+    const bag = LIVE_BAG_HOVERS[handle];
+    if (!bag) return LIVE_CARD_HOVERS[handle];
+    const onBagsPage = /^\/collections\/sacs\/?$/.test(window.yzaPreviewPath?.() || location.pathname);
+    // A colour live doesn't sell falls back to the live pair of the photo on the card.
+    const pair = onBagsPage && (bag[slug] || Object.values(bag).find(p => p[0] === primary));
+    return pair ? { primary: pair[0], img: pair[1] } : { img: '' };
+  }
+  function clearHover(media) {
+    media.querySelectorAll('.product-card__img--hover').forEach(img => img.remove());
+    media.querySelectorAll('.product-card__vid').forEach(v => { v.pause(); v.remove(); });
+    media.classList.remove('has-hover-video', 'card-image-browser', 'card-image-detail', 'swiper-no-swiping');
+    delete media.dataset.imageIndex;
+    if (media.nextElementSibling?.classList.contains('card-image-controls')) media.nextElementSibling.remove();
+    states.delete(media);
+  }
+  function ensureHoverVideo(media, src, poster) {
+    let v = media.querySelector('.product-card__vid');
+    if (v && v.dataset.hoverVideo === src) { media.classList.add('has-hover-video'); return; }
+    if (v) { v.pause(); v.remove(); }
+    v = document.createElement('video');
+    v.className = 'product-card__vid';
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none';
+    ['muted', 'loop', 'playsinline'].forEach(a => v.setAttribute(a, ''));
+    v.setAttribute('aria-hidden', 'true');
+    v.poster = poster; v.width = 461; v.height = 615;
+    v.dataset.hoverVideo = src;
+    media.append(v);
+    media.classList.add('has-hover-video');
+  }
   let scheduled = false;
   function enhance(card) {
     const media = card.querySelector('.product-card__media, .upsell-card__img');
@@ -4597,8 +4675,16 @@
     const slug = url.searchParams.get('color') || product.defaultColorSlug || '';
     const view = YZA.resolveProductColorView?.(product, slug) || product;
     const gallery = [...(view.gallery || []), ...(view.media || []).filter(m => m.type === 'image').map(m => m.src)].filter(src => still(src) && !unavailable.has(normalize(src)));
-    const primary = normalize(front.getAttribute('src'));
-    const alternate = gallery.find(src => normalize(src) !== primary && !(product.category === 'charms' && /anneau/i.test(src))) || front.getAttribute('src');
+    const live = liveCardHover(handle, slug, normalize(front.getAttribute('src')));
+    if (live && !live.img) { clearHover(media); return; }
+    let primary = normalize(front.getAttribute('src'));
+    if (live?.primary && normalize(live.img) === primary) {
+      // Show the live pair rather than the same photo twice.
+      front.removeAttribute('srcset'); front.removeAttribute('sizes');
+      front.setAttribute('src', live.primary);
+      primary = normalize(live.primary);
+    }
+    const alternate = live ? live.img : gallery.find(src => normalize(src) !== primary && !(product.category === 'charms' && /anneau/i.test(src))) || front.getAttribute('src');
     const detailOnly = normalize(alternate) === primary;
     if (!alternate) return;
     let back = media.querySelector('.product-card__img--hover');
@@ -4613,9 +4699,12 @@
     if (back.getAttribute('src') !== alternate) back.setAttribute('src', alternate);
     if (detailOnly) back.style.objectFit = 'cover'; else back.removeAttribute('style');
     media.classList.toggle('card-image-detail', detailOnly);
-    // An alternate still is available: don't cover it with a legacy hover video.
-    media.classList.remove('has-hover-video');
-    media.querySelectorAll('.product-card__vid').forEach(v => { v.pause(); v.remove(); });
+    // Live plays a hover video on a few cards; elsewhere the alternate still is the hover.
+    if (live?.video) ensureHoverVideo(media, live.video, front.getAttribute('src'));
+    else {
+      media.classList.remove('has-hover-video');
+      media.querySelectorAll('.product-card__vid').forEach(v => { v.pause(); v.remove(); });
+    }
     let state = states.get(media);
     const key = primary + '|' + alternate;
     if (state) {
