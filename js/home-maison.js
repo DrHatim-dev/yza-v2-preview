@@ -149,8 +149,23 @@
     new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync(); }, { threshold: .1 }).observe(video);
     update();
   }
+
+  // The hero fills the first screen below the sticky header and announcement bar, whose
+  // height changes with breakpoint and bar content, so measure the space above the hero.
+  function heroFit(hero) {
+    const set = () => {
+      const offset = Math.max(0, Math.round(hero.getBoundingClientRect().top + window.scrollY));
+      document.documentElement.style.setProperty('--home-hero-offset', offset + 'px');
+    };
+    set();
+    window.addEventListener('resize', set, { passive: true });
+    const header = document.querySelector('header');
+    if (header && 'ResizeObserver' in window) new ResizeObserver(set).observe(header);
+  }
   document.addEventListener('DOMContentLoaded', () => {
     if (!document.body.classList.contains('home-maison')) return;
+    const hero = document.querySelector('.home-hero');
+    if (hero) heroFit(hero);
     document.querySelectorAll('[data-home-rotator]').forEach(carousel);
     document.querySelectorAll('[data-home-video], .brand-hero__video').forEach(film);
     YZA.renderHomeMaison();
