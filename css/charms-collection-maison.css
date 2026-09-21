@@ -53,7 +53,6 @@ body.charms-maison #collectionGrid .product-card__img { width:100%; height:100%;
 body.charms-maison #collectionGrid .product-card__img--hover { object-fit:cover; }
 body.charms-maison #collectionGrid .product-card__limited { position:absolute; inset:12px auto auto 12px; z-index:3; max-width:calc(100% - 50px); padding:5px 7px; border:1px solid var(--charms-rule); background:#fff; color:#585858; font:400 8px/1.5 var(--font-body); text-transform:uppercase; letter-spacing:.14em; }
 body.charms-maison #collectionGrid .product-card__wish { width:40px; height:40px; inset:4px 2px auto auto; }
-body.charms-maison #collectionGrid .product-card:focus-within .product-card__addbag { opacity:1; pointer-events:auto; }
 body.charms-maison #collectionGrid .product-card__info { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:baseline; gap:6px 12px; margin:0; padding:15px 0 0; border-top:1px solid var(--charms-rule); background:#fff; }
 body.charms-maison #collectionGrid .product-card__name { font:400 13.5px/1.55 var(--font-body); text-transform:none; letter-spacing:0; }
 body.charms-maison #collectionGrid .product-card__price { font:400 12px/1.55 var(--font-body); color:var(--charms-muted); letter-spacing:0; white-space:nowrap; }
@@ -109,7 +108,6 @@ body.charms-maison #charmStyling .charm-related-card__label { padding:0; font:40
  body.charms-maison[data-page="collections"] #collectionGrid[data-density] { grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 16px; padding-top:24px; padding-bottom:48px; }
  body.charms-maison #collectionGrid .product-card__limited { inset:7px auto auto 5px; font-size:7px; letter-spacing:.07em; padding:4px; }
  body.charms-maison #collectionGrid .product-card__wish { inset:0 -3px auto auto; }
- body.charms-maison #collectionGrid .product-card__addbag { position:static; display:block; width:100%; min-height:44px; padding:10px 4px; opacity:1; pointer-events:auto; transform:none; border:1px solid var(--charms-rule); border-radius:0; background:#fff; color:#2e2e2e; font:400 9px/1.5 var(--font-body); letter-spacing:.08em; }
  body.charms-maison #collectionGrid .product-card__name { font-size:13px; }
  body.charms-maison #collectionGrid .product-card__info { gap:4px; padding-top:12px; }
  body.charms-maison #collectionGrid .charms-card-note { font-size:10px; }

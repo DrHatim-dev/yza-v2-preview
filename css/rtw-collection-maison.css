@@ -113,8 +113,6 @@ body.rtw-maison[data-page="collections"] .product-card__swatches { margin: 9px 0
 body.rtw-maison[data-page="collections"] .product-card__swatch-dot--btn { width: 16px; height: 16px; min-width: 16px; padding: 0; border-radius: 50%; }
 body.rtw-maison[data-page="collections"] .product-card__limited, body.rtw-maison[data-page="collections"] .product-card__few { position: absolute; top: 14px; left: 14px; width: auto; padding: 5px 8px; background: #fff !important; border: 1px solid var(--rtw-rule); font: 400 9px/1.4 var(--font-body); letter-spacing: .12em; }
 body.rtw-maison[data-page="collections"] .product-card__wish { top: 12px; right: 12px; }
-body.rtw-maison[data-page="collections"] .product-card__addbag { opacity: 0; }
-body.rtw-maison[data-page="collections"] .product-card:hover .product-card__addbag,body.rtw-maison[data-page="collections"] .product-card:focus-within .product-card__addbag { opacity: 1; }
 body.rtw-maison[data-page="collections"] main .rtw-fit-note { font: 400 11.5px/1.6 var(--font-body); color: #767676; margin-top: 6px; }
 body.rtw-maison[data-page="collections"] .rtw-empty { grid-column: 1/-1; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center; }
 body.rtw-maison[data-page="collections"] .rtw-empty img { opacity: .5; }
@@ -192,7 +190,6 @@ body.rtw-maison[data-page="collections"] input[name="yza_hp_note"] { left: 0 !im
  body.rtw-maison[data-page="collections"] .product-card__price { font-size: 12px; }
  body.rtw-maison[data-page="collections"] .product-card__limited,body.rtw-maison[data-page="collections"] .product-card__few { top: 6px; left: 6px; font-size: 7px; padding: 4px; max-width: calc(100% - 30px); }
  body.rtw-maison[data-page="collections"] .product-card__wish { top: 5px; right: 5px; }
- body.rtw-maison[data-page="collections"] .product-card__addbag { opacity: 1; }
  body.rtw-maison[data-page="collections"] .product-card__swatches { gap: 7px; }
  body.rtw-maison[data-page="collections"] .product-card__swatch-dot--btn { width: 24px; height: 24px; min-width: 24px; padding: 4px; background-clip: content-box; }
  body.rtw-maison[data-page="collections"] main .rtw-fit-note { font-size: 10px; }
@@ -247,6 +244,10 @@ html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] .rtw-color-
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] .grid-density__btn { color:#bcbab3; border-color:#3a3d39; }
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] .grid-density__btn[aria-pressed="true"] { background:#f4f1eb; color:#151716; border-color:#f4f1eb; }
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] #collectionGrid :is(.product-card__limited,.product-card__few,.product-card__wish) { color:#2e2e2e; background:#fff !important; }
+/* Ajout rapide : même carré blanc qu'en Jour ; l'inversion au survol reste encre/blanc. */
+html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] #collectionGrid .product-card__quickadd:is(:hover,.is-added) { color:#fff; }
+html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] #collectionGrid .product-card__qa-option:hover { color:#2e2e2e; }
+html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] #collectionGrid .product-card__qa-option[aria-pressed="true"] { color:#fff; }
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] .rtw-lookbook img { background:#151716; }
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] :is(.rtw-eyebrow,.rtw-sizing,.rtw-empty) > img { filter:invert(1); }
 html[data-yza-mood="night"] body.rtw-maison[data-page="collections"] #moodSwitch { background:#252923; color:#f4f1eb; border-color:#6b6c60; }

@@ -103,6 +103,71 @@
   function heartIcon() {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-9-8.3C1.4 8.4 3.4 5 6.8 5c2 0 3.3 1.1 4.1 2.2C11.8 6.1 13.1 5 15.2 5c3.3 0 5.4 3.4 3.8 6.7C17 15.7 12 20 12 20z"/></svg>';
   }
+  /* AJOUT RAPIDE (cliente 2026-09-21 : « un petit bouton panier, léger et visible, pour
+     ajouter en faisant défiler n'importe quelle page »). UN seul contrôle par carte, sur
+     toutes les grilles (accueil, collections, fiches) : un carré blanc au coin bas de la
+     photo, visible en permanence — le tactile n'a pas de survol. Il remplace la barre
+     large « Ajouter au panier » qui n'apparaissait qu'au survol. Le coin suit la langue
+     (inset-inline-end) : bas-gauche en arabe. Le libellé court ne se déplie qu'au survol
+     d'une carte sur ordinateur ; le nom accessible, lui, est toujours complet. */
+  const QA_COPY = {
+    add: { fr: 'Ajouter', en: 'Add', es: 'Añadir', tr: 'Ekle', ar: 'أضف' },
+    added: { fr: 'Ajouté', en: 'Added', es: 'Añadido', tr: 'Eklendi', ar: 'تمت الإضافة' },
+    live: { fr: '{name} : ajouté au panier', en: '{name}: added to your bag', es: '{name}: añadido a la bolsa', tr: '{name}: sepete eklendi', ar: '{name}: تمت الإضافة إلى الحقيبة' },
+    size: { fr: 'Choisissez votre taille', en: 'Choose your size', es: 'Elige tu talla', tr: 'Bedeninizi seçin', ar: 'اختاري المقاس' },
+    color: { fr: 'Choisissez la couleur', en: 'Choose the colour', es: 'Elige el color', tr: 'Rengi seçin', ar: 'اختاري اللون' },
+    // Titres visibles du sélecteur : courts, pour tenir sur une ligne dans une carte de téléphone.
+    sizeShort: { fr: 'Votre taille', en: 'Your size', es: 'Tu talla', tr: 'Bedeniniz', ar: 'مقاسك' },
+    colorShort: { fr: 'Couleur', en: 'Colour', es: 'Color', tr: 'Renk', ar: 'اللون' },
+  };
+  const QA_ICON = '<svg class="product-card__quickadd-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+    + '<path d="M5.4 8.6h13.2l-1 11.4H6.4z"/><path d="M9.1 8.6V7a2.9 2.9 0 0 1 5.8 0v1.6"/>'
+    + '<path class="qa-plus" d="M12 11.6v5.2M9.4 14.2h5.2"/><path class="qa-check" d="M9 14.3l2.1 2.1 4-4.4"/></svg>';
+  // Une taille à choisir = un choix délibéré : la carte ouvre le sélecteur au lieu de deviner.
+  const quickAddNeedsChoice = (product) => Array.isArray(product?.availableSizes)
+    && product.availableSizes.filter(Boolean).length > 1;
+  function quickAddHTML(handle, name, variant = '') {
+    const t = T();
+    const chooser = quickAddNeedsChoice(YZA.getProduct?.(handle)) && !variant;
+    return `<button class="product-card__quickadd" type="button" data-quickbuy="${esc(handle)}"${variant ? ` data-quickbuy-variant="${esc(variant)}"` : ''}${chooser ? ' aria-haspopup="dialog" aria-expanded="false"' : ''} aria-label="${esc(`${t.t('col.addbag')} — ${name}`)}">${QA_ICON}<span class="product-card__quickadd-label" aria-hidden="true">${esc(t.pick(QA_COPY.add))}</span></button>`;
+  }
+  // Tout ce qui porte un ajout rapide : les cartes produit, et les cartes du journal.
+  const QA_CARD = '.product-card, .blog-product-shell';
+  /* JOURNAL : chacun des 34 articles montre une grille de quatre pièces, rendue par blog.js
+     (a.blog-product-card : UN lien pour toute la carte). Un <button> ne peut pas vivre dans
+     un <a> : le lien est enveloppé dans .blog-product-shell, et le bouton se pose à côté de
+     lui, dans un calque de la taille exacte de la photo (même rapport, voir styles.css).
+     Le calque laisse passer les clics vers le lien ; seuls le bouton et le sélecteur les
+     prennent. Le gestionnaire délégué [data-quickbuy] fait le reste, sans rien de propre
+     au journal. refresh = reconstruire les boutons (langue, stock) ; sinon, on n'habille
+     que les liens neufs (blog.js re-rend la grille au changement de devise). */
+  function mountJournalQuickAdd(refresh = false) {
+    document.querySelectorAll('[data-blog-products] a.blog-product-card[data-blog-product-click]').forEach((link) => {
+      let shell = link.parentElement?.classList.contains('blog-product-shell') ? link.parentElement : null;
+      if (shell && !refresh) return;
+      const handle = link.getAttribute('data-blog-product-click') || '';
+      const product = YZA.getProduct?.(handle);
+      if (!product) return;
+      if (!shell) {
+        shell = document.createElement('div');
+        shell.className = 'blog-product-shell';
+        shell.dataset.productHandle = handle;
+        link.replaceWith(shell);
+        shell.appendChild(link);
+      }
+      shell.querySelector(':scope > .product-card__media-wrap')?.remove();
+      // Même règle que cardHTML : jamais sur une pièce, ni sur le coloris montré, épuisés.
+      let slug = '';
+      try { slug = new URL(link.getAttribute('href'), document.baseURI).searchParams.get('color') || ''; } catch (e) { slug = ''; }
+      slug = slug || product.defaultColorSlug || '';
+      const status = YZA.inventoryStatus?.(product) || { soldOut: false };
+      const colorSold = !!(slug && YZA.jawharaColorSoldOut?.(handle, slug));
+      shell.classList.toggle('is-color-sold-out', colorSold);   // posé aussi par qaAdd au clic
+      if (status.soldOut || colorSold) return;
+      shell.insertAdjacentHTML('beforeend',
+        `<div class="product-card__media-wrap blog-product-shell__media">${quickAddHTML(handle, T().pick(displayName(product)))}</div>`);
+    });
+  }
  function productCardCopy() {
  const lang = T().lang || 'fr';
  const copy = {
@@ -321,14 +386,12 @@
         ${hoverVid ? `<video class="product-card__vid" muted loop playsinline preload="none" poster="${esc(primaryImg)}" data-hover-video="${esc(hoverVid)}" width="461" height="615" aria-hidden="true"></video>` : ''}
         ${colorSoldTag}
       </a>`;
-    const quickAdd = (tile && !status.soldOut && !colorSold)
-      ? `<button class="product-card__addbag" type="button" data-quickbuy="${esc(p.handle)}">${esc(t.t('col.addbag'))}</button>`
-      : '';
-    // Tile mode wraps the heart + image + quick-add so the circular "+" anchors
-    // to the image bottom-right even though name/price sit statically below it.
-    const media = tile
-      ? `<div class="product-card__media-wrap">${wishBtn}${mediaLink}${quickAdd}</div>`
-      : `${wishBtn}${mediaLink}`;
+    // Ajout rapide sur TOUTES les cartes (plus seulement en mode tuile) ; jamais sur une
+    // pièce ou un coloris épuisé.
+    const quickAdd = (!status.soldOut && !colorSold) ? quickAddHTML(p.handle, name) : '';
+    // The wrap holds heart + image + quick-add so the button anchors to the image's
+    // bottom corner whether name/price sit below it (tiles) or overlay it (rails).
+    const media = `<div class="product-card__media-wrap">${wishBtn}${mediaLink}${quickAdd}</div>`;
     const swatches = tile ? cardSwatchesHTML(p) : '';
     return `<article class="product-card${tile ? ' product-card--tile' : ''}${p.hoverImg ? ' product-card--vibe' : ''}${status.soldOut ? ' is-sold-out' : ''}${colorSold ? ' is-color-sold-out' : ''}" style="--i:${index}" data-product-handle="${esc(p.handle)}">
       ${media}
@@ -443,9 +506,7 @@
     // pour que les deux chemins d'achat produisent des lignes de panier identiques.
     const _qbColor = item.color ? t.pick(item.color) : '';
     const _qbVariant = [sizeLabel, _qbColor].filter(Boolean).join(' / ');
-    const addBag = !status.soldOut
-      ? `<button class="product-card__addbag" type="button" data-quickbuy="${esc(item.handle || '')}"${_qbVariant ? ` data-quickbuy-variant="${esc(_qbVariant)}"` : ''}>${esc(t.t('col.addbag'))}</button>`
-      : '';
+    const addBag = !status.soldOut ? quickAddHTML(item.handle || '', fullName, _qbVariant) : '';
     return `<article class="product-card product-card--bag-variant${status.soldOut ? ' is-sold-out' : ''}" data-size="${esc(String(item.size || '').toUpperCase())}" style="--i:${index}" data-product-handle="${esc(item.handle || '')}">
       <div class="product-card__media-wrap">
       <button class="product-card__wish${wished ? ' is-active' : ''}" type="button" data-wishlist-toggle="${esc(item.handle || '')}" aria-pressed="${wished ? 'true' : 'false'}" aria-label="${esc(t.t(wished ? 'a.wishRemove' : 'a.wishAdd'))}">${heartIcon()}</button>
@@ -4221,6 +4282,171 @@
       document.querySelectorAll('.wishlist-btn').forEach((b) => b.classList.toggle('has-items', n > 0));
     };
     syncWishlistCount();
+    /* ---- AJOUT RAPIDE : variante, sélecteur de taille, confirmation ----
+       Chaque choix que la carte MONTRE est repris tel quel : la pastille active, sinon le
+       coloris que porte le lien de la carte (c'est la photo affichée), sinon le coloris par
+       défaut — celui de la photo quand le lien n'en précise aucun. Ce que la carte ne
+       montre PAS (une taille parmi plusieurs) ouvre un petit sélecteur posé sur la photo :
+       on ne devine jamais une taille. La finition d'un charm reste celle que la fiche
+       présélectionne (la première active), comme avant. L'ajout ne déplie plus le tiroir
+       du panier : la cliente continue de défiler ; le compteur du panier se met à jour,
+       le bouton confirme (coche + « Ajouté ») et une région aria-live l'annonce. */
+    const qaSizes = (product) => (Array.isArray(product?.availableSizes) ? product.availableSizes.filter(Boolean) : []);
+    const qaName = (btn, product) => (btn.closest(QA_CARD)?.querySelector('.product-card__name')?.textContent || '').trim()
+      || T().pick(displayName(product));
+    const qaCardColor = (card, product) => {
+      const slugs = Array.isArray(product?.colorSlugs) ? product.colorSlugs.filter(Boolean) : [];
+      if (!card || !slugs.length) return '';
+      let slug = card.querySelector('[data-color-swatches] [data-color-slug].is-active')?.dataset.colorSlug || '';
+      if (!slug) {
+        const link = card.querySelector('a.product-card__media[href], a.blog-product-card[href]');
+        try { slug = link ? (new URL(link.getAttribute('href'), document.baseURI).searchParams.get('color') || '') : ''; } catch (e) { slug = ''; }
+      }
+      if (!slug) slug = product.defaultColorSlug || '';
+      return slugs.includes(slug) ? slug : '';
+    };
+    // Même format que la fiche : « Taille / Couleur ». Taille unique (sacs) : le libellé
+    // publié, comme sur les cartes sacs ; tailles multiples : le code, comme la fiche.
+    const qaVariantLabel = (product, sizeCode, colorSlug) => {
+      const t = T();
+      const sizePart = sizeCode ? (qaSizes(product).length > 1 ? sizeCode : releasedSizeLabel(product, sizeCode, t)) : '';
+      const idx = colorSlug ? (product.colorSlugs || []).indexOf(colorSlug) : -1;
+      const colorPart = idx >= 0 ? t.pick((product.availableColors || [])[idx]) : '';
+      return [sizePart, colorPart].filter(Boolean).join(' / ');
+    };
+    const qaAnnounce = (message) => {
+      let live = document.getElementById('yzaQuickAddLive');
+      if (!live) {
+        live = document.createElement('div');
+        live.id = 'yzaQuickAddLive';
+        live.className = 'sr-only';
+        live.setAttribute('role', 'status');
+        live.setAttribute('aria-live', 'polite');
+        document.body.appendChild(live);
+      }
+      live.textContent = '';
+      setTimeout(() => { live.textContent = message; }, 50);   // un texte identique doit être relu
+    };
+    const qaConfirm = (btn, name) => {
+      const t = T();
+      const label = btn.querySelector('.product-card__quickadd-label');
+      btn.classList.add('is-added');
+      if (label) label.textContent = t.pick(QA_COPY.added);
+      clearTimeout(btn._qaTimer);
+      btn._qaTimer = setTimeout(() => {
+        btn.classList.remove('is-added');
+        if (label) label.textContent = T().pick(QA_COPY.add);
+      }, 1800);
+      qaAnnounce(t.pick(QA_COPY.live).replace('{name}', name));
+    };
+    let qaOpen = null;   // { panel, btn, state } — un seul sélecteur ouvert à la fois
+    const qaClose = (restoreFocus) => {
+      if (!qaOpen) return;
+      const { panel, btn } = qaOpen;
+      qaOpen = null;
+      panel.remove();
+      btn.setAttribute('aria-expanded', 'false');
+      btn.closest(QA_CARD)?.classList.remove('is-qa-open');
+      if (restoreFocus && btn.isConnected) btn.focus({ preventScroll: true });
+    };
+    const qaOpenChooser = (btn, product, state) => {
+      if (qaOpen && qaOpen.btn === btn) { qaClose(true); return; }
+      qaClose(false);
+      const t = T();
+      const handle = product.handle;
+      const name = qaName(btn, product);
+      const sold = (variant) => !!YZA.jawharaVariantSoldOut?.(handle, variant);
+      const sizeRow = state.needSize ? `<p class="product-card__qa-title">${esc(t.pick(QA_COPY.sizeShort))}</p><div class="product-card__qa-options">${qaSizes(product).map((code) =>
+        `<button type="button" class="product-card__qa-option" data-qa-size="${esc(code)}" aria-pressed="false"${sold(qaVariantLabel(product, code, state.colorSlug)) ? ' disabled' : ''}>${esc(releasedSizeLabel(product, code, t))}</button>`).join('')}</div>` : '';
+      const colorRow = state.needColor ? `<p class="product-card__qa-title">${esc(t.pick(QA_COPY.colorShort))}</p><div class="product-card__qa-options product-card__qa-options--wide">${(product.colorSlugs || []).filter(Boolean).map((slug) => {
+        const gone = !!(YZA.jawharaColorSoldOut?.(handle, slug) || YZA.catalogColorSoldOut?.(handle, slug));
+        return `<button type="button" class="product-card__qa-option" data-qa-color="${esc(slug)}" aria-pressed="false"${gone ? ' disabled' : ''}>${esc(qaVariantLabel(product, '', slug) || slug)}</button>`;
+      }).join('')}</div>` : '';
+      const panel = document.createElement('div');
+      panel.className = 'product-card__qa-panel';
+      panel.setAttribute('role', 'dialog');
+      panel.setAttribute('aria-label', `${t.pick(state.needSize ? QA_COPY.size : QA_COPY.color)} — ${name}`);
+      panel.innerHTML = `<button type="button" class="product-card__qa-close" data-qa-close aria-label="${esc(t.t('a.close'))}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>${sizeRow}${colorRow}`;
+      (btn.closest('.product-card__media-wrap') || btn.parentElement).appendChild(panel);
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest(QA_CARD)?.classList.add('is-qa-open');
+      qaOpen = { panel, btn, state };
+      panel.querySelector('.product-card__qa-option:not([disabled])')?.focus({ preventScroll: true });
+    };
+    const qaAdd = (btn, choice = {}) => {
+      const handle = btn.getAttribute('data-quickbuy');
+      const product = YZA.getProduct?.(handle);
+      if (!handle || !product || !YZA.cart) return;
+      // Un double appui involontaire ne met pas deux pièces au panier.
+      if (btn._qaAt && Date.now() - btn._qaAt < 600) return;
+      const card = btn.closest(QA_CARD);
+      const fixed = btn.getAttribute('data-quickbuy-variant') || '';   // cartes sacs : « XS / Noir »
+      let colorSlug = choice.colorSlug || (fixed ? (YZA.colorSlugFor?.(handle, fixed) || '') : '') || qaCardColor(card, product);
+      // Dernier verrou : le CORIS affiché est-il encore disponible ? Le bouton est retiré par
+      // applyColorSoldOut, mais il peut survivre à un retour arrière ou être atteint au clavier.
+      if (colorSlug && YZA.jawharaColorSoldOut?.(handle, colorSlug)) {
+        if (card) applyColorSoldOut(card, handle, colorSlug);
+        return;
+      }
+      const sizes = qaSizes(product);
+      let sizeCode = choice.sizeCode || (fixed ? (YZA.sizeCodeFor?.(product, '', fixed) || '') : '');
+      if (!sizeCode && sizes.length === 1) sizeCode = sizes[0];
+      const needSize = sizes.length > 1 && !sizeCode;
+      const needColor = !!YZA.productRequiresColor?.(handle) && !colorSlug;
+      if (needSize || needColor) { qaOpenChooser(btn, product, { needSize, needColor, sizeCode, colorSlug }); return; }
+      if (!YZA.productRequiresColor?.(handle)) colorSlug = '';
+      // Charm : la première finition active, clé immuable persistée (la fiche la présélectionne).
+      const finishKey = (YZA.productFinishOptions?.(handle) || [])[0]?.key || '';
+      if (Array.isArray(product.finishOptions) && !finishKey) return;
+      const variant = fixed || qaVariantLabel(product, sizeCode, colorSlug);
+      const meta = { source: 'quick_add', colorSlug, sizeCode };
+      if (finishKey) meta.finishKey = finishKey;
+      const added = YZA.cart.add(handle, variant, 1, meta);
+      if (!added) {
+        // Refus du panier (stock déjà atteint, variante illisible) : on montre l'endroit
+        // qui explique — le panier si la pièce y est déjà, sinon la fiche.
+        if ((YZA.cart.items || []).some((item) => item.handle === handle)) { YZA.cart.open?.(); return; }
+        const link = card?.querySelector('a.product-card__media[href], a.blog-product-card[href]');
+        if (link) location.href = link.href;
+        return;
+      }
+      btn._qaAt = Date.now();
+      YZA.cart.refresh?.();
+      qaConfirm(btn, qaName(btn, product));
+      YZA.analytics?.track('quick_add', { handle, variant, sizeCode, finishKey });
+    };
+    const qaChoose = (option) => {
+      if (!qaOpen || !qaOpen.panel.contains(option) || option.disabled) return;
+      const { btn, state } = qaOpen;
+      if (option.dataset.qaSize) state.sizeCode = option.dataset.qaSize;
+      if (option.dataset.qaColor) state.colorSlug = option.dataset.qaColor;
+      option.parentElement.querySelectorAll('.product-card__qa-option').forEach((b) => b.setAttribute('aria-pressed', String(b === option)));
+      if ((state.needSize && !state.sizeCode) || (state.needColor && !state.colorSlug)) return;
+      qaClose(false);
+      btn._qaAt = 0;
+      qaAdd(btn, { sizeCode: state.sizeCode, colorSlug: state.colorSlug });
+      if (btn.isConnected) btn.focus({ preventScroll: true });
+    };
+    document.addEventListener('keydown', (event) => {
+      if (qaOpen && event.key === 'Escape') { event.preventDefault(); qaClose(true); }
+    });
+    const qaDismiss = (event) => {
+      if (qaOpen && !qaOpen.panel.contains(event.target) && !qaOpen.btn.contains(event.target)) qaClose(false);
+    };
+    document.addEventListener('pointerdown', qaDismiss, true);
+    document.addEventListener('focusin', qaDismiss);
+    // Journal : habiller les grilles de blog.js (déjà rendues à ce stade — script différé
+    // exécuté avant DOMContentLoaded), puis les suivre : devise (blog.js re-rend la grille),
+    // langue et stock (on reconstruit les boutons pour leurs libellés et l'épuisement).
+    const journalGrids = document.querySelectorAll('[data-blog-products]');
+    if (journalGrids.length) {
+      mountJournalQuickAdd();
+      const journalObserver = new MutationObserver(() => mountJournalQuickAdd());
+      journalGrids.forEach((grid) => journalObserver.observe(grid, { childList: true }));
+      YZA.i18n.onChange?.(() => mountJournalQuickAdd(true));
+      document.addEventListener('yza:inventorychange', () => mountJournalQuickAdd(true));
+      YZA.inventoryReady?.then?.(() => mountJournalQuickAdd(true));
+    }
     document.addEventListener('click', (event) => {
       const wish = event.target.closest('[data-wishlist-toggle]');
       if (wish) {
@@ -4241,53 +4467,22 @@
         YZA.analytics?.track(exists ? 'wishlist_remove' : 'wishlist_add', { handle });
         return;
       }
+      // Ajout rapide et son sélecteur : hors du lien de la carte, et on arrête la
+      // propagation pour qu'aucun autre gestionnaire n'y voie un clic de navigation.
       const quick = event.target.closest('[data-quickbuy]');
       if (quick) {
         event.preventDefault();
         event.stopPropagation();
-        const handle = quick.getAttribute('data-quickbuy');
-        if (handle && YZA.cart) {
-          // Dernier verrou avant le panier : le CORIS affiché est-il encore disponible ?
-          // Le bouton est déjà retiré par applyColorSoldOut, mais il peut rester en place
-          // le temps d'un rendu, survivre à un retour arrière, ou être atteint au clavier.
-          // On revérifie donc ici, au moment de l'ajout, plutôt que de faire confiance au DOM.
-          const _qbCard = quick.closest('.product-card');
-          const _qbSlug = _qbCard
-            && (_qbCard.querySelector('[data-color-swatches] [data-color-slug].is-active') || {}).dataset?.colorSlug;
-          if (_qbSlug && YZA.jawharaColorSoldOut?.(handle, _qbSlug)) {
-            if (_qbCard) applyColorSoldOut(_qbCard, handle, _qbSlug);   // remet l'écran d'accord avec la réalité
-            return;
-          }
-          // Variante : soit figée au rendu (cartes sacs, un coloris par carte), soit
-          // lue sur la pastille active (prêt-à-porter, où la cliente change de coloris
-          // sans recharger). Sans ça la couleur choisie était perdue à l'ajout.
-          let variant = quick.getAttribute('data-quickbuy-variant') || '';
-          if (!variant) {
-            const card = quick.closest('.product-card');
-            const active = card && card.querySelector('[data-color-swatches] [data-color-slug].is-active');
-            if (active) {
-              const nom = (active.querySelector('.sr-only') || {}).textContent
-                || active.getAttribute('aria-label') || active.getAttribute('data-color-slug') || '';
-              variant = String(nom).trim();
-            }
-          }
-          // A one-click charm card has no finish selector. Choose the first active
-          // released option explicitly and persist its immutable key; an omitted key
-          // is reserved for migrating historical blank lines to an active `loop` only.
-          const _qbProduct = YZA.getProduct?.(handle);
-          const _qbHasFinish = Array.isArray(_qbProduct?.finishOptions);
-          const _qbFinishKey = (YZA.productFinishOptions?.(handle) || [])[0]?.key || '';
-          if (_qbHasFinish && !_qbFinishKey) return;
-          const _qbSizeCode = (_qbProduct?.availableSizes || []).includes(_qbProduct?.defaultSize)
-            ? _qbProduct.defaultSize : ((_qbProduct?.availableSizes || []).length === 1 ? _qbProduct.availableSizes[0] : '');
-          const _qbMeta = { source: 'quick_add', colorSlug: _qbSlug || '', sizeCode: _qbSizeCode };
-          if (_qbFinishKey) _qbMeta.finishKey = _qbFinishKey;
-          const _qbAdded = YZA.cart.add(handle, variant, 1, _qbMeta);
-          if (!_qbAdded) return;
-          YZA.cart.refresh?.();
-          YZA.cart.open?.();
-          YZA.analytics?.track('quick_add', { handle, variant, sizeCode: _qbSizeCode, finishKey: _qbFinishKey });
-        }
+        qaAdd(quick);
+        return;
+      }
+      const qaPanel = event.target.closest('.product-card__qa-panel');
+      if (qaPanel) {
+        event.preventDefault();
+        event.stopPropagation();
+        const option = event.target.closest('.product-card__qa-option');
+        if (option) qaChoose(option);
+        else if (event.target.closest('[data-qa-close]')) qaClose(true);
         return;
       }
       // Colour swatch on a product card. Must be handled BEFORE the navigation lookup

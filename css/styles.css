@@ -25,6 +25,10 @@ ul { list-style: none; padding: 0; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 1px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--color-fg); color: var(--cream); padding: 0.7rem 1.1rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
 .skip-link:focus { left: 8px; top: 8px; outline: 2px solid var(--color-accent); outline-offset: 2px; }
+/* Hide by clipping, not by parking at -9999px: in RTL that offset becomes ~10,000px of sideways scroll. */
+.skip-link:not(:focus) { left: 0; top: 0; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* Same for the forms' anti-spam honeypot (inline left:-9999px): still in the form for bots, invisible to people. */
+input[name="yza_hp_note"] { left: 0 !important; clip-path: inset(50%); }
 ::selection { background: var(--accent-2); color: var(--jq-ink); }
 
 /* Jacquemus type signature: Futura PT (Jost substitute), Regular 400 — never
@@ -808,16 +812,8 @@ body[data-page="collections"] .product-grid:not(.collection-grid--bag-families) 
 /* M-batch: never show the "Voir par 3/4/6" density switch on the bags page — only 3 of each collection/colour, bag families use their own layout. (Belt-and-braces alongside main.js hiding it.) */
 body[data-page="collections"][data-collection="bags"] .grid-density { display: none !important; }
 
-/* Tile media wrapper anchors the circular quick-add to the image bottom-right */
+/* The media wrapper anchors the heart and the quick-add (.product-card__quickadd, below) to the image */
 .product-card__media-wrap { position: relative; display: block; }
-.product-card__add {
-  position: absolute; right: 9px; bottom: 9px; z-index: 5;
-  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--color-bg); color: var(--color-fg); border: 1px solid var(--color-border-strong);
-  font-family: var(--font-display); font-size: 19px; font-weight: 300; line-height: 1; padding-bottom: 2px;
-  transition: opacity var(--motion-fade) linear;
-}
-.product-card__add:hover { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
 
 /* Swatch dots + "+N colors" */
 .product-card__swatches { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 10px 2px 0; min-height: 12px; }
@@ -846,14 +842,12 @@ body[data-page="collections"][data-collection="bags"] .grid-density { display: n
 .collection-head__count { font-size: clamp(0.8rem, 1.3vw, 1.15rem); font-weight: 400; color: var(--color-muted); vertical-align: super; margin-left: 0.45em; letter-spacing: 0; }
 .collection-head__count:empty { display: none; }
 
-/* Desktop hover: keep tile text static (override the carousel overlay), fade the quick-add in like the heart */
+/* Desktop hover: keep tile text static (override the carousel overlay) */
 @media (min-width: 861px) and (hover: hover) {
   .product-card--tile .product-card__info {
     position: static; opacity: 1; pointer-events: auto; background: none; padding: 6px 2px 0;
   }
   .product-card--tile .product-card__swatches + .product-card__info { padding-top: 4px; }
-  .product-card__add { opacity: 0; }
-  .product-card:hover .product-card__add { opacity: 1; }
 }
 
 /* ===================================================================
@@ -902,57 +896,132 @@ body[data-page="collections"] .product-card__price {
   text-transform: uppercase; letter-spacing: 0.13em; font-size: 12px;
 }
 
-/* « AJOUTER AU PANIER » — barre d'achat rapide posee sur le bas de l'image.
-   REFONTE 2026-08-05 (cliente : « une seule ligne, plus premium »).
-   Deux choses reglees d'un coup :
-   1. UNE SEULE LIGNE. `white-space: nowrap` l'impose, mais imposer ne suffit pas : a
-      11px avec 0,14em de chasse, les 17 signes d'« AJOUTER AU PANIER » demandent ~160px
-      alors qu'une carte de grille 2 colonnes sur un telephone n'en offre que ~150. On
-      passe donc la taille et la chasse en `clamp()` indexes sur la largeur reelle de la
-      CARTE (`cqw`), pas sur celle de l'ecran : c'est la carte qui contraint, et une
-      grille 6 colonnes sur grand ecran est plus etroite qu'une carte de telephone.
-      Repli `@supports not (container-type)` en dessous pour les navigateurs sans
-      requetes de conteneur.
-   2. PLUS PREMIUM. Le liseré noir plein 1px et le blanc a 62 % faisaient « controle de
-      formulaire » pose sur la photo. On garde l'angle vif (signature de la maison, on ne
-      passe pas en coins arrondis) et on change la matiere : blanc quasi opaque, filet
-      d'un dixieme d'encre, ombre portee tres basse qui decolle la barre de la photo.
-      L'inversion a l'appui/au survol reste le geste fort. */
-/* Le conteneur de requete est le parent DIRECT du bouton, et lui seul : `.product-card__media`
-   est un FRERE du bouton, pas un ancetre — le declarer aussi n'aurait rien mesure et aurait
-   ajoute du confinement a l'element qui porte les calques de survol, pour rien. */
-.product-card__media-wrap { container-type: inline-size; }
-.product-card__addbag {
-  position: absolute; left: 50%; bottom: 14px; z-index: 5;
-  transform: translate(-50%, 6px);
-  width: calc(100% - 20px); max-width: 300px; text-align: center;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  padding: 0.78em 0.9em; line-height: 1;
-  font-family: var(--font-display); font-weight: 400;
-  font-size: clamp(8.5px, 6.1cqw, 11px);
-  letter-spacing: clamp(0.05em, 0.9cqw, 0.14em);
-  text-transform: uppercase;
-  color: var(--color-fg); background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(31, 31, 31, 0.10); border-radius: 0;
-  box-shadow: 0 1px 1px rgba(31, 31, 31, 0.04), 0 8px 20px -10px rgba(31, 31, 31, 0.22);
-  -webkit-backdrop-filter: saturate(1.08) blur(6px); backdrop-filter: saturate(1.08) blur(6px);
-  opacity: 0; pointer-events: none;
-  transition: transform var(--motion-move) var(--ease-out-quint), opacity var(--motion-fade) linear;
+/* AJOUT RAPIDE (cliente 2026-09-21 : « un petit bouton panier, léger et visible, pour
+   ajouter en faisant défiler n'importe quelle page »). Remplace la barre large
+   « Ajouter au panier » qui n'apparaissait qu'au survol : UN contrôle par carte, sur
+   toutes les grilles, visible en permanence (le tactile n'a pas de survol).
+   - Petit et léger : un carré blanc translucide de 36px au coin bas de la photo, filet
+     d'un dixième d'encre, angle vif (signature de la maison). La zone d'appui déborde
+     de 5px de chaque côté (::before) : 46px au doigt pour 36px à l'oeil.
+   - Le coin suit la langue (inset-inline-end) : bas-droite, bas-gauche en arabe.
+   - Le libellé court ne se déplie qu'au survol d'une carte sur ordinateur, et pendant
+     la confirmation « Ajouté » partout. L'inversion encre/blanc reste le geste fort.
+   - Il vit dans .product-card__media-wrap, HORS du lien de la carte : un appui ne
+     navigue jamais, et il n'entre pas dans la zone de glissement des photos. */
+.product-card__quickadd {
+  position: absolute; z-index: 6;
+  inset-block-end: 10px; inset-inline-end: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 36px; min-width: 36px; margin: 0; padding: 0 7px;
+  color: var(--color-fg); background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(31, 31, 31, 0.12); border-radius: 0;
+  box-shadow: 0 1px 1px rgba(31, 31, 31, 0.04), 0 6px 16px -8px rgba(31, 31, 31, 0.3);
+  -webkit-backdrop-filter: saturate(1.1) blur(6px); backdrop-filter: saturate(1.1) blur(6px);
+  font: 400 10px/1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase;
+  cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--motion-fade, 200ms) linear, color var(--motion-fade, 200ms) linear,
+    border-color var(--motion-fade, 200ms) linear, transform 120ms ease-out;
 }
-@supports not (container-type: inline-size) {
-  .product-card__addbag { font-size: 10px; letter-spacing: 0.1em; }
-  @media (min-width: 861px) { .product-card__addbag { font-size: 11px; letter-spacing: 0.14em; } }
+.product-card__quickadd::before { content: ''; position: absolute; inset: -5px; }
+.product-card__quickadd-icon {
+  width: 20px; height: 20px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round;
 }
-.product-card__addbag:hover {
-  background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg);
+.product-card__quickadd-icon path { transition: opacity 160ms linear; }
+.product-card__quickadd .qa-check,
+.product-card__quickadd.is-added .qa-plus { opacity: 0; }
+.product-card__quickadd.is-added .qa-check { opacity: 1; }
+/* Le libellé a SA propre hauteur de ligne : à 10px/1, la boîte (overflow: hidden, pour le
+   dépliage en largeur) rognait les accents des capitales — « AJOUTÉ », « AÑADIR ». */
+.product-card__quickadd-label {
+  display: block; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; line-height: 1.6;
+  transition: max-width var(--motion-move, 250ms) var(--ease-out-quint, cubic-bezier(.23, 1, .32, 1)),
+    margin var(--motion-move, 250ms) var(--ease-out-quint, cubic-bezier(.23, 1, .32, 1)), opacity 160ms linear;
 }
+.product-card__quickadd.is-added { background: var(--color-fg); color: #fff; border-color: var(--color-fg); }
+.product-card__quickadd.is-added .product-card__quickadd-label { max-width: 12em; opacity: 1; margin-inline: 6px 3px; }
+.product-card__quickadd:active { transform: scale(0.94); }
+.product-card__quickadd:focus-visible { outline: 2px solid var(--accent, #e07a45); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) {
+  .product-card__quickadd:hover { background: var(--color-fg); color: #fff; border-color: var(--color-fg); }
+  .product-card:hover .product-card__quickadd-label,
+  .blog-product-shell:hover .product-card__quickadd-label,
+  .product-card__quickadd:focus-visible .product-card__quickadd-label { max-width: 12em; opacity: 1; margin-inline: 6px 3px; }
+}
+/* Journal (blogs/journal/*) : la carte de blog.js est UN lien, le bouton ne peut pas y
+   entrer. Il vit à côté, dans un calque posé exactement sur la photo : même largeur, même
+   rapport que .blog-product-card__media (--blog-card-ratio). (La bordure déclarée du lien
+   se résout à 0 : --color-line n'existe pas ; si elle revenait, 1px d'écart, sans effet.)
+   Le calque laisse passer les clics vers le lien ; seuls le bouton et le sélecteur les
+   prennent. La coquille reste une grille pour que le lien garde toute la hauteur de la
+   rangée. */
+.blog-product-shell { position: relative; display: grid; min-width: 0; }
+.blog-product-shell > .product-card__media-wrap {
+  position: absolute; top: 0; inset-inline: 0; aspect-ratio: var(--blog-card-ratio, 4 / 5);
+  pointer-events: none;
+}
+.blog-product-shell > .product-card__media-wrap > * { pointer-events: auto; }
+/* Carrousels (fiche produit…) : au survol, nom et prix montent en bandeau sur le bas de la
+   photo. On leur réserve le coin du bouton déplié pour que le prix ne passe pas dessous. */
 @media (min-width: 861px) and (hover: hover) {
-  .product-card:hover .product-card__addbag { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  .product-card:not(.product-card--tile):has(.product-card__quickadd) .product-card__info { padding-inline-end: 112px; }
 }
-/* Tactile : pas de survol, la barre est montree en permanence. Meme blanc que sur
-   pointeur (0,94) — elle se lit sur toutes les photos, y compris les fonds clairs. */
-@media (hover: none) {
-  .product-card__addbag { opacity: 1; transform: translateX(-50%); pointer-events: auto; background: rgba(255, 255, 255, 0.94); }
+/* « Plus que quelques pièces » occupait le coin bas-droit : il passe au coin opposé, et sa
+   largeur s'arrête avant le coin du bouton (36px + 2 marges) — sur une carte de téléphone
+   il passait à la ligne sur toute la photo et finissait sous le bouton. */
+.product-card__media-wrap:has(> .product-card__quickadd) .product-card__stock {
+  left: auto; right: auto; inset-inline-start: 0.62rem;
+  max-inline-size: calc(100% - 36px - 1.9rem); box-sizing: border-box;
+}
+/* Sélecteur de taille : posé sur le bas de la photo, par-dessus le bouton. */
+.product-card__qa-panel {
+  position: absolute; z-index: 7;
+  inset-inline: 8px; inset-block-end: 8px;
+  padding: 12px;
+  color: var(--color-fg); background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(31, 31, 31, 0.12); border-radius: 0;
+  box-shadow: 0 12px 28px -16px rgba(31, 31, 31, 0.4);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  animation: qa-panel-in var(--motion-move, 250ms) var(--ease-out-quint, cubic-bezier(.23, 1, .32, 1)) both;
+}
+@keyframes qa-panel-in { from { opacity: 0; transform: translateY(6px); } }
+.product-card__qa-title {
+  margin: 2px 0 10px; margin-inline-end: 34px;
+  font: 400 10px/1.3 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted);
+}
+/* Grille auto : S M L tiennent sur une ligne même dans une carte de téléphone (~120px utiles). */
+.product-card__qa-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); gap: 5px; }
+.product-card__qa-options--wide { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+.product-card__qa-options + .product-card__qa-title { margin-top: 12px; }
+.product-card__qa-option {
+  min-width: 0; min-height: 44px; margin: 0; padding: 0 6px;
+  color: var(--color-fg); background: #fff; border: 1px solid rgba(31, 31, 31, 0.2); border-radius: 0;
+  font: 400 12px/1.5 var(--font-body); letter-spacing: 0.06em; cursor: pointer;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: background-color var(--motion-fade, 200ms) linear, color var(--motion-fade, 200ms) linear, border-color var(--motion-fade, 200ms) linear;
+}
+.product-card__qa-option:hover { border-color: var(--color-fg); }
+.product-card__qa-option[aria-pressed="true"] { color: #fff; background: var(--color-fg); border-color: var(--color-fg); }
+.product-card__qa-option:disabled { opacity: 0.4; text-decoration: line-through; cursor: not-allowed; }
+.product-card__qa-close {
+  position: absolute; top: 0; inset-inline-end: 0; width: 44px; height: 44px; margin: 0; padding: 0;
+  display: grid; place-items: center; color: var(--color-fg); background: none; border: 0; cursor: pointer;
+}
+.product-card__qa-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; }
+:is(.product-card__qa-option, .product-card__qa-close):focus-visible { outline: 2px solid var(--accent, #e07a45); outline-offset: 2px; }
+/* Tactile : les tirets de navigation des photos forment une bande de 32px sous l'image,
+   dans le même conteneur. Le bouton et le sélecteur restent posés sur la PHOTO. */
+@media (hover: none), (pointer: coarse), (max-width: 767px) {
+  .product-card__quickadd { inset-block-end: 8px; inset-inline-end: 8px; }
+  .product-card__qa-panel { inset-inline: 6px; inset-block-end: 6px; padding: 10px; }
+  .product-card__media-wrap:has(> .card-image-controls) > .product-card__quickadd { inset-block-end: 40px; }
+  .product-card__media-wrap:has(> .card-image-controls) > .product-card__qa-panel { inset-block-end: 40px; }
+  /* Carte de téléphone : le badge de stock, borné avant le bouton, passe sur 2-3 lignes ; on les serre. */
+  .product-card__media-wrap:has(> .product-card__quickadd) .product-card__stock { line-height: 1.3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-card__quickadd, .product-card__quickadd-label, .product-card__quickadd-icon path, .product-card__qa-option { transition: none; }
+  .product-card__qa-panel { animation: none; }
 }
 
 /* ÉPUISEMENT PAR CORIS (cliente 2026-08-03). Une seule couleur peut manquer sans que la
@@ -974,7 +1043,10 @@ body[data-page="collections"] .product-card__price {
 .product-card.is-color-sold-out .product-card__stock,
 .product-card.is-color-sold-out .product-card__limited { display: none; }
 /* L'achat rapide disparait — le clic est de toute facon reverifie en JS avant le panier. */
-.product-card.is-color-sold-out .product-card__addbag { display: none; }
+.product-card.is-color-sold-out .product-card__quickadd,
+.product-card.is-color-sold-out .product-card__qa-panel,
+.blog-product-shell.is-color-sold-out .product-card__quickadd,
+.blog-product-shell.is-color-sold-out .product-card__qa-panel { display: none; }
 /* La pastille du coloris epuise est barree, sans changer sa couleur : c'est elle qu'on
    vient regarder. Le trait est en surimpression pour rester lisible sur clair comme sur
    fonce, et il est purement decoratif — le nom accessible porte deja « Epuise ». */
@@ -1943,7 +2015,8 @@ body[data-page="home"] .girls-feed-section { margin-top: var(--space-7); }
  background: rgba(255, 255, 255, 0.58);
  min-width: 0;
 }
-.blog-product-card__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--color-surface); }
+/* Le calque d'ajout rapide (.blog-product-shell > .product-card__media-wrap) lit le même rapport. */
+.blog-product-card__media { display: block; aspect-ratio: var(--blog-card-ratio, 4 / 5); overflow: hidden; background: var(--color-surface); }
 .blog-product-card__body { display: grid; gap: 0.45rem; padding: var(--space-4); }
 .blog-product-card__body strong { font-size: var(--fs-sm); line-height: 1.15; text-transform: uppercase; }
 .blog-product-card__body span { color: var(--color-muted); font-size: var(--fs-xs); }
@@ -5811,18 +5884,6 @@ html[data-yza-mood="night"] .is-mood .toolbar select {
 html[data-yza-mood="night"] .is-mood .postcard__quote { color: var(--accent); }
 html[data-yza-mood="night"] .is-mood .postcard__mark {
   color: var(--accent); border-color: var(--accent);
-}
-html[data-yza-mood="night"] .is-mood .product-card__addbag {
-  background: rgba(18, 15, 19, 0.78);
-  border-color: var(--mood-line);
-  color: var(--mood-ink);
-}
-html[data-yza-mood="night"] .is-mood .product-card__addbag:hover {
-  background: var(--mood-ink);
-  color: var(--mood-bg);
-}
-@media (max-width: 767px) {
-  html[data-yza-mood="night"] .is-mood .product-card__addbag { background: rgba(18, 15, 19, 0.88); }
 }
 
 /* --- la bascule : un bouton flottant en bas à gauche (cliente 2026-08-05) ---
