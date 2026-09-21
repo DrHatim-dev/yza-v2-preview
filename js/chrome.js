@@ -247,48 +247,93 @@ const navMega = (active) => {
  return navLink('nav.bestSellers', '/collections/best-sellers') + navLink('nav.charms', collectionUrl('charms')) + navLink('nav.bags', collectionUrl('bags')) + navLink('nav.rtw', collectionUrl('rtw')) + navLink('nav.accessories', collectionUrl('accessories')) + studioLink + navLink('nav.b2b', 'grossistes');
 };
 
-/* Mobile drawer - nested accordion. Every section starts closed so the full
- navigation stays visible on a phone without an editorial card pushing it down. */
-const drawerAccordion = () => {
+/* Menu drawer - one composed panel (styles: css/menu-drawer.css).
+ The collections a shopper came for are visible at once, each with a small
+ catalogue thumbnail that is only fetched when the menu is first opened; the
+ house and help pages sit in a quieter two-column list; language and currency
+ share one labelled row at the foot. Same destinations as the old accordion. */
+const MENU_THUMBS = {
+ 'nav.bestSellers': 'assets/products/charms-on-bag.optimized.thumb.webp',
+ 'nav.charms': 'assets/products/accessories-clean/cherries-accessory-clean.optimized.thumb.webp',
+ 'nav.bags': 'assets/collections/best-sellers/la-sculpture-s-basket-bag-ss26-main.optimized.thumb.webp',
+ 'nav.rtw': 'assets/catalog/jawhara-v1/pantalon-large/jaune-safran.thumb.webp',
+ 'nav.accessories': 'assets/products/fruit-market/earrings-watermelon.optimized.thumb.webp',
+};
+// Dialog name for screen readers (the visible bar shows the wordmark instead).
+const MENU_TITLE = { fr: 'Menu', en: 'Menu', es: 'Menú', tr: 'Menü', ar: 'القائمة' };
+// Each language names itself, so the name is right whatever language is active.
+const MENU_LANG_NAMES = { fr: 'Français', en: 'English', es: 'Español', tr: 'Türkçe', ar: 'العربية' };
+const MENU_ICON = {
+ close: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.5 5.5l13 13M18.5 5.5l-13 13"/></svg>',
+ chevron: '<svg class="menu__chev" viewBox="0 0 8 14" aria-hidden="true" focusable="false"><path d="M1.5 1.5 6.5 7l-5 5.5"/></svg>',
+};
+const drawerMenu = (active = '') => {
  const t = YZA.i18n;
- const link = (key, href) => `<a class="acc__link" href="${href}" data-i18n="${key}">${t.t(key)}</a>`;
- const sign = '<span class="acc__sign" aria-hidden="true"></span>';
- const section = (titleKey, open, inner) => `
- <li class="acc${open ? ' is-open' : ''}">
- <button type="button" class="acc__head" aria-expanded="${open ? 'true' : 'false'}">
- <span data-i18n="${titleKey}">${t.t(titleKey)}</span>${sign}
- </button>
- <div class="acc__panel"><div class="acc__panel-inner">${inner}</div></div>
- </li>`;
+ const lang = t.lang || 'fr';
+ const cur = (key) => (key === active ? ' aria-current="page"' : '');
+ const cat = (key, href) => `<li><a class="menu__cat" href="${href}"${cur(key)}>
+ <span class="menu__thumb"><img alt="" data-menu-src="${MENU_THUMBS[key]}" width="48" height="60" decoding="async"></span>
+ <span class="menu__cat-name" data-i18n="${key}">${t.t(key)}</span>${MENU_ICON.chevron}
+ </a></li>`;
+ const link = (key, href) => `<li><a class="menu__link" href="${href}" data-i18n="${key}"${cur(key)}>${t.t(key)}</a></li>`;
+ const langBtn = (code) => `<button type="button" class="menu__lang" data-menu-lang="${code}" lang="${code}" aria-pressed="${code === lang ? 'true' : 'false'}">${LANG_META_SAFE[code].label}<span class="sr-only"> ${MENU_LANG_NAMES[code]}</span></button>`;
 
- const boutique = [
- link('nav.bestSellers', '/collections/best-sellers'),
- link('nav.charms', collectionUrl('charms')),
- link('nav.rtw', collectionUrl('rtw')),
- link('nav.bags', collectionUrl('bags')),
- link('nav.accessories', collectionUrl('accessories')),
- link('col.all', '/collections'),
+ const shop = [
+ cat('nav.bestSellers', '/collections/best-sellers'),
+ cat('nav.charms', collectionUrl('charms')),
+ cat('nav.bags', collectionUrl('bags')),
+ cat('nav.rtw', collectionUrl('rtw')),
+ cat('nav.accessories', collectionUrl('accessories')),
  ].join('');
-
  // Stockists lives under YZA Studio, not Boutique (client request)
- const maison = [
+ const house = [
  link('nav.story', 'histoire'),
  link('nav.studio', 'studio'),
  link('nav.girls', 'yza-girls'),
- link('nav.b2b', 'grossistes'),
  link('nav.journal', 'journal'),
+ link('nav.b2b', 'grossistes'),
  ].join('');
-
- const aide = [
+ const help = [
  link('nav.faq', 'faq'),
  link('nav.contact', 'contact'),
  ].join('');
 
- return `<ul class="acc-list">
- ${section('footer.shop', false, boutique)}
- ${section('footer.house', false, maison)}
- ${section('footer.help', false, aide)}
- </ul>`;
+ return `<div class="menu__bar">
+ <button type="button" class="menu__close" id="drawerClose" data-i18n-attr="aria-label:a.close" aria-label="${t.t('a.close')}">${MENU_ICON.close}</button>
+ <a class="menu__logo" href="/" data-menu-home aria-label="YZA - ${t.t('breadcrumb.home')}">${WORDMARK}</a>
+ <a class="menu__saved wishlist-btn" href="/favoris" data-i18n-attr="aria-label:a.wishlist" aria-label="${t.t('a.wishlist')}">${ICON.heart}<span class="menu__saved-count wishlist-count" data-wishlist-count aria-hidden="true">0</span></a>
+ </div>
+ <div class="menu__body">
+ <h2 class="sr-only" id="drawerTitle" data-menu-title>${t.pick(MENU_TITLE)}</h2>
+ <nav class="menu__nav" aria-labelledby="drawerTitle">
+ <div class="menu__shop">
+ <div class="menu__head">
+ <h3 class="menu__eyebrow" data-i18n="footer.shop">${t.t('footer.shop')}</h3>
+ <a class="menu__all" href="/collections"><span data-i18n="cta.viewAll">${t.t('cta.viewAll')}</span></a>
+ </div>
+ <ul class="menu__cats">${shop}</ul>
+ </div>
+ <div class="menu__more">
+ <div class="menu__group">
+ <h3 class="menu__eyebrow" data-i18n="footer.house">${t.t('footer.house')}</h3>
+ <ul class="menu__links">${house}</ul>
+ </div>
+ <div class="menu__group">
+ <h3 class="menu__eyebrow" data-i18n="footer.help">${t.t('footer.help')}</h3>
+ <ul class="menu__links">${help}</ul>
+ </div>
+ </div>
+ </nav>
+ <div class="menu__prefs">
+ <div class="menu__prefs-row">
+ <div class="menu__pref menu__pref--lang" role="group" aria-labelledby="menuLangTitle">
+ <span class="menu__eyebrow" id="menuLangTitle" data-i18n="lang.label">${t.t('lang.label')}</span>
+ <div class="menu__langs">${LANG_CODES.map(langBtn).join('')}</div>
+ </div>
+ <div class="menu__pref menu__pref--currency">${currencySwitcher('drawer')}</div>
+ </div>
+ </div>
+ </div>`;
 };
 
 const searchCopy = () => {
@@ -446,7 +491,7 @@ YZA.chrome = {
  <div class="locale-tools"><div class="lang" role="group" aria-label="${t.t('lang.label')}">${langSwitcher()}</div>${currencySwitcher('header')}</div>
  <a class="icon-btn wishlist-btn" href="/favoris" data-i18n-attr="aria-label:a.wishlist" aria-label="${t.t('a.wishlist')}">${ICON.heart}<span class="cart-count wishlist-count" data-wishlist-count aria-hidden="true">0</span></a>
  <button type="button" class="icon-btn cart-btn" data-cart-open data-i18n-attr="aria-label:a.cart" aria-label="${t.t('a.cart')}">${ICON.cart}<span class="cart-count" data-cart-count aria-hidden="true">0</span></button>
- <button type="button" class="icon-btn burger" id="burger" data-i18n-attr="aria-label:a.menu" aria-label="${t.t('a.menu')}">${ICON.burger}</button>
+ <button type="button" class="icon-btn burger" id="burger" aria-controls="drawer" aria-expanded="false" aria-haspopup="dialog" data-i18n-attr="aria-label:a.menu" aria-label="${t.t('a.menu')}">${ICON.burger}</button>
  </div>
  </div>
  </header>`;
@@ -505,14 +550,9 @@ YZA.chrome = {
  const drawers = document.createElement('div');
  drawers.innerHTML = `
  <div class="overlay" id="navOverlay"></div>
- <nav class="drawer" id="drawer" aria-label="Menu">
- <div class="drawer__bar">
- <span class="drawer__brand">Menu</span>
- <button type="button" class="icon-btn drawer__close" id="drawerClose" aria-label="${t.t('a.close')}">${ICON.close}</button>
+ <div class="drawer menu" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert>
+ ${drawerMenu(active)}
  </div>
- ${drawerAccordion()}
- <div class="drawer__locale"><div class="drawer__lang lang">${langSwitcher()}</div>${currencySwitcher('drawer')}</div>
- </nav>
 
  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="${t.t('a.search')}">
  <div class="search-mega">
@@ -569,6 +609,12 @@ YZA.chrome = {
  if (!document.getElementById('cartMaisonCSS')) {
    const css = document.createElement('link'); css.id = 'cartMaisonCSS'; css.rel = 'stylesheet';
    css.href = '/yza-v2-preview/css/cart-maison.css?v=20260910-cart'; document.head.append(css);
+ }
+ // The menu drawer's own stylesheet: appended last so it outranks the legacy
+ // accordion rules in styles.css, and non-blocking because the menu starts closed.
+ if (!document.getElementById('menuDrawerCSS')) {
+   const menuCss = document.createElement('link'); menuCss.id = 'menuDrawerCSS'; menuCss.rel = 'stylesheet';
+   menuCss.href = '/yza-v2-preview/css/menu-drawer.css?v=20260921-menu'; document.head.append(menuCss);
  }
  document.body.append(drawers);
 
@@ -956,28 +1002,93 @@ YZA.chrome = {
  const burger = document.getElementById('burger');
  const drawer = document.getElementById('drawer');
  const navOverlay = document.getElementById('navOverlay');
+ // Menu drawer: a modal dialog. Opening moves focus inside and makes the rest of
+ // the page inert; closing (X, overlay, Escape, any link) restores both and hands
+ // focus back to the burger. Thumbnails load on first intent, never at page load.
+ let navReturn = null;
+ let navInert = [];
+ const isNavOpen = () => !!drawer?.classList.contains('is-open');
+ const loadMenuThumbs = () => {
+ drawer?.querySelectorAll('img[data-menu-src]').forEach((img) => {
+ img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true });
+ img.src = img.getAttribute('data-menu-src');
+ img.removeAttribute('data-menu-src');
+ });
+ };
+ const navFocusables = () => Array.from(drawer?.querySelectorAll('a[href],button:not([disabled]),select:not([disabled])') || [])
+ .filter((el) => el.getClientRects().length > 0);
  const closeNav = () => {
+ if (!isNavOpen()) return;
+ const hadFocus = drawer.contains(document.activeElement);
  drawer.classList.remove('is-open');
- navOverlay.classList.remove('is-open');
+ navOverlay?.classList.remove('is-open');
+ drawer.setAttribute('aria-hidden', 'true');
+ drawer.inert = true;
+ navInert.forEach(([el, was]) => { el.inert = was; });
+ navInert = [];
+ burger?.setAttribute('aria-expanded', 'false');
  document.body.style.overflow = '';
+ // <html> is the scroller here (overflow-x: clip), so the lock lives on it too.
+ document.documentElement.classList.remove('has-menu-drawer');
+ document.body.classList.remove('has-menu-drawer');
+ const back = navReturn && navReturn.isConnected ? navReturn : burger;
+ navReturn = null;
+ if (hadFocus && back) back.focus({ preventScroll: true });
  };
  const openNav = () => {
- drawer.classList.add('is-open');
- navOverlay.classList.add('is-open');
+ if (!drawer || isNavOpen()) return;
+ loadMenuThumbs();
+ navReturn = document.activeElement instanceof HTMLElement && document.activeElement !== document.body ? document.activeElement : burger;
+ const layer = drawer.parentElement;
+ navInert = Array.from(document.body.children)
+ .filter((el) => el !== layer && !['SCRIPT', 'STYLE', 'LINK'].includes(el.tagName))
+ .map((el) => [el, el.inert]);
+ navInert.forEach(([el]) => { el.inert = true; });
+ drawer.inert = false;
+ drawer.setAttribute('aria-hidden', 'false');
+ drawer.querySelector('.menu__body')?.scrollTo(0, 0);
+ // Transitions switch on here, never at load (see css/menu-drawer.css).
+ drawer.classList.add('is-armed', 'is-open');
+ navOverlay?.classList.add('is-open');
+ burger?.setAttribute('aria-expanded', 'true');
  document.body.style.overflow = 'hidden';
+ document.documentElement.classList.add('has-menu-drawer');
+ document.body.classList.add('has-menu-drawer');
+ drawer.querySelector('.menu__close')?.focus({ preventScroll: true });
  };
  burger?.addEventListener('click', openNav);
+ ['pointerenter', 'touchstart', 'focus'].forEach((type) => burger?.addEventListener(type, loadMenuThumbs, { once: true, passive: true }));
  navOverlay?.addEventListener('click', closeNav);
  document.getElementById('drawerClose')?.addEventListener('click', closeNav);
  drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
- drawer?.querySelectorAll('.acc__head').forEach((head) => {
- head.addEventListener('click', () => {
- const section = head.closest('.acc');
- if (!section) return;
- const open = section.classList.toggle('is-open');
- head.setAttribute('aria-expanded', open ? 'true' : 'false');
+ // Keep Tab inside the open dialog (the page behind is inert, but the browser
+ // chrome is not).
+ drawer?.addEventListener('keydown', (event) => {
+ if (event.key !== 'Tab' || !isNavOpen()) return;
+ const items = navFocusables();
+ if (!items.length) return;
+ const first = items[0];
+ const last = items[items.length - 1];
+ if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+ else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+ });
+ // Language row: one tap per language, through the same setLang() the header
+ // uses (so ?lang=, the in-place relabel and the language_switch event all run).
+ drawer?.querySelectorAll('[data-menu-lang]').forEach((btn) => {
+ btn.addEventListener('click', () => {
+ const code = btn.getAttribute('data-menu-lang');
+ if (code && code !== YZA.i18n.lang) YZA.i18n.setLang(code);
  });
  });
+ const syncMenuCopy = () => {
+ if (!drawer) return;
+ const lang = YZA.i18n.lang;
+ drawer.querySelectorAll('[data-menu-lang]').forEach((btn) => btn.setAttribute('aria-pressed', btn.getAttribute('data-menu-lang') === lang ? 'true' : 'false'));
+ const title = drawer.querySelector('[data-menu-title]');
+ if (title) title.textContent = YZA.i18n.pick(MENU_TITLE);
+ drawer.querySelector('[data-menu-home]')?.setAttribute('aria-label', 'YZA - ' + YZA.i18n.t('breadcrumb.home'));
+ };
+ YZA.i18n.onChange(syncMenuCopy);
 
  // Desktop mega menu: hover/focus open the panel via CSS; the trigger itself is a
  // link to the section landing page (click navigates). JS only closes sibling panels
