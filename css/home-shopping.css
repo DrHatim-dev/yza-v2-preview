@@ -11,6 +11,12 @@ body.home-maison[data-page="home"] #homeCategories .section-head { margin-bottom
 body.home-maison[data-page="home"] #homeCategories .cat-card { aspect-ratio:auto; }
 body.home-maison[data-page="home"] #homeCategories .cat-card .media { aspect-ratio:1 / 1; height:auto; }
 body.home-maison[data-page="home"] #homeCategories .cat-card img { height:100%; width:100%; object-fit:cover; }
+/* Portrait photos in square tiles: anchor each crop (and the hover zoom) on its subject, not the centre. */
+body.home-maison[data-page="home"] #homeCategories .cat-card img[src*="charms-cluster"] { object-position:50% 5%; transform-origin:50% 5%; }
+body.home-maison[data-page="home"] #homeCategories .cat-card img[src*="basket-lilac-fan"] { object-position:50% 10%; transform-origin:50% 10%; }
+body.home-maison[data-page="home"] #homeCategories .cat-card img[src*="basket-grey-beach"] { object-position:50% 40%; transform-origin:50% 25%; }
+body.home-maison[data-page="home"] #homeCategories .cat-card img[src*="jawhara-palazzo-white"] { object-position:50% 6%; transform-origin:50% 6%; }
+body.home-maison[data-page="home"] #homeCategories .cat-card img[src*="earrings-lilac-grape"] { object-position:50% 0%; transform-origin:50% 0%; }
 body.home-maison[data-page="home"] #bestSellers { padding-top:40px !important; }
 body.home-maison[data-page="home"] [data-instant-content],body.home-maison[data-page="home"] [data-instant-content] .product-card { opacity:1 !important; visibility:visible !important; transform:none !important; }
 @media(max-width:1100px){
