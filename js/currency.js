@@ -1,6 +1,15 @@
-/* YZA currency display layer.
-   Catalogue and order totals remain canonical in MAD; this module only changes
-   the shopper-facing display and persists the selected currency. */
+/* IP-selected product tariffs with canonical MAD settlement.
+   EUR product prices are independent catalogue fields; the display control
+   cannot select a lower market tariff. See market-lib.php for server authority.
+
+   ── PREVIEW ADAPTATION ──────────────────────────────────────────────────
+   This is the live js/currency.js. One thing differs, and only one: GitHub
+   Pages serves no PHP, so /market.php and /currency-rates.php cannot be
+   called here (they 404, and preview.js turns any .php request into a 400).
+   The market is therefore resolved from a static preview source instead of
+   the visitor's IP — same payload shape, same validation, same lock. The
+   tariff maths, the rounding, the "≈" rule, the settlement note and the
+   locked selector are live's, unchanged. */
 (function () {
   'use strict';
 
@@ -35,7 +44,8 @@
   var cached = null;
   try { cached = JSON.parse(safeGet(RATE_KEY) || 'null'); } catch (e) {}
   var rates = cached && cached.rates ? Object.assign({}, FALLBACK_RATES, cached.rates) : Object.assign({}, FALLBACK_RATES);
-  var current = validCode(safeGet(STORAGE_KEY)) ? safeGet(STORAGE_KEY).toUpperCase() : 'MAD';
+  var current = 'MAD';
+  YZA.market = { market: 'MAD', ready: false };
 
   // Keep CONVERTED storefront prices calm and easy to scan: no decimals, larger values
   // rounded to the nearest ten (102.17 -> 100), smaller ones to the unit (9.99 -> 10).
@@ -53,11 +63,13 @@
     return Math.round(value / step) * step;
   }
   function format(cents, code) {
+    if (!YZA.market.ready) return '—';
     var target = validCode(code) ? String(code).toUpperCase() : current;
     var dirhams = (Number(cents) || 0) / 100;
-    var amount = dirhams * (Number(rates[target]) || 1);
-    amount = roundedDisplayAmount(amount, target);
-    var digits = 0;
+    var tariffEur = YZA.market.market === 'EUR' && target === 'EUR';
+    var amount = tariffEur ? dirhams / 11 : dirhams * (Number(rates[target]) || 1);
+    amount = tariffEur ? Math.round(amount * 100) / 100 : roundedDisplayAmount(amount, target);
+    var digits = tariffEur && !Number.isInteger(amount) ? 2 : 0;
     var rendered;
     try {
       rendered = new Intl.NumberFormat(locale(), {
@@ -68,7 +80,7 @@
       rendered = amount.toFixed(digits) + ' ' + target;
     }
     if (target === 'MAD') rendered = rendered.replace(/MAD|د\.م\.|د\.م/g, 'DH');
-    return target === 'MAD' ? rendered : '≈ ' + rendered;
+    return target === 'MAD' || tariffEur ? rendered : '≈ ' + rendered;
   }
   function syncControls() {
     document.querySelectorAll('[data-currency-select]').forEach(function (select) {
@@ -80,7 +92,7 @@
   }
   function set(code) {
     var next = String(code || '').toUpperCase();
-    if (!validCode(next) || next === current) return;
+    if (YZA.market.locked || !validCode(next) || next === current) return;
     var previous = current;
     current = next;
     safeSet(STORAGE_KEY, current);
@@ -89,6 +101,8 @@
     try { YZA.analytics && YZA.analytics.track('currency_switch', { from: previous, to: current }); } catch (e) {}
   }
   function selectorMarkup(context) {
+    if (!YZA.market.ready) return '<span role="status">Tarifs indisponibles · <a href="">Réessayer</a></span>';
+    if (YZA.market.locked) return '<span class="currency-select"><span>' + (current === 'MAD' ? 'DH' : 'EUR') + '</span>' + (context === 'checkout' && current === 'EUR' ? '<span class="currency-select__note">Paiement en MAD · 1 EUR = 11 DH</span>' : '') + '</span>';
     var opts = CODES.map(function (code) { return '<option value="' + code + '"' + (code === current ? ' selected' : '') + '>' + code + '</option>'; }).join('');
     var place = context || 'header';
     return '<label class="currency-select currency-select--' + place + '">' +
@@ -103,14 +117,40 @@
   });
   document.addEventListener('DOMContentLoaded', syncControls);
 
-  fetch('/currency-rates.php', { credentials: 'same-origin', cache: 'no-store' })
-    .then(function (response) { if (!response.ok) throw new Error('rates'); return response.json(); })
-    .then(function (payload) {
-      if (!payload || payload.ok !== true || payload.base !== 'MAD' || !payload.rates) return;
-      CODES.forEach(function (code) { if (Number(payload.rates[code]) > 0) rates[code] = Number(payload.rates[code]); });
-      safeSet(RATE_KEY, JSON.stringify({ rates: rates, updatedAt: payload.updatedAt || null }));
-      document.dispatchEvent(new CustomEvent('yza:currencychange', { detail: { ratesUpdated: true, to: current } }));
-    }).catch(function () { /* Keep the last known/fallback rates. */ });
+  /* PREVIEW ONLY — the market gate.
+     Live: fetch('/market.php', {cache:'no-store'}) -> {ok:true, market:'MAD'|'EUR',
+     eurRate:11}, chosen from the visitor's IP, then LOCKED so the shopper cannot
+     pick a cheaper tariff. Anything else means the market is not ready and every
+     price renders "—".
+     Preview: the same payload is built from window.YZA_PREVIEW_MARKET (preview.js
+     reads ?market=eur / ?market=mad and remembers it for the tab session; default
+     MAD, which is what a Moroccan visitor sees on live) and run through the very
+     same validation. The override exists only here — live has no such control.
+     It is resolved SYNCHRONOUSLY, not in a promise: the preview's main.js has no
+     `await YZA.marketReady` and currency.js runs before cart.js / chrome.js /
+     main.js, so the tariff is settled before the first render either way.
+     YZA.marketReady is still exposed as a promise, for callers that await it. */
+  function previewMarketPayload() {
+    var forced = window.YZA_PREVIEW_MARKET;
+    return { ok: true, market: typeof forced === 'string' ? forced.toUpperCase() : 'MAD', eurRate: 11 };
+  }
+
+  YZA.marketReady = Promise.resolve((function () {
+    try {
+      var payload = previewMarketPayload();
+      if (!payload || !payload.ok || !['MAD', 'EUR'].includes(payload.market) || payload.eurRate !== 11) throw new Error('market');
+      YZA.market = Object.assign({}, payload, { ready: true, locked: true });
+      current = payload.market;
+      if (YZA.applyMarketPrices && !YZA.applyMarketPrices()) throw new Error('catalog');
+      return true;
+    } catch (e) { YZA.market.ready = false; return false; }
+  }()));
+
+  /* The live rate feed (/currency-rates.php) is deliberately NOT fetched here: it
+     is PHP, it would 404 on Pages, and with the market locked to MAD or EUR the
+     shopper can never select a rate-converted currency anyway. FALLBACK_RATES
+     still answers a programmatic format(cents, 'USD'), exactly as live's fallback
+     does before its feed replies. */
 
   YZA.currency = {
     codes: CODES.slice(),

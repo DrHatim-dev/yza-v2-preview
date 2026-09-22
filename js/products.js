@@ -20173,6 +20173,7 @@ function applyCatalogRelease(release) {
   if (!known && !simple) report.errors.push('unknown non-simple product ' + handle);
   if (typeof edit.active !== 'boolean') report.errors.push('invalid active flag ' + handle);
   if (!Number.isInteger(edit.priceDh) || edit.priceDh < 50 || edit.priceDh > 5000) report.errors.push('invalid price ' + handle);
+     if (own(edit, 'priceEur') && (!Number.isInteger(edit.priceEur) || edit.priceEur < 5 || edit.priceEur > 5000)) report.errors.push('invalid EUR price ' + handle);
   if (!validText(edit.name) || !validText(edit.short) || !validText(edit.desc)) report.errors.push('invalid translations ' + handle);
   contentTextKeys.forEach((key) => { if (own(edit, key) && edit[key] !== null && !validText(edit[key])) report.errors.push('invalid content ' + handle + ':' + key); });
   contentListKeys.forEach((key) => { if (own(edit, key) && edit[key] !== null && !validTextList(edit[key])) report.errors.push('invalid content list ' + handle + ':' + key); });
@@ -20209,7 +20210,7 @@ function applyCatalogRelease(release) {
   const sold = edit.soldOut.slice().sort();
   const serverSold = server && Array.isArray(server.soldOut) ? server.soldOut.slice().sort() : null;
   const colorSlugs = server && Array.isArray(server.colorSlugs) ? server.colorSlugs : null;
-  if (edit.active && (!Number.isInteger(server.priceDh) || server.priceDh !== edit.priceDh || server.active !== edit.active
+  if (edit.active && (!Number.isInteger(server.priceDh) || server.priceDh !== edit.priceDh || server.priceEur !== edit.priceEur || server.active !== edit.active
       || !serverSold || JSON.stringify(serverSold) !== JSON.stringify(sold)
       || typeof edit.serverImage !== 'string' || server.image !== edit.serverImage
       || !/^https:\/\/(?:www\.)?yza-shop\.com\/assets\//i.test(server.image))) report.errors.push('server parity mismatch ' + handle);
@@ -20273,7 +20274,7 @@ function applyCatalogRelease(release) {
    product.short = clone(edit.short || record.short);
    product.displayShort = clone(product.short);
    product.desc = clone(edit.desc || record.desc);
-   product.price = priceDh * 100;
+   product.price = YZA.market?.market === 'EUR' ? (edit.priceEur ?? YZA.defaultEurPrice(priceDh)) * (release.commerce?.checkout.eurSettlementRate ?? 11) * 100 : priceDh * 100;
    product.publicVisible = edit.active !== false;
    product.availableColors = [];
    product.colorSlugs = [];
@@ -20293,7 +20294,7 @@ function applyCatalogRelease(release) {
 
   const priceDh = Number(edit.priceDh);
   if (Number.isInteger(priceDh) && priceDh >= 50 && priceDh <= 5000) {
-   product.price = priceDh * 100;
+   product.price = YZA.market?.market === 'EUR' ? (edit.priceEur ?? YZA.defaultEurPrice(priceDh)) * (release.commerce?.checkout.eurSettlementRate ?? 11) * 100 : priceDh * 100;
    // Routine catalog releases are the final price authority. Timed legacy
    // mutations may have run earlier in this large compatibility file; clear
    // their presentation flags while reconciling to the atomic release.
@@ -21666,6 +21667,34 @@ YZA.packshotNuitReport = (function () {
    price/copy/publication/availability state matches PHP and checkout. A checked
    storefront-contract hash makes publishing fail if code is appended later
    without rerunning the resolved-catalog verification. */
+// Reconcile all catalogue projections (including bag cards and size comparisons)
+// after the no-store IP response, before the first interactive render.
+YZA.defaultEurPrice = function (dh) {
+ const amount = Number(dh) * 0.093681, step = amount >= 100 ? 10 : 1;
+ return Math.round(amount / step) * step;
+};
+YZA.applyMarketPrices = function () {
+ const report = applyCatalogRelease(window.YZA_CATALOG_RELEASE);
+ YZA.applyCanonicalCommerce(window.YZA_CATALOG_RELEASE);
+ YZA.catalogReleaseReady = !!(report.revision && !report.errors.length);
+ return YZA.catalogReleaseReady;
+};
+
+YZA.applyCanonicalCommerce = function (release) {
+ if (!release || !release.commerce) return; // Only the pre-activation legacy store lacks this member.
+ const r = release.commerce;
+ YZA.payment.eurRate = r.checkout.eurSettlementRate;
+ YZA.shippingPolicy = r.shipping;
+ YZA.servicePolicy.freeShippingAccessoriesDh = r.shipping.morocco.freeAccDh * 100;
+ YZA.servicePolicy.freeShippingDh = r.shipping.morocco.freeDh * 100;
+ YZA.promos.charmTiers = { enabled: true, category: 'charms', tiers: r.cart.charmTiers };
+ YZA.coupons = {}; // A coupon rule is supplied only after server validation.
+ YZA.geo.europe = r.zones.shippingEuropeCountries;
+ YZA.geo.gcc = r.zones.shippingUsaGccCountries.filter(c => c !== 'US');
+ YZA.canonicalCommerce = r;
+};
+YZA.applyCanonicalCommerce(window.YZA_CATALOG_RELEASE);
+
 YZA.catalogReleaseFinalReport = applyCatalogRelease(window.YZA_CATALOG_RELEASE);
 YZA.catalogReleaseReport = YZA.catalogReleaseFinalReport;
 YZA.catalogReleaseReady = !!(YZA.catalogReleaseReport.revision && !YZA.catalogReleaseReport.errors.length);

@@ -4,6 +4,26 @@
   const base = '/yza-v2-preview';
   const production = new Set(['yza-shop.com', 'www.yza-shop.com']);
   window.YZA_PREVIEW = true;
+  /* PREVIEW-ONLY market override — does not exist on the live storefront.
+     Live decides MAD or EUR from the visitor's IP in /market.php and then LOCKS
+     the currency control, so a shopper can never pick a tariff. GitHub Pages
+     serves no PHP, so js/currency.js reads this value instead and applies live's
+     own validation to it. Default MAD = what a Moroccan visitor sees on live.
+     Append ?market=eur (or ?market=mad) to any preview URL to inspect the export
+     tariff; it is remembered for the tab session, because the site's internal
+     links do not carry the query string. */
+  const MARKETS = new Set(['MAD', 'EUR']);
+  const MARKET_KEY = 'yza.preview.market';
+  let market = 'MAD';
+  try {
+    const asked = String(new URLSearchParams(location.search).get('market') || '').toUpperCase();
+    if (MARKETS.has(asked)) { market = asked; sessionStorage.setItem(MARKET_KEY, asked); }
+    else {
+      const saved = String(sessionStorage.getItem(MARKET_KEY) || '').toUpperCase();
+      if (MARKETS.has(saved)) market = saved;
+    }
+  } catch (_) { /* private mode: fall back to the default MAD market */ }
+  window.YZA_PREVIEW_MARKET = market;
   window.yzaPreviewPath = () => location.pathname.replace(/^\/yza-v2-preview(?=\/|$)/, '') || '/';
   const localUrl = value => {
     if (!value || /^(?:#|mailto:|tel:|data:|blob:|javascript:)/i.test(value)) return value;

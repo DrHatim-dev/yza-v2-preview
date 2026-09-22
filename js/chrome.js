@@ -261,6 +261,9 @@ const MENU_THUMBS = {
 };
 // Dialog name for screen readers (the visible bar shows the wordmark instead).
 const MENU_TITLE = { fr: 'Menu', en: 'Menu', es: 'Menú', tr: 'Menü', ar: 'القائمة' };
+// The market is locked (as on live), so the control is a plain "DH"/"EUR" label with no
+// text of its own: the row needs its own eyebrow to match the language block beside it.
+const MENU_CURRENCY = { fr: 'Devise', en: 'Currency', es: 'Moneda', tr: 'Para birimi', ar: 'العملة' };
 // Each language names itself, so the name is right whatever language is active.
 const MENU_LANG_NAMES = { fr: 'Français', en: 'English', es: 'Español', tr: 'Türkçe', ar: 'العربية' };
 const MENU_ICON = {
@@ -330,7 +333,10 @@ const drawerMenu = (active = '') => {
  <span class="menu__eyebrow" id="menuLangTitle" data-i18n="lang.label">${t.t('lang.label')}</span>
  <div class="menu__langs">${LANG_CODES.map(langBtn).join('')}</div>
  </div>
- <div class="menu__pref menu__pref--currency">${currencySwitcher('drawer')}</div>
+ <div class="menu__pref menu__pref--currency" role="group" aria-labelledby="menuCurrencyTitle">
+ <span class="menu__eyebrow" id="menuCurrencyTitle" data-menu-currency-title>${t.pick(MENU_CURRENCY)}</span>
+ ${currencySwitcher('drawer')}
+ </div>
  </div>
  </div>
  </div>`;
@@ -1086,6 +1092,8 @@ YZA.chrome = {
  drawer.querySelectorAll('[data-menu-lang]').forEach((btn) => btn.setAttribute('aria-pressed', btn.getAttribute('data-menu-lang') === lang ? 'true' : 'false'));
  const title = drawer.querySelector('[data-menu-title]');
  if (title) title.textContent = YZA.i18n.pick(MENU_TITLE);
+ const currencyTitle = drawer.querySelector('[data-menu-currency-title]');
+ if (currencyTitle) currencyTitle.textContent = YZA.i18n.pick(MENU_CURRENCY);
  drawer.querySelector('[data-menu-home]')?.setAttribute('aria-label', 'YZA - ' + YZA.i18n.t('breadcrumb.home'));
  };
  YZA.i18n.onChange(syncMenuCopy);
