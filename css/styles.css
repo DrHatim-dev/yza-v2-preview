@@ -3764,7 +3764,8 @@ body.has-recovery-modal { overflow: hidden; }
  .section-head h2 { font-size: clamp(1.4rem, 5vw, 1.85rem); }
  .video-band__content h2 { font-size: clamp(1.75rem, 8vw, 2.4rem); }
  .toolbar { display: grid; grid-template-columns: 1fr; align-items: stretch; }
- .filter-chips { min-width: 0; max-width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.2rem; }
+ /* Wrap, never scroll sideways: on a phone the scroll hid 4 of the 5 categories. */
+ .filter-chips { min-width: 0; max-width: 100%; overflow: visible; flex-wrap: wrap; gap: var(--space-2); padding-bottom: 0.2rem; }
  .filter-chips button { flex: 0 0 auto; padding-inline: var(--space-3); }
  .toolbar__right { width: 100%; min-width: 0; max-width: 100%; justify-content: space-between; gap: var(--space-2); overflow: hidden; }
   .toolbar select { min-width: 0; max-width: 100%; flex: 1; padding-inline: var(--space-3); }
