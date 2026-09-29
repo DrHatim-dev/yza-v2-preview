@@ -1,0 +1,79 @@
+/* Press page. Built from the site's editorial vocabulary (the Studio and collection
+   heroes, hairline lists, Jost small caps, Fraunces titles) and scoped to this page, so
+   the shared chrome and every other page render exactly as before. The full-size
+   viewer reuses the shared .gallery-zoom overlay; only its page arrows live here. */
+body[data-page="press"] .press-main { --press-line: rgba(46,46,46,.14); --press-muted: #767676; --press-edge: max(64px, calc((100% - 1280px) / 2)); background: #fff; color: #2e2e2e; width: 100%; }
+body[data-page="press"] .press-main * { box-sizing: border-box; min-width: 0; }
+body[data-page="press"] .press-main :is(h1, h2, p) { margin: 0; }
+body[data-page="press"] .press-main :focus-visible { outline: 2px solid #8a6a4a; outline-offset: 4px; }
+
+/* Hero: eyebrow + hairline rule, light Fraunces title, one line of Jost. */
+body[data-page="press"] .press-hero { padding: 104px var(--press-edge) 72px; }
+body[data-page="press"] .press-rule { display: flex; align-items: center; gap: 24px; margin-bottom: 44px; }
+body[data-page="press"] .press-rule::after { content: ''; height: 1px; background: var(--press-line); flex: 1; }
+body[data-page="press"] .press-eyebrow { font: 400 10px/1.5 var(--font-body); letter-spacing: .24em; text-transform: uppercase; color: var(--press-muted); }
+body[data-page="press"] .press-hero h1 { font: 200 clamp(44px, 5.3vw, 72px)/1.06 'Fraunces', Georgia, serif; letter-spacing: -.03em; color: #2e2e2e; }
+body[data-page="press"] .press-hero__lede { margin-top: 24px; max-width: 56ch; font: 400 16px/1.85 var(--font-body); color: #4a4a4a; }
+
+/* List: one hairline row per feature — media and date on the left, title in the middle,
+   the action on the right. Print and trade-fair features add their visual under the title. */
+body[data-page="press"] .press-feed { padding: 0 var(--press-edge) 104px; }
+body[data-page="press"] .press-feed__items { border-top: 1px solid var(--press-line); }
+body[data-page="press"] .press-item { border-bottom: 1px solid var(--press-line); }
+body[data-page="press"] .press-item__link {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr) auto;
+  grid-template-areas: "media title cta" "meta title cta";
+  grid-template-rows: auto 1fr;
+  column-gap: 56px; row-gap: 10px; align-items: start;
+  padding: 40px 0; color: inherit; text-decoration: none;
+}
+body[data-page="press"] .press-item--visual .press-item__link { grid-template-areas: "media title cta" "meta title cta" ". thumb ."; grid-template-rows: auto auto auto; }
+body[data-page="press"] .press-item__media { grid-area: media; font: 400 10px/1.6 var(--font-body); letter-spacing: .24em; text-transform: uppercase; color: #2e2e2e; }
+body[data-page="press"] .press-item__meta { grid-area: meta; display: flex; flex-wrap: wrap; gap: 2px 0; font: 400 13px/1.6 var(--font-body); color: var(--press-muted); }
+body[data-page="press"] .press-item__meta > span + span::before { content: '·'; margin: 0 10px; }
+body[data-page="press"] .press-item__title { grid-area: title; font: 300 clamp(22px, 2.2vw, 30px)/1.25 'Fraunces', Georgia, serif; letter-spacing: -.01em; color: #2e2e2e; text-wrap: pretty; overflow-wrap: anywhere; transition: color var(--motion-fade, .2s) linear; }
+body[data-page="press"] .press-item__cta { grid-area: cta; display: inline-flex; align-items: center; gap: 10px; padding-bottom: 3px; border-bottom: 1px solid currentColor; font: 400 11px/1.5 var(--font-body); letter-spacing: .26em; text-transform: uppercase; white-space: nowrap; color: #2e2e2e; transition: color var(--motion-fade, .2s) linear; }
+body[data-page="press"] .press-item__arrow { width: 11px; height: 11px; flex: none; }
+body[data-page="press"] .press-item__thumb { grid-area: thumb; display: block; justify-self: start; margin-top: 18px; line-height: 0; }
+body[data-page="press"] .press-item__thumb img { display: block; width: auto; height: auto; max-width: min(100%, 440px); max-height: 320px; box-shadow: 0 0 0 1px var(--press-line); }
+body[data-page="press"] .press-item__link:is(:hover, :focus-visible) :is(.press-item__title, .press-item__cta) { color: var(--terracotta, #b4552b); }
+
+/* Arabic: no tracking on Arabic script; arrows point the reading way. */
+html[dir="rtl"] body[data-page="press"] :is(.press-eyebrow, .press-item__cta) { letter-spacing: 0; }
+html[dir="rtl"] body[data-page="press"] .press-item__arrow { transform: scaleX(-1); }
+/* Titles, media names and dates stay in their original Latin script: resolve their own
+   reading direction (so "?", "!" and ":" stay put) while keeping the Arabic page's alignment. */
+html[dir="rtl"] body[data-page="press"] :is(.press-item__title, .press-item__media) { unicode-bidi: plaintext; text-align: right; }
+html[dir="rtl"] body[data-page="press"] .press-item__meta { direction: ltr; justify-content: flex-end; }
+
+@media (max-width: 1100px) {
+  body[data-page="press"] .press-item__link { grid-template-columns: minmax(0, 200px) minmax(0, 1fr) auto; column-gap: 40px; }
+}
+@media (max-width: 767px) {
+  body[data-page="press"] .press-hero { padding: 64px 24px 44px; }
+  body[data-page="press"] .press-rule { margin-bottom: 32px; }
+  body[data-page="press"] .press-feed { padding: 0 24px 72px; }
+  body[data-page="press"] .press-item__link,
+  body[data-page="press"] .press-item--visual .press-item__link { grid-template-columns: minmax(0, 1fr); grid-template-areas: "media" "title" "meta" "thumb" "cta"; grid-template-rows: none; row-gap: 12px; padding: 32px 0; }
+  body[data-page="press"] .press-item__cta { justify-self: start; margin-top: 8px; }
+  body[data-page="press"] .press-item__thumb { margin-top: 6px; }
+  body[data-page="press"] .press-item__thumb img { max-height: 280px; }
+}
+
+/* Viewer extras on top of the shared .gallery-zoom overlay. */
+html.has-press-viewer, html.has-press-viewer body { overflow: hidden; }
+body[data-page="press"] .press-viewer__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; display: grid; place-items: center; color: #fff; background: none; border: 0; cursor: pointer; }
+body[data-page="press"] .press-viewer__nav svg { width: 22px; height: 22px; }
+body[data-page="press"] .press-viewer__nav:hover { opacity: .7; }
+body[data-page="press"] .press-viewer__nav--prev { left: clamp(.4rem, 2vw, 1.4rem); }
+body[data-page="press"] .press-viewer__nav--next { right: clamp(.4rem, 2vw, 1.4rem); }
+html[dir="rtl"] body[data-page="press"] .press-viewer__nav svg { transform: scaleX(-1); }
+body[data-page="press"] .press-viewer__count { position: absolute; bottom: clamp(.8rem, 2vw, 1.4rem); left: 50%; transform: translateX(-50%); font: 400 11px/1.5 var(--font-body); letter-spacing: .26em; color: rgba(255,255,255,.8); }
+body[data-page="press"] .press-viewer :is(.press-viewer__nav, .press-viewer__count)[hidden] { display: none; }
+body[data-page="press"] .press-viewer :focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+/* Leave room under the page for the "1 / 3" counter. */
+body[data-page="press"] .press-viewer .gallery-zoom__img { max-height: calc(100vh - 7.5rem); }
+@media (max-width: 767px) {
+  body[data-page="press"] .press-viewer__nav { top: auto; bottom: clamp(.4rem, 2vw, 1rem); transform: none; }
+}
