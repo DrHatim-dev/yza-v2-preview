@@ -244,7 +244,7 @@ const navMega = (active) => {
 
  // "The House" mega replaced by a plain YZA Studio link → studio (no dropdown).
  const studioLink = `<div class="nav-item"><a href="studio"${(active === 'nav.studio' || active === 'footer.house') ? ' aria-current="page"' : ''}>YZA Studio</a></div>`;
- return navLink('nav.bestSellers', '/collections/best-sellers') + navLink('nav.charms', collectionUrl('charms')) + navLink('nav.bags', collectionUrl('bags')) + navLink('nav.rtw', collectionUrl('rtw')) + navLink('nav.accessories', collectionUrl('accessories')) + studioLink + navLink('nav.b2b', 'grossistes');
+ return navLink('nav.bestSellers', '/collections/best-sellers') + navLink('nav.charms', collectionUrl('charms')) + navLink('nav.bags', collectionUrl('bags')) + navLink('nav.rtw', collectionUrl('rtw')) + navLink('nav.accessories', collectionUrl('accessories')) + studioLink + navLink('nav.b2b', 'grossistes') + navLink('nav.press', 'press');
 };
 
 /* Menu drawer - one composed panel (styles: css/menu-drawer.css).
@@ -294,6 +294,7 @@ const drawerMenu = (active = '') => {
  link('nav.studio', 'studio'),
  link('nav.girls', 'yza-girls'),
  link('nav.journal', 'journal'),
+ link('nav.press', 'press'),
  link('nav.b2b', 'grossistes'),
  ].join('');
  const help = [
@@ -519,7 +520,7 @@ YZA.chrome = {
  // Keep the same centred wordmark and split navigation on every storefront page.
  const sharedHeader = head.querySelector('.header__inner');
  const sharedActions = sharedHeader.querySelector('.header__actions');
- for (const path of ['studio', 'grossistes']) {
+ for (const path of ['studio', 'grossistes', 'press']) {
    const link = sharedHeader.querySelector('.nav a[href="/' + path + '"],.nav a[href="' + path + '"]');
    if (!link) continue;
    const item = link.closest('.nav-item');
@@ -530,6 +531,9 @@ YZA.chrome = {
  const studioLink = sharedActions.querySelector('a[href="/studio"],a[href="studio"]');
  const stockistsLink = sharedActions.querySelector('a[href="/grossistes"],a[href="grossistes"]');
  if (studioLink && stockistsLink) sharedActions.insertBefore(studioLink, stockistsLink);
+ // Right-hand group reads: YZA Studio · Stockists · Presse.
+ const pressLink = sharedActions.querySelector('a[href="/press"],a[href="press"]');
+ if (pressLink && stockistsLink) stockistsLink.after(pressLink);
  if (studioLink) {
    studioLink.removeAttribute('data-i18n');
    const labelStudio = () => { studioLink.textContent = ({fr:'YZA Studio',en:'The Studio',es:'El estudio',tr:'Stüdyo',ar:'الاستوديو'})[YZA.i18n.lang] || 'Le Studio'; };
@@ -705,6 +709,7 @@ YZA.chrome = {
  <li><a href="studio" data-i18n="nav.studio">${t.t('nav.studio')}</a></li>
  <li><a href="yza-girls" data-i18n="nav.girls">${t.t('nav.girls')}</a></li>
  <li><a href="journal" data-i18n="nav.journal">${t.t('nav.journal')}</a></li>
+ <li><a href="press" data-i18n="nav.press">${t.t('nav.press')}</a></li>
  <li><a href="grossistes" data-i18n="nav.b2b">${t.t('nav.b2b')}</a></li>
  <li><a href="mailto:${YZA.brand.email}">${YZA.brand.email}</a></li>
  </ul></div>

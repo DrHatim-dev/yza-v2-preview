@@ -4608,6 +4608,7 @@
  b2b: 'nav.b2b',
  lookbook: 'nav.lookbook',
  journal: 'nav.journal',
+ press: 'nav.press',
  studio: 'nav.studio',
  faq: 'nav.faq',
  contact: 'nav.contact',
