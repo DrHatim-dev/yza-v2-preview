@@ -61,6 +61,29 @@ body.home-maison[data-page="home"] .home-hero .brand-hero__video { display:block
    bottom corners of the screen, and the hero now ends exactly there. */
 body.home-maison[data-page="home"] .home-hero .brand-hero__media > .home-film-toggle { top:16px; right:16px; bottom:auto; left:auto; }
 
+/* Phones and portrait tablets: the live storefront's overlay hero (owner's choice, 2026-09-30)
+   instead of the stacked orange panel — the film fills the width, a dark gradient rises from
+   the bottom, and the white lockup, title, subline and links sit on it. Same measures as
+   yza-shop.com (gradient, 21.6px title, 10.9px subline, underlined links). Landscape phones
+   keep their compact side-by-side layout; desktop is untouched. */
+@media (max-width:860px) and (min-height:521px){
+ body.home-maison[data-page="home"] .home-hero { display:block; position:relative; height:auto; min-height:0; background:#16130f; }
+ /* Stops ~64px short of the screen's bottom, as on live: the next section peeks in, and the
+    chat launcher and preview badge sit over it instead of over the hero's links. */
+ body.home-maison[data-page="home"] .home-hero .brand-hero__media { position:relative; width:100%; height:min(calc(100vh - var(--home-hero-offset,102px) - 64px), 156vw); height:min(calc(100svh - var(--home-hero-offset,102px) - 64px), 156vw); min-height:420px; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__media::after { content:""; display:block; position:absolute; left:0; right:0; bottom:0; height:62%; z-index:1; pointer-events:none; background:linear-gradient(to top, rgba(15,12,9,.80) 0%, rgba(15,12,9,.52) 26%, rgba(15,12,9,.24) 54%, rgba(15,12,9,0) 100%); }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__media > .home-film-toggle { z-index:3; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__cap { position:absolute; left:0; right:0; bottom:0; z-index:2; width:100%; max-width:none; align-items:center; justify-content:flex-end; text-align:center; gap:0; padding:40px 24px 32px; background:none; color:#fff; pointer-events:none; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__cap a { pointer-events:auto; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__logo { width:clamp(200px, 62vw, 300px); margin:0 auto 14px; filter:brightness(0) invert(1); }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__title { font:400 clamp(1.35rem, 5.76vw, 2.2rem)/1.08 'Fraunces',Georgia,serif !important; letter-spacing:.012em; color:#fff; max-width:none; margin:0; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__title br { display:none; }
+ body.home-maison[data-page="home"] .home-hero .brand-hero__sub { font:400 10.9px/1.6 var(--font-body); font-style:normal; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.85); margin:8px 0 0; }
+ body.home-maison[data-page="home"] .home-hero__actions { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; width:auto; margin:14px 0 0; }
+ body.home-maison[data-page="home"] .home-hero__actions .home-button { width:auto; min-height:0; padding:0 0 3px; background:none !important; border:0; border-bottom:1px solid currentColor; border-radius:0; color:#fff !important; font:400 11.5px/1.6 var(--font-body); letter-spacing:.1em; text-transform:uppercase; }
+ body.home-maison[data-page="home"] .home-hero__actions .home-button:hover { color:rgba(255,255,255,.72) !important; }
+}
+
 body.home-maison[data-page="home"] #bestSellers .home-best-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:28px; }
 body.home-maison[data-page="home"] #bestSellers .home-best-heading h2 { margin:0; }
 body.home-maison[data-page="home"] #bestSellers .home-best-heading a { align-self:auto; white-space:nowrap; }
