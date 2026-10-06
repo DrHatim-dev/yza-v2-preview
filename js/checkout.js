@@ -109,7 +109,10 @@
     // Single money source for every customer-facing amount — see YZA.cart.orderTotals().
     // It adds the destination delivery fee on top of merchandise; YZA.cart.pricing() alone
     // is merchandise-only and must never be used to quote a total.
-    function isPickup() { return state.ship.deliveryMode === 'pickup'; }
+    // Studio pickup at no delivery charge is retired: since 2026-10-05 delivery is never free
+    // and the order server charges the zone fee on every order. A pickup is arranged with the
+    // studio before ordering (C('pickup')), so an old saved 'pickup' mode no longer applies.
+    function isPickup() { return false; }
     function totals() { return D.totals(YZA.cart, destRegion(), isPickup()); }
 
     // Grouped country options for the selector: Morocco first, then the two priced regions.
@@ -210,9 +213,8 @@
         return '<div class="co-sum__row co-sum__row--discount"><span>' + esc(lbl) + '</span><span>−' + fmt(d.amountCents) + '</span></div>';
       }).join('');
       // Quote-only destinations are billed after the order; everywhere else shows the
-      // real number — "Offerte" only when the threshold is genuinely cleared.
-      var shipCell = tt.shippingQuoteOnly ? esc(T('co.shipCalc'))
-        : (tt.shippingFree ? esc(T('co.shipFree')) : fmt(tt.shippingCents));
+      // real fee. Delivery is never free (2026-10-05).
+      var shipCell = tt.shippingQuoteOnly ? esc(T('co.shipCalc')) : fmt(tt.shippingCents);
       var zone = isPickup() ? D.text(5) : destRegion() === 'morocco' ? C('morocco') : ((countryName(state.ship.country) || '') + ' · ' + (tt.shippingQuoteOnly ? T('co.shipCalc') : C('tracked')));
       var currency = YZA.currency?.selectorMarkup ? YZA.currency.selectorMarkup('checkout') : '';
       return '<aside class="co-sum' + (state.summaryOpen ? ' is-expanded' : '') + '" aria-label="' + esc(T('co.summary')) + '">' +
@@ -284,7 +286,7 @@
     function shippingStep() {
       const part = (n, label) => '<div class="co-delivery-heading"><span>' + n + '</span><h2>' + esc(D.text(label)) + '</h2></div>';
       const quote = YZA.cart.orderTotals(isPickup() && normCountry(state.ship.country) ? YZA.geo.regionOf(normCountry(state.ship.country)) : destRegion());
-      const fee = quote.shippingQuoteOnly ? T('co.shipCalc') : quote.shippingFree ? T('co.shipFree') : fmt(quote.shippingCents);
+      const fee = quote.shippingQuoteOnly ? T('co.shipCalc') : fmt(quote.shippingCents);
       const mode = (value, title, price, note) => '<label class="co-delivery-mode' + ((value === 'pickup') === isPickup() ? ' is-selected' : '') + '"><input id="co-mode-' + value + '" type="radio" data-delivery-mode value="' + value + '" name="deliveryChoice"' + ((value === 'pickup') === isPickup() ? ' checked' : '') + '><span><strong>' + esc(D.text(title)) + '</strong><small>' + esc(note) + '</small></span><em>' + esc(price) + '</em></label>';
       return '<h1 class="co-h1">' + esc(isPickup() ? D.text(13) : T('co.ship.title')) + '</h1><p class="co-intro">' + esc(isPickup() ? D.text(8) : C('shipIntro')) + '</p>' +
         '<form class="co-form co-delivery-form" id="coShipForm" novalidate>' +
@@ -292,7 +294,8 @@
           field('name', 'co.ship.name', 'text', true, 'autocomplete="name"') +
           '<div class="co-form__two">' + field('phone', 'co.ship.phone', 'tel', true, 'autocomplete="tel" inputmode="tel"') + field('email', 'co.ship.email', 'email', false, 'autocomplete="email"') + '</div>' +
           '<p class="co-phone-preview" id="coPhonePreview" aria-live="polite"></p>' +
-          part('02',1) + '<div class="co-delivery-modes" role="radiogroup" aria-label="' + esc(T('co.shipping')) + '">' + mode('delivery',4,fee,C('tracked')) + mode('pickup',5,D.text(6),D.text(7)) + '</div>' +
+          part('02',1) + '<div class="co-delivery-modes" role="radiogroup" aria-label="' + esc(T('co.shipping')) + '">' + mode('delivery',4,fee,C('tracked')) + '</div>' +
+          '<p class="co-delivery-hint">' + esc(C('pickup')) + ' <a class="link-underline" href="/studio">' + esc(C('pickupLink')) + '</a></p>' +
           (isPickup() ? '<div class="co-delivery-notice"><strong>' + esc(D.text(7)) + '</strong><p>' + esc(D.text(8)) + '</p><a class="link-underline" href="/studio">' + esc(C('pickupLink')) + '</a></div>' :
           field('address', 'co.ship.address', 'text', true, 'autocomplete="street-address"') +
           '<div class="co-form__two">' + field('city', 'co.ship.city', 'text', true, 'autocomplete="address-level2"') + field('zip', 'co.ship.zip', 'text', false, 'autocomplete="postal-code"') + '</div>' + countryField() +
@@ -307,7 +310,7 @@
     function deliveryReview() {
       const address = isPickup() ? D.text(7) : [state.ship.address, state.ship.zip, state.ship.city, countryName(state.ship.country)].filter(Boolean).join(', ');
       const tt = totals();
-      const fee = tt.shippingQuoteOnly ? T('co.shipCalc') : tt.shippingFree ? T('co.shipFree') : fmt(tt.shippingCents);
+      const fee = tt.shippingQuoteOnly ? T('co.shipCalc') : fmt(tt.shippingCents);
       const reviewRow = (label, value, target) => '<div class="co-delivery-review__row"><small>' + esc(label) + '</small><p>' + esc(value) + '</p><button class="link-underline" type="button" data-edit-shipping="' + target + '" aria-label="' + esc(C('edit') + ' — ' + label) + '">' + esc(C('edit')) + '</button></div>';
       return '<div class="co-delivery-review">' +
         reviewRow(C('payContact'), [state.ship.name,state.ship.phone,state.ship.email].filter(Boolean).join(' · '), 'co-name') +
@@ -566,7 +569,7 @@
       if (isPickup()) { shipOut.country = 'Maroc'; shipOut.address = 'Retrait au studio YZA — 66 rue Yougoslavie, Guéliz'; shipOut.city = 'Marrakech'; shipOut.zip = ''; }
       return { number: state.orderNo || '', operationId: state.operationId || '', items: items, subtotalDh: Math.round(tt.subtotalCents / 100), discounts: discounts,
         merchandiseDh: Math.round(tt.merchandiseCents / 100),
-        shippingDh: Math.round(tt.shippingCents / 100), shippingFree: tt.shippingFree, shippingQuoteOnly: tt.shippingQuoteOnly,
+        shippingDh: Math.round(tt.shippingCents / 100), shippingFree: false, shippingQuoteOnly: tt.shippingQuoteOnly,
         shippingRegion: tt.region, countryCode: isPickup() ? 'MA' : normCountry(state.ship.country),
         totalDh: Math.round(tt.grandTotalCents / 100), method: state.method, methodLabel: methodLabel(), shipping: shipOut, lang: YZA.i18n.lang,
         coupon: (YZA.cart.coupon && YZA.cart.couponDef()) ? YZA.cart.coupon.code : '',
@@ -626,14 +629,11 @@
       if (o.number) out.push('N° : ' + o.number);
       out = out.concat(lns);
       (o.discounts || []).forEach(function (d) { out.push(d.label + ' : −' + fmtMad(d.amountDh * 100)); });
-      // Always state the delivery fee explicitly — an order line that omits it is what
-      // let sub-threshold orders ship free without anyone noticing.
+      // Always state the delivery fee explicitly: every priced destination pays it.
       var tt = totals();
       var acceptedQuoteOnly = Object.prototype.hasOwnProperty.call(o, 'shippingQuoteOnly') ? !!o.shippingQuoteOnly : tt.shippingQuoteOnly;
-      var acceptedShippingFree = Object.prototype.hasOwnProperty.call(o, 'shippingFree') ? !!o.shippingFree : tt.shippingFree;
       var acceptedShippingC = (typeof o.shippingDh === 'number') ? o.shippingDh * 100 : tt.shippingCents;
-      out.push(c.ship + ' : ' + (acceptedQuoteOnly ? T('co.shipCalc')
-        : (acceptedShippingFree ? T('co.shipFree') : fmtMad(acceptedShippingC))));
+      out.push(c.ship + ' : ' + (acceptedQuoteOnly ? T('co.shipCalc') : fmtMad(acceptedShippingC)));
       var totalC = (typeof o.totalDh === 'number') ? o.totalDh * 100 : tt.grandTotalCents;
       out.push(c.total + ' : ' + fmtMad(totalC) + (isIntl() ? ' (' + eur(totalC) + ')' : ''));
       out.push('—');
@@ -1051,7 +1051,7 @@
       var r = e.target.closest('input[name="pay"]');
       if (r) { state.method = r.value; render(); return; }
       // Destination drives the delivery tariff — re-render so the summary fee/total
-      // and the free-shipping progress bar follow the country immediately.
+      // follow the country immediately.
       var cty = e.target.closest('select[name="country"]');
       if (cty) { state.ship.country = cty.value; if (destRegion() !== 'morocco' && state.method === 'cod') state.method = 'card'; saveShip(); render(); return; }
       // Order bump: check → add to cart; uncheck → decrement/remove. state.bumpOn is authoritative.

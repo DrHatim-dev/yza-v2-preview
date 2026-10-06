@@ -277,15 +277,12 @@
     if (provenance && target) target.append(provenance);
   }
 
-  function shipping(p) {
+  // Delivery is never free (2026-10-05): the delivery line under the button carries no
+  // progress track and no threshold, only main.js's "calculated at checkout" text.
+  function shipping() {
+    $('#bagShippingTrack')?.remove();
     const target = $('#pShipBar');
-    const progress = YZA.cart?.shippingProgress?.({ assumeItems: [{ handle: p.handle, qty: 1 }] });
-    if (!target || !progress) return;
-    let track = $('#bagShippingTrack');
-    if (!track) { track = document.createElement('div'); track.id = 'bagShippingTrack'; track.className = 'bag-shipping-track'; track.setAttribute('aria-hidden', 'true'); target.before(track); }
-    track.innerHTML = '<span></span>';
-    track.firstElementChild.style.transform = `scaleX(${progress.pct / 100})`;
-    target.dataset.threshold = price(progress.thresholdCents);
+    if (target) delete target.dataset.threshold;
   }
 
   function restoreChoices() {

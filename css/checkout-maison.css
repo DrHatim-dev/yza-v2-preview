@@ -377,7 +377,9 @@ body[data-page="checkout"] > .skip-link:not(:focus) { position:fixed; left:0; to
 #checkoutRoot .co-delivery-form .co-field__err { margin:6px 0 0; color:#a4491c; }
 #checkoutRoot .co-phone-preview { margin:-12px 0 20px; font-size:12px; color:var(--co-muted); }
 #checkoutRoot .co-phone-preview:empty { display:none; }
-#checkoutRoot .co-delivery-modes { display:grid; grid-template-columns:1fr 1fr; margin:0 0 30px; border:1px solid #d5d3ce; }
+/* One delivery mode since studio pickup stopped bypassing the fee (2026-10-05): full width. */
+#checkoutRoot .co-delivery-modes { display:grid; grid-template-columns:1fr; margin:0 0 30px; border:1px solid #d5d3ce; }
+#checkoutRoot .co-delivery-modes + .co-delivery-hint { margin:-18px 0 30px; }
 #checkoutRoot .co-delivery-mode { display:grid; grid-template-columns:16px minmax(0,1fr) auto; align-items:start; gap:8px; position:relative; padding:20px 16px; margin:0; border-top:2px solid transparent; cursor:pointer; }
 #checkoutRoot .co-delivery-mode + .co-delivery-mode { border-inline-start:1px solid #d5d3ce; }
 #checkoutRoot .co-delivery-mode.is-selected { border-top-color:var(--co-ink); }

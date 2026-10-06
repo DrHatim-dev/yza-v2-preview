@@ -29,11 +29,11 @@ const formatMad = (cents) => {
 
 
 const drawerCopy = {
-  fr: { gift: 'Emballage cadeau et mot écrit à la main', free: 'Offert', message: 'Votre mot (facultatif · 200 caractères)', subtotal: 'Sous-total', continue: 'Continuer mes achats', shipping: 'Frais de livraison calculés à l’étape suivante. Retrait au studio possible à Guéliz.', unlocked: 'Livraison offerte au Maroc — c’est acquis.', repair: 'Réparé à vie à l’atelier', secure: 'Paiement sécurisé', returns: '30 jours pour changer d’avis', help: 'Une question ?', delivery: 'Livraison & retours', removed: 'Pièce retirée du panier.', undo: 'Annuler', unavailable: 'Cette pièce n’est plus disponible dans cette quantité.', emptyTitle: 'Votre prochaine histoire commence ici.', emptyText: 'Découvrez nos pièces faites main, à partir de {price}.', emptyCta: 'Découvrir les Best Sellers', increase: 'Augmenter la quantité', decrease: 'Diminuer la quantité', add: 'Ajouter', choose: 'Choisir', handmade: 'Fait main à Marrakech', giftNote: 'Mot cadeau', added: 'Pièce ajoutée au panier.' },
-  en: { gift: 'Gift wrapping and a handwritten note', free: 'Complimentary', message: 'Your note (optional · 200 characters)', subtotal: 'Subtotal', continue: 'Continue shopping', shipping: 'Shipping calculated at the next step. Studio pickup available in Guéliz.', unlocked: 'Free delivery in Morocco — unlocked.', repair: 'Lifetime atelier repairs', secure: 'Secure payment', returns: '30 days to change your mind', help: 'A question?', delivery: 'Delivery & returns', removed: 'Item removed from your bag.', undo: 'Undo', unavailable: 'This quantity is no longer available.', emptyTitle: 'Your next story starts here.', emptyText: 'Discover our handmade pieces, from {price}.', emptyCta: 'Discover Best Sellers', increase: 'Increase quantity', decrease: 'Decrease quantity', add: 'Add', choose: 'Choose', handmade: 'Handmade in Marrakech', giftNote: 'Gift note', added: 'Item added to your bag.' },
-  es: { gift: 'Envoltorio de regalo y nota manuscrita', free: 'Gratis', message: 'Tu nota (opcional · 200 caracteres)', subtotal: 'Subtotal', continue: 'Seguir comprando', shipping: 'Envío calculado en el siguiente paso. Recogida en el estudio de Guéliz.', unlocked: 'Envío gratis en Marruecos — conseguido.', repair: 'Reparación de por vida', secure: 'Pago seguro', returns: '30 días para cambiar de opinión', help: '¿Una pregunta?', delivery: 'Envíos y devoluciones', removed: 'Pieza eliminada del carrito.', undo: 'Deshacer', unavailable: 'Esta cantidad ya no está disponible.', emptyTitle: 'Tu próxima historia empieza aquí.', emptyText: 'Descubre nuestras piezas hechas a mano, desde {price}.', emptyCta: 'Descubrir Best Sellers', increase: 'Aumentar cantidad', decrease: 'Reducir cantidad', add: 'Añadir', choose: 'Elegir', handmade: 'Hecho a mano en Marrakech', giftNote: 'Nota de regalo', added: 'Pieza añadida al carrito.' },
-  tr: { gift: 'Hediye paketi ve el yazısı not', free: 'Ücretsiz', message: 'Notunuz (isteğe bağlı · 200 karakter)', subtotal: 'Ara toplam', continue: 'Alışverişe devam et', shipping: 'Kargo sonraki adımda hesaplanır. Guéliz stüdyosundan teslim alınabilir.', unlocked: 'Fas’ta ücretsiz teslimat hakkı kazandınız.', repair: 'Atölyede ömür boyu onarım', secure: 'Güvenli ödeme', returns: '30 gün iade hakkı', help: 'Bir sorunuz mu var?', delivery: 'Teslimat ve iadeler', removed: 'Ürün sepetten çıkarıldı.', undo: 'Geri al', unavailable: 'Bu miktar artık mevcut değil.', emptyTitle: 'Yeni hikâyeniz burada başlıyor.', emptyText: '{price} başlayan fiyatlarla el yapımı parçalarımızı keşfedin.', emptyCta: 'Best Sellers keşfet', increase: 'Adedi artır', decrease: 'Adedi azalt', add: 'Ekle', choose: 'Seç', handmade: 'Marakeş’te el yapımı', giftNote: 'Hediye notu', added: 'Ürün sepete eklendi.' },
-  ar: { gift: 'تغليف هدية ورسالة مكتوبة بخط اليد', free: 'مجاناً', message: 'رسالتك (اختياري · 200 حرف)', subtotal: 'المجموع الفرعي', continue: 'متابعة التسوق', shipping: 'تُحسب رسوم التوصيل في الخطوة التالية. يمكن الاستلام من استوديو كيليز.', unlocked: 'التوصيل داخل المغرب مجاني الآن.', repair: 'إصلاح مدى الحياة في الورشة', secure: 'دفع آمن', returns: '30 يوماً لتغيير رأيك', help: 'لديك سؤال؟', delivery: 'التوصيل والإرجاع', removed: 'تمت إزالة القطعة من السلة.', undo: 'تراجع', unavailable: 'هذه الكمية لم تعد متوفرة.', emptyTitle: 'قصتك القادمة تبدأ هنا.', emptyText: 'اكتشفي قطعنا المصنوعة يدوياً، ابتداءً من {price}.', emptyCta: 'اكتشفي Best Sellers', increase: 'زيادة الكمية', decrease: 'تقليل الكمية', add: 'إضافة', choose: 'اختيار', handmade: 'صنع يدوياً في مراكش', giftNote: 'رسالة الهدية', added: 'تمت إضافة القطعة إلى السلة.' }
+  fr: { gift: 'Emballage cadeau et mot écrit à la main', free: 'Offert', message: 'Votre mot (facultatif · 200 caractères)', subtotal: 'Sous-total', continue: 'Continuer mes achats', shipping: 'Frais de livraison calculés à l’étape suivante. Retrait au studio possible à Guéliz.', repair: 'Réparé à vie à l’atelier', secure: 'Paiement sécurisé', returns: '30 jours pour changer d’avis', help: 'Une question ?', delivery: 'Livraison & retours', removed: 'Pièce retirée du panier.', undo: 'Annuler', unavailable: 'Cette pièce n’est plus disponible dans cette quantité.', emptyTitle: 'Votre prochaine histoire commence ici.', emptyText: 'Découvrez nos pièces faites main, à partir de {price}.', emptyCta: 'Découvrir les Best Sellers', increase: 'Augmenter la quantité', decrease: 'Diminuer la quantité', add: 'Ajouter', choose: 'Choisir', handmade: 'Fait main à Marrakech', giftNote: 'Mot cadeau', added: 'Pièce ajoutée au panier.' },
+  en: { gift: 'Gift wrapping and a handwritten note', free: 'Complimentary', message: 'Your note (optional · 200 characters)', subtotal: 'Subtotal', continue: 'Continue shopping', shipping: 'Shipping calculated at the next step. Studio pickup available in Guéliz.', repair: 'Lifetime atelier repairs', secure: 'Secure payment', returns: '30 days to change your mind', help: 'A question?', delivery: 'Delivery & returns', removed: 'Item removed from your bag.', undo: 'Undo', unavailable: 'This quantity is no longer available.', emptyTitle: 'Your next story starts here.', emptyText: 'Discover our handmade pieces, from {price}.', emptyCta: 'Discover Best Sellers', increase: 'Increase quantity', decrease: 'Decrease quantity', add: 'Add', choose: 'Choose', handmade: 'Handmade in Marrakech', giftNote: 'Gift note', added: 'Item added to your bag.' },
+  es: { gift: 'Envoltorio de regalo y nota manuscrita', free: 'Gratis', message: 'Tu nota (opcional · 200 caracteres)', subtotal: 'Subtotal', continue: 'Seguir comprando', shipping: 'Envío calculado en el siguiente paso. Recogida en el estudio de Guéliz.', repair: 'Reparación de por vida', secure: 'Pago seguro', returns: '30 días para cambiar de opinión', help: '¿Una pregunta?', delivery: 'Envíos y devoluciones', removed: 'Pieza eliminada del carrito.', undo: 'Deshacer', unavailable: 'Esta cantidad ya no está disponible.', emptyTitle: 'Tu próxima historia empieza aquí.', emptyText: 'Descubre nuestras piezas hechas a mano, desde {price}.', emptyCta: 'Descubrir Best Sellers', increase: 'Aumentar cantidad', decrease: 'Reducir cantidad', add: 'Añadir', choose: 'Elegir', handmade: 'Hecho a mano en Marrakech', giftNote: 'Nota de regalo', added: 'Pieza añadida al carrito.' },
+  tr: { gift: 'Hediye paketi ve el yazısı not', free: 'Ücretsiz', message: 'Notunuz (isteğe bağlı · 200 karakter)', subtotal: 'Ara toplam', continue: 'Alışverişe devam et', shipping: 'Kargo sonraki adımda hesaplanır. Guéliz stüdyosundan teslim alınabilir.', repair: 'Atölyede ömür boyu onarım', secure: 'Güvenli ödeme', returns: '30 gün iade hakkı', help: 'Bir sorunuz mu var?', delivery: 'Teslimat ve iadeler', removed: 'Ürün sepetten çıkarıldı.', undo: 'Geri al', unavailable: 'Bu miktar artık mevcut değil.', emptyTitle: 'Yeni hikâyeniz burada başlıyor.', emptyText: '{price} başlayan fiyatlarla el yapımı parçalarımızı keşfedin.', emptyCta: 'Best Sellers keşfet', increase: 'Adedi artır', decrease: 'Adedi azalt', add: 'Ekle', choose: 'Seç', handmade: 'Marakeş’te el yapımı', giftNote: 'Hediye notu', added: 'Ürün sepete eklendi.' },
+  ar: { gift: 'تغليف هدية ورسالة مكتوبة بخط اليد', free: 'مجاناً', message: 'رسالتك (اختياري · 200 حرف)', subtotal: 'المجموع الفرعي', continue: 'متابعة التسوق', shipping: 'تُحسب رسوم التوصيل في الخطوة التالية. يمكن الاستلام من استوديو كيليز.', repair: 'إصلاح مدى الحياة في الورشة', secure: 'دفع آمن', returns: '30 يوماً لتغيير رأيك', help: 'لديك سؤال؟', delivery: 'التوصيل والإرجاع', removed: 'تمت إزالة القطعة من السلة.', undo: 'تراجع', unavailable: 'هذه الكمية لم تعد متوفرة.', emptyTitle: 'قصتك القادمة تبدأ هنا.', emptyText: 'اكتشفي قطعنا المصنوعة يدوياً، ابتداءً من {price}.', emptyCta: 'اكتشفي Best Sellers', increase: 'زيادة الكمية', decrease: 'تقليل الكمية', add: 'إضافة', choose: 'اختيار', handmade: 'صنع يدوياً في مراكش', giftNote: 'رسالة الهدية', added: 'تمت إضافة القطعة إلى السلة.' }
 };
 
 const cart = {
@@ -149,7 +149,7 @@ const cart = {
   save() {
     localStorage.setItem(KEY, JSON.stringify(this.items));
     this.refresh();
-    // Lets non-drawer surfaces (PDP free-ship line…) stay honest as the cart changes.
+    // Lets non-drawer surfaces stay honest as the cart changes.
     try { document.dispatchEvent(new CustomEvent('yza:cartchange')); } catch (e) {}
   },
   _key(handle, variant, colorSlug, releaseId, finishKey, sizeCode) {
@@ -369,84 +369,26 @@ const cart = {
     }, 0);
   },
 
-  // ---- Shared free-shipping math (drawer bar, checkout summary, PDP line, nudges).
-  // assumeItems: virtual extra items — e.g. the PDP product before it's added. ----
-  shippingProgress(opts = {}) {
-    const assumed = opts.assumeItems || [];
-    const all = this.items.concat(assumed);
-    const allAccessories = all.length > 0 && all.every((i) => {
-      const p = YZA.getProduct?.(i.handle);
-      return p && p.group === 'accessories';
-    });
-    const threshold = allAccessories
-      ? (YZA.servicePolicy?.freeShippingAccessoriesDh || 50000)
-      : (YZA.servicePolicy?.freeShippingDh || 150000);
-    const assumedCents = assumed.reduce((s, i) => {
-      const p = YZA.getProduct?.(i.handle);
-      return s + (p ? p.price * (i.qty || 1) : 0);
-    }, 0);
-    // What the customer actually pays (post-discount) — honest + consistent everywhere.
-    // MAIS le coupon est exclu de ce calcul : le franco se gagne sur le panier COMPOSE.
-    // Sinon appliquer un code de -10% faisait RECULER la barre et pouvait re-verrouiller
-    // le port offert Europe (250 EUR) / USA (350 EUR) : la cliente saisit une remise et
-    // voit 25 EUR de livraison apparaitre — son total ne baisse presque pas. Les remises
-    // automatiques (paliers charms) restent deduites, elles, comme c'etait deja le cas.
-    const _pr = this.pricing();
-    const _couponCents = (_pr.discounts.find((d) => d && d.id === 'coupon') || {}).amountCents || 0;
-    const paid = _pr.totalCents + _couponCents + assumedCents;
-    const remaining = Math.max(0, threshold - paid);
-    return {
-      thresholdCents: threshold,
-      paidCents: paid,
-      remainingCents: remaining,
-      pct: Math.max(0, Math.min(100, Math.round((paid / threshold) * 100))),
-      allAccessories,
-      unlocked: remaining === 0 && all.length > 0,
-    };
-  },
-
-  // Region-aware shipping quote (MAD-cents). Morocco uses the native accessory/bag tiers;
-  // Europe & USA/Gulf convert the EUR thresholds/fees at the live display rate; anything
-  // else is quoted after the order. `region` defaults to the visitor's timezone region.
-  shippingQuote(region, opts = {}) {
+  // Region-aware shipping quote (MAD-cents). Since 2026-10-05 delivery is never free: every
+  // priced destination pays its fee whatever the cart value, products or coupon, exactly as
+  // catalog-order-lib.php charges it. Europe & USA/Gulf convert their EUR fee at the fixed
+  // settlement rate; anything else is quoted after the order. `region` defaults to the
+  // visitor's timezone region.
+  shippingQuote(region) {
     region = region || (YZA.geo && YZA.geo.fromTimezone ? YZA.geo.fromTimezone() : 'other');
     const sp = YZA.shippingPolicy || {};
-    const prog = this.shippingProgress(opts);
     // Fixed checkout settlement rate; catalog-order-lib.php uses the same 11 DH/EUR.
     // Display-currency rates can refresh independently and must not change delivery money.
     const eurToCents = (e) => Math.round((Number(e) || 0) * ((YZA.payment && YZA.payment.eurRate) || 11) * 100);
     if (region === 'europe' || region === 'usa_gcc') {
       const cfg = sp[region] || {};
-      const freeCents = eurToCents(cfg.freeEur);
-      return {
-        region, quoteOnly: false,
-        feeCents: eurToCents(cfg.feeEur),
-        freeThresholdCents: freeCents,
-        unlocked: prog.paidCents >= freeCents,
-        etaKey: cfg.etaKey || null,
-        paidCents: prog.paidCents,
-      };
+      return { region, quoteOnly: false, feeCents: eurToCents(cfg.feeEur), etaKey: cfg.etaKey || null };
     }
     if (region === 'morocco') {
       const m = sp.morocco || {};
-      /* Le coupon ouvre le port offert au Maroc, meme si le panier n'atteint pas le seuil
-         habituel — et il le garde meme quand la remise fait repasser le total en dessous.
-         C'est voulu : le droit s'acquiert sur le panier compose, il ne se retire pas
-         parce qu'on vient d'accorder une remise. */
-      const cdef = this.couponDef();
-      const couponFree = !!(cdef && (cdef.freeShipRegions || []).indexOf('morocco') !== -1);
-      return {
-        region, quoteOnly: false,
-        feeCents: Math.round((m.feeDh || 50) * 100),
-        freeThresholdCents: prog.thresholdCents,
-        unlocked: prog.unlocked || couponFree,
-        couponFree,
-        etaKey: null,
-        paidCents: prog.paidCents,
-        allAccessories: prog.allAccessories,
-      };
+      return { region, quoteOnly: false, feeCents: Math.round((m.feeDh ?? 50) * 100), etaKey: null };
     }
-    return { region: 'other', quoteOnly: true, feeCents: 0, freeThresholdCents: 0, unlocked: false, etaKey: null, paidCents: prog.paidCents };
+    return { region: 'other', quoteOnly: true, feeCents: 0, etaKey: null };
   },
 
   // ---- THE money source for anything the customer is actually charged. ----
@@ -455,14 +397,13 @@ const cart = {
   // WooCommerce, PayPal/IBAN amounts, purchase pixels — must read grandTotalCents here
   // instead, or the delivery fee silently never gets charged.
   // `region` is the DESTINATION region (from the checkout country), not the visitor's.
-  orderTotals(region, opts = {}) {
+  orderTotals(region) {
     const pr = this.pricing();
-    const q = this.shippingQuote(region, opts);
-    const free = !q.quoteOnly && q.unlocked;
+    const q = this.shippingQuote(region);
     // Quote-only destinations are billed after the order, so they add 0 here — but they
-    // are NOT "free", and the UI must say so rather than showing "Offerte".
+    // are NOT "free", and the UI must say so. Every other destination always pays its fee.
     // An empty cart owes nothing: never quote a delivery fee on 0 items.
-    const shippingCents = (!this.items.length || q.quoteOnly || free) ? 0 : q.feeCents;
+    const shippingCents = (!this.items.length || q.quoteOnly) ? 0 : q.feeCents;
     return {
       subtotalCents: pr.subtotalCents,
       discounts: pr.discounts,
@@ -470,13 +411,14 @@ const cart = {
       merchandiseCents: pr.totalCents,
       region: q.region,
       shippingCents,
-      shippingFree: free,
+      shippingFree: false,
       shippingQuoteOnly: !!q.quoteOnly,
-      freeThresholdCents: q.freeThresholdCents,
       grandTotalCents: pr.totalCents + shippingCents,
     };
   },
 
+  // Delivery line in the cart drawer (and, for quote-only destinations, at checkout).
+  // There is no free-delivery threshold to count down to any more.
   deliveryProgressHTML(region) {
     const t = YZA.i18n;
     const lang = t.lang || 'fr';
@@ -491,28 +433,14 @@ const cart = {
       };
       return `<p>${o[lang] || o.fr}</p>`;
     }
-    const remaining = Math.max(0, q.freeThresholdCents - q.paidCents);
-    const pct = q.freeThresholdCents ? Math.max(0, Math.min(100, Math.round((q.paidCents / q.freeThresholdCents) * 100))) : 0;
-    const whereMap = {
-      morocco: { fr: 'au Maroc', en: 'in Morocco', es: 'en Marruecos', tr: "Fas'ta", ar: 'داخل المغرب' },
-      europe: { fr: 'en Europe', en: 'to Europe', es: 'a Europa', tr: "Avrupa'ya", ar: 'إلى أوروبا' },
-      usa_gcc: { fr: '', en: '', es: '', tr: '', ar: '' },
-    };
-    const where = whereMap[q.region] || whereMap.morocco;
-    const w = where[lang] || where.fr;
     const copy = {
-      fr: remaining ? `Ajoutez ${t.formatPrice(remaining)} pour la livraison offerte ${w}.` : `Livraison offerte ${w} débloquée.`,
-      en: remaining ? `Add ${t.formatPrice(remaining)} more for free delivery ${w}.` : `Free delivery ${w} unlocked.`,
-      es: remaining ? `Añade ${t.formatPrice(remaining)} para envío gratis ${w}.` : `Envío gratis ${w} desbloqueado.`,
-      tr: remaining ? `${w} ücretsiz teslimat için ${t.formatPrice(remaining)} daha ekleyin.` : `${w} ücretsiz teslimat açıldı.`,
-      ar: remaining ? `أضيفي ${t.formatPrice(remaining)} للحصول على توصيل مجاني ${w}.` : `تم تفعيل التوصيل المجاني ${w}.`,
+      fr: 'Frais de livraison calculés au paiement, selon votre adresse.',
+      en: 'Shipping calculated at checkout, based on your address.',
+      es: 'Gastos de envío calculados al pagar, según tu dirección.',
+      tr: 'Kargo ücreti, adresinize göre ödeme adımında hesaplanır.',
+      ar: 'تُحتسب رسوم التوصيل عند الدفع حسب عنوانك.',
     };
-    return `<p>${(copy[lang] || copy.fr).replace(/\s+\./g, '.').replace(/\s{2,}/g, ' ').trim()}</p>
-      <div class="cart-progress__track" aria-hidden="true"><span style="transform:scaleX(${pct / 100})"></span></div>
-      <div class="cart-progress__meta">
-        <span>${t.formatPrice(q.paidCents)}</span>
-        <span>${t.formatPrice(q.freeThresholdCents)}</span>
-      </div>`;
+    return `<p>${copy[lang] || copy.fr}</p>`;
   },
 
   /* — UI — */
@@ -566,9 +494,6 @@ const cart = {
     if (progress) {
       progress.hidden = !n;
       progress.innerHTML = this.deliveryProgressHTML('morocco');
-      const free = this.shippingQuote('morocco').unlocked;
-      progress.classList.toggle('is-unlocked', free);
-      if (free) progress.querySelector('p').textContent = this.copy('unlocked');
     }
     const notice = drawer.querySelector('[data-cart-notice]');
     notice.hidden = !this._removed;
@@ -638,7 +563,7 @@ const cart = {
             `<span>${esc(this.discountLabel(d))}</span><strong>−${t.formatPrice(d.amountCents)}</strong>`).join('');
         } else { discEl.hidden = true; discEl.innerHTML = ''; }
       }
-      foot.querySelector('[data-cart-shipping-note]').textContent = this.shippingQuote('morocco').unlocked ? this.copy('unlocked') : this.copy('shipping');
+      foot.querySelector('[data-cart-shipping-note]').textContent = this.copy('shipping');
     }
   },
 

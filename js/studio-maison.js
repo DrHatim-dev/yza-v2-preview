@@ -2,11 +2,11 @@
 (function () {
   'use strict';
   const copy = {
-    fr: ['Livraison offerte dès 500 DH · Retrait au studio, Guéliz', 'Le Studio', 'Pause', 'Lire le film'],
-    en: ['Free shipping from 500 DH · Studio pickup, Guéliz', 'The Studio', 'Pause', 'Play film'],
-    es: ['Envío gratis desde 500 DH · Recogida en el estudio, Guéliz', 'El estudio', 'Pausa', 'Reproducir'],
-    tr: ['500 DH üzeri ücretsiz teslimat · Guéliz stüdyosundan teslim', 'Stüdyo', 'Duraklat', 'Filmi oynat'],
-    ar: ['توصيل مجاني ابتداءً من 500 درهم · الاستلام من استوديو كليز', 'الاستوديو', 'إيقاف مؤقت', 'تشغيل الفيلم'],
+    fr: ['Livraison suivie depuis Marrakech · frais calculés au paiement', 'Le Studio', 'Pause', 'Lire le film'],
+    en: ['Tracked delivery from Marrakech · shipping calculated at checkout', 'The Studio', 'Pause', 'Play film'],
+    es: ['Envío con seguimiento desde Marrakech · gastos calculados al pagar', 'El estudio', 'Pausa', 'Reproducir'],
+    tr: ['Marrakech\'ten takipli teslimat · kargo ücreti ödemede hesaplanır', 'Stüdyo', 'Duraklat', 'Filmi oynat'],
+    ar: ['توصيل متتبَّع من مراكش · تُحتسب الرسوم عند الدفع', 'الاستوديو', 'إيقاف مؤقت', 'تشغيل الفيلم'],
   };
   const words = () => copy[window.YZA?.i18n?.lang] || copy.fr;
   function updateHeader() {

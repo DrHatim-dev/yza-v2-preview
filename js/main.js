@@ -2309,27 +2309,27 @@
     const lang = t.lang || 'fr';
     const copy = {
       fr: [
-        ['LIVRAISON OFFERTE DES 1 500 DH', 'Livraison suivie au Maroc et retrait possible au studio de Gueliz.'],
+        ['LIVRAISON CALCULEE AU PAIEMENT', 'Livraison suivie au Maroc et retrait possible au studio de Gueliz.'],
         ['RETOURS 30 JOURS', 'Essayez tranquillement, retour possible si la piece reste non portee.'],
         ['ATELIER FEMININ A MARRAKECH', 'Chaque piece passe par les mains de notre atelier.'],
       ],
       en: [
-        ['FREE SHIPPING FROM 1,500 DH', 'Tracked Morocco delivery and studio pickup in Gueliz.'],
+        ['SHIPPING CALCULATED AT CHECKOUT', 'Tracked Morocco delivery and studio pickup in Gueliz.'],
         ['30-DAY RETURNS', 'Try it calmly, return it unworn if it is not right.'],
         ['WOMEN-LED ATELIER IN MARRAKECH', 'Every piece passes through the hands of our atelier.'],
       ],
       es: [
-        ['ENVIO GRATIS DESDE 1.500 DH', 'Entrega con seguimiento en Marruecos y recogida en Gueliz.'],
+        ['ENVIO CALCULADO AL PAGAR', 'Entrega con seguimiento en Marruecos y recogida en Gueliz.'],
         ['DEVOLUCIONES 30 DIAS', 'Pruebala con calma, devuelvela sin usar si no encaja.'],
         ['ATELIER FEMENINO EN MARRAKECH', 'Cada pieza pasa por las manos de nuestro atelier.'],
       ],
       tr: [
-        ['1.500 DH UZERI UCRETSIZ TESLIMAT', 'Fas ici takipli teslimat ve Gueliz studyo teslimi.'],
+        ['KARGO UCRETI ODEMEDE HESAPLANIR', 'Fas ici takipli teslimat ve Gueliz studyo teslimi.'],
         ['30 GUN IADE', 'Sakin deneyin, kullanilmadiysa iade edin.'],
         ['MARRAKECH KADIN ATOLYESI', 'Her parca atolyemizin ellerinden gecer.'],
       ],
       ar: [
-        ['توصيل مجاني من 1,500 درهم', 'توصيل متتبع داخل المغرب واستلام من استوديو كليز.'],
+        ['رسوم التوصيل تُحتسب عند الدفع', 'توصيل متتبع داخل المغرب واستلام من استوديو كليز.'],
         ['ارجاع خلال 30 يوما', 'جربيها بهدوء، ويمكن ارجاعها غير مستعملة.'],
         ['اتولييه نسائي في مراكش', 'كل قطعة تمر بين ايدي اتولييهنا.'],
       ],
@@ -2778,14 +2778,10 @@
  const wrap = $('#pTrustChips');
  if (!wrap || !p) return;
  const t = T();
- const isAccessories = p.group === 'accessories';
- const threshold = isAccessories
- ? (YZA.servicePolicy?.freeShippingAccessoriesDh || 50000)
- : (YZA.servicePolicy?.freeShippingDh || 150000);
  const deliveryFeature = YZA.serviceFeature('morocco-delivery');
  const deliveryChip = deliveryFeature ? `<span class="product-trust-chip" data-service-chip="morocco-delivery">
  ${YZA.serviceIcon(deliveryFeature.icon, 'product-trust-chip__icon')}
- <span>${t.pick({ fr: `Livraison offerte dès ${t.formatPrice(threshold)}`, en: `Free delivery from ${t.formatPrice(threshold)}` })}</span>
+ <span>${t.pick({ fr: 'Livraison calculée au paiement', en: 'Shipping calculated at checkout' })}</span>
  </span>` : '';
  wrap.innerHTML = deliveryChip + ['returns', 'repairs'].map((key) => YZA.serviceChip(key)).join('');
  }
@@ -3785,24 +3781,16 @@
  } else { el.hidden = true; el.textContent = ''; }
  };
  renderScarcity(purchaseProduct);
- // Free-shipping line under ADD TO CART: progress computed AS IF this piece were in the
- // cart (assumeItems), so the 500 DH accessories vs 1500 DH general threshold resolves
- // correctly whatever is already in the cart.
- const renderShipBar = (prod) => {
+ // Delivery line under ADD TO CART. Delivery is never free since 2026-10-05: the fee is
+ // added at checkout from the delivery address, so there is no threshold to count down.
+ const renderShipBar = () => {
  const el = $('#pShipBar');
- if (!el || !YZA.cart?.shippingProgress) return;
- YZA.cart.load(); // renderProduct can run before cart.init() — read the real cart
- const s = YZA.cart.shippingProgress({ assumeItems: [{ handle: prod.handle, qty: 1 }] });
- el.innerHTML = s.remainingCents > 0
- ? t.tFmt('pp.shipbar.remaining', { x: t.formatPrice(s.remainingCents) })
- : t.t('pp.shipbar.unlockedWith');
+ if (!el) return;
+ YZA.cart?.load?.(); // renderProduct can run before cart.init() — read the real cart
+ el.setAttribute('data-i18n', 'pp.shipbar.checkout');
+ el.textContent = t.t('pp.shipbar.checkout');
  };
- renderShipBar(purchaseProduct);
- // Keep the line honest as the cart changes (adds from the drawer, qty steps…).
- if (!root.dataset.shipbarWired) {
- root.dataset.shipbarWired = '1';
- document.addEventListener('yza:cartchange', () => renderShipBar(purchaseProduct));
- }
+ renderShipBar();
  const cross = $('#pCross');
  if (cross) {
  const next = YZA.related(p.handle, 1)[0];

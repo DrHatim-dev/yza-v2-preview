@@ -4,11 +4,11 @@
   const YZA = window.YZA = window.YZA || {};
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const copy = {
-    fr: ['Livraison offerte au Maroc dès 500 DH (accessoires) · 1 500 DH (sacs & prêt-à-porter)', 'Pause', 'Lire le film', 'Vue'],
-    en: ['Free shipping from 500 DH · Studio pickup, Guéliz', 'Pause', 'Play film', 'View'],
-    es: ['Envío gratis desde 500 DH · Recogida en el estudio, Guéliz', 'Pausa', 'Reproducir', 'Vista'],
-    tr: ['500 DH üzeri ücretsiz teslimat · Guéliz stüdyosundan teslim', 'Duraklat', 'Filmi oynat', 'Görünüm'],
-    ar: ['توصيل مجاني ابتداءً من 500 درهم · الاستلام من استوديو كليز', 'إيقاف مؤقت', 'تشغيل الفيلم', 'مشهد'],
+    fr: ['Livraison suivie depuis Marrakech · frais calculés au paiement', 'Pause', 'Lire le film', 'Vue'],
+    en: ['Tracked delivery from Marrakech · shipping calculated at checkout', 'Pause', 'Play film', 'View'],
+    es: ['Envío con seguimiento desde Marrakech · gastos calculados al pagar', 'Pausa', 'Reproducir', 'Vista'],
+    tr: ['Marrakech\'ten takipli teslimat · kargo ücreti ödemede hesaplanır', 'Duraklat', 'Filmi oynat', 'Görünüm'],
+    ar: ['توصيل متتبَّع من مراكش · تُحتسب الرسوم عند الدفع', 'إيقاف مؤقت', 'تشغيل الفيلم', 'مشهد'],
   };
   const words = () => copy[YZA.i18n?.lang] || copy.fr;
   YZA.renderHomeMaison = function () {

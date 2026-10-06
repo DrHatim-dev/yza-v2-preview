@@ -195,17 +195,15 @@ YZA.tracking = {
 
 YZA.servicePolicy = {
  returnsDays: 30,
- freeShippingDh: 150000,
- freeShippingAccessoriesDh: 50000,
  b2bMoqBags: 10,
- shipping: { fr: 'Expédition suivie sous 48 h pour les pièces en stock. Livraison Maroc offerte dès 500 DH (accessoires) ou 1 500 DH (sacs & prêt-à-porter).', en: 'Tracked dispatch within 48 hours for in-stock pieces. Free Morocco delivery from 500 DH (accessories) or 1,500 DH (bags & ready-to-wear).' },
+ shipping: { fr: 'Expédition suivie sous 48 h pour les pièces en stock. Frais de livraison calculés au paiement, selon votre adresse.', en: 'Tracked dispatch within 48 hours for in-stock pieces. Shipping calculated at checkout, based on your address.' },
  packaging: { fr: "Emballage prêt à offrir, avec étiquette YZA et mot de l\"atelier.", en: "Gift-ready packaging with YZA tag and atelier note." },
  guarantee: { fr: "Garantie à vie : vos pièces se réparent à vie à l'atelier de Guéliz, elles ne se jettent pas. Et vous avez 30 jours pour changer d'avis — retour non porté, dans son état d'origine.", en: "Lifetime guarantee: your pieces are repaired for life at the Guéliz atelier, never thrown away. And you have 30 days to change your mind — returned unworn, in original condition." },
  repairs: { fr: "Réparations à vie offertes à l\"atelier de Guéliz. À distance, seuls les frais d\"envoi peuvent s\"appliquer.", en: "Lifetime repairs are free at the Guéliz atelier. For remote repairs, shipping may apply." },
 };
 
 // ── Region shipping policy (client spec 2026-07-15) ─────────────────────────
-// Morocco is native MAD (accessories free ≥500 DH, bags/RTW free ≥1500 DH, else 50 DH).
+// Morocco: 50 DH on every order. Delivery is never free (owner's decision, 2026-10-05).
 // Europe & USA/Gulf are quoted in EUR and converted to MAD at the live display rate.
 // Any other destination is quoted after the order (no fixed fee). Amounts are the spec.
 /* COUPONS. Une seule definition, lue par le panier ET recopiee cote serveur dans
@@ -213,11 +211,7 @@ YZA.servicePolicy = {
    le serveur ne seront pas d'accord et la commande sera refusee.
    minDh se mesure sur le sous-total AVANT toute remise : c'est le panier que la cliente a
    compose qui ouvre le droit, pas ce qu'elle finit par payer.
-   freeShipRegions : le port offert ne vaut QUE pour ces regions. La cliente a demande le
-   Maroc ; ailleurs le coupon donne la remise mais pas la livraison, parce que le port
-   Europe/USA est un cout reel de 25 a 50 EUR qu'aucune remise de 10% ne couvre.
-   Le port reste offert meme si la remise fait repasser le total sous minDh : le droit est
-   acquis au moment ou le panier franchit le seuil, il ne se retire pas ensuite. */
+   Coupons never change the delivery fee. */
 /* CHARMY — operation privee, page /offre-charmy.html (lien envoye a la main par Nawal).
    Ce coupon n'est PAS un pourcentage : `pct: 0` et `freeItemCategory` basculent le calcul
    sur « une piece de cette categorie est offerte ». La remise vaut le prix de la piece
@@ -228,16 +222,16 @@ YZA.servicePolicy = {
    l'offre est finie ; c'est le SERVEUR (yza-coupon-lib.php) qui tranche pour de bon —
    le navigateur ne fait qu'eviter d'annoncer un prix qui serait ensuite refuse. */
 YZA.coupons = {
- YZA10:  { code: 'YZA10', pct: 10, minDh: 500, freeShipRegions: ['morocco'], oncePerEmail: true },
+ YZA10:  { code: 'YZA10', pct: 10, minDh: 500, freeShipRegions: [], oncePerEmail: true },
  CHARMY: { code: 'CHARMY', pct: 0, minDh: 1000, freeShipRegions: [], oncePerEmail: true,
            freeItemCategory: 'charms', freeItemMaxDh: 230,
            expiresAt: '2026-08-18T23:59:59+01:00', maxRedemptions: 30 },
 };
 
 YZA.shippingPolicy = {
- morocco: { freeAccDh: 500, freeDh: 1500, feeDh: 50 },
- europe:  { freeEur: 250, feeEur: 25, etaKey: 'co.ship.etaEU' },
- usa_gcc: { freeEur: 350, feeEur: 50, etaKey: 'co.ship.etaUS' },
+ morocco: { feeDh: 50 },
+ europe:  { feeEur: 25, etaKey: 'co.ship.etaEU' },
+ usa_gcc: { feeEur: 50, etaKey: 'co.ship.etaUS' },
 };
 
 // Visitor → region from the device timezone (banner + drawer nudge; no geo-IP, privacy-safe).
@@ -318,9 +312,9 @@ YZA.serviceFeatures = [
  {
  key: 'morocco-delivery',
  icon: 'shipping',
- title: { fr: 'Livraison Maroc offerte', en: 'Free Morocco delivery', es: 'Envio Marruecos gratis', tr: 'Fas ici ucretsiz teslimat', ar: 'توصيل مجاني في المغرب' },
- text: { fr: 'Livraison suivie offerte au Maroc dès 500 DH (accessoires) ou 1 500 DH (sacs & prêt-à-porter). Retrait au studio possible à Guéliz.', en: 'Tracked Morocco delivery is free from 500 DH (accessories) or 1,500 DH (bags & ready-to-wear). Studio pickup available in Guéliz.', es: 'Envio con seguimiento en Marruecos gratis desde 500 DH (accesorios) o 1.500 DH (bolsos y ropa). Retiro en Guéliz.', tr: 'Fas ici takipli teslimat aksesuar icin 500 DH, canta ve giysi icin 1.500 DH uzeri ucretsiz. Guéliz studyo teslimi var.', ar: 'توصيل متتبع مجاني داخل المغرب من 500 درهم (إكسسوارات) أو 1,500 درهم (حقائب وملابس). يمكن الاستلام من كليز.' },
- short: { fr: 'Offert dès 500 DH', en: 'Free from 500 DH', es: 'Gratis desde 500 DH', tr: '500 DH uzeri', ar: 'من 500 درهم' },
+ title: { fr: 'Livraison suivie au Maroc', en: 'Tracked Morocco delivery', es: 'Envio con seguimiento en Marruecos', tr: 'Fas ici takipli teslimat', ar: 'توصيل متتبَّع داخل المغرب' },
+ text: { fr: '50 DH, ajoutés au paiement. Retrait au studio possible à Guéliz.', en: '50 DH, added at checkout. Studio pickup available in Guéliz.', es: '50 DH, añadidos al pagar. Recogida en Guéliz.', tr: '50 DH, ödeme adımında eklenir. Guéliz stüdyosundan teslim alınabilir.', ar: '50 درهم، تُضاف عند الدفع. يمكن الاستلام من كليز.' },
+ short: { fr: 'Calculée au paiement', en: 'Calculated at checkout', es: 'Calculado al pagar', tr: 'Ödemede hesaplanır', ar: 'تُحتسب عند الدفع' },
  },
  {
  key: 'international',
@@ -21685,8 +21679,6 @@ YZA.applyCanonicalCommerce = function (release) {
  const r = release.commerce;
  YZA.payment.eurRate = r.checkout.eurSettlementRate;
  YZA.shippingPolicy = r.shipping;
- YZA.servicePolicy.freeShippingAccessoriesDh = r.shipping.morocco.freeAccDh * 100;
- YZA.servicePolicy.freeShippingDh = r.shipping.morocco.freeDh * 100;
  YZA.promos.charmTiers = { enabled: true, category: 'charms', tiers: r.cart.charmTiers };
  YZA.coupons = {}; // A coupon rule is supplied only after server validation.
  YZA.geo.europe = r.zones.shippingEuropeCountries;

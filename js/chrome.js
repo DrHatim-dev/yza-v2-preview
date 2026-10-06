@@ -460,11 +460,11 @@ const footerServiceCopy = () => {
 const footerFactsCopy = () => {
  const lang = YZA.i18n?.lang || 'fr';
  const copy = {
- fr: { studio: 'Studio', hours: 'Horaires', pickup: 'Retrait', delivery: 'Livraison offerte', guarantee: 'Garantie', b2b: 'B2B', stockists: 'Stockistes bienvenus', days: 'jours', country: 'Maroc', lang: 'Français' },
- en: { studio: 'Studio', hours: 'Hours', pickup: 'Pickup', delivery: 'Free delivery', guarantee: 'Guarantee', b2b: 'B2B', stockists: 'Stockists welcome', days: 'days', country: 'Morocco', lang: 'English' },
- es: { studio: 'Studio', hours: 'Horario', pickup: 'Recogida', delivery: 'Envío gratis', guarantee: 'Garantía', b2b: 'B2B', stockists: 'Distribuidores bienvenidos', days: 'días', country: 'Marruecos', lang: 'Español' },
- tr: { studio: 'Stüdyo', hours: 'Saatler', pickup: 'Teslim alma', delivery: 'Ücretsiz teslimat', guarantee: 'Garanti', b2b: 'B2B', stockists: 'Bayiler bekleniyor', days: 'gün', country: 'Fas', lang: 'Türkçe' },
- ar: { studio: 'الستوديو', hours: 'الأوقات', pickup: 'الاستلام', delivery: 'توصيل مجاني', guarantee: 'ضمان', b2b: 'B2B', stockists: 'نرحب بالموزعين', days: 'يوم', country: 'المغرب', lang: 'العربية' },
+ fr: { studio: 'Studio', hours: 'Horaires', pickup: 'Retrait', delivery: 'Livraison', guarantee: 'Garantie', b2b: 'B2B', stockists: 'Stockistes bienvenus', days: 'jours', country: 'Maroc', lang: 'Français' },
+ en: { studio: 'Studio', hours: 'Hours', pickup: 'Pickup', delivery: 'Delivery', guarantee: 'Guarantee', b2b: 'B2B', stockists: 'Stockists welcome', days: 'days', country: 'Morocco', lang: 'English' },
+ es: { studio: 'Studio', hours: 'Horario', pickup: 'Recogida', delivery: 'Envío', guarantee: 'Garantía', b2b: 'B2B', stockists: 'Distribuidores bienvenidos', days: 'días', country: 'Marruecos', lang: 'Español' },
+ tr: { studio: 'Stüdyo', hours: 'Saatler', pickup: 'Teslim alma', delivery: 'Teslimat', guarantee: 'Garanti', b2b: 'B2B', stockists: 'Bayiler bekleniyor', days: 'gün', country: 'Fas', lang: 'Türkçe' },
+ ar: { studio: 'الستوديو', hours: 'الأوقات', pickup: 'الاستلام', delivery: 'التوصيل', guarantee: 'ضمان', b2b: 'B2B', stockists: 'نرحب بالموزعين', days: 'يوم', country: 'المغرب', lang: 'العربية' },
  };
  return copy[lang] || copy.fr;
 };
@@ -477,7 +477,7 @@ YZA.chrome = {
  this.mountSeoTags();
  YZA.analytics?.track('page_view', { title: document.title });
 
- // Per-region free-shipping banner, from the visitor's device timezone (privacy-safe,
+ // Per-region delivery banner, from the visitor's device timezone (privacy-safe,
  // no geo-IP). Unknown regions keep the default editions line.
  const annKey = ({ morocco: 'announce.shipMA', europe: 'announce.shipEU', usa_gcc: 'announce.shipUS' })[(YZA.geo && YZA.geo.fromTimezone) ? YZA.geo.fromTimezone() : 'other'] || 'announce.unique';
  const head = document.createElement('div');
