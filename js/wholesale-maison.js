@@ -36,12 +36,13 @@
     }
     const line = document.querySelector('.announcement__line');
     if (line) { line.removeAttribute('data-i18n'); line.textContent = words().announcement; }
-    document.querySelector('.skip-link')?.setAttribute('href','/grossistes#main');
+    // The same layout serves /grossistes and the private selection page: skip to this page's main.
+    document.querySelector('.skip-link')?.setAttribute('href', location.pathname + '#main');
   }
   YZA.renderWholesaleMaison = function (thresholds) {
     if (!document.body.classList.contains('wholesale-maison')) return;
     const form = document.getElementById('b2bForm'), core = YZA.b2bComposer;
-    if (!form || !core) return;
+    if (!form || !core || !document.getElementById('b2bSheet')) return;
     const c = words(), inputs = [...form.querySelectorAll('.b2b-qty')];
     const n = inputs.reduce((sum,input) => sum + quantity(input),0);
     const limits = thresholds || core.thresholds();
@@ -101,6 +102,18 @@
     header();
     YZA.b2bComposer?.refresh();
     YZA.i18n?.onChange(header);
+    document.getElementById('b2bBuyer')?.addEventListener('input',(event)=>{
+      const input = event.target;
+      if (input.getAttribute('aria-invalid') !== 'true') return;
+      const valid = input.value.trim() && (input.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()));
+      if (valid) { input.classList.remove('is-invalid'); input.setAttribute('aria-invalid','false'); }
+      if (!document.querySelector('#b2bBuyer [aria-invalid="true"]')) {
+        const message = document.getElementById('b2bBuyerStatus');
+        message.hidden = true; message.textContent = '';
+      }
+    });
+    // The public page only asks for the private selection link: no sheet, summary or reset there.
+    if (!document.getElementById('b2bSheet')) return;
     const composer = document.getElementById('b2bComposer');
     const summary = document.getElementById('b2bSummary');
     const toggle = summary.querySelector('[data-summary-toggle]');
@@ -127,16 +140,6 @@
       document.querySelectorAll('#b2bForm .b2b-qty').forEach(input=>{input.value=0;});
       YZA.b2bComposer.selectedPreset=null;
       YZA.b2bComposer.refresh();
-    });
-    document.getElementById('b2bBuyer').addEventListener('input',(event)=>{
-      const input = event.target;
-      if (input.getAttribute('aria-invalid') !== 'true') return;
-      const valid = input.value.trim() && (input.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()));
-      if (valid) { input.classList.remove('is-invalid'); input.setAttribute('aria-invalid','false'); }
-      if (!document.querySelector('#b2bBuyer [aria-invalid="true"]')) {
-        const message = document.getElementById('b2bBuyerStatus');
-        message.hidden = true; message.textContent = '';
-      }
     });
     document.getElementById('b2bForm').addEventListener('focusin',(event)=>{
       if (small.matches && event.target.closest('.wholesale-buyer')) setOpen(false);
