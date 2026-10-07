@@ -32,7 +32,14 @@
   const label=document.querySelector('#cartServicePolicy summary');if(label&&label.textContent!==c.title)label.textContent=c.title;
   document.querySelectorAll('[data-yza-policy-field]').forEach(el=>{const text=c[el.dataset.yzaPolicyField]||'';if(el.textContent!==text)el.textContent=text;});
   document.querySelectorAll('[data-yza-service-block],#accShip,#purchaseService,[data-i18n="cart.acc.shipTxt"]').forEach(el=>{
-   const markup=Y.serviceBlockHTML();if(el.innerHTML!==markup){el.removeAttribute('data-i18n');el.setAttribute('data-yza-service-block','');el.innerHTML=markup;}
+   // Product purchase column: the delivery line stays visible, the full policy folds away.
+   const markup=el.id==='purchaseService'
+    ?'<p class="purchase-service__line">'+esc(c.shipping)+'</p><details><summary>'+esc(c.title)+'</summary>'+['dispatch','returns','editions'].map(k=>'<p>'+esc(c[k])+'</p>').join('')+'</details>'
+    :Y.serviceBlockHTML();
+   // Compare with what this script last wrote (an open <details> changes innerHTML), and
+   // rewrite only if the language changed or another script replaced the content.
+   const intact=el.id==='purchaseService'?(el._yzaMarkup===markup&&!!el.querySelector('.purchase-service__line')):el.innerHTML===markup;
+   if(!intact){el.removeAttribute('data-i18n');el.setAttribute('data-yza-service-block','');el.innerHTML=markup;el._yzaMarkup=markup;}
   });
   document.querySelectorAll('#sameDayDelivery').forEach(el=>{if(el.textContent!==c.sameDay)el.textContent=c.sameDay;});
   document.querySelectorAll('[data-service-strip="home"] [data-service-card]').forEach(card=>{

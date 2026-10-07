@@ -566,6 +566,13 @@
       var shipOut = {};
       for (var k in state.ship) { if (Object.prototype.hasOwnProperty.call(state.ship, k)) shipOut[k] = state.ship[k]; }
       shipOut.country = countryName(state.ship.country);
+      // The live order server does not read `gift`, but it prints the note in the order
+      // e-mail, WhatsApp text and WooCommerce order: carry the gift request there too.
+      var giftAsk = YZA.cart.orderGift();
+      if (giftAsk.enabled) {
+        var giftLine = 'Emballage cadeau : oui' + (giftAsk.message ? ' - mot : « ' + giftAsk.message + ' »' : '');
+        shipOut.note = giftLine + (shipOut.note ? ' / ' + shipOut.note : '');
+      }
       if (isPickup()) { shipOut.country = 'Maroc'; shipOut.address = 'Retrait au studio YZA — 66 rue Yougoslavie, Guéliz'; shipOut.city = 'Marrakech'; shipOut.zip = ''; }
       return { number: state.orderNo || '', operationId: state.operationId || '', items: items, subtotalDh: Math.round(tt.subtotalCents / 100), discounts: discounts,
         merchandiseDh: Math.round(tt.merchandiseCents / 100),

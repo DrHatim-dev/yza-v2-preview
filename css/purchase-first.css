@@ -34,13 +34,52 @@ body.purchase-first #pPrice { margin:0 !important; padding:0 !important; font-si
 body.purchase-first .product-info > .option { margin-block:7px !important; }
 body.purchase-first #purchaseDescription { font:400 14px/1.7 var(--font-body); }
 
-/* On phones, present purchase essentials before the image gallery and story. */
-@media(max-width:700px) {
- body.purchase-first .product--cg { display:grid !important; grid-template-columns:minmax(0,1fr) !important; gap:10px !important; padding:18px !important; }
+/* Phones and tablets, every category: gallery first, then name, price, options and the
+   add button (the live storefront's order), then the editorial detail. The category
+   stylesheets hid the options and the add button here for a bottom sheet that
+   purchase-first replaces, which left no way to add a piece to the bag. */
+@media(max-width:860px) {
+ body.purchase-first .product--cg { display:grid !important; grid-template-columns:minmax(0,1fr) !important; gap:10px !important; padding:0 18px 18px !important; }
  body.purchase-first .product--cg .product-info { display:contents !important; }
  body.purchase-first .product-info > * { order:2; }
- body.purchase-first .product-info > :is(#pName,.bag-price-row,#pPrice,#pShort,#pColorWrap,#pVariants,#pSize,#pFinish,.option--add,#purchaseService) { order:0; }
- body.purchase-first .product--cg .gallery { order:1 !important; position:relative !important; top:auto !important; margin-top:20px; }
- body.purchase-first #pName { font-size:28px !important; }
+ body.purchase-first .product-info > :is(#pName,.bag-price-row,#pPrice,#pShort,#pColorWrap,#pVariants,#pSize,#pFinish,.option--add,#purchaseService) { order:1; }
+ body.purchase-first .product--cg .gallery { order:0 !important; grid-column:1 !important; grid-row:auto !important; position:relative !important; top:auto !important; margin:0 -18px 8px !important; width:auto !important; }
+ body.purchase-first .product--cg .product-info > * { grid-column:1 !important; }
+ body.purchase-first.maison-product .product-info > :is(#pColorWrap,#pVariants,.option--add) { display:block !important; }
+ body.purchase-first.earring-product .product-info > :is(#pColorWrap,#pVariants) { display:none !important; }
+ body.purchase-first #pName { font-size:28px !important; margin-top:8px !important; }
  body.purchase-first #purchaseService { margin-bottom:4px; }
 }
+
+/* Desktop, every category: gallery on the left, purchase column on the right (earrings and
+   clothing used a mirrored grid). */
+@media(min-width:861px) {
+ body.purchase-first:is(.earring-product,.clothing-product) .product--cg { grid-template-columns:minmax(0,1fr) 460px !important; gap:40px !important; align-items:start !important; padding:24px 64px 96px !important; max-width:1720px; margin:0 auto; }
+ body.purchase-first:is(.earring-product,.clothing-product) .product--cg .gallery { grid-column:1 !important; grid-row:1 !important; position:sticky !important; top:136px !important; }
+ body.purchase-first:is(.earring-product,.clothing-product) .product--cg .product-info { grid-column:2 !important; grid-row:1 !important; padding:16px 0 0 !important; max-width:none !important; }
+}
+
+/* Delivery and returns in the purchase column: one line, the full policy on demand.
+   #purchaseService carries the delivery line, so the older line under the button goes. */
+body.purchase-first #pShipBar { display:none !important; }
+body.purchase-first #purchaseService .purchase-service__line { margin:0 0 6px; }
+body.purchase-first #purchaseService details { border-top:1px solid var(--bag-line,#e2ddd2); border-bottom:1px solid var(--bag-line,#e2ddd2); }
+body.purchase-first #purchaseService summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; padding:12px 0; font:400 10px/1.5 var(--font-body); letter-spacing:.16em; text-transform:uppercase; color:#2e2e2e; }
+body.purchase-first #purchaseService summary::-webkit-details-marker { display:none; }
+body.purchase-first #purchaseService summary::after { content:'+'; font-size:14px; letter-spacing:0; }
+body.purchase-first #purchaseService details[open] summary::after { content:'−'; }
+body.purchase-first #purchaseService details p { margin:0 0 10px; font:400 12px/1.65 var(--font-body); color:#555; }
+
+/* The same service tiles at the end of every product page. */
+body.purchase-first .product-services { padding-top:0; }
+body.purchase-first .product-services > div { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--bag-line,#e2ddd2); border-block:1px solid var(--bag-line,#e2ddd2); }
+body.purchase-first .product-services article { padding:32px 28px; background:#fff; }
+body.purchase-first .product-services h2 { font:400 9.5px/1.5 var(--font-body); letter-spacing:.2em; text-transform:uppercase; margin:0 0 14px; color:#2e2e2e; }
+body.purchase-first .product-services p { font:400 13px/1.75 var(--font-body); color:#4a4a4a; margin:0; }
+@media(max-width:860px) {
+ body.purchase-first .product-services { width:100%; }
+ body.purchase-first .product-services > div { grid-template-columns:1fr; }
+ body.purchase-first .product-services article { padding:24px 20px; }
+}
+/* Related pieces close every product page, earrings included. */
+body.purchase-first.earring-product .product-rail-section:not([hidden]) { display:block !important; }

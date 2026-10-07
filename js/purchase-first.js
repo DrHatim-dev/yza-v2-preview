@@ -1,6 +1,26 @@
 /* Purchase-first layout; uses the original catalog selectors and add handler. */
 (function(){
  const Y=window.YZA=window.YZA||{}; let cleanup=()=>{};
+ const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ // One end sequence on every product page, whatever the category: product sheet, questions,
+ // then the same three service tiles (owner's lock list: harmonise all product pages).
+ const SERVICE_TITLES={fr:['Livraison','Retours','Paiement'],en:['Delivery','Returns','Payment'],es:['Envío','Devoluciones','Pago'],tr:['Teslimat','İade','Ödeme'],ar:['التوصيل','الإرجاع','الدفع']};
+ function harmonise(p){
+  const editorial=document.querySelector('#bagEditorial,#charmEditorial,#earringEditorial,#clothingEditorial');
+  if(!editorial||!p)return;
+  const pick=v=>typeof v==='string'?v:Y.i18n.pick(v||{});
+  const titles=SERVICE_TITLES[Y.i18n.lang]||SERVICE_TITLES.fr;
+  const items=[[titles[0],pick(p.shipping)],[titles[1],pick(p.returns)],[titles[2],pick(Y.serviceFeature?.('payment')?.text)]].filter(([,body])=>body);
+  editorial.querySelectorAll('.bag-included,.charm-guarantees,.earring-services,.clothing-services,.product-services').forEach(node=>node.remove());
+  const questions=editorial.querySelector('.bag-questions');
+  const specs=editorial.querySelector('.bag-specs,.clothing-specs');
+  if(specs&&questions&&specs.nextElementSibling!==questions)questions.before(specs);
+  if(!items.length)return;
+  const services=document.createElement('section');
+  services.className='bag-section product-services';
+  services.innerHTML='<div>'+items.map(([title,body])=>'<article><h2>'+esc(title)+'</h2><p>'+esc(body)+'</p></article>').join('')+'</div>';
+  if(questions)questions.after(services);else editorial.append(services);
+ }
  Y.purchaseFirst=function(p){
   cleanup();
   const info=document.querySelector('.product-info'), add=document.querySelector('#pAdd');
@@ -53,8 +73,10 @@
   sync();
   const mutation=new MutationObserver(sync);mutation.observe(add,{attributes:true,childList:true,subtree:true});
   const price=document.querySelector('#pPrice');if(price)mutation.observe(price,{childList:true,subtree:true,characterData:true});
+  harmonise(p);
   const refresh=()=>{
-   const r=add.getBoundingClientRect();const visible=r.top>=0&&r.bottom<=innerHeight;
+   // A hidden button (0×0 at the top) is not "visible": the sticky bar must take over.
+   const r=add.getBoundingClientRect();const visible=r.height>0&&r.top>=0&&r.bottom<=innerHeight;
    bar.hidden=visible;document.body.classList.toggle('purchase-sticky-visible',!visible);
   };
   const observer=new IntersectionObserver(refresh,{threshold:[0,1]});observer.observe(add);
