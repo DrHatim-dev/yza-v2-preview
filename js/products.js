@@ -21690,8 +21690,6 @@ YZA.applyCanonicalCommerce(window.YZA_CATALOG_RELEASE);
 YZA.catalogReleaseFinalReport = applyCatalogRelease(window.YZA_CATALOG_RELEASE);
 YZA.catalogReleaseReport = YZA.catalogReleaseFinalReport;
 YZA.catalogReleaseReady = !!(YZA.catalogReleaseReport.revision && !YZA.catalogReleaseReport.errors.length);
-YZA.catalogReleaseFinalized = true;
-
 // Approved close-ups are shared by PDP galleries and product-card browsing.
 (function () {
   const files = { 'raffia-lemon-slice-charm-ss26': 'lemon-slice' };
@@ -21701,3 +21699,5 @@ YZA.catalogReleaseFinalized = true;
     if (p && !p.gallery.includes(src)) { p.gallery.push(src); if (Array.isArray(p.media)) p.media.push({type:'image',src}); }
   });
 })();
+
+YZA.catalogReleaseFinalized = true;

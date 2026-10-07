@@ -4603,7 +4603,8 @@
  })[page] || '';
  }
 
- document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', async () => {
+ if (YZA.marketReady) await YZA.marketReady;
  document.documentElement.classList.add('js');
  YZA.i18n.lang = YZA.i18n.detect();
  YZA.chrome.mount(activeNav());

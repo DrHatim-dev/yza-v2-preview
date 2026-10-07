@@ -11,7 +11,7 @@
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
   }
-  ready(boot);
+  ready(function () { Promise.resolve(window.YZA && YZA.marketReady).then(boot); });
 
   function boot() {
     // Deferred scripts run in order before DOMContentLoaded, but poll defensively.
@@ -22,6 +22,7 @@
     if (!root) return;
     root.removeAttribute('data-reveal');
     root.style.opacity = '1';
+    if (YZA.market && !YZA.market.ready) { root.innerHTML = '<p role="alert">Les tarifs sont temporairement indisponibles. <a href="">Réessayer</a></p>'; return; }
 
     YZA.cart.load();
     YZA.cart.loadGift();
@@ -229,6 +230,7 @@
         (YZA.cart.gift.enabled ? '<div class="co-gift-summary"><strong>' + esc(YZA.cart.copy('gift')) + ' — ' + esc(YZA.cart.copy('free')) + '</strong><p>' + esc(YZA.cart.gift.message) + '</p></div>' : '') +
         couponBox() +
         '<div class="co-sum__total"><span>' + esc(T('co.total')) + '<small>' + esc(T('co.vat')) + '</small></span><strong>' + fmt(tt.grandTotalCents) + eurLine + '</strong></div>' +
+        (YZA.market?.market === 'EUR' ? '<p class="co-terms">Montant débité en MAD : <strong>' + YZA.currency.format(tt.grandTotalCents, 'MAD') + '</strong> (1 EUR = 11 DH).</p>' : '') +
         reassureStrip() + '<div class="co-summary-currency">' + currency + '</div>' +
         '<p class="co-terms">' + esc(T('co.terms')) + ' <a href="/mentions-legales#cgv">' + esc(T('co.gcs')) + '</a> · <a href="/mentions-legales#confidentialite">' + esc(T('co.privacy')) + '</a>.</p>' +
       '</div></aside>';
@@ -551,7 +553,7 @@
       return { cod: isPickup() ? D.text(16) : T('co.pay.cod'), card: T('co.pay.card'), rib: T('co.pay.rib'), iban: T('co.pay.iban'), paypal: T('co.pay.paypal') }[state.method] || state.method;
     }
     function buildOrder() {
-      var items = lines().map(function (it) { return { handle: it.handle, baseHandle: it.handle, name: it.name, variant: it.variant, rawVariant: it.rawVariant || '', sizeCode: it.sizeCode || '', colorSlug: it.colorSlug || '', finishKey: it.finishKey || '', releaseId: it.releaseId, qty: it.qty, price: it.price, src: it.src || '' }; });
+      var items = lines().map(function (it) { return { handle: it.handle, baseHandle: it.handle, name: it.name, variant: it.variant, rawVariant: it.rawVariant || '', sizeCode: it.sizeCode || '', colorSlug: it.colorSlug || '', finishKey: it.finishKey || '', releaseId: it.releaseId, market: YZA.market?.market || 'MAD', qty: it.qty, price: it.price, src: it.src || '' }; });
       var tt = totals();
       var discounts = tt.discounts.map(function (d) {
         var label = YZA.cart.discountLabel(d);
@@ -692,7 +694,8 @@
         setSubmitting(false);
         if (data && (data.status === 'reprice' || data.error === 'catalog_reprice')) {
           state.repriceRevision = data.currentRevision || '';
-          state.catalogErr = 'Le catalogue a changé. Actualisez puis vérifiez le nouveau prix avant de confirmer.';
+          state.repricePending = true;
+          state.catalogErr = 'Votre pays ou les tarifs ont changé. Actualisez puis vérifiez le nouveau prix avant de confirmer.';
         } else if (data && (data.status === 'stock' || data.error === 'catalog_stock')) {
           state.catalogErr = 'La quantité disponible vient de changer. Le panier a été corrigé avec le stock actuel; vérifiez-le avant de confirmer.';
           Promise.resolve(YZA.refreshInventory?.()).then(function () { YZA.cart?.load?.(); YZA.cart?.refresh?.(); render(); });
@@ -715,6 +718,7 @@
             try { sessionStorage.setItem('yza.zazu.order', JSON.stringify({ sessionId: d.id, o: acceptedOrder, t: orderText(acceptedOrder) })); } catch (e) {}
             try { if (YZA.track) YZA.track('add_payment_info', trackPayload(acceptedOrder)); } catch (e) {}
             try { if (YZA.analytics) YZA.analytics.track('card_payment_start', { number: acceptedOrder.number, total_cents: (acceptedOrder.totalDh || 0) * 100 }); } catch (e) {}
+            coTrk.send('payment', { order: acceptedOrder.number || '', method: 'card' });   // keepalive : survit a la redirection
             location.href = window.yzaPreviewUrl(d.url);   // hand over to the hosted payment page
             return;
           }
@@ -732,6 +736,7 @@
       try { sessionStorage.removeItem('yza.order.operation'); } catch (operationClearError) {}
       state.operationId = '';
       state.lastOrder = o;
+      coTrk.done(o);   // AVANT le vidage du panier : la ligne garde ce qui a ete commande
       try { YZA.cart.clear(); } catch (e) {}
       state.step = 'done';
       render();
@@ -741,7 +746,7 @@
     function placeOrder() {
       if (state.submitting || couponBusy) return;
       if (!YZA.cart.items.length) { state.step = 'cart'; render(); return; }
-      if (state.repriceRevision && state.repriceRevision !== YZA.catalogRevision) {
+      if (state.repricePending || (state.repriceRevision && state.repriceRevision !== YZA.catalogRevision)) {
         state.catalogErr = 'Le nouveau catalogue n\u2019a pas encore pu \u00eatre charg\u00e9. Le paiement reste bloqu\u00e9 pour ne pas confirmer un prix que vous n\u2019avez pas vu.';
         render(); scrollTop(); return;
       }
@@ -768,7 +773,8 @@
           setSubmitting(false);
           if (d && (d.status === 'reprice' || d.error === 'catalog_reprice')) {
             state.repriceRevision = d.currentRevision || '';
-            state.catalogErr = 'Le catalogue a changé. Actualisez puis vérifiez le nouveau prix avant de confirmer.';
+            state.repricePending = true;
+            state.catalogErr = 'Votre pays ou les tarifs ont changé. Actualisez puis vérifiez le nouveau prix avant de confirmer.';
           } else if (d && (d.status === 'stock' || d.error === 'catalog_stock')) {
             state.catalogErr = 'La quantité disponible vient de changer. Le panier a été corrigé avec le stock actuel; vérifiez-le avant de confirmer.';
             Promise.resolve(YZA.refreshInventory?.()).then(function () { YZA.cart?.load?.(); YZA.cart?.refresh?.(); render(); });
@@ -828,6 +834,7 @@
           if (state.cardPaid === 'yes' && state.lastOrder) {
             try { YZA.cart.clear(); } catch (cardClearError) {}
             try { if (YZA.track) YZA.track('purchase', trackPayload(state.lastOrder)); } catch (cardTrackError) {}
+            coTrk.done(state.lastOrder);
             try { if (YZA.analytics) YZA.analytics.track('card_payment_done', { number: state.orderNo }); } catch (cardAnalyticsError) {}
             try { sessionStorage.removeItem('yza.zazu.order'); } catch (cardStorageError) {}
             try { sessionStorage.removeItem('yza.order.operation'); } catch (cardOperationClearError) {}
@@ -864,7 +871,7 @@
           if (state.bumpOn && !YZA.cart.items.some(function (i) { return i.handle === state.bumpHandle && i.src === 'order_bump'; })) state.bumpOn = false;
         }
         if (state.step === 'shipping' && to !== 'cart') collectShip();
-        state.step = to; render(); scrollTop(); root.querySelector('.co-h1')?.setAttribute('tabindex','-1'); root.querySelector('.co-h1')?.focus({preventScroll:true}); return;
+        state.step = to; render(); scrollTop(); coTrk.send(to); root.querySelector('.co-h1')?.setAttribute('tabindex','-1'); root.querySelector('.co-h1')?.focus({preventScroll:true}); return;
       }
       var up = e.target.closest('[data-upsell-add]');
       if (up) {
@@ -914,7 +921,7 @@
         }).then(function (r) { return r.json(); }).then(function (j) {
           couponBusy = false;
           if (j && j.ok) {
-            YZA.cart.setCoupon(j.code, mail);
+            YZA.cart.setCoupon(j.code, mail, j.definition, j.policyHash);
             couponOk = true; couponMsg = ''; couponDraft = '';
             try { YZA.analytics && YZA.analytics.track('coupon_applied', { code: j.code }); } catch (e2) {}
           } else {
@@ -979,7 +986,7 @@
           try {
             fetch((YZA.payment && YZA.payment.orderEndpoint) || 'order.php', {
               method: 'POST', headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ type: 'addon', order: { number: state.lastOrder.number, operationId: addonOperation, items: [{ handle: ah, baseHandle: ah, sizeCode: addonSizeCode, colorSlug: '', finishKey: YZA.finishKeyFor?.(ah, YZA.defaultVariantLabel?.(ah) || '') || '', releaseId: YZA.catalogRevision || '', qty: 1 }] }, text: amsg }),
+              body: JSON.stringify({ type: 'addon', order: { number: state.lastOrder.number, operationId: addonOperation, items: [{ handle: ah, baseHandle: ah, sizeCode: addonSizeCode, colorSlug: '', finishKey: YZA.finishKeyFor?.(ah, YZA.defaultVariantLabel?.(ah) || '') || '', releaseId: YZA.catalogRevision || '', market: YZA.market?.market || 'MAD', qty: 1 }] }, text: amsg }),
             }).then(function (r) { return r.json().catch(function () { return {}; }); }).then(function (d) {
               if (!d || !d.accepted || !d.item) {
                 try { if (addonWindow) addonWindow.close(); } catch (addonCloseError) {}
@@ -1055,6 +1062,7 @@
          probleme de fiches enterrees que le commit 34d2de2 vient de corriger. */
       var shipField = e.target.closest('#coShipForm') && e.target.name;
       if (shipField === 'phone' || shipField === 'name') { capturePhone(); }
+      if (shipField) { coTrk.soon(); }
       var r = e.target.closest('input[name="pay"]');
       if (r) { state.method = r.value; render(); return; }
       // Destination drives the delivery tariff — re-render so the summary fee/total
@@ -1094,6 +1102,105 @@
     });
 
     root.addEventListener('focusout', function (e) { if (e.target.closest('#coShipForm .co-field')) validateField(e.target, true); });
+
+    // ---- Paiements inities : registre premiere partie (checkout-capture.php) ----
+    /* Meta comptait chaque ouverture du paiement (begin_checkout -> InitiateCheckout),
+       notre console seulement les paniers dont l'e-mail — FACULTATIF — avait ete tape :
+       16 contre 1 en septembre. Chaque tentative a desormais UNE ligne chez nous, creee a
+       l'ouverture du paiement avec un panier, puis mise a jour a chaque etape, a chaque
+       coordonnee saisie et a la commande. L'identifiant vit en sessionStorage : un
+       rechargement met a jour la meme ligne, un nouvel onglet ouvre une autre tentative.
+       Le registre sert au suivi de la commande dans la boutique.
+       La provenance est lue dans ce que yza-track.js a deja pose (premier passage,
+       visiteuse, session) et dans le cookie _fbc du pixel Meta (heure du dernier clic).
+       Tout est enrobe : mesurer ne doit JAMAIS bloquer une commande. */
+    var coTrk = (function () {
+      var ID_KEY = 'yza.co.id';
+      var sent = '', timer = null, memoryId = '';
+      function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+      function ssGet(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+      function parse(s) { try { return JSON.parse(s || 'null'); } catch (e) { return null; } }
+      function cookie(n) {
+        try { var m = new RegExp('(?:^|;\\s*)' + n + '=([^;]*)').exec(document.cookie || ''); return m ? decodeURIComponent(m[1]) : ''; }
+        catch (e) { return ''; }
+      }
+      function id() {
+        var v = memoryId || ssGet(ID_KEY);
+        if (v && /^co_[a-f0-9]{16,40}$/.test(v)) { memoryId = v; return v; }
+        var a = new Uint8Array(12);
+        try { crypto.getRandomValues(a); } catch (e) { for (var i = 0; i < a.length; i++) a[i] = Math.floor(Math.random() * 256); }
+        v = 'co_' + Array.prototype.map.call(a, function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+        memoryId = v;
+        try { sessionStorage.setItem(ID_KEY, v); } catch (e) {}
+        return v;
+      }
+      // Memes signaux que l'exclusion de yza-track.js : la ligne est gardee, MARQUEE essai.
+      function internal() {
+        try {
+          if (lsGet('yza_notrack') === '1' || /(?:^|;\s*)yza_notrack=1(?:;|$)/.test(document.cookie || '')) return true;
+          return navigator.webdriver === true;
+        } catch (e) { return false; }
+      }
+      function payload(step, extra) {
+        var sh = state.ship || {}, sess = parse(ssGet('yza_trk_s'));
+        var o = {
+          id: id(), step: step,
+          items: lines().map(function (it) { return { name: it.name, qty: it.qty, variant: it.variant || '', handle: it.handle }; }),
+          total: Math.round(totals().grandTotalCents / 100),
+          name: String(sh.name || '').trim(), phone: String(sh.phone || '').trim(), email: String(sh.email || '').trim(),
+          city: String(sh.city || '').trim(), country: normCountry(sh.country) || '',
+          lang: (YZA.i18n && YZA.i18n.lang) || 'fr',
+          visitor: lsGet('yza_trk_v') || '', session: (sess && sess.id) || '',
+          first: parse(lsGet('yza_trk_first')), fbc: cookie('_fbc'), internal: internal(), _hp: ''
+        };
+        if (extra) { for (var k in extra) { if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k]; } }
+        return o;
+      }
+      function transmit(o, sig, attempt) {
+        fetch('/checkout-capture.php', {
+          method: 'POST', keepalive: true, credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(o)
+        }).then(function (r) {
+          if (!r.ok) throw new Error('capture');
+        }).catch(function () {
+          // Retry the SAME attempt and snapshot, including after the cart is cleared.
+          // A newer step supersedes a failed older snapshot.
+          if (sent !== sig) return;
+          if (attempt < 2) {
+            setTimeout(function () { if (sent === sig) transmit(o, sig, attempt + 1); }, 1000 * (attempt + 1));
+          } else { sent = ''; }
+        });
+      }
+      function send(step, extra) {
+        try {
+          if (timer) { clearTimeout(timer); timer = null; }
+          if (!YZA.cart.items.length && step !== 'order') return;
+          var o = payload(step, extra);
+          var sig = JSON.stringify([o.id, o.step, o.items, o.total, o.name, o.phone, o.email, o.city, o.country, o.order || '', o.method || '']);
+          if (sig === sent) return;          // rien de neuf depuis le dernier envoi
+          sent = sig;
+          transmit(o, sig, 0);
+        } catch (e) {}
+      }
+      function current() { return state.step === 'done' ? 'order' : state.step; }
+      return {
+        send: send,
+        // Sortie d'un champ : on attend un instant, plusieurs champs remplis d'affilee = un envoi.
+        soon: function () { try { if (timer) clearTimeout(timer); timer = setTimeout(function () { send(current()); }, 1500); } catch (e) {} },
+        // Onglet quitte ou appli changee : ce qui a ete tape part MAINTENANT (keepalive).
+        flush: function () { if (state.step !== 'done') send(current()); },
+        done: function (o) {
+          o = o || {};
+          send('order', { order: o.number || state.orderNo || '', method: o.method || state.method || '',
+                          total: typeof o.totalDh === 'number' ? o.totalDh : Math.round(totals().grandTotalCents / 100) });
+          try { sessionStorage.removeItem(ID_KEY); } catch (e) {}
+          memoryId = '';
+        }
+      };
+    }());
+    document.addEventListener('visibilitychange', function () {
+      try { if (document.visibilityState === 'hidden') coTrk.flush(); } catch (e) {}
+    });
 
     // ---- abandoned-cart capture: once a valid email is typed at checkout we store
     // the pending cart server-side (cart-capture.php) so the recovery emails can go
@@ -1223,5 +1330,7 @@
     });
     render();
     try { if (YZA.track && YZA.cart.items.length) YZA.track('begin_checkout', trackPayload({})); } catch (e) {}
+    // Le pendant premiere partie de InitiateCheckout : meme moment, meme condition.
+    if (YZA.cart.items.length && state.step !== 'done') coTrk.send(state.step);
   }
 }());

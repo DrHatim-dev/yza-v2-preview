@@ -110,7 +110,7 @@ const cart = {
         if ((requiresColor && !colorSlug) || (!requiresColor && storedColor)) { changed = true; return null; }
         if (colorSlug && YZA.catalogColorSoldOut?.(handle, colorSlug)) { changed = true; return null; }
         const qty = Number(line.qty);
-        if (!Number.isInteger(qty) || qty < 1 || qty > 99) { changed = true; return null; }
+        if (!Number.isInteger(qty) || qty < 1 || qty > (YZA.canonicalCommerce?.checkout.maxQuantity ?? 99)) { changed = true; return null; }
         const storedReleaseId = String(line.releaseId || '');
         if (storedReleaseId && !validReleaseId(storedReleaseId)) { changed = true; return null; }
         // A full page reload renders current catalog prices, so migrate persisted
@@ -168,6 +168,7 @@ const cart = {
     // le resolveur inverse. Un panier enregistre AVANT qu'un coloris passe en epuise
     // survit dans localStorage et ne repasserait par aucune de ces surfaces.
     const product = YZA.getProduct?.(handle);
+    if (YZA.market && !YZA.market.ready) return null;
     if (!product || !YZA.catalogReleaseReady || !YZA.catalogRevision) return null;
     if (Object.prototype.hasOwnProperty.call(meta, 'sizeCode') && typeof meta.sizeCode !== 'string') return null;
     const suppliedSizeCode = typeof meta.sizeCode === 'string' ? meta.sizeCode : '';
@@ -184,7 +185,7 @@ const cart = {
     if ((requiresColor && !colorSlug) || (!requiresColor && Object.prototype.hasOwnProperty.call(meta, 'colorSlug') && meta.colorSlug)) return null;
     if ((colorSlug && YZA.catalogColorSoldOut?.(handle, colorSlug)) || YZA.jawharaVariantSoldOut?.(handle, variant)) return null;
     qty = Number(qty);
-    if (!Number.isInteger(qty) || qty < 1 || qty > 99) return null;
+    if (!Number.isInteger(qty) || qty < 1 || qty > (YZA.canonicalCommerce?.checkout.maxQuantity ?? 99)) return null;
     const publicAvailable = YZA.effectiveInventory?.(handle);
     const alreadyInCart = this.items.reduce((sum, item) => sum + (item.handle === handle ? Number(item.qty || 0) : 0), 0);
     // The public projection returns exact counts only from 0..5; 6 means "6 or more".
@@ -194,7 +195,8 @@ const cart = {
     if (!validReleaseId(releaseId)) return null;
     const k = this._key(handle, variant, colorSlug, releaseId, finishKey, sizeCode);
     let line = this.items.find(i => this._key(i.handle, i.variant, i.colorSlug, i.releaseId, i.finishKey, i.sizeCode) === k);
-    if (line) { line.qty = Math.min(99, line.qty + qty); if (meta.source && !line.src) line.src = meta.source; }
+    if (!line && this.items.length >= (YZA.canonicalCommerce?.checkout.maxLines ?? 40)) return null;
+    if (line) { line.qty = Math.min(YZA.canonicalCommerce?.checkout.maxQuantity ?? 99, line.qty + qty); if (meta.source && !line.src) line.src = meta.source; }
     else { line = { handle, variant, sizeCode, colorSlug, ...(finishKey ? { finishKey } : {}), releaseId, qty }; if (meta.source) line.src = meta.source; this.items.push(line); }
     this.save();
     YZA.analytics?.track('add_to_cart', {
@@ -234,7 +236,7 @@ const cart = {
     const publicAvailable = YZA.effectiveInventory?.(handle);
     const otherQty = this.items.reduce((sum, item) => sum + (item !== line && item.handle === handle ? Number(item.qty || 0) : 0), 0);
     if (qty > line.qty && publicAvailable !== null && publicAvailable < 6 && otherQty + qty > publicAvailable) return;
-    line.qty = Math.max(1, Math.min(99, qty));
+    line.qty = Math.max(1, Math.min(YZA.canonicalCommerce?.checkout.maxQuantity ?? 99, qty));
     this.save();
   },
   count() { return this.items.reduce((n, i) => n + i.qty, 0); },
@@ -258,7 +260,9 @@ const cart = {
   loadCoupon() {
     try {
       const v = JSON.parse(localStorage.getItem(COUPON_KEY));
-      this.coupon = (v && v.code && YZA.coupons && YZA.coupons[v.code]) ? v : null;
+      this.coupon = YZA.canonicalCommerce
+        ? (v?.definition && v.policyHash === YZA.canonicalCommerce.checkout.couponPolicyHash ? v : null)
+        : ((v && v.code && YZA.coupons && YZA.coupons[v.code]) ? v : null);
     } catch (e) { this.coupon = null; }
     return this.coupon;
   },
@@ -268,9 +272,11 @@ const cart = {
       else localStorage.removeItem(COUPON_KEY);
     } catch (e) { /* navigation privee : le coupon ne survivra pas, tant pis */ }
   },
-  setCoupon(code, email) {
-    const def = code ? (YZA.coupons || {})[String(code).trim().toUpperCase()] : null;
-    this.coupon = def ? { code: def.code, email: (email || '').trim().toLowerCase() } : null;
+  setCoupon(code, email, definition, policyHash) {
+    const def = YZA.canonicalCommerce
+      ? (code && definition && policyHash === YZA.canonicalCommerce.checkout.couponPolicyHash ? definition : null)
+      : (code ? (YZA.coupons || {})[String(code).trim().toUpperCase()] : null);
+    this.coupon = def ? { code: def.code, email: (email || '').trim().toLowerCase(), definition: def, policyHash } : null;
     this.saveCoupon();
     document.dispatchEvent(new CustomEvent('yza:cartchange'));
     return this.coupon;
@@ -313,7 +319,9 @@ const cart = {
   },
   couponDef() {
     if (!this.coupon || !this.items.length) return null;
-    const def = (YZA.coupons || {})[this.coupon.code];
+    const def = YZA.canonicalCommerce
+      ? (this.coupon.policyHash === YZA.canonicalCommerce.checkout.couponPolicyHash ? this.coupon.definition : null)
+      : (YZA.coupons || {})[this.coupon.code];
     if (!def) return null;
     /* Date de fin : passee, on cesse d'afficher la remise. Le serveur refuserait de toute
        facon, autant ne pas promettre un total qu'on ne tiendra pas. */
@@ -352,7 +360,7 @@ const cart = {
          Bornees a `base` pour qu'aucun coupon ne puisse rendre un total negatif. */
       const amount = cdef.freeItemCategory
         ? Math.min(this.freeItemCents(cdef), base)
-        : Math.min(Math.round(base * (cdef.pct / 100)), base);
+        : Math.min(Math.round(base * (cdef.pct / 100) / 100) * 100, base);
       if (amount > 0) discounts.push({ id: 'coupon', code: cdef.code, amountCents: amount, meta: { pct: cdef.pct } });
     }
     const discountCents = discounts.reduce((s, d) => s + d.amountCents, 0);

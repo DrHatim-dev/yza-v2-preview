@@ -135,16 +135,35 @@
     return { ok: true, market: typeof forced === 'string' ? forced.toUpperCase() : 'MAD', eurRate: 11 };
   }
 
-  YZA.marketReady = Promise.resolve((function () {
-    try {
-      var payload = previewMarketPayload();
-      if (!payload || !payload.ok || !['MAD', 'EUR'].includes(payload.market) || payload.eurRate !== 11) throw new Error('market');
-      YZA.market = Object.assign({}, payload, { ready: true, locked: true });
-      current = payload.market;
-      if (YZA.applyMarketPrices && !YZA.applyMarketPrices()) throw new Error('catalog');
-      return true;
-    } catch (e) { YZA.market.ready = false; return false; }
-  }()));
+  function acceptMarket(payload) {
+    if (!payload || !payload.ok || !['MAD', 'EUR'].includes(payload.market) || payload.eurRate !== 11) throw new Error('market');
+    YZA.market = Object.assign({}, payload, { ready: true, locked: true });
+    current = payload.market;
+    if (YZA.applyMarketPrices && !YZA.applyMarketPrices()) throw new Error('catalog');
+    return true;
+  }
+  YZA.marketReady = window.YZA_PREVIEW
+    ? Promise.resolve((function () {
+      try { return acceptMarket(previewMarketPayload()); } catch (e) { YZA.market.ready = false; return false; }
+    }()))
+    // Live: the visitor's market is decided server-side from the IP, then locked.
+    : fetch('/market.php', { credentials: 'same-origin', cache: 'no-store', signal: AbortSignal.timeout(8000) })
+      .then(function (response) { if (!response.ok) throw new Error('market'); return response.json(); })
+      .then(acceptMarket)
+      .catch(function () { YZA.market.ready = false; return false; })
+      // Page scripts that painted before the answer (homepage, collections) re-render.
+      .then(function (ok) { document.dispatchEvent(new CustomEvent('yza:currencychange', { detail: { marketReady: ok, to: current } })); return ok; });
+
+  if (!window.YZA_PREVIEW) {
+    fetch('/currency-rates.php', { credentials: 'same-origin', cache: 'no-store' })
+      .then(function (response) { if (!response.ok) throw new Error('rates'); return response.json(); })
+      .then(function (payload) {
+        if (!payload || payload.ok !== true || payload.base !== 'MAD' || !payload.rates) return;
+        CODES.forEach(function (code) { if (Number(payload.rates[code]) > 0) rates[code] = Number(payload.rates[code]); });
+        safeSet(RATE_KEY, JSON.stringify({ rates: rates, updatedAt: payload.updatedAt || null }));
+        document.dispatchEvent(new CustomEvent('yza:currencychange', { detail: { ratesUpdated: true, to: current } }));
+      }).catch(function () { /* Keep the last known/fallback rates. */ });
+  }
 
   /* The live rate feed (/currency-rates.php) is deliberately NOT fetched here: it
      is PHP, it would 404 on Pages, and with the market locked to MAD or EUR the
