@@ -1,6 +1,9 @@
 /* YZA — atelier letter. Existing welcome offer, capture endpoint and discovery triggers. */
 (function () {
   'use strict';
+  // Paused by the owner on 2026-10-09. Set true and redeploy to reactivate.
+  var NEWSLETTER_POPUP_ENABLED = false;
+  if (!NEWSLETTER_POPUP_ENABLED) return;
   if (!document || !document.body) return;
   var NOPE = { checkout:1, cart:1, panier:1, order:1, confirmation:1, merci:1, account:1, compte:1 };
   if (NOPE[document.body.dataset.page]) return;
