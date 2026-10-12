@@ -1,0 +1,170 @@
+{
+  "checks": [
+    {
+      "path": "assets/journal/2026-10/breloques-fruits-raffia-tendance-bijou-ete-2026.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/breloques-fruits-raffia-tendance-bijou-ete-2026.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/duree-panier-yza.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/duree-panier-yza.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/no-size-xs-xxl.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/no-size-xs-xxl.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/shopping-durable-marrakech.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+      "url": "https://yza-shop.com/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+      "status": 200,
+      "hashMatches": false,
+      "cdnMayOptimizeImage": true
+    },
+    {
+      "path": "css/journal-nawal.css",
+      "url": "https://yza-shop.com/css/journal-nawal.css",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+      "url": "https://yza-shop.com/blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+      "url": "https://yza-shop.com/blogs/journal/cadeau-demoiselle-honneur/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+      "url": "https://yza-shop.com/blogs/journal/cadeau-noel-marrakech/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/duree-panier-yza/index.html",
+      "url": "https://yza-shop.com/blogs/journal/duree-panier-yza/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+      "url": "https://yza-shop.com/blogs/journal/marque-mode-locale-marrakech/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/no-size-xs-xxl/index.html",
+      "url": "https://yza-shop.com/blogs/journal/no-size-xs-xxl/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+      "url": "https://yza-shop.com/blogs/journal/que-porter-marrakech-40-degres/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+      "url": "https://yza-shop.com/blogs/journal/que-porter-marrakech-printemps/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/shopping-durable-marrakech/index.html",
+      "url": "https://yza-shop.com/blogs/journal/shopping-durable-marrakech/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+      "url": "https://yza-shop.com/blogs/journal/techniques-raffia-atelier-yza/",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "blogs/journal/index.html",
+      "url": "https://yza-shop.com/journal",
+      "status": 200,
+      "hashMatches": true,
+      "cdnMayOptimizeImage": false
+    },
+    {
+      "path": "sitemap.xml",
+      "url": "https://yza-shop.com/sitemap.xml",
+      "status": 200,
+      "hashMatches": "dynamic",
+      "cdnMayOptimizeImage": false
+    }
+  ],
+  "newEditorialSitemapUrls": 10,
+  "dynamicSitemapUrls": 91,
+  "newsletterPopupStillDisabled": true,
+  "catalogueRevision": "rel-20261009173024-a273053f4a0b",
+  "errors": []
+}

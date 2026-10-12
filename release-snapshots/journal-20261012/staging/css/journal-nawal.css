@@ -1,0 +1,17 @@
+/* Author-approved Journal additions; use the live storefront typography and layout. */
+/* The shared footer already displays delivery, returns and payment services. */
+.journal-published > .blog-service-trust{display:none}
+.journal-published .blog-post-hero{align-items:center;padding-top:clamp(2rem,5vw,4rem)}
+.journal-published .blog-post-hero h1{font-size:clamp(2.5rem,4.5vw,4.5rem);line-height:1.04}
+.journal-published .article-body figure{margin:var(--space-8,3rem) 0}
+.journal-published .article-body figure img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:var(--color-surface)}
+.journal-published .article-body figcaption{font-size:.82rem;line-height:1.6;color:var(--color-muted);margin-top:.75rem}
+.journal-published .blog-post-hero__media img{object-position:50% 50%}
+.journal-published .blog-meta{display:flex;flex-wrap:wrap;gap:.5rem 1rem}
+.journal-published .article-body p{overflow-wrap:break-word}
+.journal-published .journal-piece-links{display:flex;flex-wrap:wrap;gap:.6rem 1rem;list-style:none;padding:0}
+.journal-published .journal-piece-links a{text-decoration:underline;text-underline-offset:.2em}
+.journal-published .journal-signature{margin-top:2rem}
+.journal-new-articles .article-card__body h3{overflow-wrap:break-word}
+.journal-new-articles .article-card__media img{object-position:50% 50%}
+@media(max-width:680px){.journal-published .blog-post-hero h1{font-size:clamp(2.2rem,9vw,3.2rem)}.journal-published .article-body figure img{max-height:560px}}

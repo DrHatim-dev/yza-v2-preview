@@ -1,0 +1,93 @@
+{
+  "mode": "live",
+  "checks": [
+    {
+      "page": "journal",
+      "newArticles": 10,
+      "oldArticles": 35
+    },
+    {
+      "article": 1,
+      "title": "Les breloques fruits en raffia : la tendance bijou de l'été 2026",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 2,
+      "title": "Que porter à Marrakech quand il fait 40°C : wrap pants et top foulard ou bateau",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 3,
+      "title": "La marque de mode locale à acheter à Marrakech",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 4,
+      "title": "Que porter à Marrakech au printemps",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 5,
+      "title": "Comment une seule taille va du XS au XXL",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 6,
+      "title": "Un peu de Marrakech sous le sapin",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 7,
+      "title": "Le cadeau de demoiselle d'honneur qu'on garde un an après",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 8,
+      "title": "Comment on travaille le raffia ? 3 techniques utilisées à l'atelier YZA",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 9,
+      "title": "Où faire du shopping durable à Marrakech",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    },
+    {
+      "article": 10,
+      "title": "Combien de temps dure un panier YZA ?",
+      "products": 3,
+      "questions": 3,
+      "heroLoaded": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "blockedWrites": 0,
+  "realOrdersOrSubscriptions": 0
+}
