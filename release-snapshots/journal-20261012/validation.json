@@ -1,0 +1,160 @@
+{
+  "articlesValidated": 10,
+  "oldArticleSlugsPreserved": 30,
+  "newSitemapUrls": 10,
+  "publicTargetsChecked": 25,
+  "remote": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/"
+    },
+    {
+      "path": "/assets/editorial/dataset/studio-hero-atelier-table.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "url": "https://yza-shop.com/assets/editorial/dataset/studio-hero-atelier-table.jpg"
+    },
+    {
+      "path": "/assets/lifestyle/accessories/lemon-earrings-cafe.webp",
+      "status": 200,
+      "type": "image/webp",
+      "url": "https://yza-shop.com/assets/lifestyle/accessories/lemon-earrings-cafe.webp"
+    },
+    {
+      "path": "/assets/lifestyle/rtw/pantalon-pareo-blanc-jasmin-detail.webp",
+      "status": 200,
+      "type": "image/webp",
+      "url": "https://yza-shop.com/assets/lifestyle/rtw/pantalon-pareo-blanc-jasmin-detail.webp"
+    },
+    {
+      "path": "/assets/products/charms/client/cherries-02.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "url": "https://yza-shop.com/assets/products/charms/client/cherries-02.jpg"
+    },
+    {
+      "path": "/assets/products/jawhara/client/pareo-courte-01.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "url": "https://yza-shop.com/assets/products/jawhara/client/pareo-courte-01.jpg"
+    },
+    {
+      "path": "/blogs/journal/best-handmade-gifts-from-marrakech/",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/blogs/journal/best-handmade-gifts-from-marrakech/"
+    },
+    {
+      "path": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/"
+    },
+    {
+      "path": "/collections/boucles-d-oreilles",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/collections/boucles-d-oreilles"
+    },
+    {
+      "path": "/collections/charms",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/collections/charms"
+    },
+    {
+      "path": "/collections/pret-a-porter",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/collections/pret-a-porter"
+    },
+    {
+      "path": "/collections/sacs",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/collections/sacs"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/contact"
+    },
+    {
+      "path": "/journal",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/journal"
+    },
+    {
+      "path": "/produits/la-nouvelle-vague-xs-basket-bag-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/la-nouvelle-vague-xs-basket-bag-ss26"
+    },
+    {
+      "path": "/produits/la-sculpture-xs-basket-bag-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/la-sculpture-xs-basket-bag-ss26"
+    },
+    {
+      "path": "/produits/lemon-raffia-earrings-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/lemon-raffia-earrings-ss26"
+    },
+    {
+      "path": "/produits/raffia-cherries-charm-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/raffia-cherries-charm-ss26"
+    },
+    {
+      "path": "/produits/raffia-grapes-charm-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/raffia-grapes-charm-ss26"
+    },
+    {
+      "path": "/produits/yza-bandeau-top-jawhara-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/yza-bandeau-top-jawhara-ss26"
+    },
+    {
+      "path": "/produits/yza-button-up-shirt-jawhara-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/yza-button-up-shirt-jawhara-ss26"
+    },
+    {
+      "path": "/produits/yza-pareo-skirt-short-jawhara-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/yza-pareo-skirt-short-jawhara-ss26"
+    },
+    {
+      "path": "/produits/yza-scarf-top-jawhara-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/yza-scarf-top-jawhara-ss26"
+    },
+    {
+      "path": "/produits/yza-wrap-pants-jawhara-ss26",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "url": "https://yza-shop.com/produits/yza-wrap-pants-jawhara-ss26"
+    },
+    {
+      "path": "/studio",
+      "status": 200,
+      "type": "text/html",
+      "url": "https://yza-shop.com/studio"
+    }
+  ],
+  "errors": [],
+  "originalPhotosUnmodified": true
+}

@@ -1,0 +1,20 @@
+{
+  "changes": [
+    {
+      "article": 3,
+      "before": "25 à 55€",
+      "after": "40 à 65€",
+      "sourceRevision": "rel-20261009173024-a273053f4a0b"
+    },
+    {
+      "article": 6,
+      "before": "25€",
+      "after": "40€",
+      "sourceRevision": "rel-20261009173024-a273053f4a0b"
+    }
+  ],
+  "topBateauTarget": "Existing public alias resolves to yza-bandeau-top-jawhara-ss26",
+  "laVagueTarget": "Sacs collection; original La Vague is not an active catalogue product",
+  "weddingPage": "No new wedding landing page invented; existing products linked",
+  "language": "Author-supplied French copy, no invented translated versions"
+}
