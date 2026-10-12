@@ -1,0 +1,230 @@
+{
+  "checks": [
+    {
+      "route": "/journal",
+      "width": 360,
+      "lang": "fr",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 20,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 38
+    },
+    {
+      "route": "/journal",
+      "width": 390,
+      "lang": "fr",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 20,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 38
+    },
+    {
+      "route": "/journal",
+      "width": 768,
+      "lang": "fr",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 34.56,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 38
+    },
+    {
+      "route": "/journal",
+      "width": 1024,
+      "lang": "fr",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 46.08,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 58
+    },
+    {
+      "route": "/journal",
+      "width": 1440,
+      "lang": "fr",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 64,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 58
+    },
+    {
+      "route": "/journal",
+      "width": 390,
+      "lang": "en",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 20,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 38
+    },
+    {
+      "route": "/journal",
+      "width": 1440,
+      "lang": "en",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 64,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 58
+    },
+    {
+      "route": "/journal",
+      "width": 390,
+      "lang": "ar",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 20,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 38
+    },
+    {
+      "route": "/journal",
+      "width": 1440,
+      "lang": "ar",
+      "titlesChecked": 48,
+      "bad": [],
+      "minimumLinkGap": 12,
+      "leftGutter": 64,
+      "overflow": false,
+      "newCards": 10,
+      "oldCards": 30,
+      "headerBelowBar": true,
+      "logoHeight": 58
+    },
+    {
+      "route": "breloques-fruits-raffia-tendance-bijou-ete-2026",
+      "width": 390,
+      "title": "Les breloques fruits en raffia : la tendance bijou de l'été 2026",
+      "height": 69.90625,
+      "lineHeight": 34.96,
+      "tooltip": "Les breloques fruits en raffia : la tendance bijou de l'été 2026",
+      "clamp": "2"
+    },
+    {
+      "route": "breloques-fruits-raffia-tendance-bijou-ete-2026",
+      "width": 1440,
+      "title": "Les breloques fruits en raffia : la tendance bijou de l'été 2026",
+      "height": 119.21875,
+      "lineHeight": 59.616,
+      "tooltip": "Les breloques fruits en raffia : la tendance bijou de l'été 2026",
+      "clamp": "2"
+    },
+    {
+      "route": "que-porter-marrakech-40-degres",
+      "width": 390,
+      "title": "Que porter à Marrakech quand il fait 40°C : wrap pants et top foulard ou bateau",
+      "height": 69.90625,
+      "lineHeight": 34.96,
+      "tooltip": "Que porter à Marrakech quand il fait 40°C : wrap pants et top foulard ou bateau",
+      "clamp": "2"
+    },
+    {
+      "route": "que-porter-marrakech-40-degres",
+      "width": 1440,
+      "title": "Que porter à Marrakech quand il fait 40°C : wrap pants et top foulard ou bateau",
+      "height": 119.21875,
+      "lineHeight": 59.616,
+      "tooltip": "Que porter à Marrakech quand il fait 40°C : wrap pants et top foulard ou bateau",
+      "clamp": "2"
+    },
+    {
+      "route": "techniques-raffia-atelier-yza",
+      "width": 390,
+      "title": "Comment on travaille le raffia ? 3 techniques utilisées à l'atelier YZA",
+      "height": 69.90625,
+      "lineHeight": 34.96,
+      "tooltip": "Comment on travaille le raffia ? 3 techniques utilisées à l'atelier YZA",
+      "clamp": "2"
+    },
+    {
+      "route": "techniques-raffia-atelier-yza",
+      "width": 1440,
+      "title": "Comment on travaille le raffia ? 3 techniques utilisées à l'atelier YZA",
+      "height": 119.21875,
+      "lineHeight": 59.616,
+      "tooltip": "Comment on travaille le raffia ? 3 techniques utilisées à l'atelier YZA",
+      "clamp": "2"
+    },
+    {
+      "route": "yza-pareo-skirt-size-guide-xs-to-xxl",
+      "width": 390,
+      "title": "Jupe pareo YZA : le paréo qui se noue à votre taille, du XS au XXLYZA Pareo Skirt: The Wrap That Ties to Fit, XS to XXLFalda pareo YZA: el pareo que se anuda a tu medida, de la XS a la XXLYZA Pareo Etek: Bedeninize Göre Bağlanan Sarma, XS'ten XXL'eتنورة الباريو من YZA: اللفّة التي تُعقد على مقاسكِ، من XS إلى XXL",
+      "height": 69.90625,
+      "lineHeight": 34.96,
+      "tooltip": "Jupe pareo YZA : le paréo qui se noue à votre taille, du XS au XXLYZA Pareo Skirt: The Wrap That Ties to Fit, XS to XXLFalda pareo YZA: el pareo que se anuda a tu medida, de la XS a la XXLYZA Pareo Etek: Bedeninize Göre Bağlanan Sarma, XS'ten XXL'eتنورة الباريو من YZA: اللفّة التي تُعقد على مقاسكِ، من XS إلى XXL",
+      "clamp": "2"
+    },
+    {
+      "route": "yza-pareo-skirt-size-guide-xs-to-xxl",
+      "width": 1440,
+      "title": "Jupe pareo YZA : le paréo qui se noue à votre taille, du XS au XXLYZA Pareo Skirt: The Wrap That Ties to Fit, XS to XXLFalda pareo YZA: el pareo que se anuda a tu medida, de la XS a la XXLYZA Pareo Etek: Bedeninize Göre Bağlanan Sarma, XS'ten XXL'eتنورة الباريو من YZA: اللفّة التي تُعقد على مقاسكِ، من XS إلى XXL",
+      "height": 119.21875,
+      "lineHeight": 59.616,
+      "tooltip": "Jupe pareo YZA : le paréo qui se noue à votre taille, du XS au XXLYZA Pareo Skirt: The Wrap That Ties to Fit, XS to XXLFalda pareo YZA: el pareo que se anuda a tu medida, de la XS a la XXLYZA Pareo Etek: Bedeninize Göre Bağlanan Sarma, XS'ten XXL'eتنورة الباريو من YZA: اللفّة التي تُعقد على مقاسكِ، من XS إلى XXL",
+      "clamp": "2"
+    },
+    {
+      "route": "why-handmade-raffia-costs-more",
+      "width": 390,
+      "title": "Pourquoi un raphia fait main coûte plus qu'un sac souvenirWhy Handmade Raffia Costs More Than a Souvenir BagPor qué la rafia hecha a mano cuesta más que un bolso de recuerdoEl yapımı rafya neden bir hediyelik çantadan daha pahalıdırلماذا يكلّف الرافيا المصنوع يدويًا أكثر من حقيبة تذكارية",
+      "height": 69.90625,
+      "lineHeight": 34.96,
+      "tooltip": "Pourquoi un raphia fait main coûte plus qu'un sac souvenirWhy Handmade Raffia Costs More Than a Souvenir BagPor qué la rafia hecha a mano cuesta más que un bolso de recuerdoEl yapımı rafya neden bir hediyelik çantadan daha pahalıdırلماذا يكلّف الرافيا المصنوع يدويًا أكثر من حقيبة تذكارية",
+      "clamp": "2"
+    },
+    {
+      "route": "why-handmade-raffia-costs-more",
+      "width": 1440,
+      "title": "Pourquoi un raphia fait main coûte plus qu'un sac souvenirWhy Handmade Raffia Costs More Than a Souvenir BagPor qué la rafia hecha a mano cuesta más que un bolso de recuerdoEl yapımı rafya neden bir hediyelik çantadan daha pahalıdırلماذا يكلّف الرافيا المصنوع يدويًا أكثر من حقيبة تذكارية",
+      "height": 119.21875,
+      "lineHeight": 59.616,
+      "tooltip": "Pourquoi un raphia fait main coûte plus qu'un sac souvenirWhy Handmade Raffia Costs More Than a Souvenir BagPor qué la rafia hecha a mano cuesta más que un bolso de recuerdoEl yapımı rafya neden bir hediyelik çantadan daha pahalıdırلماذا يكلّف الرافيا المصنوع يدويًا أكثر من حقيبة تذكارية",
+      "clamp": "2"
+    }
+  ],
+  "errors": [],
+  "headerFooterUnchanged": true,
+  "workingFilters": true,
+  "newsletterStubTests": {
+    "invalid": true,
+    "failure": true,
+    "success": true,
+    "interceptedPosts": 2
+  },
+  "realOrdersOrSubscriptions": 0
+}

@@ -1,0 +1,264 @@
+{
+  "release": "journal-magazine-header-fix-20261012",
+  "files": [
+    {
+      "path": "404.html",
+      "sha256": "4025e2c9de4b0a620217eab6f30dabcad83b5a26c1d980a7e28db299da9f9ec3"
+    },
+    {
+      "path": "b2b.html",
+      "sha256": "f83fbcf147dd7ac979a2d82261d0862c80363d473ab038737d3b3d54162be97f"
+    },
+    {
+      "path": "blogs/journal/best-handmade-gifts-from-marrakech/index.html",
+      "sha256": "34897feef62963df69da6a85dfe50031358a0fb8cfc51240b063b4263162b65b"
+    },
+    {
+      "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+      "sha256": "2e4b1583ceae53fe05c7be83b7268af7c4287694e1f1f903777be858a8247614"
+    },
+    {
+      "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+      "sha256": "60da54230fbd5b01b59dd6bbfa22443e9777f9296c35b5d7718bd07e5ff686ab"
+    },
+    {
+      "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+      "sha256": "e14d8f66e458344ab91163362e4dfc0e351d35eb188ebaae0dbd53cab9daedb0"
+    },
+    {
+      "path": "blogs/journal/care-guide-raffia-bags-charms-earrings/index.html",
+      "sha256": "2abe9b8fc71b552b285da6db0a455f717415422d317ab2b4ec313f107d11e3b9"
+    },
+    {
+      "path": "blogs/journal/creative-sunday-yza-craft-community/index.html",
+      "sha256": "e38935ceea361b5fc22b34a630e9f1b4e0222f6bbe0e027d994ac20c92ce3894"
+    },
+    {
+      "path": "blogs/journal/duree-panier-yza/index.html",
+      "sha256": "ca8ebb08395b2198c83ee5c2f4ef62392827ecc7c177ee1815b249c9f2f7f939"
+    },
+    {
+      "path": "blogs/journal/fruit-charms-tiny-postcards-from-marrakech/index.html",
+      "sha256": "1dc4de7dfdfbfe2bfd0b94d21a4de2cf787d12a35ea685f9ddf99932a7628ff0"
+    },
+    {
+      "path": "blogs/journal/fruit-earrings-handmade-raffia-detail/index.html",
+      "sha256": "c7514a5d06925109838fae96a050e673cff4544f1be6f1bf617e2618cd6f26c3"
+    },
+    {
+      "path": "blogs/journal/handmade-accessories-vs-mass-products/index.html",
+      "sha256": "a565ad2629de1c583f1952bf42254654b194fa0ce92bbf633524f322b7486dce"
+    },
+    {
+      "path": "blogs/journal/handmade-by-women-gueliz-atelier/index.html",
+      "sha256": "927eb047983697c3ce21825797ccf8002894d187863e46e48fd9ba714f53db6e"
+    },
+    {
+      "path": "blogs/journal/how-to-recognize-quality-moroccan-basket-bag/index.html",
+      "sha256": "006312a7e3dd2111cf69c99e7cdb180368ccb861d90d791155a0b80dafe67513"
+    },
+    {
+      "path": "blogs/journal/how-to-style-raffia-fruit-charms/index.html",
+      "sha256": "9c5218793812874c5ae4ec40ca2be42b4c1f9cd710b44e0633004f9668ffd448"
+    },
+    {
+      "path": "blogs/journal/how-to-wear-yza-day-to-night/index.html",
+      "sha256": "721b9de50abe593a677aba305613002dc786dfe4ce757909f5dd6fa36d4802d5"
+    },
+    {
+      "path": "blogs/journal/index.html",
+      "sha256": "4e42460413cce75114828ff1a41af1a56864df20ee5ab7e7548d63106bd8cc74"
+    },
+    {
+      "path": "blogs/journal/la-nouvelle-vague-basket-bag-longevity/index.html",
+      "sha256": "3e04c538fe552fdd4bda7b6d365e8b0864b60a8433fdc86f11ff36045fc215dc"
+    },
+    {
+      "path": "blogs/journal/la-sculpture-xs-s-m-size-guide/index.html",
+      "sha256": "63d3aaf6e3376da12395620f8d5640b1ac83c4fe08333aa75bd89fa0a5cd6bcc"
+    },
+    {
+      "path": "blogs/journal/la-sculpture-yza-new-it-bag/index.html",
+      "sha256": "9c6b06998953f29ccab41b138e21a18a816be84ddd109f0f4458dd423a4a74a6"
+    },
+    {
+      "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+      "sha256": "76e4013bd24e3dd97b825727ec4e98b2e36710deb5638e40d0a370622f4527d0"
+    },
+    {
+      "path": "blogs/journal/marrakech-resort-wear-packing-guide/index.html",
+      "sha256": "8df0061e871711df3716fc4e779b78fe1fade68120e26e9831af2c20a131737b"
+    },
+    {
+      "path": "blogs/journal/modern-marrakchi-wardrobe-souks-to-seaside/index.html",
+      "sha256": "efc53797af71fadebdcc07316e68d9f81b814f3e8afaf13b3673515f68a4e066"
+    },
+    {
+      "path": "blogs/journal/no-size-xs-xxl/index.html",
+      "sha256": "1dcc06bb2172d2be0230fee77ceee7575d776c15858e60a5a807c6fb11b6d778"
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+      "sha256": "e6d07d57dfaa3b15af5ac52e720f7dad0062c7a3dee55f1cd9832cd6621dd845"
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+      "sha256": "b165cb5751bdeb2c7c7300fa08e848e2b95919ce02b710ff3d5fbb2fd2137795"
+    },
+    {
+      "path": "blogs/journal/raffia-banana-leaves-beads-yza-bags/index.html",
+      "sha256": "eb9dacce8ecba3c8a99d20a1691bbae152e02c7483ae0263ab009736c30fe9ff"
+    },
+    {
+      "path": "blogs/journal/raffia-vs-straw-bag-difference/index.html",
+      "sha256": "682e9e55a27424b965918d80baeae581f9d4c63f17d5cdd6012a3b34b1662e82"
+    },
+    {
+      "path": "blogs/journal/shopping-durable-marrakech/index.html",
+      "sha256": "ffc82c70f6e4ca3fd949382acc4e3170c55d0c02b9b34422a3b610662320a26a"
+    },
+    {
+      "path": "blogs/journal/slow-fashion-yza-marrakech/index.html",
+      "sha256": "a17b00cac5e69b6bff6bfc848707a6a97963714f7c0bbaa682d46e945a06a753"
+    },
+    {
+      "path": "blogs/journal/small-batch-fashion-limited-pieces/index.html",
+      "sha256": "cffcbdec559e245ac03e5bf534e082cf506e402faa16edef0a6460f38d92efa4"
+    },
+    {
+      "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+      "sha256": "5a1c995b2da606aa1caf65bb0f7d01e6e0f932ceedd9abc1a9aea2e3d190ff94"
+    },
+    {
+      "path": "blogs/journal/true-value-handmade-basket-bag-marrakech/index.html",
+      "sha256": "78b0d352e92e0cba8578934c1cdd5d0e62247789ab93108a62a1f15778d817b9"
+    },
+    {
+      "path": "blogs/journal/visit-yza-studio-gueliz-guide/index.html",
+      "sha256": "84ff339f132d235cd191b05289ebb8db746dd98896c6e4421bd566f8bcc480b8"
+    },
+    {
+      "path": "blogs/journal/what-fits-in-yza-basket-bag/index.html",
+      "sha256": "867e64fb0658ba6f29b8611982831bc337fce95cc7efb213f8ea6ea4b8f0163f"
+    },
+    {
+      "path": "blogs/journal/what-is-jawhara-fabric/index.html",
+      "sha256": "f2e512de46390ddd2f416b459008a647fe10a350a7d0743815f925e2215be1e4"
+    },
+    {
+      "path": "blogs/journal/what-to-buy-in-gueliz-design-craft/index.html",
+      "sha256": "bef229ca4ab1af4714ae4afa7a240a25fa734638aeabb51ec227ec34b553a927"
+    },
+    {
+      "path": "blogs/journal/what-to-wear-in-marrakech-in-summer/index.html",
+      "sha256": "1e8960adb34b0aeddc0da2c4e232f5efd0037923086e1a91cab4d11619de5cd2"
+    },
+    {
+      "path": "blogs/journal/why-handmade-raffia-costs-more/index.html",
+      "sha256": "534321594e0cb7520312a21a08d0adf8de70b049c65c80ed9b8f6d181ab2719f"
+    },
+    {
+      "path": "blogs/journal/why-yza-is-not-just-a-souvenir/index.html",
+      "sha256": "f158efeec587a3af2d092977ae4581b4b63ed896703f6dd1e3da4921631c9b06"
+    },
+    {
+      "path": "blogs/journal/yza-pairing-tops-scarf-bateau-button-up/index.html",
+      "sha256": "2171d4df795e6660df9084dfd8349b6dad5df601e35d4a0a550bde3b8c4e3853"
+    },
+    {
+      "path": "blogs/journal/yza-palazzo-pants-resortwear-big-pockets/index.html",
+      "sha256": "e79adf5f82fe6794f8abdb94407818a2a01ac7fe5cceb0cf45d68c2bad85b4d7"
+    },
+    {
+      "path": "blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/index.html",
+      "sha256": "4c292bcbe2106345d30779523dd20337a9cf4b7802542a61f518bd3d44a7ee81"
+    },
+    {
+      "path": "blogs/journal/yza-wholesale-concept-stores-hotels-gift-line/index.html",
+      "sha256": "a0ceca4945982216d2269ccd6d4c1e9b50c8f0e8429f3bcf78da0ac13fc080d9"
+    },
+    {
+      "path": "blogs/journal/yza-wrap-pants-local-style-reimagined/index.html",
+      "sha256": "a4607992ee597d0b9f305b0c5408edd0df53a04a2c424315131299695cce96c5"
+    },
+    {
+      "path": "checkout.html",
+      "sha256": "2e44aa9e9ceae8d9baf1a070ed72ca66e59419a62c4f1b133916fe6b34b70cb6"
+    },
+    {
+      "path": "collections.html",
+      "sha256": "08c05d09aadae35d2f082cb9a7a6e83ce342bdd962f0e78fd193d8101fafa836"
+    },
+    {
+      "path": "contact.html",
+      "sha256": "aedc8b2c216e9f15a9526774c2394d50d6f81f2fb3b1de81329db85e9338c07a"
+    },
+    {
+      "path": "css/journal-magazine.css",
+      "sha256": "44399d3c1127747e1da973b3c1513b828980c3884cc1b280e77e0e5053d2a630"
+    },
+    {
+      "path": "css/journal-nawal.css",
+      "sha256": "f7b7441ae512e192daa3feaf2109c425d544ad8ca04e17e62fc95b04ffe390a9"
+    },
+    {
+      "path": "css/site-header-maison.css",
+      "sha256": "e9b2f7ec7de8c2563261ad9e513561ab3cf618074703dedf6e61bbfa2fe0a102"
+    },
+    {
+      "path": "faq.html",
+      "sha256": "dac59f120adf385d2ab4793c7e49f12b506b5f86c9bd78b2a2b2fcf180883452"
+    },
+    {
+      "path": "favoris.html",
+      "sha256": "8b56b1acae02a97c7425fd9a0e5d17275b39a5879a9eddb161374b40f6fc1302"
+    },
+    {
+      "path": "histoire.html",
+      "sha256": "2cf81dc21b2a9686912f2a0e788208da8a88d1d462be7bdab4de328502f23fa0"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5a13099277798ab4907879150c48981529c605c377962cc229c18d48e5802e34"
+    },
+    {
+      "path": "js/journal-magazine.js",
+      "sha256": "bf38e5781211d94de2d56786c9201189bde31be7cb3b7c94289be15a6c6372cb"
+    },
+    {
+      "path": "legal.html",
+      "sha256": "7ded1b6a242a35a5fcc1e5cddd559781f1285e674eb4948c1e64c1131d6a7a52"
+    },
+    {
+      "path": "offre-charmy.html",
+      "sha256": "5f60e71202bbd0ccfa6dddab08391b1db950d9f2fa18676f484996f2e14f9c62"
+    },
+    {
+      "path": "press.html",
+      "sha256": "70a2507385ee74de351508e70f5d099577920dc17630e458949e6e15ffed5a1d"
+    },
+    {
+      "path": "produit.html",
+      "sha256": "9cbf1f4d3c9b139b898923cdfdf3cd42eda622037335050f3af0ff5e939dbdaa"
+    },
+    {
+      "path": "selection-chz5vvw2a2.html",
+      "sha256": "98b1ad4cd366011474a96ef3180318a67f59eec8bed30c4cf9a783e589ed68b6"
+    },
+    {
+      "path": "studio.html",
+      "sha256": "9c934a2d51f82e18ebaae0ece7025efb2d808a55b3dad2a5560673aede635d7f"
+    },
+    {
+      "path": "yza-girls.html",
+      "sha256": "ca35039c4eee26936c172094b249ba6db04f8f57705705b0ff46b653838af4db"
+    }
+  ],
+  "headerReleaseFiles": 60,
+  "magazineReleaseFiles": 46,
+  "publicFileUnion": 63,
+  "headerCssVersion": "e9b2f7ec7de8c256",
+  "articleCssVersion": "f7b7441ae512e192",
+  "magazineCssVersion": "44399d3c1127747e",
+  "magazineJsVersion": "bf38e5781211d94d"
+}

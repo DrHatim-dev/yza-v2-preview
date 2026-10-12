@@ -1,0 +1,365 @@
+{
+  "version": "e9b2f7ec7de8c256",
+  "changed": [
+    {
+      "path": "css/site-header-maison.css",
+      "action": "replace",
+      "sha256": "e9b2f7ec7de8c2563261ad9e513561ab3cf618074703dedf6e61bbfa2fe0a102",
+      "before": "0c1a04a371906b71d9b438a77f0416e624de576418975024cdb5132167f19e2c"
+    },
+    {
+      "path": "404.html",
+      "action": "replace",
+      "sha256": "4025e2c9de4b0a620217eab6f30dabcad83b5a26c1d980a7e28db299da9f9ec3",
+      "before": "8dcaf2c71cbc7c2453600a29855c6f000f550a7e25b5768fccdc04e2ba908c0f"
+    },
+    {
+      "path": "b2b.html",
+      "action": "replace",
+      "sha256": "f83fbcf147dd7ac979a2d82261d0862c80363d473ab038737d3b3d54162be97f",
+      "before": "03029cee27370c56e78d3c43d1b03c49c9e515138277b835a6f7206c6673b624"
+    },
+    {
+      "path": "blogs/journal/best-handmade-gifts-from-marrakech/index.html",
+      "action": "replace",
+      "sha256": "df7c2e3e2fc4a6333c3045f68e82dc9592be32c071a883cc131aa4d163fc008c",
+      "before": "76a8b86d213266c3bd3d93fdf95c14611a05b7491b5ebde268430f366adf8b1d"
+    },
+    {
+      "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+      "action": "replace",
+      "sha256": "312ee451cc0bd653bdb37baefed63ef9e78f5784c397d44ddef4e2fa294838d3",
+      "before": "ef3bd0d1873f41832547e1657a3067bcfb3c89cd17936980f53518a38851fe75"
+    },
+    {
+      "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+      "action": "replace",
+      "sha256": "fb22f83ed2c752b691782e55582f973c64c5547dd4e37e208711a7e5de43ef17",
+      "before": "f30e1e91c16956d98e18decbb8cb4a2465de9b5431e9adf8607471d1ea6de968"
+    },
+    {
+      "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+      "action": "replace",
+      "sha256": "40a1b5a2573486b53d2e6e63e67de1b923fd96c6689532d582781da4b68e0ab3",
+      "before": "40449f1a6ffb94a6a62a111eb33052a02fcae78fbb93a46497dfff160f8cfeda"
+    },
+    {
+      "path": "blogs/journal/care-guide-raffia-bags-charms-earrings/index.html",
+      "action": "replace",
+      "sha256": "65d0b0109b2a6cfb62c5fc6968ace0fca8d41a7519a97e5d2559767399abb4c1",
+      "before": "b1338b609254f79a51a821decbf35a985c609ada980ea4e880f82268db35cee3"
+    },
+    {
+      "path": "blogs/journal/creative-sunday-yza-craft-community/index.html",
+      "action": "replace",
+      "sha256": "f05ccbf7abfa8d6d27eb7fd901a9475189ca1f1fb61e85b3d1f0a8dbafda6008",
+      "before": "725fc7c2ec44b11c64bf36082bf122f30f32d2aa24ecdf7e90f9b84c8e6b9411"
+    },
+    {
+      "path": "blogs/journal/duree-panier-yza/index.html",
+      "action": "replace",
+      "sha256": "a14bbc598189c767ae7971d20f2efa372793ff29b4c3adcc38adc01c2b359632",
+      "before": "f0adb473d612942822f3b92baeeadfe4d7990a1d42d7be59f4222e82b851aeaa"
+    },
+    {
+      "path": "blogs/journal/fruit-charms-tiny-postcards-from-marrakech/index.html",
+      "action": "replace",
+      "sha256": "e05760ccf1ad0659b27cf7226252ed46ed71c947fb4958a23b747b8fbf69d60d",
+      "before": "29991f26a50639716e75de865e8dc1c3e725c4c9c6144db693d62c88e4cc8261"
+    },
+    {
+      "path": "blogs/journal/fruit-earrings-handmade-raffia-detail/index.html",
+      "action": "replace",
+      "sha256": "60ba9fc286e16a1936f4a464f1d19019027351e3a7cf21daa596694a2d872d1a",
+      "before": "039eef43dbbfa329042024878e0315da1356887a442c40c102a044fb0e0f91fa"
+    },
+    {
+      "path": "blogs/journal/handmade-accessories-vs-mass-products/index.html",
+      "action": "replace",
+      "sha256": "df616952b238478181f44fcc1f0575b804bd0f987e0bff4e80d816c697800a5c",
+      "before": "d9a2c14919d3bcaa93f21405bb50f42ef1d61a930c697d794360d9acef079c9f"
+    },
+    {
+      "path": "blogs/journal/handmade-by-women-gueliz-atelier/index.html",
+      "action": "replace",
+      "sha256": "106136d17e4dffc65dfbe1cdef1da105baae1cdf7eac96ee220e475593211e97",
+      "before": "4eb0856e66d2a56f81db9f766146e35a8874bc2600da0066be91a86952832df9"
+    },
+    {
+      "path": "blogs/journal/how-to-recognize-quality-moroccan-basket-bag/index.html",
+      "action": "replace",
+      "sha256": "da0854c9c0d2548442e53459d1d7a7ce9e6eb993ea74427a3bf4599009befe8d",
+      "before": "133b2f84f87602d5dd5a686bf5533089f91b927e68aef515e8da9acc12ec93ae"
+    },
+    {
+      "path": "blogs/journal/how-to-style-raffia-fruit-charms/index.html",
+      "action": "replace",
+      "sha256": "10ba0a005caa9cb8fdf4d04518ef6e98081409d7419e68caa295165031792715",
+      "before": "628624f3804891d0c13247c9477bd0b0072bde04d56183c627c70a24e1e444f2"
+    },
+    {
+      "path": "blogs/journal/how-to-wear-yza-day-to-night/index.html",
+      "action": "replace",
+      "sha256": "565d3388ea7f7fa8834c2c37d768850ffb2bbeb3141fd7609921a9ad5ddc2176",
+      "before": "ad895b81631eba2b9693e87dd01ddc831e6973fcdc42e0e479c9fa8ee52f0f40"
+    },
+    {
+      "path": "blogs/journal/index.html",
+      "action": "replace",
+      "sha256": "b0f6f32a7a9fd6e267b57d1daf0b7c873f69cb87786f4f873709ec8276629382",
+      "before": "8c663822cd6e1eed43534e723a084064f0c13d6a6e543d2a26cb09973d55bde7"
+    },
+    {
+      "path": "blogs/journal/la-nouvelle-vague-basket-bag-longevity/index.html",
+      "action": "replace",
+      "sha256": "b2fa54a22291ec38888c7a00e87810d755675577d4bc0b3a2f816d7b72f0039d",
+      "before": "7aabc01942af331a8242119ff0b5bb20fde4c20c797171b560e27f44f6b5fec6"
+    },
+    {
+      "path": "blogs/journal/la-sculpture-xs-s-m-size-guide/index.html",
+      "action": "replace",
+      "sha256": "543c157a07da8a7864310198599d587c9c966e409f0a515e361558a9592b0ec9",
+      "before": "e6bad6917d9be644416ea4bd0d7dc54d4d3eeea3106d57d2fcd4d16b296173b2"
+    },
+    {
+      "path": "blogs/journal/la-sculpture-yza-new-it-bag/index.html",
+      "action": "replace",
+      "sha256": "477f72fe17e963a88f4266f59b5842231ae6032fadec07ab8a334a9ba8ee77ff",
+      "before": "3b422da49a8e8f22e14cc63120abddfaace1b7004d84b182f08c8cef2b9e1e84"
+    },
+    {
+      "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+      "action": "replace",
+      "sha256": "90b2390ab4a04471449c539a77baccc7ebeb999d7ca5747bbf4ca5fb336c0d38",
+      "before": "c634442041635e43df9fb2aca2e6254b44bcdce2f562a86c7c5757743e254094"
+    },
+    {
+      "path": "blogs/journal/marrakech-resort-wear-packing-guide/index.html",
+      "action": "replace",
+      "sha256": "e6a308f7e088e95f958860b0de591595867de1c7a80fdb87b49b9eb51cef7243",
+      "before": "6d7f807866584b721caf8338bfe5fe7cc637e23270382f93666d6163768567e3"
+    },
+    {
+      "path": "blogs/journal/modern-marrakchi-wardrobe-souks-to-seaside/index.html",
+      "action": "replace",
+      "sha256": "cef16896ab532a4dfc7b3b1a6bf28fc8f879f33d7d188db138f4ee6bcfbd5060",
+      "before": "17dd3b5b155b29bbdc523190459024e6171cf463d76ed104e3bbb22afcca9c35"
+    },
+    {
+      "path": "blogs/journal/no-size-xs-xxl/index.html",
+      "action": "replace",
+      "sha256": "a906e444765ad82e681803b6394816fd9a9d2cf59d60bd30e01ad9295ded6911",
+      "before": "fafcd8974edb471c949dd1940ef2ae689c37b08c1dbf6d72ac247982692d2d05"
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+      "action": "replace",
+      "sha256": "acd690086852c724f5f97496ddf5002dc23dffe8736be94cb1b50d2d5e71f272",
+      "before": "1af34b40144e5346a57f8fcdc18c0ef4a6c78a5775954f1de1ac0e618fe785d6"
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+      "action": "replace",
+      "sha256": "fb4c267484f47d035d90547e1a8f19f1bc838e1ee492b27f746f0891764d9baf",
+      "before": "50afb5efe3b253ab2aedac6671bb638092ab7c7ff2d9036ea12bfab3a9d003e5"
+    },
+    {
+      "path": "blogs/journal/raffia-banana-leaves-beads-yza-bags/index.html",
+      "action": "replace",
+      "sha256": "e798ff8e28c16609c209c7bb024e0dbf30abbe22f257a413ec205c38147d7c8f",
+      "before": "b6ec94400775d09bd23b5b5c694c8c3ccd13edf256e6488f78db670b48b5a440"
+    },
+    {
+      "path": "blogs/journal/raffia-vs-straw-bag-difference/index.html",
+      "action": "replace",
+      "sha256": "7fd5e3c400ca72627cd8adc066314c0f30ee43038324bdee6f212edf20009964",
+      "before": "b72b325f49dad65109d8f289ad176cafa1d6e4096e8a4b6592ddc03c4bdbb0b6"
+    },
+    {
+      "path": "blogs/journal/shopping-durable-marrakech/index.html",
+      "action": "replace",
+      "sha256": "4f24544f769fd2d240ae8fa46a120898b3ebac7c0fa0f0f1a4b71338a5dc2d90",
+      "before": "7f5c991d27cd9493f21ea8295a82f1ce3723a4e2ed5e2683f202b9ff567337f1"
+    },
+    {
+      "path": "blogs/journal/slow-fashion-yza-marrakech/index.html",
+      "action": "replace",
+      "sha256": "d380acd1a16297df77486d8db4d0df684bf8a93a294bd63b7b5cdbf62f2ccdab",
+      "before": "26f0a91f5099cf27c604e65f6f209a79a267638d9c3c4dbb790efbefd366f4de"
+    },
+    {
+      "path": "blogs/journal/small-batch-fashion-limited-pieces/index.html",
+      "action": "replace",
+      "sha256": "4cec93cc4eacec4501f0614407fecc0713d0230275bcaa6d386fc20b72d8143e",
+      "before": "d42e06d858ee3b79fee5d3d60d9a23ff2bfbc7fb5f44efb1c1343b3ce2478331"
+    },
+    {
+      "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+      "action": "replace",
+      "sha256": "a5dc5486362928a8694e4cd2a91444a35c1d8270316adf1777bd3c3a833ad907",
+      "before": "824d99a35bf850a9f3836b63705cefa459d0e38338b3d8f1b9ad9387629d60ad"
+    },
+    {
+      "path": "blogs/journal/true-value-handmade-basket-bag-marrakech/index.html",
+      "action": "replace",
+      "sha256": "235a256602cf9c4f3f263f090c02fe65747e3d72c0533a9c0df22ecbf8df2c19",
+      "before": "a9e70d78196d27525fb2ddf8bf9098ba085c02e37dbef36ed180ee89051ff57c"
+    },
+    {
+      "path": "blogs/journal/visit-yza-studio-gueliz-guide/index.html",
+      "action": "replace",
+      "sha256": "10309d8ad007e9a47d7a303d22d9e5919d55fac73865656d3f1e7793cf144bb3",
+      "before": "098118b7ff2dbb07061845813ebf88ebd5434382130a99b7ef5a381baee07bba"
+    },
+    {
+      "path": "blogs/journal/what-fits-in-yza-basket-bag/index.html",
+      "action": "replace",
+      "sha256": "47b323cd7338317ff6e5ec8726f7996d162e5c48134b895b589331475cbd7e6b",
+      "before": "5a462af430cac6d368e8703ab6b5cf2d3122d938c4de2dec301c2912714b22ee"
+    },
+    {
+      "path": "blogs/journal/what-is-jawhara-fabric/index.html",
+      "action": "replace",
+      "sha256": "fbfcbf8a2589799b8829484dc6418732501f0dc14f42d7beba1d9b28a34b68a7",
+      "before": "eb08f33da7769fd70f21d21127fe3b030573003883ea3280724a3fbc16f15c00"
+    },
+    {
+      "path": "blogs/journal/what-to-buy-in-gueliz-design-craft/index.html",
+      "action": "replace",
+      "sha256": "3688555b86cec37600ed944171a164d505c7187afd87d757ebb91126611c25af",
+      "before": "8cdd5c1587cb101349fc33986a545cccd68f5f32739768be12eb81675df5d830"
+    },
+    {
+      "path": "blogs/journal/what-to-wear-in-marrakech-in-summer/index.html",
+      "action": "replace",
+      "sha256": "1d094361430f56d0107248d4100836fa48e9a02b92522d9ec4a747ce2c229c25",
+      "before": "1ebdebb3f7a504b31f18867fd9e9d67f2c053662e85f5a7609f7b2f4ed50ab1e"
+    },
+    {
+      "path": "blogs/journal/why-handmade-raffia-costs-more/index.html",
+      "action": "replace",
+      "sha256": "47a68014a26ba364170632b058830d7f1a668f2396c42fa1b4e64ebfa275dbd6",
+      "before": "93fc99633fce1e32f1dbe1d36c606c5aaedc99ca2b3f66b5eab618934d7ea530"
+    },
+    {
+      "path": "blogs/journal/why-yza-is-not-just-a-souvenir/index.html",
+      "action": "replace",
+      "sha256": "187b7e6c578ec1da9c4e93119491b6280d95690d3c10d2163317d1cb885ed495",
+      "before": "67eea72c8874c5d211d2e10995f6f80d166d3e96e7b8c61c7aa013c31b270cb5"
+    },
+    {
+      "path": "blogs/journal/yza-pairing-tops-scarf-bateau-button-up/index.html",
+      "action": "replace",
+      "sha256": "9926ed6a512293a4af5ea9d8c66a2a4c6de082ea57764151acecd20253364e57",
+      "before": "1ba35556175d8b5ef06f6bec83d7fc7a1b3cbf5719e113b0f9d08519daf15852"
+    },
+    {
+      "path": "blogs/journal/yza-palazzo-pants-resortwear-big-pockets/index.html",
+      "action": "replace",
+      "sha256": "3d36ef9032cf85683b230449886ba62ae3a3d34a0cfe0343396a5b0552ae3686",
+      "before": "f2418ce4a27c2c5b68c0a19475a36dcf3452edc27e37eb62da656e31a5a433cf"
+    },
+    {
+      "path": "blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/index.html",
+      "action": "replace",
+      "sha256": "b89dd9ca0bf73e0c8268d9b07aa69f20f5148aa947ede2699caf5a01cc5f6956",
+      "before": "9a85db633b7a80b28cc8bb1b2ea1d41cbddb88630bc07e573218009a27c11629"
+    },
+    {
+      "path": "blogs/journal/yza-wholesale-concept-stores-hotels-gift-line/index.html",
+      "action": "replace",
+      "sha256": "773595bc86bf58bfcc00212d1ace92a580f33b37640b227c8a36be66675996e7",
+      "before": "e1ec737c1b01b89209dbcf4b241e83e07762d25f80f3ebf45a5822e6e813b708"
+    },
+    {
+      "path": "blogs/journal/yza-wrap-pants-local-style-reimagined/index.html",
+      "action": "replace",
+      "sha256": "7c051c18f981ee52f48b8cd30b35292902b800ea244d3f079fc39ecba7c9fa1d",
+      "before": "588f2adec465317ab72e97570e95c1339ae96931d7811ec983b69b0679beea77"
+    },
+    {
+      "path": "checkout.html",
+      "action": "replace",
+      "sha256": "2e44aa9e9ceae8d9baf1a070ed72ca66e59419a62c4f1b133916fe6b34b70cb6",
+      "before": "ce1d1ec4a3ca9bf5faf3da3cb9f9f1e61c818cbed67505cea62595e8e7ff59b5"
+    },
+    {
+      "path": "collections.html",
+      "action": "replace",
+      "sha256": "08c05d09aadae35d2f082cb9a7a6e83ce342bdd962f0e78fd193d8101fafa836",
+      "before": "45df44149eddf450cbaba33d51e62a110af81fddd4d31a2e6da34bce93e757a7"
+    },
+    {
+      "path": "contact.html",
+      "action": "replace",
+      "sha256": "aedc8b2c216e9f15a9526774c2394d50d6f81f2fb3b1de81329db85e9338c07a",
+      "before": "3444eaec5587dd562c54d60841ff0437ee1fe63eed6fcc97757932bb876b5f9e"
+    },
+    {
+      "path": "faq.html",
+      "action": "replace",
+      "sha256": "dac59f120adf385d2ab4793c7e49f12b506b5f86c9bd78b2a2b2fcf180883452",
+      "before": "b3cee4cd9ad457710d55020d67be39b12cdd5c8e405f90ea04a0f8ecaad061d7"
+    },
+    {
+      "path": "favoris.html",
+      "action": "replace",
+      "sha256": "8b56b1acae02a97c7425fd9a0e5d17275b39a5879a9eddb161374b40f6fc1302",
+      "before": "8bea1f33434a1abe4b2bc65863442cb8f00485b58e86ac1e16beec6c43e5a8e3"
+    },
+    {
+      "path": "histoire.html",
+      "action": "replace",
+      "sha256": "2cf81dc21b2a9686912f2a0e788208da8a88d1d462be7bdab4de328502f23fa0",
+      "before": "aeeb575558fc10988dd81bbb7686c82ad448c2f8d1fb0db3db255bedfa9e73cb"
+    },
+    {
+      "path": "index.html",
+      "action": "replace",
+      "sha256": "5a13099277798ab4907879150c48981529c605c377962cc229c18d48e5802e34",
+      "before": "d2cce935b92f92e0a5cccf3b741fc26c2675cfa24e8050e7db30e403f332fe56"
+    },
+    {
+      "path": "legal.html",
+      "action": "replace",
+      "sha256": "7ded1b6a242a35a5fcc1e5cddd559781f1285e674eb4948c1e64c1131d6a7a52",
+      "before": "6951641dbd6495f95753d19aae654401cee7808560b65763d50fea87ee125991"
+    },
+    {
+      "path": "offre-charmy.html",
+      "action": "replace",
+      "sha256": "5f60e71202bbd0ccfa6dddab08391b1db950d9f2fa18676f484996f2e14f9c62",
+      "before": "f4986c78dbf4fe68c411fc87c77cfb2352209456bda0f1cba3689ab6acd0d714"
+    },
+    {
+      "path": "press.html",
+      "action": "replace",
+      "sha256": "70a2507385ee74de351508e70f5d099577920dc17630e458949e6e15ffed5a1d",
+      "before": "4c663c4640847238ff735c81278bb91dc2a7a5210a4d711045a3528272872373"
+    },
+    {
+      "path": "produit.html",
+      "action": "replace",
+      "sha256": "9cbf1f4d3c9b139b898923cdfdf3cd42eda622037335050f3af0ff5e939dbdaa",
+      "before": "7a8c717e3f2806eec932cdbf1d0d82b294b5335fee00cfb72e8cea07f9e64128"
+    },
+    {
+      "path": "selection-chz5vvw2a2.html",
+      "action": "replace",
+      "sha256": "98b1ad4cd366011474a96ef3180318a67f59eec8bed30c4cf9a783e589ed68b6",
+      "before": "248f79813dac2250d31c1bc828f104e6ebb114d611902c47eda10c3ad3717b38"
+    },
+    {
+      "path": "studio.html",
+      "action": "replace",
+      "sha256": "9c934a2d51f82e18ebaae0ece7025efb2d808a55b3dad2a5560673aede635d7f",
+      "before": "6ffeddd0320a2f2f6dba8e75edf7e968ef63e22306340210800c67ad43d1acde"
+    },
+    {
+      "path": "yza-girls.html",
+      "action": "replace",
+      "sha256": "ca35039c4eee26936c172094b249ba6db04f8f57705705b0ff46b653838af4db",
+      "before": "0091063dcacff89eb9ea71c795935492f7b5fe3afdb6c3084fd582059f02caf6"
+    }
+  ]
+}

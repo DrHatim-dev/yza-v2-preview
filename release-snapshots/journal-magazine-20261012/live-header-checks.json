@@ -1,0 +1,758 @@
+[
+  {
+    "route": "/journal",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/journal",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/journal",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/journal",
+    "width": 768,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/journal",
+    "width": 768,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/journal",
+    "width": 768,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/journal",
+    "width": 1024,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/journal",
+    "width": 1024,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/journal",
+    "width": 1024,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/journal",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/journal",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/journal",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 30,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 102,
+      "height": 72
+    },
+    "logo": {
+      "top": 47,
+      "bottom": 85,
+      "height": 38
+    },
+    "offset": "30px",
+    "scroll": 0
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "announcement": {
+      "top": -500,
+      "bottom": -470,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 102,
+      "height": 72
+    },
+    "logo": {
+      "top": 47,
+      "bottom": 85,
+      "height": 38
+    },
+    "offset": "30px",
+    "scroll": 500
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "announcement": {
+      "top": -1600,
+      "bottom": -1570,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 102,
+      "height": 72
+    },
+    "logo": {
+      "top": 47,
+      "bottom": 85,
+      "height": 38
+    },
+    "offset": "30px",
+    "scroll": 1600
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 30,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 142,
+      "height": 112
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 115,
+      "height": 58
+    },
+    "offset": "30px",
+    "scroll": 0
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "announcement": {
+      "top": -500,
+      "bottom": -470,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 142,
+      "height": 112
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 115,
+      "height": 58
+    },
+    "offset": "30px",
+    "scroll": 500
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "announcement": {
+      "top": -1600,
+      "bottom": -1570,
+      "height": 30
+    },
+    "header": {
+      "top": 30,
+      "bottom": 142,
+      "height": 112
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 115,
+      "height": 58
+    },
+    "offset": "30px",
+    "scroll": 1600
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 40,
+      "height": 40
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 30,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 390,
+    "announcement": {
+      "top": -500,
+      "bottom": -470,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 390,
+    "announcement": {
+      "top": -1600,
+      "bottom": -1570,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 112,
+      "height": 72
+    },
+    "logo": {
+      "top": 57,
+      "bottom": 95,
+      "height": 38
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 30,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 0
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 1440,
+    "announcement": {
+      "top": -500,
+      "bottom": -470,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 500
+  },
+  {
+    "route": "/collections/sacs",
+    "width": 1440,
+    "announcement": {
+      "top": -1600,
+      "bottom": -1570,
+      "height": 30
+    },
+    "header": {
+      "top": 40,
+      "bottom": 152,
+      "height": 112
+    },
+    "logo": {
+      "top": 67,
+      "bottom": 125,
+      "height": 58
+    },
+    "offset": "40px",
+    "scroll": 1600
+  },
+  {
+    "route": "/checkout",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 72,
+      "height": 72
+    },
+    "logo": {
+      "top": 17,
+      "bottom": 55,
+      "height": 38
+    },
+    "offset": "0px",
+    "scroll": 0
+  },
+  {
+    "route": "/checkout",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 72,
+      "height": 72
+    },
+    "logo": {
+      "top": 17,
+      "bottom": 55,
+      "height": 38
+    },
+    "offset": "0px",
+    "scroll": 500
+  },
+  {
+    "route": "/checkout",
+    "width": 390,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 72,
+      "height": 72
+    },
+    "logo": {
+      "top": 17,
+      "bottom": 55,
+      "height": 38
+    },
+    "offset": "0px",
+    "scroll": 1600
+  },
+  {
+    "route": "/checkout",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 112,
+      "height": 112
+    },
+    "logo": {
+      "top": 27,
+      "bottom": 85,
+      "height": 58
+    },
+    "offset": "0px",
+    "scroll": 0
+  },
+  {
+    "route": "/checkout",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 112,
+      "height": 112
+    },
+    "logo": {
+      "top": 27,
+      "bottom": 85,
+      "height": 58
+    },
+    "offset": "0px",
+    "scroll": 500
+  },
+  {
+    "route": "/checkout",
+    "width": 1440,
+    "announcement": {
+      "top": 0,
+      "bottom": 0,
+      "height": 0
+    },
+    "header": {
+      "top": 0,
+      "bottom": 112,
+      "height": 112
+    },
+    "logo": {
+      "top": 27,
+      "bottom": 85,
+      "height": 58
+    },
+    "offset": "0px",
+    "scroll": 1333
+  }
+]
