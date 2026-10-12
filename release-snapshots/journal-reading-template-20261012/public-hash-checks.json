@@ -1,0 +1,272 @@
+[
+  {
+    "path": "css/journal-reader.css",
+    "status": 200,
+    "sha256": "f8d146881d492c05a83cdd0e5e2e340ca0447e4e694baffb50278f9afafb7c61",
+    "matches": true
+  },
+  {
+    "path": "js/journal-reader.js",
+    "status": 200,
+    "sha256": "d9a0f8f209b4dce8bbe7da56491dd755f08219ee526caeaf38ed654acbb53f2e",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/best-handmade-gifts-from-marrakech/index.html",
+    "status": 200,
+    "sha256": "4b1ed60e5269810d81972a1de408c968974abecd9ba23c088bb3c94ddf2d0df2",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+    "status": 200,
+    "sha256": "b0ae0d81b5c93eb8eb80a87694b4a9e09d24cb7b92af5a41e848f0a3ccd62427",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+    "status": 200,
+    "sha256": "cb4b3d8fea762168888919f00cfaba96ce091716dfaaa08145ca038a8274a15d",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+    "status": 200,
+    "sha256": "1a821b6028279cdd032b7792b76966d0e35ba8814d31b642115c6ffc14f97041",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/care-guide-raffia-bags-charms-earrings/index.html",
+    "status": 200,
+    "sha256": "74b339c9ee5c1c0231bfae0bd42b8060b9d0b647b4e8080eb5f02dba2251a69f",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/creative-sunday-yza-craft-community/index.html",
+    "status": 200,
+    "sha256": "fbde7daab82035bc82c2f4791ef03ab834838158d0e07993b7a2d1c73b3e0a3f",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/duree-panier-yza/index.html",
+    "status": 200,
+    "sha256": "b858eb23ecc9ad87b9913efddbb3a57c029617d1883e42dce254eb3b69bd0369",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/fruit-charms-tiny-postcards-from-marrakech/index.html",
+    "status": 200,
+    "sha256": "9419a8ffc249205f1d862846083195923d9e4fbab6774896f50b86e6e9b29b9b",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/fruit-earrings-handmade-raffia-detail/index.html",
+    "status": 200,
+    "sha256": "b2660ace3f5d4288747d5c87f0ddb1cc0648ade82cc42efb3d4fa1ad3afec3db",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/handmade-accessories-vs-mass-products/index.html",
+    "status": 200,
+    "sha256": "bb5f6895084a3450077805f1d8760544f258985897427923e39c138b84ce4ba1",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/handmade-by-women-gueliz-atelier/index.html",
+    "status": 200,
+    "sha256": "f7196088ad96141813c13d54ce4ad8a974317c8c7099fb3195230baa12592295",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/how-to-recognize-quality-moroccan-basket-bag/index.html",
+    "status": 200,
+    "sha256": "f2b5a697a8db45ae86057442c80610ae85b0c3d83f4be308aedd465038ec2abf",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/how-to-style-raffia-fruit-charms/index.html",
+    "status": 200,
+    "sha256": "8fbd19357c80f529388b06a7f061b67db0e3b6cb5a868f3f8ac2d7e63fb37be2",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/how-to-wear-yza-day-to-night/index.html",
+    "status": 200,
+    "sha256": "a8c86973f4843dbb8affb7b2c00dfbdec03437e69d75c3cce3eed76c665894a0",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/la-nouvelle-vague-basket-bag-longevity/index.html",
+    "status": 200,
+    "sha256": "3f6a593702147720c0226ac4af2397649653e7bdd2ad561a7b236c84df863826",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/la-sculpture-xs-s-m-size-guide/index.html",
+    "status": 200,
+    "sha256": "c3094c49eb63fd1da819a0ea0b3018385a03fa76cf8614371a77b217c0e1210c",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/la-sculpture-yza-new-it-bag/index.html",
+    "status": 200,
+    "sha256": "b6a38d2529711de0fdefa3127790b0a0ecfef24f838a0bf39893bbf0969ffb02",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+    "status": 200,
+    "sha256": "cf9974691c3167603bc499e773a9db65364b8bf2e28dc905dff590f5829e63e4",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/marrakech-resort-wear-packing-guide/index.html",
+    "status": 200,
+    "sha256": "79a6d6b573c1ed8cfab27530ed75ac53f8f91008caf26d6fd1ecc33a835271d8",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/modern-marrakchi-wardrobe-souks-to-seaside/index.html",
+    "status": 200,
+    "sha256": "7cb38832224572dcf2c49a6dfc17040fca82f5bbe826289cd516305b62982748",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/no-size-xs-xxl/index.html",
+    "status": 200,
+    "sha256": "466355e25e276f242533d9e3b85dc70b30d8ffc78f074bae8ca7c3f2f9c57298",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+    "status": 200,
+    "sha256": "be81baedd7dfb062b4e8b33b8f07ce143f7737c941282f6fa50be2e57e9cd6f1",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+    "status": 200,
+    "sha256": "11d99bba4cfe2d1e13d34d83442180ea5319167e7cea6b091116a9da9573f916",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/raffia-banana-leaves-beads-yza-bags/index.html",
+    "status": 200,
+    "sha256": "9314edbb79a8ced506aa1b404e06238035f700ce2b38bd8c6b40ef457c92ee0c",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/raffia-vs-straw-bag-difference/index.html",
+    "status": 200,
+    "sha256": "fa01d328f17a1d8faa9693e57be7108a5938bc515782115b08eb7103b3aed7e4",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/shopping-durable-marrakech/index.html",
+    "status": 200,
+    "sha256": "bfca45ab8d649111a0a639c6c7bbf19b4f31a626438f18d7e5f81b359226741b",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/slow-fashion-yza-marrakech/index.html",
+    "status": 200,
+    "sha256": "0e5847d55b92841bcba6892b5c1a6c48aac339c7427df97bc773d8b56c983629",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/small-batch-fashion-limited-pieces/index.html",
+    "status": 200,
+    "sha256": "8f7c919753ca7cd0a0260e9c7ae2bc7371e731b6bfc641b619389f6b55a5b68a",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+    "status": 200,
+    "sha256": "388b09be21bb59207e3950e3d2f8d1b7ed8693e1a1779c283226d627952d7211",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/true-value-handmade-basket-bag-marrakech/index.html",
+    "status": 200,
+    "sha256": "e6d533d6e791943919dbca4a4b6b3cfbd29fd61944acb2d4d8b5ed152c514243",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/visit-yza-studio-gueliz-guide/index.html",
+    "status": 200,
+    "sha256": "b7149b5e8823fd796c1555bab96c32b5b7419a4d21a5ee6ba930a72b0e2a3613",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/what-fits-in-yza-basket-bag/index.html",
+    "status": 200,
+    "sha256": "56174af23dd03b100cc9bbae6be55b88ad36a3a9c79d9dd72b92bef165858157",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/what-is-jawhara-fabric/index.html",
+    "status": 200,
+    "sha256": "94101297eb1c7ef537601b14709d114cca8e900cc9a58634af212c2531187adf",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/what-to-buy-in-gueliz-design-craft/index.html",
+    "status": 200,
+    "sha256": "c92fafcddc174b3eb123ec07df8c98e7e60747b125b005ab2ba0c4b1ae3572ea",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/what-to-wear-in-marrakech-in-summer/index.html",
+    "status": 200,
+    "sha256": "a0af8089e18bdca99b26f279ece139c73eaf0a5e349b90b540768407a8b5660f",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/why-handmade-raffia-costs-more/index.html",
+    "status": 200,
+    "sha256": "542df26c92ac2905faacfd45c01cd6f9115f70eb2816fa4ae49195184d7e1594",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/why-yza-is-not-just-a-souvenir/index.html",
+    "status": 200,
+    "sha256": "260edc84016e200c3b9dc629ce84ed1a2059ab0ff05c17a8f897041b939cc4d5",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/yza-pairing-tops-scarf-bateau-button-up/index.html",
+    "status": 200,
+    "sha256": "f298cfefe143bc9665eb280f8af714fcc4c39df3c07c8c1234c2da9e0e9dfcff",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/yza-palazzo-pants-resortwear-big-pockets/index.html",
+    "status": 200,
+    "sha256": "376ce473a397791ec70e4beafb05b578333cf48ae2b0d2296cc09f4be09b9472",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/index.html",
+    "status": 200,
+    "sha256": "cd100a4b2617c6a9d8b777dd2135077394ce24239f1c923017f9b73ad4d7b7c6",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/yza-wholesale-concept-stores-hotels-gift-line/index.html",
+    "status": 200,
+    "sha256": "6c2201ff4f60d429d9624cc6ecf53ce58a46691cd42f18801604663b86f4c4aa",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/yza-wrap-pants-local-style-reimagined/index.html",
+    "status": 200,
+    "sha256": "beb62e93dd4d6850fb2e24c45597eb53567576444ef773818bcc5f2e253ab8a5",
+    "matches": true
+  },
+  {
+    "path": "blogs/journal/index.html",
+    "status": 200,
+    "sha256": "4e42460413cce75114828ff1a41af1a56864df20ee5ab7e7548d63106bd8cc74",
+    "matches": true
+  }
+]
