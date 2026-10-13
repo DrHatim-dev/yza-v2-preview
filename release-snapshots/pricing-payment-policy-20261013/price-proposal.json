@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "baseHash": "091aa72671fa9cd4ffdb6b3c804b7e97310b5baa04cc3fa97fe8b780ec5ccc37",
+  "prices": {
+    "raffia-orange-slice-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-lemon-slice-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-watermelon-slice-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-kiwi-slice-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-avocado-half-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-grapes-charm-ss26": {
+      "priceEur": 60
+    },
+    "raffia-cherries-charm-ss26": {
+      "priceEur": 45
+    },
+    "cherries-raffia-earrings-ss26": {
+      "priceEur": 80
+    },
+    "watermelon-raffia-earrings-ss26": {
+      "priceEur": 130
+    },
+    "kiwi-raffia-earrings-ss26": {
+      "priceEur": 130
+    },
+    "grapes-raffia-earrings-ss26": {
+      "priceEur": 130
+    },
+    "lemon-raffia-earrings-ss26": {
+      "priceEur": 140
+    },
+    "orange-raffia-earrings-ss26": {
+      "priceEur": 140
+    },
+    "tomatoes-raffia-earrings-ss26": {
+      "priceEur": 145
+    },
+    "la-sculpture-xs-basket-bag-ss26": {
+      "priceEur": 185
+    },
+    "la-sculpture-s-basket-bag-ss26": {
+      "priceEur": 200
+    },
+    "la-sculpture-m-basket-bag-ss26": {
+      "priceEur": 210
+    }
+  },
+  "rules": {
+    "schemaVersion": 1,
+    "tax": {
+      "mode": "as_priced_no_additional_tax",
+      "rate": null
+    },
+    "checkout": {
+      "settlementCurrency": "MAD",
+      "eurSettlementRate": 11,
+      "priceGraceSeconds": 7200,
+      "maxLines": 40,
+      "maxQuantity": 99,
+      "couponPolicyHash": "78c994e4ed4a92793d0263f121989f9152cd6ffa1ece81c0eb1b61017aa59a22"
+    },
+    "cart": {
+      "charmTiers": [
+        {
+          "min": 2,
+          "pct": 5
+        },
+        {
+          "min": 3,
+          "pct": 10
+        }
+      ]
+    },
+    "shipping": {
+      "morocco": {
+        "feeDh": 50
+      },
+      "europe": {
+        "feeEur": 20,
+        "etaKey": "co.ship.etaEU"
+      },
+      "usa_gcc": {
+        "feeEur": 50,
+        "etaKey": "co.ship.etaUS"
+      },
+      "other": {
+        "mode": "fixed_fee",
+        "feeEur": 50
+      }
+    },
+    "zones": {
+      "defaultCurrency": "EUR",
+      "europeCountries": [
+        "AL",
+        "AD",
+        "AT",
+        "BY",
+        "BE",
+        "BA",
+        "BG",
+        "HR",
+        "CY",
+        "CZ",
+        "DK",
+        "EE",
+        "FO",
+        "FI",
+        "FR",
+        "DE",
+        "GI",
+        "GR",
+        "GG",
+        "VA",
+        "HU",
+        "IS",
+        "IE",
+        "IM",
+        "IT",
+        "JE",
+        "XK",
+        "LV",
+        "LI",
+        "LT",
+        "LU",
+        "MT",
+        "MD",
+        "MC",
+        "ME",
+        "NL",
+        "MK",
+        "NO",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "SM",
+        "RS",
+        "SK",
+        "SI",
+        "ES",
+        "SJ",
+        "SE",
+        "CH",
+        "TR",
+        "UA",
+        "GB",
+        "AX"
+      ],
+      "shippingEuropeCountries": [
+        "AT",
+        "BE",
+        "BG",
+        "HR",
+        "CY",
+        "CZ",
+        "DK",
+        "EE",
+        "FI",
+        "FR",
+        "DE",
+        "GR",
+        "HU",
+        "IE",
+        "IT",
+        "LV",
+        "LT",
+        "LU",
+        "MT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "SK",
+        "SI",
+        "ES",
+        "SE"
+      ],
+      "shippingUsaGccCountries": [
+        "US",
+        "SA",
+        "AE",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ],
+      "retailPolicy": "morocco_vs_international"
+    },
+    "lastModifiedAt": "2026-10-09T17:30:24Z"
+  },
+  "effectiveAt": "on_approval"
+}

@@ -1,0 +1,284 @@
+{
+  "ok": true,
+  "revision": "rel-20261013213004-297feb595a65",
+  "products": 33,
+  "publicProducts": 32,
+  "changedEurPrices": 17,
+  "changedMoroccoPrices": 0,
+  "shippingAndDiscountsUnchanged": true,
+  "publicFileChecks": [
+    {
+      "path": "catalog-storefront-contract.json",
+      "match": true
+    },
+    {
+      "path": "js/checkout.js",
+      "match": true
+    },
+    {
+      "path": "js/i18n.js",
+      "match": true
+    },
+    {
+      "path": "js/products.js",
+      "match": true
+    },
+    {
+      "path": "404.html",
+      "match": true
+    },
+    {
+      "path": "b2b.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/best-handmade-gifts-from-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/care-guide-raffia-bags-charms-earrings/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/creative-sunday-yza-craft-community/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/duree-panier-yza/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/fruit-charms-tiny-postcards-from-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/fruit-earrings-handmade-raffia-detail/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/handmade-accessories-vs-mass-products/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/handmade-by-women-gueliz-atelier/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/how-to-recognize-quality-moroccan-basket-bag/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/how-to-style-raffia-fruit-charms/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/how-to-wear-yza-day-to-night/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/la-nouvelle-vague-basket-bag-longevity/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/la-sculpture-xs-s-m-size-guide/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/la-sculpture-yza-new-it-bag/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/marrakech-resort-wear-packing-guide/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/modern-marrakchi-wardrobe-souks-to-seaside/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/no-size-xs-xxl/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/raffia-banana-leaves-beads-yza-bags/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/raffia-vs-straw-bag-difference/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/shopping-durable-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/slow-fashion-yza-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/small-batch-fashion-limited-pieces/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/true-value-handmade-basket-bag-marrakech/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/visit-yza-studio-gueliz-guide/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/what-fits-in-yza-basket-bag/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/what-is-jawhara-fabric/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/what-to-buy-in-gueliz-design-craft/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/what-to-wear-in-marrakech-in-summer/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/why-handmade-raffia-costs-more/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/why-yza-is-not-just-a-souvenir/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/yza-pairing-tops-scarf-bateau-button-up/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/yza-palazzo-pants-resortwear-big-pockets/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/yza-wholesale-concept-stores-hotels-gift-line/index.html",
+      "match": true
+    },
+    {
+      "path": "blogs/journal/yza-wrap-pants-local-style-reimagined/index.html",
+      "match": true
+    },
+    {
+      "path": "checkout.html",
+      "match": true
+    },
+    {
+      "path": "collections.html",
+      "match": true
+    },
+    {
+      "path": "contact.html",
+      "match": true
+    },
+    {
+      "path": "faq.html",
+      "match": true
+    },
+    {
+      "path": "favoris.html",
+      "match": true
+    },
+    {
+      "path": "histoire.html",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "legal.html",
+      "match": true
+    },
+    {
+      "path": "offre-charmy.html",
+      "match": true
+    },
+    {
+      "path": "press.html",
+      "match": true
+    },
+    {
+      "path": "produit.html",
+      "match": true
+    },
+    {
+      "path": "selection-chz5vvw2a2.html",
+      "match": true
+    },
+    {
+      "path": "studio.html",
+      "match": true
+    },
+    {
+      "path": "yza-girls.html",
+      "match": true
+    }
+  ],
+  "canonicalRoutes": [
+    {
+      "route": "checkout.html",
+      "currentScriptVersions": true
+    },
+    {
+      "route": "journal",
+      "currentScriptVersions": true
+    },
+    {
+      "route": "blogs/journal/marque-mode-locale-marrakech/",
+      "currentScriptVersions": true
+    }
+  ],
+  "liveConnectionMarket": {
+    "ok": true,
+    "country": "MA",
+    "market": "MAD",
+    "eurRate": 11,
+    "available": true
+  }
+}

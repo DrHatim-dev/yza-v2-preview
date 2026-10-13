@@ -1,0 +1,252 @@
+{
+  "matchedExisting": [
+    {
+      "productId": "raffia-orange-slice-charm-ss26",
+      "page": 1,
+      "oldDh": 350,
+      "newDh": 350,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-lemon-slice-charm-ss26",
+      "page": 1,
+      "oldDh": 350,
+      "newDh": 350,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-watermelon-slice-charm-ss26",
+      "page": 1,
+      "oldDh": 350,
+      "newDh": 350,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-kiwi-slice-charm-ss26",
+      "page": 1,
+      "oldDh": 350,
+      "newDh": 350,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-avocado-half-charm-ss26",
+      "page": 1,
+      "oldDh": 380,
+      "newDh": 380,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": true
+    },
+    {
+      "productId": "raffia-whole-orange-charm-ss26",
+      "page": 1,
+      "oldDh": 420,
+      "newDh": 420,
+      "oldEur": 65,
+      "newEur": 65,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-whole-lemon-charm-ss26",
+      "page": 1,
+      "oldDh": 420,
+      "newDh": 420,
+      "oldEur": 65,
+      "newEur": 65,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-tomato-charm-ss26",
+      "page": 1,
+      "oldDh": 420,
+      "newDh": 420,
+      "oldEur": 65,
+      "newEur": 65,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-grapes-charm-ss26",
+      "page": 1,
+      "oldDh": 380,
+      "newDh": 380,
+      "oldEur": 55,
+      "newEur": 60,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "raffia-cherries-charm-ss26",
+      "page": 1,
+      "oldDh": 270,
+      "newDh": 270,
+      "oldEur": 40,
+      "newEur": 45,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "cherries-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 460,
+      "newDh": 460,
+      "oldEur": 70,
+      "newEur": 80,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "watermelon-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 670,
+      "newDh": 670,
+      "oldEur": 100,
+      "newEur": 130,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "kiwi-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 670,
+      "newDh": 670,
+      "oldEur": 100,
+      "newEur": 130,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "grapes-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 680,
+      "newDh": 680,
+      "oldEur": 100,
+      "newEur": 130,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "lemon-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 710,
+      "newDh": 710,
+      "oldEur": 115,
+      "newEur": 140,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "orange-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 710,
+      "newDh": 710,
+      "oldEur": 115,
+      "newEur": 140,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "tomatoes-raffia-earrings-ss26",
+      "page": 2,
+      "oldDh": 750,
+      "newDh": 750,
+      "oldEur": 130,
+      "newEur": 145,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "la-sculpture-xs-basket-bag-ss26",
+      "page": 3,
+      "oldDh": 1050,
+      "newDh": 1050,
+      "oldEur": 130,
+      "newEur": 185,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "la-sculpture-s-basket-bag-ss26",
+      "page": 3,
+      "oldDh": 1290,
+      "newDh": 1290,
+      "oldEur": 170,
+      "newEur": 200,
+      "moroccoBlankInSource": false
+    },
+    {
+      "productId": "la-sculpture-m-basket-bag-ss26",
+      "page": 3,
+      "oldDh": 1650,
+      "newDh": 1650,
+      "oldEur": 200,
+      "newEur": 210,
+      "moroccoBlankInSource": false
+    }
+  ],
+  "unchangedExisting": [
+    {
+      "productId": "yza-scarf-top-jawhara-ss26",
+      "priceDh": 370,
+      "priceEur": 70
+    },
+    {
+      "productId": "yza-button-up-shirt-jawhara-ss26",
+      "priceDh": 890,
+      "priceEur": 140
+    },
+    {
+      "productId": "yza-pareo-skirt-short-jawhara-ss26",
+      "priceDh": 450,
+      "priceEur": 70
+    },
+    {
+      "productId": "yza-pareo-skirt-midi-jawhara-ss26",
+      "priceDh": 510,
+      "priceEur": 90
+    },
+    {
+      "productId": "yza-pareo-skirt-long-jawhara-ss26",
+      "priceDh": 590,
+      "priceEur": 115
+    },
+    {
+      "productId": "yza-pareo-skirt-x-long-jawhara-ss26",
+      "priceDh": 590,
+      "priceEur": 56
+    },
+    {
+      "productId": "yza-palazzo-pants-jawhara-ss26",
+      "priceDh": 760,
+      "priceEur": 150
+    },
+    {
+      "productId": "yza-wrap-pants-jawhara-ss26",
+      "priceDh": 690,
+      "priceEur": 80
+    },
+    {
+      "productId": "la-nouvelle-vague-xs-basket-bag-ss26",
+      "priceDh": 990,
+      "priceEur": 95
+    },
+    {
+      "productId": "la-nouvelle-vague-s-basket-bag-ss26",
+      "priceDh": 1290,
+      "priceEur": 123
+    },
+    {
+      "productId": "la-nouvelle-vague-m-basket-bag-ss26",
+      "priceDh": 1650,
+      "priceEur": 158
+    },
+    {
+      "productId": "avocado-raffia-earrings-ss26",
+      "priceDh": 670,
+      "priceEur": 100
+    },
+    {
+      "productId": "yza-bandeau-top-jawhara-ss26",
+      "priceDh": 350,
+      "priceEur": 33
+    }
+  ],
+  "excludedSourceRows": 26
+}
