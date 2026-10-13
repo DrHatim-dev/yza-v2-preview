@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "tests": [
+    {
+      "endpoint": "order.php",
+      "method": "rib",
+      "countryCode": "MA",
+      "httpStatus": 422,
+      "error": "method_invalid"
+    },
+    {
+      "endpoint": "order.php",
+      "method": "iban",
+      "countryCode": "FR",
+      "httpStatus": 422,
+      "error": "method_invalid"
+    },
+    {
+      "endpoint": "order.php",
+      "method": "cod",
+      "countryCode": "US",
+      "httpStatus": 422,
+      "error": "payment_destination_invalid"
+    },
+    {
+      "endpoint": "zazu-checkout.php",
+      "method": "iban",
+      "countryCode": "MA",
+      "httpStatus": 422,
+      "error": "method_invalid"
+    }
+  ]
+}

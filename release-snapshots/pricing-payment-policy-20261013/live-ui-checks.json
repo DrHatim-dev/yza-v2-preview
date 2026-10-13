@@ -1,0 +1,180 @@
+{
+  "ok": true,
+  "mode": "live public assets with simulated IP market and blocked writes",
+  "cases": [
+    {
+      "country": "MA",
+      "lang": "fr",
+      "width": 390,
+      "pending": null,
+      "methods": [
+        "cod",
+        "card"
+      ],
+      "checked": "cod",
+      "market": "MAD",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "MA",
+      "lang": "en",
+      "width": 1440,
+      "pending": null,
+      "methods": [
+        "cod",
+        "card"
+      ],
+      "checked": "cod",
+      "market": "MAD",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "MA",
+      "lang": "ar",
+      "width": 390,
+      "pending": null,
+      "methods": [
+        "cod",
+        "card"
+      ],
+      "checked": "cod",
+      "market": "MAD",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "FR",
+      "lang": "fr",
+      "width": 1440,
+      "pending": null,
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "US",
+      "lang": "en",
+      "width": 390,
+      "pending": null,
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "AE",
+      "lang": "ar",
+      "width": 1440,
+      "pending": null,
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "GB",
+      "lang": "es",
+      "width": 390,
+      "pending": null,
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "JP",
+      "lang": "tr",
+      "width": 1440,
+      "pending": null,
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 1
+    },
+    {
+      "country": "US",
+      "lang": "en",
+      "width": 390,
+      "pending": "rib",
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 0
+    },
+    {
+      "country": "MA",
+      "lang": "fr",
+      "width": 1440,
+      "pending": "iban",
+      "methods": [
+        "cod",
+        "card"
+      ],
+      "checked": "cod",
+      "market": "MAD",
+      "productsChecked": 33,
+      "postIntercepted": 0
+    },
+    {
+      "country": "US",
+      "lang": "en",
+      "width": 390,
+      "pending": "cod-foreign",
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 0
+    },
+    {
+      "country": "MA",
+      "lang": "en",
+      "width": 390,
+      "pending": "cod-valid",
+      "methods": [
+        "cod",
+        "card"
+      ],
+      "checked": "cod",
+      "market": "MAD",
+      "productsChecked": 33,
+      "postIntercepted": 0
+    },
+    {
+      "country": "US",
+      "lang": "en",
+      "width": 390,
+      "pending": "card-valid",
+      "methods": [
+        "card"
+      ],
+      "checked": "card",
+      "market": "EUR",
+      "productsChecked": 33,
+      "postIntercepted": 0
+    }
+  ]
+}
