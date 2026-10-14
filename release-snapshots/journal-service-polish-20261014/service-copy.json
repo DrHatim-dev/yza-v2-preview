@@ -1,0 +1,37 @@
+{
+  "shippingTitle": {
+    "fr": "Livraison suivie internationale",
+    "en": "Tracked international delivery",
+    "es": "Envío internacional con seguimiento",
+    "tr": "Takipli uluslararası teslimat",
+    "ar": "توصيل دولي مع تتبع"
+  },
+  "shippingSummary": {
+    "fr": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €.",
+    "en": "Morocco: 50 DH · European Union: €20 · other destinations: €50.",
+    "es": "Marruecos: 50 DH · Unión Europea: 20 € · otros destinos: 50 €.",
+    "tr": "Fas: 50 DH · Avrupa Birliği: 20 € · diğer ülkeler: 50 €.",
+    "ar": "المغرب: 50 درهم · الاتحاد الأوروبي: 20 يورو · باقي الوجهات: 50 يورو."
+  },
+  "guaranteeTitle": {
+    "fr": "Garantie à vie",
+    "en": "Lifetime guarantee",
+    "es": "Garantía de por vida",
+    "tr": "Ömür boyu garanti",
+    "ar": "ضمان مدى الحياة"
+  },
+  "guaranteeSummary": {
+    "fr": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA.",
+    "en": "At our Marrakech atelier. Your first return within 30 days is 100% covered by YZA.",
+    "es": "En nuestro taller de Marrakech. YZA cubre el 100 % de tu primera devolución en un plazo de 30 días.",
+    "tr": "Marakeş atölyemizde. 30 gün içinde ilk iadenizin masrafını YZA %100 karşılar.",
+    "ar": "في أتيليه مراكش. تتكفل YZA بنسبة 100٪ من تكاليف أول إرجاع خلال 30 يوماً."
+  },
+  "paymentSummary": {
+    "fr": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire.",
+    "en": "Morocco: card or cash on delivery. International: card payment.",
+    "es": "Marruecos: tarjeta o contra entrega. Internacional: tarjeta.",
+    "tr": "Fas: kart veya kapıda ödeme. Uluslararası: kartla ödeme.",
+    "ar": "المغرب: البطاقة البنكية أو الدفع عند الاستلام. دولياً: البطاقة البنكية."
+  }
+}

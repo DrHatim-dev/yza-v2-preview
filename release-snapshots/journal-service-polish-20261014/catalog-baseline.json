@@ -1,0 +1,173 @@
+{
+  "revision": "rel-20261013213004-297feb595a65",
+  "hashes": {
+    "contentSha256": "83165b9162480a98758c45603435000d79592c79995dbcc5c6bf8b141ecde84b"
+  },
+  "products": {
+    "yza-scarf-top-jawhara-ss26": {
+      "active": true,
+      "priceDh": 370,
+      "priceEur": 70
+    },
+    "yza-button-up-shirt-jawhara-ss26": {
+      "active": true,
+      "priceDh": 890,
+      "priceEur": 140
+    },
+    "yza-pareo-skirt-short-jawhara-ss26": {
+      "active": true,
+      "priceDh": 450,
+      "priceEur": 70
+    },
+    "yza-pareo-skirt-midi-jawhara-ss26": {
+      "active": true,
+      "priceDh": 510,
+      "priceEur": 90
+    },
+    "yza-pareo-skirt-long-jawhara-ss26": {
+      "active": true,
+      "priceDh": 590,
+      "priceEur": 115
+    },
+    "yza-pareo-skirt-x-long-jawhara-ss26": {
+      "active": false,
+      "priceDh": 590,
+      "priceEur": 56
+    },
+    "yza-palazzo-pants-jawhara-ss26": {
+      "active": true,
+      "priceDh": 760,
+      "priceEur": 150
+    },
+    "yza-wrap-pants-jawhara-ss26": {
+      "active": true,
+      "priceDh": 690,
+      "priceEur": 80
+    },
+    "la-sculpture-xs-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 1050,
+      "priceEur": 185
+    },
+    "la-sculpture-s-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 1290,
+      "priceEur": 200
+    },
+    "la-sculpture-m-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 1650,
+      "priceEur": 210
+    },
+    "la-nouvelle-vague-xs-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 990,
+      "priceEur": 95
+    },
+    "la-nouvelle-vague-s-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 1290,
+      "priceEur": 123
+    },
+    "la-nouvelle-vague-m-basket-bag-ss26": {
+      "active": true,
+      "priceDh": 1650,
+      "priceEur": 158
+    },
+    "raffia-cherries-charm-ss26": {
+      "active": true,
+      "priceDh": 270,
+      "priceEur": 45
+    },
+    "raffia-grapes-charm-ss26": {
+      "active": true,
+      "priceDh": 380,
+      "priceEur": 60
+    },
+    "raffia-whole-lemon-charm-ss26": {
+      "active": true,
+      "priceDh": 420,
+      "priceEur": 65
+    },
+    "raffia-whole-orange-charm-ss26": {
+      "active": true,
+      "priceDh": 420,
+      "priceEur": 65
+    },
+    "raffia-tomato-charm-ss26": {
+      "active": true,
+      "priceDh": 420,
+      "priceEur": 65
+    },
+    "raffia-lemon-slice-charm-ss26": {
+      "active": true,
+      "priceDh": 350,
+      "priceEur": 60
+    },
+    "raffia-orange-slice-charm-ss26": {
+      "active": true,
+      "priceDh": 350,
+      "priceEur": 60
+    },
+    "raffia-kiwi-slice-charm-ss26": {
+      "active": true,
+      "priceDh": 350,
+      "priceEur": 60
+    },
+    "raffia-watermelon-slice-charm-ss26": {
+      "active": true,
+      "priceDh": 350,
+      "priceEur": 60
+    },
+    "raffia-avocado-half-charm-ss26": {
+      "active": true,
+      "priceDh": 380,
+      "priceEur": 60
+    },
+    "watermelon-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 670,
+      "priceEur": 130
+    },
+    "kiwi-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 670,
+      "priceEur": 130
+    },
+    "avocado-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 670,
+      "priceEur": 100
+    },
+    "lemon-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 710,
+      "priceEur": 140
+    },
+    "orange-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 710,
+      "priceEur": 140
+    },
+    "grapes-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 680,
+      "priceEur": 130
+    },
+    "cherries-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 460,
+      "priceEur": 80
+    },
+    "tomatoes-raffia-earrings-ss26": {
+      "active": true,
+      "priceDh": 750,
+      "priceEur": 145
+    },
+    "yza-bandeau-top-jawhara-ss26": {
+      "active": true,
+      "priceDh": 350,
+      "priceEur": 33
+    }
+  }
+}

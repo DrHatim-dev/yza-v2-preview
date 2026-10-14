@@ -1,0 +1,287 @@
+{
+  "ok": true,
+  "publicFiles": [
+    {
+      "path": "catalog-storefront-contract.json",
+      "sha256Match": true
+    },
+    {
+      "path": "css/journal-magazine.css",
+      "sha256Match": true
+    },
+    {
+      "path": "css/journal-reader.css",
+      "sha256Match": true
+    },
+    {
+      "path": "js/i18n.js",
+      "sha256Match": true
+    },
+    {
+      "path": "js/products.js",
+      "sha256Match": true
+    },
+    {
+      "path": "js/service-policy.js",
+      "sha256Match": true
+    },
+    {
+      "path": "404.html",
+      "sha256Match": true
+    },
+    {
+      "path": "b2b.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/best-handmade-gifts-from-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/breloques-fruits-raffia-tendance-bijou-ete-2026/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/cadeau-demoiselle-honneur/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/cadeau-noel-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/care-guide-raffia-bags-charms-earrings/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/creative-sunday-yza-craft-community/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/duree-panier-yza/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/fruit-charms-tiny-postcards-from-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/fruit-earrings-handmade-raffia-detail/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/handmade-accessories-vs-mass-products/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/handmade-by-women-gueliz-atelier/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/how-to-recognize-quality-moroccan-basket-bag/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/how-to-style-raffia-fruit-charms/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/how-to-wear-yza-day-to-night/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/la-nouvelle-vague-basket-bag-longevity/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/la-sculpture-xs-s-m-size-guide/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/la-sculpture-yza-new-it-bag/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/marque-mode-locale-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/marrakech-resort-wear-packing-guide/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/modern-marrakchi-wardrobe-souks-to-seaside/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/no-size-xs-xxl/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-40-degres/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/que-porter-marrakech-printemps/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/raffia-banana-leaves-beads-yza-bags/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/raffia-vs-straw-bag-difference/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/shopping-durable-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/slow-fashion-yza-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/small-batch-fashion-limited-pieces/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/techniques-raffia-atelier-yza/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/true-value-handmade-basket-bag-marrakech/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/visit-yza-studio-gueliz-guide/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/what-fits-in-yza-basket-bag/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/what-is-jawhara-fabric/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/what-to-buy-in-gueliz-design-craft/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/what-to-wear-in-marrakech-in-summer/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/why-handmade-raffia-costs-more/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/why-yza-is-not-just-a-souvenir/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/yza-pairing-tops-scarf-bateau-button-up/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/yza-palazzo-pants-resortwear-big-pockets/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/yza-pareo-skirt-size-guide-xs-to-xxl/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/yza-wholesale-concept-stores-hotels-gift-line/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "blogs/journal/yza-wrap-pants-local-style-reimagined/index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "checkout.html",
+      "sha256Match": true
+    },
+    {
+      "path": "collections.html",
+      "sha256Match": true
+    },
+    {
+      "path": "contact.html",
+      "sha256Match": true
+    },
+    {
+      "path": "faq.html",
+      "sha256Match": true
+    },
+    {
+      "path": "favoris.html",
+      "sha256Match": true
+    },
+    {
+      "path": "histoire.html",
+      "sha256Match": true
+    },
+    {
+      "path": "index.html",
+      "sha256Match": true
+    },
+    {
+      "path": "legal.html",
+      "sha256Match": true
+    },
+    {
+      "path": "offre-charmy.html",
+      "sha256Match": true
+    },
+    {
+      "path": "press.html",
+      "sha256Match": true
+    },
+    {
+      "path": "produit.html",
+      "sha256Match": true
+    },
+    {
+      "path": "selection-chz5vvw2a2.html",
+      "sha256Match": true
+    },
+    {
+      "path": "studio.html",
+      "sha256Match": true
+    },
+    {
+      "path": "yza-girls.html",
+      "sha256Match": true
+    }
+  ],
+  "canonicalRoutes": [
+    {
+      "route": "journal",
+      "assetVersionsCurrent": true
+    },
+    {
+      "route": "checkout.html",
+      "assetVersionsCurrent": true
+    },
+    {
+      "route": "blogs/journal/marque-mode-locale-marrakech/",
+      "assetVersionsCurrent": true
+    },
+    {
+      "route": "blogs/journal/que-porter-marrakech-40-degres/",
+      "assetVersionsCurrent": true
+    }
+  ],
+  "canonicalCatalogueUnchanged": true,
+  "catalogRevision": "rel-20261013213004-297feb595a65",
+  "products": 33,
+  "shippingAndPaymentBackendUnchanged": true
+}
