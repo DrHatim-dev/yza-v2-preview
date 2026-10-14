@@ -1,0 +1,121 @@
+{
+  "stories": [
+    {
+      "article": 1,
+      "src": "/assets/journal/2026-10/breloques-fruits-raffia-tendance-bijou-ete-2026.jpg",
+      "alt": "Boucle orange en raffia portée par une modèle",
+      "width": "902",
+      "height": "1600",
+      "loading": "eager",
+      "decoding": "async",
+      "fetchpriority": "high"
+    },
+    {
+      "article": 2,
+      "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+      "alt": "Tenue Jawhara blanche portée en extérieur à Marrakech",
+      "width": "1170",
+      "height": "1560",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 3,
+      "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+      "alt": "Machine à coudre et outils de couture à l’atelier YZA",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 4,
+      "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+      "alt": "Top foulard bleu et pantalon wrap Jawhara blanc portés ensemble",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 5,
+      "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+      "alt": "Démonstration de la largeur ajustable d’un pantalon Jawhara bleu à l’atelier",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 6,
+      "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+      "alt": "Panier et assortiment de charms fruits en raffia disposés au sol",
+      "width": "1066",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 7,
+      "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+      "alt": "Modèle vue à travers un panier décoré de charms citrons",
+      "width": "1066",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 8,
+      "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+      "alt": "Panier décoré de charms et outils de fabrication sur une table de l’atelier",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 9,
+      "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+      "alt": "Écheveaux de raffia colorés devant le mur de pierre de l’atelier YZA",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "article": 10,
+      "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+      "alt": "Deux paniers YZA utilisés pour transporter des objets du quotidien",
+      "width": "900",
+      "height": "1600",
+      "loading": "lazy",
+      "decoding": "async"
+    }
+  ],
+  "collections": [
+    {
+      "src": "/assets/products/review-white/bags/06-sculpture-xs-hot-red.png",
+      "alt": "Panier en raffia YZA aux anses rouges",
+      "width": "900",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "/assets/products/fruit-market/charm-whole-lemon.jpg",
+      "alt": "Citron en raffia crocheté à la main",
+      "width": "900",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "src": "/assets/products/jawhara/client/top-foulard-02.jpg",
+      "alt": "Top foulard YZA porté",
+      "width": "900",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    }
+  ]
+}

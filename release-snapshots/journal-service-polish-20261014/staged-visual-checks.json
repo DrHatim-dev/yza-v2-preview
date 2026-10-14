@@ -1,0 +1,1260 @@
+{
+  "ok": true,
+  "mode": "staged public files; all writes blocked",
+  "cases": [
+    {
+      "route": "journal",
+      "lang": "fr",
+      "width": 1440,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 112
+      },
+      "journal": {
+        "stories": 10,
+        "grid": [
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+              "fit": "cover",
+              "position": "50% 50%",
+              "naturalWidth": 1170,
+              "naturalHeight": 1560
+            },
+            "top": 1200.890625,
+            "cta": 1946.25
+          },
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 32%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1200.890625,
+            "cta": 1946.25
+          },
+          {
+            "photo": {
+              "width": 421.34375,
+              "height": 561.78125,
+              "ratio": 0.7500139066585081,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+              "fit": "cover",
+              "position": "50% 0%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1200.890625,
+            "cta": 1946.25
+          },
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1998.4375,
+            "cta": 2743.796875
+          },
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 70%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 1998.4375,
+            "cta": 2743.796875
+          },
+          {
+            "photo": {
+              "width": 421.34375,
+              "height": 561.78125,
+              "ratio": 0.7500139066585081,
+              "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+              "fit": "cover",
+              "position": "50% 45%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 1998.4375,
+            "cta": 2743.796875
+          },
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 40%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2795.984375,
+            "cta": 3541.34375
+          },
+          {
+            "photo": {
+              "width": 421.328125,
+              "height": 561.765625,
+              "ratio": 0.7500069535226546,
+              "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2795.984375,
+            "cta": 3541.34375
+          },
+          {
+            "photo": {
+              "width": 421.34375,
+              "height": 561.78125,
+              "ratio": 0.7500139066585081,
+              "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 30%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2795.984375,
+            "cta": 3541.34375
+          }
+        ],
+        "titleLines": [
+          1.9996279761904763,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958,
+          1.9998327289993958
+        ],
+        "collections": [
+          {
+            "width": 421.328125,
+            "height": 526.65625,
+            "ratio": 0.8000059336616626,
+            "src": "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+            "fit": "cover",
+            "position": "50% 68%",
+            "naturalWidth": 1080,
+            "naturalHeight": 1350
+          },
+          {
+            "width": 421.328125,
+            "height": 526.65625,
+            "ratio": 0.8000059336616626,
+            "src": "/assets/products/charms/client/whole-lemon-02.jpg",
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1350,
+            "naturalHeight": 1800
+          },
+          {
+            "width": 421.34375,
+            "height": 526.671875,
+            "ratio": 0.8000118669712523,
+            "src": "/assets/products/jawhara/client/chemise-01.jpg",
+            "fit": "cover",
+            "position": "50% 28%",
+            "naturalWidth": 1200,
+            "naturalHeight": 1800
+          }
+        ]
+      },
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "journal",
+      "lang": "fr",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": {
+        "stories": 10,
+        "grid": [
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+              "fit": "cover",
+              "position": "50% 50%",
+              "naturalWidth": 1170,
+              "naturalHeight": 1560
+            },
+            "top": 1232.96875,
+            "cta": 1892.71875
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 32%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1949.90625,
+            "cta": 2609.65625
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+              "fit": "cover",
+              "position": "50% 0%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2666.84375,
+            "cta": 3326.59375
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 3383.78125,
+            "cta": 4043.53125
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 70%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 4100.71875,
+            "cta": 4760.46875
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+              "fit": "cover",
+              "position": "50% 45%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 4817.65625,
+            "cta": 5477.40625
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 40%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 5534.59375,
+            "cta": 6194.34375
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 6251.53125,
+            "cta": 6911.28125
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 30%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 6968.46875,
+            "cta": 7628.21875
+          }
+        ],
+        "titleLines": [
+          1.999627976190476,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "collections": [
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+            "fit": "cover",
+            "position": "50% 68%",
+            "naturalWidth": 1080,
+            "naturalHeight": 1350
+          },
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/charms/client/whole-lemon-02.jpg",
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1350,
+            "naturalHeight": 1800
+          },
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/jawhara/client/chemise-01.jpg",
+            "fit": "cover",
+            "position": "50% 28%",
+            "naturalWidth": 1200,
+            "naturalHeight": 1800
+          }
+        ]
+      },
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "journal",
+      "lang": "fr",
+      "width": 360,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": {
+        "stories": 10,
+        "grid": [
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+              "fit": "cover",
+              "position": "50% 50%",
+              "naturalWidth": 1170,
+              "naturalHeight": 1560
+            },
+            "top": 1208.75,
+            "cta": 1828.5
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 32%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1885.6875,
+            "cta": 2505.4375
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+              "fit": "cover",
+              "position": "50% 0%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2562.625,
+            "cta": 3182.375
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 3239.5625,
+            "cta": 3859.3125
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 70%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 3916.5,
+            "cta": 4536.25
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+              "fit": "cover",
+              "position": "50% 45%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 4593.4375,
+            "cta": 5213.1875
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 40%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 5270.375,
+            "cta": 5890.125
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 5947.3125,
+            "cta": 6567.0625
+          },
+          {
+            "photo": {
+              "width": 320,
+              "height": 426.65625,
+              "ratio": 0.7500183109939208,
+              "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 30%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 6624.25,
+            "cta": 7244
+          }
+        ],
+        "titleLines": [
+          1.999627976190476,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "collections": [
+          {
+            "width": 320,
+            "height": 400,
+            "ratio": 0.8,
+            "src": "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+            "fit": "cover",
+            "position": "50% 68%",
+            "naturalWidth": 1080,
+            "naturalHeight": 1350
+          },
+          {
+            "width": 320,
+            "height": 400,
+            "ratio": 0.8,
+            "src": "/assets/products/charms/client/whole-lemon-02.jpg",
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1350,
+            "naturalHeight": 1800
+          },
+          {
+            "width": 320,
+            "height": 400,
+            "ratio": 0.8,
+            "src": "/assets/products/jawhara/client/chemise-01.jpg",
+            "fit": "cover",
+            "position": "50% 28%",
+            "naturalWidth": 1200,
+            "naturalHeight": 1800
+          }
+        ]
+      },
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "journal",
+      "lang": "fr",
+      "width": 768,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": {
+        "stories": 10,
+        "grid": [
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+              "fit": "cover",
+              "position": "50% 50%",
+              "naturalWidth": 1170,
+              "naturalHeight": 1560
+            },
+            "top": 803.421875,
+            "cta": 1272.828125
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 32%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 803.421875,
+            "cta": 1272.828125
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+              "fit": "cover",
+              "position": "50% 0%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 803.421875,
+            "cta": 1272.828125
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1321.015625,
+            "cta": 1790.421875
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 70%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 1321.015625,
+            "cta": 1790.421875
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+              "fit": "cover",
+              "position": "50% 45%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 1321.015625,
+            "cta": 1790.421875
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 40%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1838.609375,
+            "cta": 2308.015625
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1838.609375,
+            "cta": 2308.015625
+          },
+          {
+            "photo": {
+              "width": 220.96875,
+              "height": 294.625,
+              "ratio": 0.75,
+              "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 30%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1838.609375,
+            "cta": 2308.015625
+          }
+        ],
+        "titleLines": [
+          1.9999601403061225,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532,
+          1.9998664529914532
+        ],
+        "collections": [
+          {
+            "width": 220.96875,
+            "height": 276.203125,
+            "ratio": 0.8000226282740284,
+            "src": "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+            "fit": "cover",
+            "position": "50% 68%",
+            "naturalWidth": 1080,
+            "naturalHeight": 1350
+          },
+          {
+            "width": 220.96875,
+            "height": 276.203125,
+            "ratio": 0.8000226282740284,
+            "src": "/assets/products/charms/client/whole-lemon-02.jpg",
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1350,
+            "naturalHeight": 1800
+          },
+          {
+            "width": 220.96875,
+            "height": 276.203125,
+            "ratio": 0.8000226282740284,
+            "src": "/assets/products/jawhara/client/chemise-01.jpg",
+            "fit": "cover",
+            "position": "50% 28%",
+            "naturalWidth": 1200,
+            "naturalHeight": 1800
+          }
+        ]
+      },
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "journal",
+      "lang": "ar",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "توصيل دولي مع تتبع",
+          "text": "المغرب: 50 درهم · الاتحاد الأوروبي: 20 يورو · باقي الوجهات: 50 يورو."
+        },
+        "guarantee": {
+          "title": "ضمان مدى الحياة",
+          "text": "في أتيليه مراكش. تتكفل YZA بنسبة 100٪ من تكاليف أول إرجاع خلال 30 يوماً."
+        },
+        "payment": {
+          "title": "دفع آمن",
+          "text": "المغرب: البطاقة البنكية أو الدفع عند الاستلام. دولياً: البطاقة البنكية."
+        },
+        "lang": "ar"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": {
+        "stories": 10,
+        "grid": [
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-40-degres.jpg",
+              "fit": "cover",
+              "position": "50% 50%",
+              "naturalWidth": 1170,
+              "naturalHeight": 1560
+            },
+            "top": 1232.96875,
+            "cta": 1892.71875
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/marque-mode-locale-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 32%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 1949.90625,
+            "cta": 2609.65625
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/que-porter-marrakech-printemps.jpg",
+              "fit": "cover",
+              "position": "50% 0%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 2666.84375,
+            "cta": 3326.59375
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/no-size-xs-xxl.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 3383.78125,
+            "cta": 4043.53125
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/cadeau-noel-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 70%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 4100.71875,
+            "cta": 4760.46875
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/cadeau-demoiselle-honneur.jpg",
+              "fit": "cover",
+              "position": "50% 45%",
+              "naturalWidth": 1066,
+              "naturalHeight": 1600
+            },
+            "top": 4817.65625,
+            "cta": 5477.40625
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/techniques-raffia-atelier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 40%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 5534.59375,
+            "cta": 6194.34375
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/shopping-durable-marrakech.jpg",
+              "fit": "cover",
+              "position": "50% 65%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 6251.53125,
+            "cta": 6911.28125
+          },
+          {
+            "photo": {
+              "width": 350,
+              "height": 466.65625,
+              "ratio": 0.7500167414451215,
+              "src": "/assets/journal/2026-10/duree-panier-yza.jpg",
+              "fit": "cover",
+              "position": "50% 30%",
+              "naturalWidth": 900,
+              "naturalHeight": 1600
+            },
+            "top": 6968.46875,
+            "cta": 7628.21875
+          }
+        ],
+        "titleLines": [
+          1.999627976190476,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "collections": [
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+            "fit": "cover",
+            "position": "50% 68%",
+            "naturalWidth": 1080,
+            "naturalHeight": 1350
+          },
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/charms/client/whole-lemon-02.jpg",
+            "fit": "cover",
+            "position": "50% 50%",
+            "naturalWidth": 1350,
+            "naturalHeight": 1800
+          },
+          {
+            "width": 350,
+            "height": 437.5,
+            "ratio": 0.8,
+            "src": "/assets/products/jawhara/client/chemise-01.jpg",
+            "fit": "cover",
+            "position": "50% 28%",
+            "naturalWidth": 1200,
+            "naturalHeight": 1800
+          }
+        ]
+      },
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "blogs/journal/que-porter-marrakech-40-degres/",
+      "lang": "fr",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 3,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "blogs/journal/marque-mode-locale-marrakech/",
+      "lang": "fr",
+      "width": 1440,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 3,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 112
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "checkout.html",
+      "lang": "fr",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "Livraison suivie internationale",
+          "text": "Maroc : 50 DH · Union européenne : 20 € · autres destinations : 50 €."
+        },
+        "guarantee": {
+          "title": "Garantie à vie",
+          "text": "À l’atelier de Marrakech. Premier retour sous 30 jours : 100 % pris en charge par YZA."
+        },
+        "payment": {
+          "title": "Paiement sécurisé",
+          "text": "Maroc : carte bancaire ou paiement à la livraison. International : carte bancaire."
+        },
+        "lang": "fr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "checkout.html",
+      "lang": "en",
+      "width": 1440,
+      "service": {
+        "shipping": {
+          "title": "Tracked international delivery",
+          "text": "Morocco: 50 DH · European Union: €20 · other destinations: €50."
+        },
+        "guarantee": {
+          "title": "Lifetime guarantee",
+          "text": "At our Marrakech atelier. Your first return within 30 days is 100% covered by YZA."
+        },
+        "payment": {
+          "title": "Secure payment",
+          "text": "Morocco: card or cash on delivery. International: card payment."
+        },
+        "lang": "en"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 112
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "/",
+      "lang": "es",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "Envío internacional con seguimiento",
+          "text": "Marruecos: 50 DH · Unión Europea: 20 € · otros destinos: 50 €."
+        },
+        "guarantee": {
+          "title": "Garantía de por vida",
+          "text": "Garantía de por vida en Marrakech. Primera devolución en 30 días gratis."
+        },
+        "payment": {
+          "title": "Pago seguro",
+          "text": "Marruecos: tarjeta o contra entrega. Internacional: tarjeta."
+        },
+        "lang": "es"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "/",
+      "lang": "tr",
+      "width": 1440,
+      "service": {
+        "shipping": {
+          "title": "Takipli uluslararası teslimat",
+          "text": "Fas: 50 DH · Avrupa Birliği: 20 € · diğer ülkeler: 50 €."
+        },
+        "guarantee": {
+          "title": "Ömür boyu garanti",
+          "text": "Marakeş’te ömür boyu garanti. 30 gün içinde ilk iade ücretsiz."
+        },
+        "payment": {
+          "title": "Guvenli odeme",
+          "text": "Fas: kart veya kapıda ödeme. Uluslararası: kartla ödeme."
+        },
+        "lang": "tr"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 112
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    },
+    {
+      "route": "/",
+      "lang": "ar",
+      "width": 390,
+      "service": {
+        "shipping": {
+          "title": "توصيل دولي مع تتبع",
+          "text": "المغرب: 50 درهم · الاتحاد الأوروبي: 20 يورو · باقي الوجهات: 50 يورو."
+        },
+        "guarantee": {
+          "title": "ضمان مدى الحياة",
+          "text": "ضمان مدى الحياة في مراكش. أول إرجاع خلال 30 يوماً مجاناً."
+        },
+        "payment": {
+          "title": "دفع آمن",
+          "text": "المغرب: البطاقة البنكية أو الدفع عند الاستلام. دولياً: البطاقة البنكية."
+        },
+        "lang": "ar"
+      },
+      "related": 0,
+      "geometry": {
+        "overflow": false,
+        "headerHeight": 72
+      },
+      "journal": null,
+      "prices": {
+        "revision": "rel-20261013213004-297feb595a65",
+        "mismatches": [],
+        "market": "MAD"
+      },
+      "writesBlocked": 0
+    }
+  ]
+}

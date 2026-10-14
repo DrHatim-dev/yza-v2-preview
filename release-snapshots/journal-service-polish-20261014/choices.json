@@ -1,0 +1,39 @@
+{
+  "collectionPhotos": [
+    [
+      "bags",
+      "/assets/products/la-sculpture/client/rouge-xs-01.jpg",
+      "Panier La Sculpture aux anses rouges, présenté avec des fruits"
+    ],
+    [
+      "charms",
+      "/assets/products/charms/client/whole-lemon-02.jpg",
+      "Charm citron en raffia tenu dans la main"
+    ],
+    [
+      "wear",
+      "/assets/products/jawhara/client/chemise-01.jpg",
+      "Chemise Jawhara blanche portée, avec ses manches volantées"
+    ]
+  ],
+  "portraitFocalPoints": {
+    "1": "50% 30%",
+    "2": "50% 50%",
+    "3": "50% 32%",
+    "4": "50% 0%",
+    "5": "50% 65%",
+    "6": "50% 70%",
+    "7": "50% 45%",
+    "8": "50% 40%",
+    "9": "50% 65%",
+    "10": "50% 30%"
+  },
+  "assetVersions": {
+    "js/products.js": "a866cec46b8c2267",
+    "js/service-policy.js": "79c1d3088a073bcc",
+    "js/i18n.js": "43667c06fe97e582",
+    "css/journal-magazine.css": "9508867b263a6d9b",
+    "css/journal-reader.css": "0038a19f6a8b701d"
+  },
+  "relatedThumbnails": 30
+}
