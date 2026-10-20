@@ -1,0 +1,43 @@
+{
+  "deployedAtUtc": "2026-10-20T15:48:59Z",
+  "site": "https://yza-shop.com",
+  "files": [
+    {
+      "path": "js/checkout.js",
+      "before": "cca27d575ac932aedc4468ce4fa5634ff8b312ca2e6f75d7af69be00844ff3da",
+      "after": "6087ca11284ab15862397a1ea9c185c0ec87177b6657878c959a586631d99319"
+    },
+    {
+      "path": "js/checkout-delivery.js",
+      "before": "75a8ba16ec5d955e62d492d123c0c4fc0163c8b6687997b7080a11674383392b",
+      "after": "9bfc3efbfa5c712fb0d5a0521c86dbf6dfe6cb0d4556c0a2f6f96ae1154c5cef"
+    },
+    {
+      "path": "js/tracking.js",
+      "before": "7c5d3a2428c732a892499460838933eda58d2db49871a814f087e9cf4bd31abe",
+      "after": "06a75aa5277cb1c7b23c0d62456196128c1c6e98b4b0440f211250b933847081"
+    },
+    {
+      "path": "yza-collect.php",
+      "before": "ba26423ec47882b4b32b83c20ab4bf8c605fd8bf9816e73113512d458c93c214",
+      "after": "ea5cd9184a1958af95371a01e0b78a06b0be6ae23563517b5f01d10b319a175a"
+    },
+    {
+      "path": "checkout.html",
+      "before": "ef2e446c177c0a7717bd2e9cd42611fc2cd1c8a73ce94c047700693b4d1acb0b",
+      "after": "0fa1e31f76f735bc4735a21edd1810f589b6ba7bb532eed2d20fb1ac1cf14e7f"
+    }
+  ],
+  "verification": {
+    "automatedNodeChecks": 41,
+    "phpFilterChecks": 4,
+    "liveHttpChecks": 10,
+    "countriesTested": [
+      "MA",
+      "FR",
+      "US"
+    ],
+    "realOrderCreated": false,
+    "realCardChargeTested": false
+  }
+}
