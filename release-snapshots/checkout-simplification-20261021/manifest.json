@@ -1,0 +1,48 @@
+{
+  "site": "https://yza-shop.com",
+  "deployedAtUtc": "2026-10-21T13:55:00Z",
+  "files": [
+    {
+      "path": "checkout.html",
+      "before": "0fa1e31f76f735bc4735a21edd1810f589b6ba7bb532eed2d20fb1ac1cf14e7f",
+      "after": "f6a0a78e56785e7940d44af973f3443035af8c6cd813fb2ca478baf5963777d5"
+    },
+    {
+      "path": "js/checkout.js",
+      "before": "6087ca11284ab15862397a1ea9c185c0ec87177b6657878c959a586631d99319",
+      "after": "0b1a695c2f39c7cfeb41773ab3c1d48c52bb9eeac69d0e04b377c312c4678d1b"
+    },
+    {
+      "path": "js/checkout-maison.js",
+      "before": "bc230f17a900fbb624a28c9a8799a1a984e151852e8e4ee6e3ce1b77d3336c7c",
+      "after": "e3f8322df1ce015664eadd5d351519f80884aac2841ed4d723884865dd38f72b"
+    },
+    {
+      "path": "css/checkout-maison.css",
+      "before": "90df9faaece842f6d45859d4983fc1d7d8955d6b030dea9cf140fb9d83aa3697",
+      "after": "c0fc46d725c87a0ea03c35c19f44507c954b9a5b05734aa90f24e814a5a35d81"
+    }
+  ],
+  "verification": {
+    "presentationChecks": 19,
+    "checkoutRegressionChecks": 41,
+    "liveHttpHashChecks": 4,
+    "mobileWidths": [
+      390,
+      320
+    ],
+    "mobileLanguages": [
+      "fr",
+      "ar"
+    ],
+    "paymentCountries": [
+      "MA",
+      "FR",
+      "US"
+    ],
+    "realOrderCreated": false,
+    "realCardChargeTested": false,
+    "testWritesBlocked": true,
+    "paymentAndPricingLogicUnchanged": true
+  }
+}
